@@ -6,13 +6,142 @@ permalink: "index.html"
 
 {% block head %}
 <title>Lab Municipal | Red Ciudadana</title>
-
 {% endblock %}
 
 {% block content %}
-	<div></div>
+
+    <!-- ====== Hero Start ====== -->
+    <section class="ud-hero" id="home">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="ud-hero-content wow fadeInUp" data-wow-delay=".2s">
+              <h1 class="ud-hero-title">
+                Lab Municipal
+              </h1>
+              <p class="ud-hero-desc">
+                Busca entre los conjuntos de datos abiertos disponibles
+              </p>
+              <form action="#" class="search_bar">
+                <input type="text" id="fname" name="fname">
+                <i class="lupa fas fa-search"></i>
+              </form>
+              <div class="row">
+                <div class="col-lg-4 mb-4 mr-white">
+                  <h1 class="ud-hero-title mb-0">
+                    123
+                  </h1>
+                  <p class="ud-hero-desc">Estadídtica 1</p>
+                </div>
+                <div class="col-lg-4 mb-4 mr-white">
+                  <h1 class="ud-hero-title mb-0">
+                    456
+                  </h1>
+                  <p class="ud-hero-desc">Estadídtica 2</p>
+                </div>
+                <div class="col-lg-4 mb-4">
+                  <h1 class="ud-hero-title mb-0">
+                    321
+                  </h1>
+                  <p class="ud-hero-desc">Estadídtica 3</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ====== Hero End ====== -->
+
+    <section id="" class="ud-section">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-12">
+            <div class="ud-section-title text-center mx-auto">
+              <span>¿Qué hacemos?</span>
+              <h2>Lorem Ipsum</h2>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="cuadro">
+              <img src="/assets/images/plalceholder.png">
+              <p>Cuadro explicativo 1</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="cuadro">
+              <img src="/assets/images/plalceholder.png">
+              <p>Cuadro explicativo 2</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="cuadro">
+              <img src="/assets/images/plalceholder.png">
+              <p>Cuadro explicativo 3</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== Conjuntos ====== -->
+    <section id="conjuntos" class="ud-faq">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="ud-section-title text-center mx-auto">
+              <span>Categorías</span>
+              <h2>Nuestras Categorías</h2>
+              <p>
+                Hecha un vistaso a nuestras categorías donde encontrarás los conjuntos de datos.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-6">
+            <h3>Categorías Disponibles</h3>
+            <hr>
+            
+            {% for categoria in collections.categorias %}
+            <a href="{{categoria.url}}" class="categoria">
+              <div><img src="{{categoria.data.icono}}">{{categoria.data.title}}</div>
+              {% set categoryTitle = categoria.data.title %}
+              {% set categoryCount = collections | countdatasets(categoryTitle) %}
+              <div>{{ categoryCount }}</div>
+
+            </a>
+            {% endfor %}
+
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ====== FAQ End ====== -->
 {% endblock %}
 
 {% block body_javascripts %}
-	
+<script>
+  document.getElementById('copyLink').addEventListener('click', function() {
+    // Create a temporary input element
+    var input = document.createElement('input');
+    // Set its value to the link's href attribute
+    input.value = this.href;
+    // Append the input element to the document
+    document.body.appendChild(input);
+    // Select the input's value
+    input.select();
+    // Copy the selected text
+    document.execCommand('copy');
+    // Remove the temporary input element
+    document.body.removeChild(input);
+    // Log a message or perform any additional actions
+    console.log('Link copied to clipboard: ' + this.href);
+  });
+</script>
 {% endblock %}
