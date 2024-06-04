@@ -1,0 +1,18 @@
+---
+pagination:
+  data: municipios
+  size: 1
+  alias: municipio
+  addAllPagesToCollections: true
+permalink: "{{ municipio.departamento }}/{{ municipio.municipio }}/index.html"
+tags:
+  - municipio
+---
+{% extends "src/base.njk" %}
+
+{% block head %}
+    <title>Lab Municipal | Municipio</title>
+{% endblock %}
+
+{% block content %}
+{% endblock %}

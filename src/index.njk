@@ -93,10 +93,10 @@ permalink: "index.html"
         <div class="row">
           <div class="col-lg-12">
             <div class="ud-section-title text-center mx-auto">
-              <span>Categorías</span>
-              <h2>Nuestras Categorías</h2>
+              <span>Municipios</span>
+              <h2>Revisa los municipios</h2>
               <p>
-                Hecha un vistaso a nuestras categorías donde encontrarás los conjuntos de datos.
+                Hecha un vistaso a los municipios donde encontrarás los conjuntos de datos.
               </p>
             </div>
           </div>
@@ -104,15 +104,12 @@ permalink: "index.html"
 
         <div class="row">
           <div class="col-lg-6">
-            <h3>Categorías Disponibles</h3>
+            <h3>Municipios Disponibles</h3>
             <hr>
             
-            {% for categoria in collections.categorias %}
-            <a href="{{categoria.url}}" class="categoria">
-              <div><img src="{{categoria.data.icono}}">{{categoria.data.title}}</div>
-              {% set categoryTitle = categoria.data.title %}
-              {% set categoryCount = collections | countdatasets(categoryTitle) %}
-              <div>{{ categoryCount }}</div>
+            {% for municipio in collections.municipio %}
+            <a href="{{municipio.url}}" class="categoria">
+              <div>{{municipio.data.municipio.municipio}}</div>
 
             </a>
             {% endfor %}
