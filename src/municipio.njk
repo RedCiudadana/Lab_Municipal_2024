@@ -1,6 +1,6 @@
 ---
 pagination:
-  data: municipios
+  data: collections.municipios_completos
   size: 1
   alias: municipio
   addAllPagesToCollections: true
@@ -11,11 +11,12 @@ tags:
 {% extends "src/base.njk" %}
 
 {% block head %}
-    <title>Lab Municipal | {{municipio.municipio}}</title>
+    <title>Lab Municipal | {{ municipio.municipio }}</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
 {% endblock %}
 
 {% block content %}
-
     <!-- ====== Hero Start ====== -->
     <section class="ud-hero" id="home">
         <div class="container">
@@ -23,10 +24,10 @@ tags:
             <div class="col-lg-12">
               <div class="ud-hero-content wow fadeInUp" data-wow-delay=".2s">
                 <h1 class="ud-hero-title">
-                  {{municipio.municipio}}
+                  {{ municipio.municipio }}
                 </h1>
                 <p class="ud-hero-desc">
-                  {{municipio.departamento}}/{{municipio.municipio}}
+                  {{ municipio.departamento }}/{{ municipio.municipio }}
                 </p>
                 </div>
               </div>
@@ -40,10 +41,40 @@ tags:
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-12">
-        
-                    
+                    <div class="cuadro_titulo">
+                        <h3>General</h3>
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <div class="row ">
+                        <div class="col-lg-4 my-4">
+                            <h3 class="mb-4">Población total</h3>
+                            {% set pobtotal = municipio.poblacion_sexo.Hombres + municipio.poblacion_sexo.Mujeres %}
+                            <h2>{{pobtotal}}</h2>
+                            <h6 class="mb-4">habitantes</h6>
+
+                            <p>Fuente: Instituto Nacional de Estadística (INE)</p>
+                        </div>
+                        <div class="col-lg-4 my-4">
+                            <h5>Población total por sexo</h5>
+                            <!-- Añadir un canvas para la gráfica -->
+                            <canvas id="poblacionSexoChart"></canvas>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
+{% endblock %}
+
+{% block body_javascripts%}
+<!-- Incluir datos en un elemento script oculto -->
+<script id="municipio-data" type="application/json">
+  {
+    "hombres": {{ municipio.poblacion_sexo.Hombres | safe }},
+    "mujeres": {{ municipio.poblacion_sexo.Mujeres | safe }}
+  }
+</script>
+
+<script src="/assets/js/municipio.js"></script>
 {% endblock %}

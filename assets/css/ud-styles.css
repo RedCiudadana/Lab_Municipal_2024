@@ -2806,3 +2806,12 @@ hr{
   white-space: normal;
   overflow-wrap: break-word;
 }
+
+.cuadro_titulo{
+  background-color: var(--primary-color);
+  padding: 20px;
+}
+
+.cuadro_titulo h3{
+  color: #fff!important;
+}
