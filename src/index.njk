@@ -107,11 +107,10 @@ permalink: "index.html"
           <div class="col-lg-6">
             <h3>Municipios Disponibles</h3>
             <hr>
-            
+  
             {% for municipio in collections.municipio %}
             <a href="{{municipio.url}}" class="categoria">
               <div>{{municipio.data.municipio.municipio}}</div>
-
             </a>
             {% endfor %}
 
