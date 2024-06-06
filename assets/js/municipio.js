@@ -64,7 +64,7 @@ document.addEventListener("DOMContentLoaded", function() {
         },
         {
           label: 'Promedio de todos los municipios',
-          data: [0.3248664670658683, 0.29074999999999995, 0.3785176470588236], // Aquí coloca tus datos de promedio de todos los municipios
+          data: [0.32, 0.29, 0.37], // Aquí coloca tus datos de promedio de todos los municipios
           fill: false,
           borderColor: 'rgba(255, 99, 132, 1)',
           backgroundColor: 'rgba(255, 99, 132, 0.2)',
@@ -122,7 +122,7 @@ document.addEventListener("DOMContentLoaded", function() {
         },
         {
           label: 'Promedio de todos los municipios',
-          data: [6.923457446808511, 18.17705882352941, 40.48629411764706], // Aquí coloca tus datos de promedio de todos los municipios
+          data: [6.92, 18.17, 40.48], // Aquí coloca tus datos de promedio de todos los municipios
           fill: false,
           borderColor: 'rgba(255, 99, 132, 1)',
           backgroundColor: 'rgba(255, 99, 132, 0.2)',
