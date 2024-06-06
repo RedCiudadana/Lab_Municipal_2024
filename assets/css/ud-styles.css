@@ -2824,7 +2824,7 @@ hr{
   align-items: center;
 }
 
-#poblacionSexoChart {
+#poblacionSexoChart, #gestionMunicipalChart, #transparenciaChart {
   width: 70% !important;  /* Ajusta el canvas al 80% del contenedor */
   height: auto !important; /* Mantén la proporción del gráfico */
   margin: auto;

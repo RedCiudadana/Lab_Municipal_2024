@@ -53,13 +53,21 @@ module.exports = function (eleventyConfig) {
         url = `https://data-dataverso.redciudadana.org/assets/conjuntos/desnutricion.json`;
         const desnutricion = await fetchDataset(url);
 
+        url = `https://data-dataverso.redciudadana.org/assets/conjuntos/ranking_municipal_segeplan.json`;
+        const gestion = await fetchDataset(url);
+
+        url = `https://data-dataverso.redciudadana.org/assets/conjuntos/acceso_a_la_informacion_publica.json`;
+        const transparencia = await fetchDataset(url);
+
         // const poblacion_sexo = JSON.parse(fs.readFileSync(path.join(__dirname, '_data', 'poblacion_sexo.json'), 'utf-8'));
         // return municipios.slice(0,10).map(municipio => {
-        return municipios.slice(0,10).map(municipio => {
+        return municipios.map(municipio => {
           const poblacion_sexoData = poblacion_sexo.find(pobsex => pobsex.id_municipal === municipio.id_municipal) || {};
           const educacionData = educacion.find(edu => (edu.id_municipal === municipio.id_municipal) && (edu.Periodo === 2019)) || {};
           const desnutricionCronicaData = desnutricion.find(desnu => desnu.Cod_municipal === municipio.id_municipal && desnu.periodo === 2019 && desnu.Tipo === "Crónica") || {};
           const desnutricionAgudaData = desnutricion.find(desnu => desnu.Cod_municipal === municipio.id_municipal && desnu.periodo === 2019 && desnu.Tipo === "Aguda") || {};
+          const gestionData = gestion.find(gestion => gestion.id_municipal === municipio.id_municipal) || {};
+          const transparenciaData = transparencia.find(trans => trans.id_municipal === municipio.id_municipal) || {};
 
           // Filtrar solo las columnas necesarias
           const filteredPoblacionSexoData = {
@@ -79,12 +87,28 @@ module.exports = function (eleventyConfig) {
             Cantidad: desnutricionAgudaData.Cantidad
           };
 
+          const filteredgestionData = {
+            segeplan2013: gestionData.segeplan2013,
+            segeplan2016: gestionData.segeplan2016,
+            segeplan2018: gestionData.segeplan2018,
+            Promediosegeplan: gestionData.Promediosegeplan,
+          };
+
+          const filteredtransparenciaData = {
+            aip2015: transparenciaData.aip2015,
+            aip2017: transparenciaData.aip2017,
+            aip2019: transparenciaData.aip2019,
+            aipPromedio: transparenciaData.aipPromedio,
+          };
+
           return {
             ...municipio,
             poblacion_sexo: filteredPoblacionSexoData,
             educacion: filteredEducacionData,
             desnutricion_cronica: filteredDesnutricionCronicaData,
-            desnutricion_aguda: filteredDesnutricionAgudaData
+            desnutricion_aguda: filteredDesnutricionAgudaData,
+            gestion: filteredgestionData,
+            transparencia: filteredtransparenciaData
           };
         });
     });
@@ -98,4 +122,16 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addNunjucksFilter("limit", function (array, limit) {
         return array.slice(0, limit);
     });
+
+    eleventyConfig.addFilter("limitNumberLength", function(value, maxLength) {
+      if (typeof value === 'number' && !isNaN(value)) {
+        let stringValue = value.toString();
+        if (stringValue.length > maxLength) {
+          return parseFloat(stringValue.slice(0, maxLength));
+        }
+        return value;
+      }
+      return value;
+    });
+
 }

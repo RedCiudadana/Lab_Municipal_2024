@@ -39,7 +39,7 @@ tags:
 
     <section id="" class="ud-section">
         <div class="container">
-            <div class="row align-items-center">
+            <div class="row align-items-center mb-4">
                 <div class="col-lg-12">
                     <div class="cuadro_titulo">
                         <h3>General</h3>
@@ -95,6 +95,52 @@ tags:
                     </div>
                 </div>
             </div>
+
+			<div class="row align-items-center mb-4">
+                <div class="col-lg-12">
+                    <div class="cuadro_titulo">
+                        <h3>Gestión Municipal</h3>
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <div class="row ">
+                        <div class="col-lg-4 my-4">
+                            <h3 >Índice de Gestión Municipal</h3>
+                            <h1 class="mb-4">{{municipio.gestion.Promediosegeplan | limitNumberLength(4)}}</h1>
+
+                            <p>Fuente: Secretaría de Planificación y Programación de la Presidencia (SEGEPLAN) 2018</p>
+                        </div>
+                        <div class="col-lg-8 my-4 justify-content-center">
+                            <!-- Añadir un canvas para la gráfica -->
+                            <canvas id="gestionMunicipalChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+			<div class="row align-items-center mb-4">
+                <div class="col-lg-12">
+                    <div class="cuadro_titulo">
+                        <h3>Transparencia</h3>
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <div class="row ">
+                        <div class="col-lg-4 my-4">
+                            <h3 >Acceso a la información pública</h3>
+                            <h1 class="mb-4">{{municipio.transparencia.aipPromedio | limitNumberLength(5)}} %</h1>
+
+                            <p>Fuente: Procuraduría de los Derechos Humanos (PDH) 2019</p>
+                        </div>
+                        <div class="col-lg-8 my-4 justify-content-center">
+                            <!-- Añadir un canvas para la gráfica -->
+                            <canvas id="transparenciaChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
         </div>
     </section>
 {% endblock %}
@@ -106,6 +152,22 @@ tags:
     "hombres": {{ municipio.poblacion_sexo.Hombres | safe }},
     "mujeres": {{ municipio.poblacion_sexo.Mujeres | safe }}
   }
+</script>
+
+<script id="gestion-data" type="application/json">
+	{
+	  "segeplan2013": {{ municipio.gestion.segeplan2013 | safe }},
+	  "segeplan2016": {{ municipio.gestion.segeplan2016 | safe }},
+	  "segeplan2018": {{ municipio.gestion.segeplan2018 | safe }}
+	}
+</script>
+
+<script id="transparencia-data" type="application/json">
+	{
+	  "aip2015": {{ municipio.transparencia.aip2015 | safe }},
+	  "aip2017": {{ municipio.transparencia.aip2017 | safe }},
+	  "aip2019": {{ municipio.transparencia.aip2019 | safe }}
+	}
 </script>
 
 <script src="/assets/js/municipio.js"></script>
