@@ -2829,3 +2829,11 @@ hr{
   height: auto !important; /* Mantén la proporción del gráfico */
   margin: auto;
 }
+
+@media (max-width: 767px) {
+  #poblacionSexoChart, #gestionMunicipalChart, #transparenciaChart {
+    width: 100% !important;  /* Ajusta el canvas al 80% del contenedor */
+    height: auto !important; /* Mantén la proporción del gráfico */
+    margin: auto;
+  }
+}
