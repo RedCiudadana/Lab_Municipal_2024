@@ -56,9 +56,41 @@ tags:
                             <p>Fuente: Instituto Nacional de Estadística (INE)</p>
                         </div>
                         <div class="col-lg-4 my-4">
-                            <h5>Población total por sexo</h5>
+                            <h5 class="text-center">Población total por sexo</h5>
                             <!-- Añadir un canvas para la gráfica -->
                             <canvas id="poblacionSexoChart"></canvas>
+                        </div>
+                    </div>
+
+					<div class="row ">
+                        <div class="col-lg-6 my-4">
+                            <h3 >Desnutrición Crónica Total</h3>
+                            <h1 class="mb-4">{{ municipio.desnutricion_cronica.Cantidad}}</h1>
+
+                            <p>Fuente: Ministerio de salud pública y asistencia social (MSPAS) 2019</p>
+							
+                        </div>
+						<div class="col-lg-6 my-4">
+                            <h3 >Desnutrición Aguda Total</h3>
+                            <h1 class="mb-4">{{ municipio.desnutricion_aguda.Cantidad}}</h1>
+
+                            <p>Fuente: Ministerio de salud pública y asistencia social (MSPAS) 2019</p>
+                        </div>
+                    </div>
+
+					<div class="row ">
+                        <div class="col-lg-6 my-4">
+                            <h3 >Desempeño Municipal en Matematica 2018</h3>
+                            <h1 class="mb-4">{{ municipio.educacion.MatematicaMunicipal}} %</h1>
+
+                            <p>Fuente: Instituto Nacional de Estadística (INE)</p>
+							
+                        </div>
+						<div class="col-lg-6 my-4">
+                            <h3 >Desempeño Municipal en Lectura  2018</h3>
+                            <h1 class="mb-4">{{ municipio.educacion.LecturaMunicipal}} %</h1>
+
+                            <p>Fuente: Instituto Nacional de Estadística (INE)</p>
                         </div>
                     </div>
                 </div>

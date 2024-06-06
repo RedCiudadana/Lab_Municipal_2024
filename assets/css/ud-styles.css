@@ -2815,3 +2815,17 @@ hr{
 .cuadro_titulo h3{
   color: #fff!important;
 }
+
+#chart-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#poblacionSexoChart {
+  width: 70% !important;  /* Ajusta el canvas al 80% del contenedor */
+  height: auto !important; /* Mantén la proporción del gráfico */
+  margin: auto;
+}

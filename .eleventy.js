@@ -44,23 +44,47 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addCollection("municipios_completos", async function(collectionApi) {
         const municipios = JSON.parse(fs.readFileSync(path.join(__dirname, 'data_files', 'municipios.json'), 'utf-8'));
 
-        const url = `https://data-dataverso.redciudadana.org/assets/conjuntos/cuadroa1_poblacion_total_por_sexo_grupos_quinquenales_de__edad_y_area.json`;
+        let url = `https://data-dataverso.redciudadana.org/assets/conjuntos/cuadroa1_poblacion_total_por_sexo_grupos_quinquenales_de__edad_y_area.json`;
         const poblacion_sexo = await fetchDataset(url);
+
+        url = `https://data-dataverso.redciudadana.org/assets/conjuntos/desempeno_de_escuelas_consolidado_2015_2019.json`;
+        const educacion = await fetchDataset(url);
+
+        url = `https://data-dataverso.redciudadana.org/assets/conjuntos/desnutricion.json`;
+        const desnutricion = await fetchDataset(url);
 
         // const poblacion_sexo = JSON.parse(fs.readFileSync(path.join(__dirname, '_data', 'poblacion_sexo.json'), 'utf-8'));
         // return municipios.slice(0,10).map(municipio => {
-        return municipios.map(municipio => {
+        return municipios.slice(0,10).map(municipio => {
           const poblacion_sexoData = poblacion_sexo.find(pobsex => pobsex.id_municipal === municipio.id_municipal) || {};
-    
+          const educacionData = educacion.find(edu => (edu.id_municipal === municipio.id_municipal) && (edu.Periodo === 2019)) || {};
+          const desnutricionCronicaData = desnutricion.find(desnu => desnu.Cod_municipal === municipio.id_municipal && desnu.periodo === 2019 && desnu.Tipo === "Crónica") || {};
+          const desnutricionAgudaData = desnutricion.find(desnu => desnu.Cod_municipal === municipio.id_municipal && desnu.periodo === 2019 && desnu.Tipo === "Aguda") || {};
+
           // Filtrar solo las columnas necesarias
           const filteredPoblacionSexoData = {
             Hombres: poblacion_sexoData.Hombres,
             Mujeres: poblacion_sexoData.Mujeres,
           };
-    
+
+          const filteredEducacionData = {
+            MatematicaMunicipal: educacionData.MatematicaMunicipal,
+            LecturaMunicipal: educacionData.LecturaMunicipal,
+          };
+
+          const filteredDesnutricionCronicaData = {
+            Cantidad: desnutricionCronicaData.Cantidad
+          };
+          const filteredDesnutricionAgudaData = {
+            Cantidad: desnutricionAgudaData.Cantidad
+          };
+
           return {
             ...municipio,
-            poblacion_sexo: filteredPoblacionSexoData
+            poblacion_sexo: filteredPoblacionSexoData,
+            educacion: filteredEducacionData,
+            desnutricion_cronica: filteredDesnutricionCronicaData,
+            desnutricion_aguda: filteredDesnutricionAgudaData
           };
         });
     });
