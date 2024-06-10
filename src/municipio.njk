@@ -65,14 +65,14 @@ tags:
 					<div class="row ">
                         <div class="col-lg-6 my-4">
                             <h3 >Desnutrición Crónica Total</h3>
-                            <h1 class="mb-4">{{ municipio.desnutricion_cronica.Cantidad}}</h1>
+                            <h1 class="mb-4">{{municipio.desnutricion['2019']['Crónica']}}</h1>
 
                             <p>Fuente: Ministerio de salud pública y asistencia social (MSPAS) 2019</p>
 							
                         </div>
 						<div class="col-lg-6 my-4">
                             <h3 >Desnutrición Aguda Total</h3>
-                            <h1 class="mb-4">{{ municipio.desnutricion_aguda.Cantidad}}</h1>
+                            <h1 class="mb-4">{{municipio.desnutricion['2019']['Aguda']}}</h1>
 
                             <p>Fuente: Ministerio de salud pública y asistencia social (MSPAS) 2019</p>
                         </div>
@@ -140,6 +140,67 @@ tags:
                 </div>
             </div>
 
+            <div class="row align-items-center mb-4">
+                <div class="col-lg-12">
+                    <div class="cuadro_titulo">
+                        <h3>Nutrición / Alimentación</h3>
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <div class="row ">
+                        <div class="col-lg-4 my-4">
+                            <h3 >Desnutrición Crónica Total</h3>
+                            <h1 >{{municipio.desnutricion['2019']['Crónica']}} </h1>
+                            <h6 class="mb-4">casos</h6>
+
+                            <h3 >Desnutrición Aguda Total</h3>
+                            <h1 >{{municipio.desnutricion['2019']['Aguda']}} </h1>
+                            <h6 class="mb-4">casos</h6>
+
+                            <p>Fuente: Ministerio de salud pública y asistencia social (MSPAS) 2019</p>
+                        </div>
+                        <div class="col-lg-8 my-4 justify-content-center">
+                            <!-- Añadir un canvas para la gráfica -->
+                            <h4>Casos de Desnutrición por Año</h4>
+                            <canvas id="desnutricionChart"></canvas>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-8 my-4 justify-content-center">
+                            <!-- Añadir un canvas para la gráfica -->
+                            <h4>Casos de Desnutrición por Edad de 2019</h4>
+                            <canvas id="desnutricionChartEdadSexo"></canvas>
+                        </div>
+
+                        <div class="col-lg-4 my-4 justify-content-center">
+                            <h4>Casos de Desnutrición Crónica por sexo de 2019</h4>
+                            <canvas id="desnutricionPieChartSexo"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row align-items-center mb-4">
+                <div class="col-lg-12">
+                    <div class="cuadro_titulo">
+                        <h3>Pobreza</h3>
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <div class="row ">
+                        <div class="col-lg-4 my-4">
+                            <h3 >Índice de Pobreza Multidimensional</h3>
+                            <h1 class="mb-4">{{municipio.pobreza.ipm2014 | limitNumberLength(5)}}</h1>
+
+                            <p>Fuente: Programa de las Naciones Unidas para el Desarrollo (PNUD) 2014</p>
+                        </div>
+                        <div class="col-lg-8 my-4 justify-content-center">
+                            <!-- Añadir un canvas para la gráfica -->
+                            <canvas id="pobrezaChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
         </div>
     </section>
@@ -167,6 +228,56 @@ tags:
 	  "aip2015": {{ municipio.transparencia.aip2015 | safe }},
 	  "aip2017": {{ municipio.transparencia.aip2017 | safe }},
 	  "aip2019": {{ municipio.transparencia.aip2019 | safe }}
+	}
+</script>
+
+<script id="desnutricion-data" type="application/json">
+	{
+	  "cronica2012": {{ municipio.desnutricion['2012']['Crónica'] or 0 | safe }},
+      "cronica2013": {{ municipio.desnutricion['2013']['Crónica'] or 0 | safe }},
+      "cronica2014": {{ municipio.desnutricion['2014']['Crónica'] or 0 | safe }},
+      "cronica2015": {{ municipio.desnutricion['2015']['Crónica'] or 0 | safe }},
+      "cronica2016": {{ municipio.desnutricion['2016']['Crónica'] or 0 | safe }},
+      "cronica2017": {{ municipio.desnutricion['2017']['Crónica'] or 0 | safe }},
+      "cronica2018": {{ municipio.desnutricion['2018']['Crónica'] or 0 | safe }},
+      "cronica2019": {{ municipio.desnutricion['2019']['Crónica'] or 0 | safe }},
+      "aguda2012": {{ municipio.desnutricion['2012']['Aguda'] or 0 | safe }},
+      "aguda2013": {{ municipio.desnutricion['2013']['Aguda'] or 0 | safe }},
+      "aguda2014": {{ municipio.desnutricion['2014']['Aguda'] or 0 | safe }},
+      "aguda2015": {{ municipio.desnutricion['2015']['Aguda'] or 0 | safe }},
+      "aguda2016": {{ municipio.desnutricion['2016']['Aguda'] or 0 | safe }},
+      "aguda2017": {{ municipio.desnutricion['2017']['Aguda'] or 0 | safe }},
+      "aguda2018": {{ municipio.desnutricion['2018']['Aguda'] or 0 | safe }},
+      "aguda2019": {{ municipio.desnutricion['2019']['Aguda'] or 0 | safe }}
+	}
+</script>
+
+<script id="desnutricion-data-edad-sexo" type="application/json">
+	{
+	  "cronicafem1mes": {{ municipio.desnutricion_cronica.fem1mes or 0 }},
+      "cronicamasc1mes": {{ municipio.desnutricion_cronica.masc1mes or 0 }},
+      "cronicafem1a2mes": {{ municipio.desnutricion_cronica.fem1a2mes or 0 }},
+      "cronicamasc1a2mes": {{ municipio.desnutricion_cronica.masc1a2mes or 0 }},
+      "cronicafem2a1ano": {{ municipio.desnutricion_cronica.fem2a1ano or 0 }},
+      "cronicamasc2a1ano": {{ municipio.desnutricion_cronica.masc2a1ano or 0 }},
+      "cronicafem1a4ano": {{ municipio.desnutricion_cronica.fem1a4ano or 0 }},
+      "cronicamasc1a4ano": {{ municipio.desnutricion_cronica.masc1a4ano or 0 }},
+      "agudafem1mes": {{ municipio.desnutricion_aguda.fem1mes or 0 }},
+      "agudamasc1mes": {{ municipio.desnutricion_aguda.masc1mes or 0 }},
+      "agudafem1a2mes": {{ municipio.desnutricion_aguda.fem1a2mes or 0 }},
+      "agudamasc1a2mes": {{ municipio.desnutricion_aguda.masc1a2mes or 0 }},
+      "agudafem2a1ano": {{ municipio.desnutricion_aguda.fem2a1ano or 0 }},
+      "agudamasc2a1ano": {{ municipio.desnutricion_aguda.masc2a1ano or 0 }},
+      "agudafem1a4ano": {{ municipio.desnutricion_aguda.fem1a4ano or 0 }},
+      "agudamasc1a4ano": {{ municipio.desnutricion_aguda.masc1a4ano or 0 }}
+	}
+</script>
+
+<script id="pobreza-data" type="application/json">
+	{
+	  "ipm2006": {{ municipio.pobreza.ipm2006 | limitNumberLength(5) | safe }},
+	  "ipm2011": {{ municipio.pobreza.ipm2011 | limitNumberLength(5) | safe }},
+	  "ipm2014": {{ municipio.pobreza.ipm2014 | limitNumberLength(5) | safe }}
 	}
 </script>
 

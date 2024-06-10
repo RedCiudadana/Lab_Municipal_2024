@@ -3,6 +3,34 @@ const rmj = require('render-markdown-js')
 const fs = require('fs');
 const path = require('path');
 
+// Función para obtener y limpiar datos de población por sexo
+async function fetchDataset(url) {
+	let responseText = await EleventyFetch(url, {
+		duration: "1h", // Guardar por 1 hora
+		type: "text"    // Obtener el texto sin analizar
+	});
+
+	// Dividir el texto en líneas
+	let lines = responseText.split('\n');
+
+	// Si hay líneas, conservar solo el primer carácter de la última línea
+	if (lines.length > 0) {
+		let lastLine = lines[lines.length - 1];
+		lines[lines.length - 1] = lastLine.charAt(0);
+	}
+
+	// Unir de nuevo las líneas en un solo texto
+	let cleanedText = lines.join('\n');
+
+	// Intentar analizar el texto como JSON
+	try {
+		return JSON.parse(cleanedText);
+	} catch (error) {
+		console.error("Error al analizar JSON:", error);
+		return null;
+	}
+}
+
 module.exports = function (eleventyConfig) {
 
     eleventyConfig.setTemplateFormats("njk,html,md");
@@ -10,34 +38,6 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy('src');
     eleventyConfig.addPassthroughCopy('admin');
     eleventyConfig.addPassthroughCopy('assets');
-
-    // Función para obtener y limpiar datos de población por sexo
-    async function fetchDataset(url) {
-      let responseText = await EleventyFetch(url, {
-          duration: "1h", // Guardar por 1 hora
-          type: "text"    // Obtener el texto sin analizar
-      });
-
-      // Dividir el texto en líneas
-      let lines = responseText.split('\n');
-
-      // Si hay líneas, conservar solo el primer carácter de la última línea
-      if (lines.length > 0) {
-          let lastLine = lines[lines.length - 1];
-          lines[lines.length - 1] = lastLine.charAt(0);
-      }
-
-      // Unir de nuevo las líneas en un solo texto
-      let cleanedText = lines.join('\n');
-
-      // Intentar analizar el texto como JSON
-      try {
-          return JSON.parse(cleanedText);
-      } catch (error) {
-          console.error("Error al analizar JSON:", error);
-          return null;
-      }
-    }
 
     // municipios enteros
     
@@ -59,57 +59,95 @@ module.exports = function (eleventyConfig) {
         url = `https://data-dataverso.redciudadana.org/assets/conjuntos/acceso_a_la_informacion_publica.json`;
         const transparencia = await fetchDataset(url);
 
+		url = `https://data-dataverso.redciudadana.org/assets/conjuntos/indice_de_pobreza_multidimensional.json`;
+        const pobreza = await fetchDataset(url);
+
         // const poblacion_sexo = JSON.parse(fs.readFileSync(path.join(__dirname, '_data', 'poblacion_sexo.json'), 'utf-8'));
         // return municipios.slice(0,10).map(municipio => {
         return municipios.map(municipio => {
-          const poblacion_sexoData = poblacion_sexo.find(pobsex => pobsex.id_municipal === municipio.id_municipal) || {};
-          const educacionData = educacion.find(edu => (edu.id_municipal === municipio.id_municipal) && (edu.Periodo === 2019)) || {};
-          const desnutricionCronicaData = desnutricion.find(desnu => desnu.Cod_municipal === municipio.id_municipal && desnu.periodo === 2019 && desnu.Tipo === "Crónica") || {};
-          const desnutricionAgudaData = desnutricion.find(desnu => desnu.Cod_municipal === municipio.id_municipal && desnu.periodo === 2019 && desnu.Tipo === "Aguda") || {};
-          const gestionData = gestion.find(gestion => gestion.id_municipal === municipio.id_municipal) || {};
-          const transparenciaData = transparencia.find(trans => trans.id_municipal === municipio.id_municipal) || {};
+			const poblacion_sexoData = poblacion_sexo.find(pobsex => pobsex.id_municipal === municipio.id_municipal) || {};
+			const educacionData = educacion.find(edu => (edu.id_municipal === municipio.id_municipal) && (edu.Periodo === 2019)) || {};
+			const gestionData = gestion.find(gestion => gestion.id_municipal === municipio.id_municipal) || {};
+			const transparenciaData = transparencia.find(trans => trans.id_municipal === municipio.id_municipal) || {};
+			const desnutricionData = desnutricion.filter(desnu => desnu.Cod_municipal === municipio.id_municipal) || [];
+			const desnutricionCronicaData = desnutricion.find(desnu => desnu.Cod_municipal === municipio.id_municipal && desnu.periodo === 2019 && desnu.Tipo === "Crónica") || {};
+          	const desnutricionAgudaData = desnutricion.find(desnu => desnu.Cod_municipal === municipio.id_municipal && desnu.periodo === 2019 && desnu.Tipo === "Aguda") || {};
+			const pobrezaData = pobreza.find(pobre => pobre.id_municipal === municipio.id_municipal) || {};
 
-          // Filtrar solo las columnas necesarias
-          const filteredPoblacionSexoData = {
-            Hombres: poblacion_sexoData.Hombres,
-            Mujeres: poblacion_sexoData.Mujeres,
-          };
+			const groupedDesnutricionData = desnutricionData.reduce((acc, desnu) => {
+				if (!acc[desnu.periodo]) {
+					acc[desnu.periodo] = {};
+				}
+				if (!acc[desnu.periodo][desnu.Tipo]) {
+					acc[desnu.periodo][desnu.Tipo] = [];
+				}
+				acc[desnu.periodo][desnu.Tipo].push(desnu.Cantidad);
+				return acc;
+			}, {});
 
-          const filteredEducacionData = {
-            MatematicaMunicipal: educacionData.MatematicaMunicipal,
-            LecturaMunicipal: educacionData.LecturaMunicipal,
-          };
+			// Filtrar solo las columnas necesarias
+			const filteredPoblacionSexoData = {
+				Hombres: poblacion_sexoData.Hombres,
+				Mujeres: poblacion_sexoData.Mujeres,
+			};
 
-          const filteredDesnutricionCronicaData = {
-            Cantidad: desnutricionCronicaData.Cantidad
-          };
-          const filteredDesnutricionAgudaData = {
-            Cantidad: desnutricionAgudaData.Cantidad
-          };
+			const filteredEducacionData = {
+				MatematicaMunicipal: educacionData.MatematicaMunicipal,
+				LecturaMunicipal: educacionData.LecturaMunicipal,
+			};
+			
+			const filteredgestionData = {
+				segeplan2013: gestionData.segeplan2013,
+				segeplan2016: gestionData.segeplan2016,
+				segeplan2018: gestionData.segeplan2018,
+				Promediosegeplan: gestionData.Promediosegeplan,
+			};
 
-          const filteredgestionData = {
-            segeplan2013: gestionData.segeplan2013,
-            segeplan2016: gestionData.segeplan2016,
-            segeplan2018: gestionData.segeplan2018,
-            Promediosegeplan: gestionData.Promediosegeplan,
-          };
+			const filteredtransparenciaData = {
+				aip2015: transparenciaData.aip2015,
+				aip2017: transparenciaData.aip2017,
+				aip2019: transparenciaData.aip2019,
+				aipPromedio: transparenciaData.aipPromedio,
+			};
 
-          const filteredtransparenciaData = {
-            aip2015: transparenciaData.aip2015,
-            aip2017: transparenciaData.aip2017,
-            aip2019: transparenciaData.aip2019,
-            aipPromedio: transparenciaData.aipPromedio,
-          };
+			const filteredDesnutricionCronicaData = {
+				fem1mes: desnutricionCronicaData["F < 1 mes "],
+				masc1mes: desnutricionCronicaData["M < 1 mes"],
+				fem1a2mes: desnutricionCronicaData["F 1m a < 2m"],
+				masc1a2mes: desnutricionCronicaData["M < 1 mes "],
+				fem2a1ano: desnutricionCronicaData["F 2m a < 1 a"],
+				masc2a1ano: desnutricionCronicaData["M 2m a < 1 a"],
+				fem1a4ano: desnutricionCronicaData["F 1a a 4 a"],
+				masc1a4ano: desnutricionCronicaData["M 1a a 4 a"]
+			};
+			const filteredDesnutricionAgudaData = {
+				fem1mes: desnutricionAgudaData["F < 1 mes "],
+				masc1mes: desnutricionAgudaData["M < 1 mes"],
+				fem1a2mes: desnutricionAgudaData["F 1m a < 2m"],
+				masc1a2mes: desnutricionAgudaData["M < 1 mes "],
+				fem2a1ano: desnutricionAgudaData["F 2m a < 1 a"],
+				masc2a1ano: desnutricionAgudaData["M 2m a < 1 a"],
+				fem1a4ano: desnutricionAgudaData["F 1a a 4 a"],
+				masc1a4ano: desnutricionAgudaData["M 1a a 4 a"]
+			};
 
-          return {
-            ...municipio,
-            poblacion_sexo: filteredPoblacionSexoData,
-            educacion: filteredEducacionData,
-            desnutricion_cronica: filteredDesnutricionCronicaData,
-            desnutricion_aguda: filteredDesnutricionAgudaData,
-            gestion: filteredgestionData,
-            transparencia: filteredtransparenciaData
-          };
+			const filteredpobrezaData = {
+				ipm2006: pobrezaData.IPM2006,
+				ipm2011: pobrezaData.IPM2011,
+				ipm2014: pobrezaData.IPM2014
+			};
+
+			return {
+				...municipio,
+				poblacion_sexo: filteredPoblacionSexoData,
+				educacion: filteredEducacionData,
+				desnutricion: groupedDesnutricionData,
+				desnutricion_cronica: filteredDesnutricionCronicaData,
+	            desnutricion_aguda: filteredDesnutricionAgudaData,
+				gestion: filteredgestionData,
+				transparencia: filteredtransparenciaData,
+				pobreza: filteredpobrezaData
+			};
         });
     });
 
