@@ -62,10 +62,22 @@ module.exports = function (eleventyConfig) {
 		url = `https://data-dataverso.redciudadana.org/assets/conjuntos/indice_de_pobreza_multidimensional.json`;
         const pobreza = await fetchDataset(url);
 
+		url = `https://data-dataverso.redciudadana.org/assets/conjuntos/cuadroa2_poblacion_segun_parentesco_con_el_jefe_del_hogar.json`;
+        const poblacion_parentesco = await fetchDataset(url);
+
+		url = `https://data-dataverso.redciudadana.org/assets/conjuntos/cuadroa3_poblacion_de_10_anos_y_mas_por_estado_conyugal.json`;
+        const poblacion_estado_conyugal = await fetchDataset(url);
+
+		url = `https://data-dataverso.redciudadana.org/assets/conjuntos/cuadroa4_poblacion_total_por_lugar_de_nacimiento_y_lugar_de_residencia_en_abril_del_2013.json`;
+        const poblacion_residencia = await fetchDataset(url);
+
+		url = `https://data-dataverso.redciudadana.org/assets/conjuntos/cuadroa5_poblacion_total_por_pueblos.json`;
+        const poblacion_pueblo = await fetchDataset(url);
+
         // const poblacion_sexo = JSON.parse(fs.readFileSync(path.join(__dirname, '_data', 'poblacion_sexo.json'), 'utf-8'));
         // return municipios.slice(0,10).map(municipio => {
-        return municipios.map(municipio => {
-			const poblacion_sexoData = poblacion_sexo.find(pobsex => pobsex.id_municipal === municipio.id_municipal) || {};
+        return municipios.slice(0,10).map(municipio => {
+			const poblacion_sexoData = poblacion_sexo.find(pob => pob.id_municipal === municipio.id_municipal) || {};
 			const educacionData = educacion.find(edu => (edu.id_municipal === municipio.id_municipal) && (edu.Periodo === 2019)) || {};
 			const gestionData = gestion.find(gestion => gestion.id_municipal === municipio.id_municipal) || {};
 			const transparenciaData = transparencia.find(trans => trans.id_municipal === municipio.id_municipal) || {};
@@ -73,6 +85,10 @@ module.exports = function (eleventyConfig) {
 			const desnutricionCronicaData = desnutricion.find(desnu => desnu.Cod_municipal === municipio.id_municipal && desnu.periodo === 2019 && desnu.Tipo === "Crónica") || {};
           	const desnutricionAgudaData = desnutricion.find(desnu => desnu.Cod_municipal === municipio.id_municipal && desnu.periodo === 2019 && desnu.Tipo === "Aguda") || {};
 			const pobrezaData = pobreza.find(pobre => pobre.id_municipal === municipio.id_municipal) || {};
+			const poblacion_parentezcoData = poblacion_parentesco.find(pob => pob.id_municipal === municipio.id_municipal) || {};
+			const poblacion_estado_conyugalData = poblacion_estado_conyugal.find(pob => pob.id_municipal === municipio.id_municipal) || {};
+			const poblacion_residenciaData = poblacion_residencia.find(pob => pob.id_municipal === municipio.id_municipal) || {};
+			const poblacion_puebloData = poblacion_pueblo.find(pob => pob.id_municipal === municipio.id_municipal) || {};
 
 			const groupedDesnutricionData = desnutricionData.reduce((acc, desnu) => {
 				if (!acc[desnu.periodo]) {
@@ -89,6 +105,28 @@ module.exports = function (eleventyConfig) {
 			const filteredPoblacionSexoData = {
 				Hombres: poblacion_sexoData.Hombres,
 				Mujeres: poblacion_sexoData.Mujeres,
+				Urbana: poblacion_sexoData.Urbana,
+				Rural: poblacion_sexoData.Rural,
+				pob0a4: poblacion_sexoData["0 - 4"],
+				pob5a9: poblacion_sexoData["5 - 9"],
+				pob10a14: poblacion_sexoData["10 - 14"],
+				pob15a19: poblacion_sexoData["15 - 19"],
+				pob20a24: poblacion_sexoData["20 - 24"],
+				pob25a29: poblacion_sexoData["25 - 29"],
+				pob30a34: poblacion_sexoData["30 - 34"],
+				pob35a39: poblacion_sexoData["35 - 39"],
+				pob40a44: poblacion_sexoData["40 - 44"],
+				pob45a49: poblacion_sexoData["45 - 49"],
+				pob50a54: poblacion_sexoData["50 - 54"],
+				pob55a59: poblacion_sexoData["55 - 59"],
+				pob60a64: poblacion_sexoData["60 - 64"],
+				pob65a69: poblacion_sexoData["65 - 69"],
+				pob70a74: poblacion_sexoData["70 - 74"],
+				pob75a79: poblacion_sexoData["75 - 79"],
+				pob80a84: poblacion_sexoData["80 - 84"],
+				pob85a89: poblacion_sexoData["85 - 89"],
+				pob90a94: poblacion_sexoData["90 - 94"],
+				pob95a99: poblacion_sexoData["95 - 99"]
 			};
 
 			const filteredEducacionData = {
@@ -137,6 +175,45 @@ module.exports = function (eleventyConfig) {
 				ipm2014: pobrezaData.IPM2014
 			};
 
+			const filteredPoblacionParentezoData = {
+				jefe: poblacion_parentezcoData["Jefe(a) de hogar"],
+				esposo: poblacion_parentezcoData["  Esposa(o) o pareja"],
+				hijo: poblacion_parentezcoData["Hija(o) hijastra(o)"],
+				nuerooyerno: poblacion_parentezcoData["Nuera o yerno"],
+				nieto: poblacion_parentezcoData["Nieta o nieto"],
+				hermano: poblacion_parentezcoData["Hermana o hermano"],
+				padre: poblacion_parentezcoData["Madre o padre"],
+				suegro: poblacion_parentezcoData["Suegra o suegro"],
+				cunado: poblacion_parentezcoData["Cuñada o cuñado"],
+				otro: poblacion_parentezcoData["Otra(o) pariente"]
+			};
+
+			const filteredPoblacionEstadoConyugalData = {
+				pob10ymas: poblacion_estado_conyugalData["Población de 10 años y más"],
+				soltero: poblacion_estado_conyugalData["Soltera(o)"],
+				unido: poblacion_estado_conyugalData["Unida(o)"],
+				casado: poblacion_estado_conyugalData["Casada(o)"],
+				separado: poblacion_estado_conyugalData["Separada(o)"],
+				divorciado: poblacion_estado_conyugalData["Divorciada(o)"],
+				viudo: poblacion_estado_conyugalData["Viuda(o)"]
+			};
+
+			const filteredPoblacionResidenciaData = {
+				municipio: poblacion_residenciaData["Lugar nacimiento en el mismo municipio"],
+				otromun: poblacion_residenciaData[" Lugar nacimiento  En otro municipio "],
+				otropais: poblacion_residenciaData["Lugar nacimiento en otro pais"],
+				nodeclarado: poblacion_residenciaData["Lugar nacimiento  no declarado"]
+			};
+
+			const filteredPoblacionPuebloData = {
+				maya: poblacion_puebloData["Maya"],
+				garifuna: poblacion_puebloData["Gaifuna"],
+				xinka: poblacion_puebloData["Xinka"],
+				afro: poblacion_puebloData["Afrodescendiente \/ Creole \/ Afromestizo"],
+				ladino: poblacion_puebloData["Ladina(o)"],
+				extranjero: poblacion_puebloData["Extranjera(o)"]
+			};
+
 			return {
 				...municipio,
 				poblacion_sexo: filteredPoblacionSexoData,
@@ -146,7 +223,11 @@ module.exports = function (eleventyConfig) {
 	            desnutricion_aguda: filteredDesnutricionAgudaData,
 				gestion: filteredgestionData,
 				transparencia: filteredtransparenciaData,
-				pobreza: filteredpobrezaData
+				pobreza: filteredpobrezaData,
+				poblacion_parentesco: filteredPoblacionParentezoData,
+				poblacion_estado_conyugal: filteredPoblacionEstadoConyugalData,
+				poblacion_residencia: filteredPoblacionResidenciaData,
+				poblacion_pueblo: filteredPoblacionPuebloData
 			};
         });
     });

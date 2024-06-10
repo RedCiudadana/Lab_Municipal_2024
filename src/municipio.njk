@@ -60,6 +60,11 @@ tags:
                             <!-- Añadir un canvas para la gráfica -->
                             <canvas id="poblacionSexoChart"></canvas>
                         </div>
+                        <div class="col-lg-4 my-4">
+                            <h5 class="text-center">Población total por área</h5>
+                            <!-- Añadir un canvas para la gráfica -->
+                            <canvas id="poblacionAreaChart"></canvas>
+                        </div>
                     </div>
 
 					<div class="row ">
@@ -202,16 +207,119 @@ tags:
                 </div>
             </div>
 
+            <div class="row align-items-center mb-4">
+                <div class="col-lg-12">
+                    <div class="cuadro_titulo">
+                        <h3>Población</h3>
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <div class="row ">
+                        <div class="col-lg-4 my-4">
+                            <h3 class="mb-4">Población total</h3>
+                            {% set pobtotal = municipio.poblacion_sexo.Hombres + municipio.poblacion_sexo.Mujeres %}
+                            <h2>{{pobtotal}}</h2>
+                            <h6 class="mb-4">habitantes</h6>
+
+                            <p>Fuente: Instituto Nacional de Estadística (INE)</p>
+                        </div>
+                        <div class="col-lg-4 my-4">
+                            <h5 class="text-center">Población total por sexo</h5>
+                            <!-- Añadir un canvas para la gráfica -->
+                            <canvas id="poblacionSexoChart2"></canvas>
+                        </div>
+                        <div class="col-lg-4 my-4">
+                            <h5 class="text-center">Población total por sexo</h5>
+                            <!-- Añadir un canvas para la gráfica -->
+                            <canvas id="poblacionAreaChart2"></canvas>
+                        </div>
+                        <div class="col-lg-6 my-4">
+                            <h5 class="text-center">Población total por grupos quinquenales de edad</h5>
+                            <!-- Añadir un canvas para la gráfica -->
+                            <canvas id="poblacionEdadChart"></canvas>
+                        </div>
+                        <div class="col-lg-6 my-4">
+                            <h5 class="text-center">Población total por grupos quinquenales de edad</h5>
+                            <!-- Añadir un canvas para la gráfica -->
+                            <canvas id="poblacionParentezcoChart"></canvas>
+                        </div>
+                        <div class="col-lg-4 my-4">
+                            <h5 >Población de 10 años y más</h5>
+                            <h2>{{municipio.poblacion_estado_conyugal.pob10ymas}}</h2>
+                            <h6 class="mb-4">habitantes</h6>
+
+                            <p>Fuente: Instituto Nacional de Estadística (INE)</p>
+                        </div>
+                        <div class="col-lg-4 my-4">
+                            <h5 class="text-center">Población de 10 años y más por estado conyugal</h5>
+                            <!-- Añadir un canvas para la gráfica -->
+                            <canvas id="poblacionEstadoConyugalChart"></canvas>
+                        </div>
+                        <div class="col-lg-4 my-4">
+                            <h5 class="text-center">Población total por lugar de nacimiento y lugar de residencia en abril del 2013</h5>
+                            <!-- Añadir un canvas para la gráfica -->
+                            <canvas id="poblacionResidenciaChart"></canvas>
+                        </div>
+                        <div class="col-lg-4 my-4">
+                            <h5 >Total de poblacion pueblo maya</h5>
+                            <h2>{{municipio.poblacion_pueblo.maya}}</h2>
+                            <h6 class="mb-4">habitantes</h6>
+
+                            <p>Fuente: Instituto Nacional de Estadística (INE)</p>
+                        </div>
+                        <div class="col-lg-8 my-4">
+                            <h5 class="text-center">Población total por pueblos</h5>
+                            <!-- Añadir un canvas para la gráfica -->
+                            <canvas id="poblacionPuebloChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </section>
 {% endblock %}
 
 {% block body_javascripts%}
+
+{% if municipio.poblacion_sexo.Rural == "-" %}
+  {% set ruralidad = 0 %}
+{% else %}
+  {% set ruralidad = municipio.poblacion_sexo.Rural %}
+{% endif %}
+{% if municipio.poblacion_sexo.Urbana == "-" %}
+  {% set urbanidad = 0 %}
+{% else %}
+  {% set urbanidad = municipio.poblacion_sexo.Urbana %}
+{% endif %}
+
 <!-- Incluir datos en un elemento script oculto -->
 <script id="municipio-data" type="application/json">
   {
     "hombres": {{ municipio.poblacion_sexo.Hombres | safe }},
-    "mujeres": {{ municipio.poblacion_sexo.Mujeres | safe }}
+    "mujeres": {{ municipio.poblacion_sexo.Mujeres | safe }},
+    "urbana": {{ urbanidad | safe }},
+    "rural": {{ ruralidad | safe }},
+    "pob0a4": {{ municipio.poblacion_sexo.pob0a4 | safe }},
+    "pob5a9": {{ municipio.poblacion_sexo.pob5a9 | safe }},
+    "pob10a14": {{ municipio.poblacion_sexo.pob10a14 or 0 | safe }},
+    "pob15a19": {{ municipio.poblacion_sexo.pob15a19 or 0 | safe }},
+    "pob20a24": {{ municipio.poblacion_sexo.pob20a24 or 0 | safe }},
+    "pob25a29": {{ municipio.poblacion_sexo.pob25a29 or 0 | safe }},
+    "pob30a34": {{ municipio.poblacion_sexo.pob30a34 or 0 | safe }},
+    "pob35a39": {{ municipio.poblacion_sexo.pob35a39 or 0 | safe }},
+    "pob40a44": {{ municipio.poblacion_sexo.pob40a44 or 0 | safe }},
+    "pob45a49": {{ municipio.poblacion_sexo.pob45a49 or 0 | safe }},
+    "pob50a54": {{ municipio.poblacion_sexo.pob50a54 or 0 | safe }},
+    "pob55a59": {{ municipio.poblacion_sexo.pob55a59 or 0 | safe }},
+    "pob60a64": {{ municipio.poblacion_sexo.pob60a64 or 0 | safe }},
+    "pob65a69": {{ municipio.poblacion_sexo.pob65a69 or 0 | safe }},
+    "pob70a74": {{ municipio.poblacion_sexo.pob70a74 or 0 | safe }},
+    "pob75a79": {{ municipio.poblacion_sexo.pob75a79 or 0 | safe }},
+    "pob80a84": {{ municipio.poblacion_sexo.pob80a84 or 0 | safe }},
+    "pob85a89": {{ municipio.poblacion_sexo.pob85a89 or 0 | safe }},
+    "pob90a94": {{ municipio.poblacion_sexo.pob90a94 or 0 | safe }},
+    "pob95a99": {{ municipio.poblacion_sexo.pob95a99 or 0 | safe }}
   }
 </script>
 
@@ -278,6 +386,52 @@ tags:
 	  "ipm2006": {{ municipio.pobreza.ipm2006 | limitNumberLength(5) | safe }},
 	  "ipm2011": {{ municipio.pobreza.ipm2011 | limitNumberLength(5) | safe }},
 	  "ipm2014": {{ municipio.pobreza.ipm2014 | limitNumberLength(5) | safe }}
+	}
+</script>
+
+<script id="poblacion-parentezco-data" type="application/json">
+	{
+	  "jefe": {{ municipio.poblacion_parentesco.jefe or 0 }},
+      "esposo": {{ municipio.poblacion_parentesco.esposo or 0 }},
+      "hijo": {{ municipio.poblacion_parentesco.hijo or 0 }},
+      "nuerooyerno": {{ municipio.poblacion_parentesco.nuerooyerno or 0 }},
+      "nieto": {{ municipio.poblacion_parentesco.nieto or 0 }},
+      "hermano": {{ municipio.poblacion_parentesco.hermano or 0 }},
+      "padre": {{ municipio.poblacion_parentesco.padre or 0 }},
+      "suegro": {{ municipio.poblacion_parentesco.suegro or 0 }},
+      "cunado": {{ municipio.poblacion_parentesco.cunado or 0 }},
+      "otro": {{ municipio.poblacion_parentesco.otro or 0 }}
+	}
+</script>
+
+<script id="poblacion-estado-conyugal-data" type="application/json">
+	{
+	  "soltero": {{ municipio.poblacion_estado_conyugal.soltero or 0 }},
+      "unido": {{ municipio.poblacion_estado_conyugal.unido or 0 }},
+      "casado": {{ municipio.poblacion_estado_conyugal.casado or 0 }},
+      "separado": {{ municipio.poblacion_estado_conyugal.separado or 0 }},
+      "divorciado": {{ municipio.poblacion_estado_conyugal.divorciado or 0 }},
+      "viudo": {{ municipio.poblacion_estado_conyugal.viudo or 0 }}
+	}
+</script>
+
+<script id="poblacion-residencia-data" type="application/json">
+	{
+	  "mun": {{ municipio.poblacion_residencia.municipio or 0 }},
+      "otromun": {{ municipio.poblacion_residencia.otromun or 0 }},
+      "otropais": {{ municipio.poblacion_residencia.otropais or 0 }},
+      "nd": {{ municipio.poblacion_residencia.nodeclarado or 0 }}
+	}
+</script>
+
+<script id="poblacion-pueblo-data" type="application/json">
+	{
+	  "maya": {{ municipio.poblacion_pueblo.maya or 0 }},
+      "xinca": {{ municipio.poblacion_pueblo.xinca or 0 }},
+      "garifuna": {{ municipio.poblacion_pueblo.garifuna or 0 }},
+      "afro": {{ municipio.poblacion_pueblo.afro or 0 }},
+      "ladino": {{ municipio.poblacion_pueblo.ladino or 0 }},
+      "extranjero": {{ municipio.poblacion_pueblo.extranjero or 0 }}
 	}
 </script>
 

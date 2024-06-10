@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
   const municipioDataElement = document.getElementById('municipio-data');
+  
   if (municipioDataElement) {
     const municipioData = JSON.parse(municipioDataElement.textContent);
 
@@ -39,6 +40,170 @@ document.addEventListener("DOMContentLoaded", function() {
         }
       },
       plugins: [ChartDataLabels]
+    });
+
+    const ctx2 = document.getElementById('poblacionSexoChart2').getContext('2d');
+
+    const poblacionSexoChart2 = new Chart(ctx2, {
+      type: 'pie',
+      data: {
+        labels: ['Hombres', 'Mujeres'],
+        datasets: [{
+          data: [municipioData.hombres, municipioData.mujeres],
+          backgroundColor: ['#36a2eb', '#ff6384'],
+          hoverBackgroundColor: ['#36a2eb', '#ff6384']
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          datalabels: {
+            formatter: (value, ctx) => {
+              let sum = ctx.dataset.data.reduce((a, b) => a + b, 0);
+              let percentage = ((value * 100) / sum).toFixed(2) + "%";
+              return percentage;
+            },
+            color: '#fff',
+          },
+          tooltip: {
+            callbacks: {
+              label: function(tooltipItem) {
+                const dataset = tooltipItem.dataset;
+                const currentValue = dataset.data[tooltipItem.dataIndex];
+                return `${currentValue.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}`;
+              }
+            }
+          }
+        }
+      },
+      plugins: [ChartDataLabels]
+    });
+
+    const ctx3 = document.getElementById('poblacionAreaChart').getContext('2d');
+
+    const poblacionAreaChart = new Chart(ctx3, {
+      type: 'pie',
+      data: {
+        labels: ['Urbana', 'Rural'],
+        datasets: [{
+          data: [municipioData.urbana, municipioData.rural],
+          backgroundColor: ['#36a2eb', '#ff6384'],
+          hoverBackgroundColor: ['#36a2eb', '#ff6384']
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          datalabels: {
+            formatter: (value, ctx) => {
+              let sum = ctx.dataset.data.reduce((a, b) => a + b, 0);
+              let percentage = ((value * 100) / sum).toFixed(2) + "%";
+              return percentage;
+            },
+            color: '#fff',
+          },
+          tooltip: {
+            callbacks: {
+              label: function(tooltipItem) {
+                const dataset = tooltipItem.dataset;
+                const currentValue = dataset.data[tooltipItem.dataIndex];
+                return `${currentValue.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}`;
+              }
+            }
+          }
+        }
+      },
+      plugins: [ChartDataLabels]
+    });
+
+    const ctx4 = document.getElementById('poblacionAreaChart2').getContext('2d');
+
+    const poblacionAreaChart2 = new Chart(ctx4, {
+      type: 'pie',
+      data: {
+        labels: ['Urbana', 'Rural'],
+        datasets: [{
+          data: [municipioData.urbana, municipioData.rural],
+          backgroundColor: ['#36a2eb', '#ff6384'],
+          hoverBackgroundColor: ['#36a2eb', '#ff6384']
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          datalabels: {
+            formatter: (value, ctx) => {
+              let sum = ctx.dataset.data.reduce((a, b) => a + b, 0);
+              let percentage = ((value * 100) / sum).toFixed(2) + "%";
+              return percentage;
+            },
+            color: '#fff',
+          },
+          tooltip: {
+            callbacks: {
+              label: function(tooltipItem) {
+                const dataset = tooltipItem.dataset;
+                const currentValue = dataset.data[tooltipItem.dataIndex];
+                return `${currentValue.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}`;
+              }
+            }
+          }
+        }
+      },
+      plugins: [ChartDataLabels]
+    });
+
+    const ctx5 = document.getElementById('poblacionEdadChart').getContext('2d');
+
+    const poblacionEdadChart = new Chart(ctx5, {
+      type: 'bar',
+      data: {
+        labels: [
+          '0-4 años', '5-9 años', '10-14 años', '15-19 años', '20-24 años',
+          '25-29 años', '30-34 años', '35-39 años', '40-44 años', '45-49 años',
+          '50-54 años', '55-59 años', '60-64 años', '65-69 años', '70-74 años',
+          '75-79 años', '80-84 años', '85-89 años', '90-94 años', '95-99 años'
+        ],
+        datasets: [{
+          label: 'Población por edad',
+          data: [
+            municipioData.pob0a4, municipioData.pob5a9, municipioData.pob10a14, municipioData.pob15a19,
+            municipioData.pob20a24, municipioData.pob25a29, municipioData.pob30a34, municipioData.pob35a39,
+            municipioData.pob40a44, municipioData.pob45a49, municipioData.pob50a54, municipioData.pob55a59,
+            municipioData.pob60a64, municipioData.pob65a69, municipioData.pob70a74, municipioData.pob75a79,
+            municipioData.pob80a84, municipioData.pob85a89, municipioData.pob90a94, municipioData.pob95a99
+          ],
+          borderColor: 'rgba(54, 162, 235, 1)',
+          backgroundColor: 'rgba(54, 162, 235, 0.2)',
+          borderWidth: 1
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: {
+            display: true,
+            position: 'top'
+          },
+          tooltip: {
+            callbacks: {
+              label: function(context) {
+                return `${context.raw.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}`;
+              }
+            }
+          }
+        },
+        scales: {
+          y: {
+            beginAtZero: true,
+            ticks: {
+              callback: function(value) {
+                return value.toLocaleString(); // Añadir comas como separadores de miles
+              }
+            }
+          }
+        }
+      }
     });
   }
 
@@ -417,5 +582,225 @@ document.addEventListener("DOMContentLoaded", function() {
 
   }
 
+  // Gráfica de poblacion por parentezco
+  const poblacion_parentezoDataElement = document.getElementById('poblacion-parentezco-data');
+  
+  if (poblacion_parentezoDataElement) {
+    const poblacion_parentezoData = JSON.parse(poblacion_parentezoDataElement.textContent);
+
+    const ctx = document.getElementById('poblacionParentezcoChart').getContext('2d');
+
+    const poblacionParentezcoChart = new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: [
+          'Jefe(a) de hogar', 'Esposa(o) o pareja', 'Hija(o) hijastra(o)', 'Nuera o yerno', 'Nieta o nieto', 
+          'Hermana o hermano', 'Madre o padre', 'Suegra o suegro', 'Cuñada o cuñado', 'Otra(o) pariente'
+        ],
+        datasets: [{
+          label: 'Población por Parentezo',
+          data: [
+            poblacion_parentezoData.jefe, poblacion_parentezoData.esposo, poblacion_parentezoData.hijo, poblacion_parentezoData.nuerooyerno, 
+            poblacion_parentezoData.nieto, poblacion_parentezoData.hermano, poblacion_parentezoData.padre, poblacion_parentezoData.suegro, 
+            poblacion_parentezoData.cunado, poblacion_parentezoData.otro 
+          ],
+          borderColor: 'rgba(54, 162, 235, 1)',
+          backgroundColor: 'rgba(54, 162, 235, 0.2)',
+          borderWidth: 1
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: {
+            display: true,
+            position: 'top'
+          },
+          tooltip: {
+            callbacks: {
+              label: function(context) {
+                return `${context.raw.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}`;
+              }
+            }
+          }
+        },
+        scales: {
+          y: {
+            beginAtZero: true,
+            ticks: {
+              callback: function(value) {
+                return value.toLocaleString(); // Añadir comas como separadores de miles
+              }
+            }
+          }
+        }
+      }
+    });
+
+  }
+
+  // Gráfica de poblacion por parentezco
+  const poblacion_estado_conyugalDataElement = document.getElementById('poblacion-estado-conyugal-data');
+  
+  if (poblacion_estado_conyugalDataElement) {
+    const poblacion_estado_conyugalData = JSON.parse(poblacion_estado_conyugalDataElement.textContent);
+
+    const ctx = document.getElementById('poblacionEstadoConyugalChart').getContext('2d');
+
+    const poblacionEstadoConyugalChart = new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: [
+          'Soltera(o)', 'Unida(o)', 'Casada(o)', 'Separada(o)', 'Divorciada(o)', 'Viuda(o)'
+        ],
+        datasets: [{
+          label: 'Población por Estado Conyugal',
+          data: [
+            poblacion_estado_conyugalData.soltero, poblacion_estado_conyugalData.unido, poblacion_estado_conyugalData.casado,
+            poblacion_estado_conyugalData.separado, poblacion_estado_conyugalData.diverciado, poblacion_estado_conyugalData.viudo,
+          ],
+          borderColor: 'rgba(54, 162, 235, 1)',
+          backgroundColor: 'rgba(54, 162, 235, 0.2)',
+          borderWidth: 1
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: {
+            display: true,
+            position: 'top'
+          },
+          tooltip: {
+            callbacks: {
+              label: function(context) {
+                return `${context.raw.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}`;
+              }
+            }
+          }
+        },
+        scales: {
+          y: {
+            beginAtZero: true,
+            ticks: {
+              callback: function(value) {
+                return value.toLocaleString(); // Añadir comas como separadores de miles
+              }
+            }
+          }
+        }
+      }
+    });
+
+  }
+
+  // Gráfica de poblacion por residencia
+  const poblacion_residenciaDataElement = document.getElementById('poblacion-residencia-data');
+  
+  if (poblacion_residenciaDataElement) {
+    const poblacion_residenciaData = JSON.parse(poblacion_residenciaDataElement.textContent);
+
+    const ctx = document.getElementById('poblacionResidenciaChart').getContext('2d');
+
+    const poblacionResidenciaChart = new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: [
+          'Lugar nacimiento en el mismo municipio', 'Lugar nacimiento  En otro municipio', 'Lugar nacimiento en otro pais', 'Lugar nacimiento  no declarado'
+        ],
+        datasets: [{
+          label: 'Población por Estado Conyugal',
+          data: [
+            poblacion_residenciaData.mun, poblacion_residenciaData.otromun, poblacion_residenciaData.otropais, poblacion_residenciaData.nd 
+          ],
+          borderColor: 'rgba(54, 162, 235, 1)',
+          backgroundColor: 'rgba(54, 162, 235, 0.2)',
+          borderWidth: 1
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: {
+            display: true,
+            position: 'top'
+          },
+          tooltip: {
+            callbacks: {
+              label: function(context) {
+                return `${context.raw.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}`;
+              }
+            }
+          }
+        },
+        scales: {
+          y: {
+            beginAtZero: true,
+            ticks: {
+              callback: function(value) {
+                return value.toLocaleString(); // Añadir comas como separadores de miles
+              }
+            }
+          }
+        }
+      }
+    });
+
+  }
+
+  // Gráfica de poblacion por pueblo
+  const poblacion_puebloDataElement = document.getElementById('poblacion-pueblo-data');
+  
+  if (poblacion_puebloDataElement) {
+    const poblacion_puebloData = JSON.parse(poblacion_puebloDataElement.textContent);
+
+    const ctx = document.getElementById('poblacionPuebloChart').getContext('2d');
+
+    const poblacionPuebloChart = new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: [
+          'Maya', 'Gaifuna', 'Xinca', 'Afrodescendiente \/ Creole \/ Afromestizo', 'Ladina(o)', 'Extranjera(o)'
+        ],
+        datasets: [{
+          label: 'Población por Estado Conyugal',
+          data: [
+            poblacion_puebloData.maya, poblacion_puebloData.xinca, poblacion_puebloData.garifuna,
+            poblacion_puebloData.afro, poblacion_puebloData.ladino, poblacion_puebloData.extranjero 
+          ],
+          borderColor: 'rgba(54, 162, 235, 1)',
+          backgroundColor: 'rgba(54, 162, 235, 0.2)',
+          borderWidth: 1
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: {
+            display: true,
+            position: 'top'
+          },
+          tooltip: {
+            callbacks: {
+              label: function(context) {
+                return `${context.raw.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}`;
+              }
+            }
+          }
+        },
+        scales: {
+          y: {
+            beginAtZero: true,
+            ticks: {
+              callback: function(value) {
+                return value.toLocaleString(); // Añadir comas como separadores de miles
+              }
+            }
+          }
+        }
+      }
+    });
+
+  }
 
 });
