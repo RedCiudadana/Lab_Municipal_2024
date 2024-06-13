@@ -76,7 +76,7 @@ module.exports = function (eleventyConfig) {
 
         // const poblacion_sexo = JSON.parse(fs.readFileSync(path.join(__dirname, '_data', 'poblacion_sexo.json'), 'utf-8'));
         // return municipios.slice(0,10).map(municipio => {
-        return municipios.slice(0,10).map(municipio => {
+        return municipios.map(municipio => {
 			const poblacion_sexoData = poblacion_sexo.find(pob => pob.id_municipal === municipio.id_municipal) || {};
 			const educacionData = educacion.find(edu => (edu.id_municipal === municipio.id_municipal) && (edu.Periodo === 2019)) || {};
 			const gestionData = gestion.find(gestion => gestion.id_municipal === municipio.id_municipal) || {};
