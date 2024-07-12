@@ -296,6 +296,26 @@ tags:
                             <!-- Añadir un canvas para la gráfica -->
                             <canvas id="poblacionNivelEducativoChart"></canvas>
                         </div>
+                        <div class="col-lg-4 my-4">
+                            <h5 class="text-center">Población de 7 años o más con alfabetismo</h5>
+                            <!-- Añadir un canvas para la gráfica -->
+                            <canvas id="poblacionAlfabetismoChart"></canvas>
+                        </div>
+                        <div class="col-lg-4 my-4">
+                            <h5 class="text-center">Asistencia escolar</h5>
+                            <!-- Añadir un canvas para la gráfica -->
+                            <canvas id="poblacionAsistenciaEscolarChart"></canvas>
+                        </div>
+                        <div class="col-lg-4 my-4">
+                            <h5 class="text-center">Causa principal de inasistencia</h5>
+                            <!-- Añadir un canvas para la gráfica -->
+                            <canvas id="poblacionAsistenciaChart"></canvas>
+                        </div>
+                        <div class="col-lg-4 my-4">
+                            <h5 class="text-center">Lugar de estudio</h5>
+                            <!-- Añadir un canvas para la gráfica -->
+                            <canvas id="poblacionLugarEstudioChart"></canvas>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -481,7 +501,7 @@ tags:
       "municipio": {{ municipio.poblacion_alfabetismo.municipio or 0 }},
       "otromunicipio": {{ municipio.poblacion_alfabetismo.otromunicipio or 0 }},
       "otropais": {{ municipio.poblacion_alfabetismo.otropais or 0 }},
-      "nodeclarado": {{ municipio.poblacion_alfabetismo.nodeclarado or 0 }},
+      "nodeclarado": {{ municipio.poblacion_alfabetismo.nodeclarado or 0 }}
 	}
 </script>
 

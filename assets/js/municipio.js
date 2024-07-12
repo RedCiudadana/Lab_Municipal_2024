@@ -709,7 +709,7 @@ document.addEventListener("DOMContentLoaded", function() {
           'Lugar nacimiento en el mismo municipio', 'Lugar nacimiento  En otro municipio', 'Lugar nacimiento en otro pais', 'Lugar nacimiento  no declarado'
         ],
         datasets: [{
-          label: 'Población por Estado Conyugal',
+          label: 'Población por llugar de nacimiento',
           data: [
             poblacion_residenciaData.mun, poblacion_residenciaData.otromun, poblacion_residenciaData.otropais, poblacion_residenciaData.nd 
           ],
@@ -763,7 +763,7 @@ document.addEventListener("DOMContentLoaded", function() {
           'Maya', 'Gaifuna', 'Xinca', 'Afrodescendiente \/ Creole \/ Afromestizo', 'Ladina(o)', 'Extranjera(o)'
         ],
         datasets: [{
-          label: 'Población por Estado Conyugal',
+          label: 'Población por Pueblo',
           data: [
             poblacion_puebloData.maya, poblacion_puebloData.xinca, poblacion_puebloData.garifuna,
             poblacion_puebloData.afro, poblacion_puebloData.ladino, poblacion_puebloData.extranjero 
@@ -803,7 +803,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
   }
 
-  // Gráfica de poblacion por pueblo
+  // Gráfica de poblacion por nivel educativo
   const poblacion_nivel_educativoDataElement = document.getElementById('poblacion-nivel-educativo');
   
   if (poblacion_nivel_educativoDataElement) {
@@ -818,11 +818,200 @@ document.addEventListener("DOMContentLoaded", function() {
           'Preprimaria', 'Primaria  1 - 3', 'Primaria 4 - 5', 'Primaria 6', 'Basico', 'Diversificado', 'Licenciatura', 'Maestria o Doctorado'
         ],
         datasets: [{
-          label: 'Población por Estado Conyugal',
+          label: 'Población por Nivel Educativo',
           data: [
             poblacion_nivel_educativoData.preprimaria, poblacion_nivel_educativoData.primaria1a3, poblacion_nivel_educativoData.primaria4a5,
             poblacion_nivel_educativoData.primaria1a6, poblacion_nivel_educativoData.basico, poblacion_nivel_educativoData.diversificado,
             poblacion_nivel_educativoData.licenciatura, poblacion_nivel_educativoData.maestriaodoctorado 
+          ],
+          borderColor: 'rgba(54, 162, 235, 1)',
+          backgroundColor: 'rgba(54, 162, 235, 0.2)',
+          borderWidth: 1
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: {
+            display: true,
+            position: 'top'
+          },
+          tooltip: {
+            callbacks: {
+              label: function(context) {
+                return `${context.raw.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}`;
+              }
+            }
+          }
+        },
+        scales: {
+          y: {
+            beginAtZero: true,
+            ticks: {
+              callback: function(value) {
+                return value.toLocaleString(); // Añadir comas como separadores de miles
+              }
+            }
+          }
+        }
+      }
+    });
+
+  }
+
+  // Gráfica de poblacion por alfabetismo
+  const poblacionAlfabetismoDataElement = document.getElementById('poblacion-alfabetismo');
+  
+  if (poblacionAlfabetismoDataElement) {
+    const poblacionAlfabetismoData = JSON.parse(poblacionAlfabetismoDataElement.textContent);
+
+    const ctx = document.getElementById('poblacionAlfabetismoChart').getContext('2d');
+    const total = poblacionAlfabetismoData.hombres + poblacionAlfabetismoData.mujeres;
+
+    const poblacionAlfabetismoChart = new Chart(ctx, {
+      type: 'pie',
+      data: {
+        labels: ['Hombres', 'Mujeres'],
+        datasets: [{
+          data: [poblacionAlfabetismoData.hombres, poblacionAlfabetismoData.mujeres],
+          backgroundColor: ['#36a2eb', '#ff6384'],
+          hoverBackgroundColor: ['#36a2eb', '#ff6384']
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          datalabels: {
+            formatter: (value, ctx) => {
+              let sum = ctx.dataset.data.reduce((a, b) => a + b, 0);
+              let percentage = ((value * 100) / sum).toFixed(2) + "%";
+              return percentage;
+            },
+            color: '#fff',
+          },
+          tooltip: {
+            callbacks: {
+              label: function(tooltipItem) {
+                const dataset = tooltipItem.dataset;
+                const currentValue = dataset.data[tooltipItem.dataIndex];
+                return `${currentValue.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}`;
+              }
+            }
+          }
+        }
+      },
+      plugins: [ChartDataLabels]
+    });
+
+    const ctx2 = document.getElementById('poblacionAsistenciaEscolarChart').getContext('2d');
+    const total2 = poblacionAlfabetismoData.asiste + poblacionAlfabetismoData.noasiste;
+
+    const poblacionAsistenciaEscolarChart = new Chart(ctx2, {
+      type: 'pie',
+      data: {
+        labels: ['Asiste', 'No Asiste'],
+        datasets: [{
+          data: [poblacionAlfabetismoData.asiste, poblacionAlfabetismoData.noasiste],
+          backgroundColor: ['#36a2eb', '#ff6384'],
+          hoverBackgroundColor: ['#36a2eb', '#ff6384']
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          datalabels: {
+            formatter: (value, ctx) => {
+              let sum = ctx.dataset.data.reduce((a, b) => a + b, 0);
+              let percentage = ((value * 100) / sum).toFixed(2) + "%";
+              return percentage;
+            },
+            color: '#fff',
+          },
+          tooltip: {
+            callbacks: {
+              label: function(tooltipItem) {
+                const dataset = tooltipItem.dataset;
+                const currentValue = dataset.data[tooltipItem.dataIndex];
+                return `${currentValue.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}`;
+              }
+            }
+          }
+        }
+      },
+      plugins: [ChartDataLabels]
+    });
+
+    const ctx3 = document.getElementById('poblacionLugarEstudioChart').getContext('2d');
+
+    const poblacionLugarEstudioChart = new Chart(ctx3, {
+      type: 'bar',
+      data: {
+        labels: [
+          'En el mismo municipio', 'En otro municipio', 'En otro pais', 
+          'No declarado'
+        ],
+        datasets: [{
+          label: 'Población por Lugar de Estudio',
+          data: [
+            poblacionAlfabetismoData.municipio, poblacionAlfabetismoData.otromunicipio, poblacionAlfabetismoData.otropais,
+            poblacionAlfabetismoData.nodeclarado
+          ],
+          borderColor: 'rgba(54, 162, 235, 1)',
+          backgroundColor: 'rgba(54, 162, 235, 0.2)',
+          borderWidth: 1
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: {
+            display: true,
+            position: 'top'
+          },
+          tooltip: {
+            callbacks: {
+              label: function(context) {
+                return `${context.raw.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}`;
+              }
+            }
+          }
+        },
+        scales: {
+          y: {
+            beginAtZero: true,
+            ticks: {
+              callback: function(value) {
+                return value.toLocaleString(); // Añadir comas como separadores de miles
+              }
+            }
+          }
+        }
+      }
+    });
+  }
+
+  // Gráfica de poblacion por nivel educativo
+  const poblacion_asistenciaDataElement = document.getElementById('poblacion-asistencia');
+  
+  if (poblacion_asistenciaDataElement) {
+    const poblacion_asistenciaData = JSON.parse(poblacion_asistenciaDataElement.textContent);
+
+    const ctx = document.getElementById('poblacionAsistenciaChart').getContext('2d');
+
+    const poblacionAsistenciaChart = new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: [
+          'Falta de Dinero', 'Tiene que trabajar', 'No hay escuela, instituto o universidad', 
+          'Los padres \/ pareja no quieren', 'Quehaceres del hogar', 'No le gusta \/ no quiere ir', 
+          'Ya termino sus estudios', 'Otra causa', 'No declarada'
+        ],
+        datasets: [{
+          label: 'Población por Falta de Asistencia',
+          data: [
+            poblacion_asistenciaData.faltadinero, poblacion_asistenciaData.tienetrabajar, poblacion_asistenciaData.noescuela,
+            poblacion_asistenciaData.padresimpiden, poblacion_asistenciaData.quehaceres, poblacion_asistenciaData.nogusta,
+            poblacion_asistenciaData.termino, poblacion_asistenciaData.otra, poblacion_asistenciaData.nodeclarada 
           ],
           borderColor: 'rgba(54, 162, 235, 1)',
           backgroundColor: 'rgba(54, 162, 235, 0.2)',
