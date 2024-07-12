@@ -276,6 +276,30 @@ tags:
                 </div>
             </div>
 
+            <div class="row align-items-center mb-4">
+                <div class="col-lg-12">
+                    <div class="cuadro_titulo">
+                        <h3>Educación</h3>
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <div class="row ">
+                        <div class="col-lg-4 my-4">
+                            <h3 class="mb-4">Población de 4 a 29 años que no asiste a un establecimiento educativo</h3>
+                            <h2>{{municipio.poblacion_no_asiste.total}}</h2>
+                            <h6 class="mb-4">habitantes</h6>
+
+                            <p>Fuente: Instituto Nacional de Estadística (INE)</p>
+                        </div>
+                        <div class="col-lg-4 my-4">
+                            <h5 class="text-center">Población de 4 años y más por nivel educativo</h5>
+                            <!-- Añadir un canvas para la gráfica -->
+                            <canvas id="poblacionNivelEducativoChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </section>
 {% endblock %}
@@ -432,6 +456,46 @@ tags:
       "afro": {{ municipio.poblacion_pueblo.afro or 0 }},
       "ladino": {{ municipio.poblacion_pueblo.ladino or 0 }},
       "extranjero": {{ municipio.poblacion_pueblo.extranjero or 0 }}
+	}
+</script>
+
+<script id="poblacion-nivel-educativo" type="application/json">
+	{
+	  "preprimaria": {{ municipio.poblacion_nivel_educativo.preprimaria or 0 }},
+      "primaria1a3": {{ municipio.poblacion_nivel_educativo.primaria1a3 or 0 }},
+      "primaria4a5": {{ municipio.poblacion_nivel_educativo.primaria4a5 or 0 }},
+      "primaria6": {{ municipio.poblacion_nivel_educativo.primaria6 or 0 }},
+      "labasicodino": {{ municipio.poblacion_nivel_educativo.basico or 0 }},
+      "diversificado": {{ municipio.poblacion_nivel_educativo.diversificado or 0 }},
+      "licenciatura": {{ municipio.poblacion_nivel_educativo.licenciatura or 0 }},
+      "maestriaodoctorado": {{ municipio.poblacion_nivel_educativo.maestriaodoctorado or 0 }}
+	}
+</script>
+
+<script id="poblacion-alfabetismo" type="application/json">
+	{
+	  "hombres": {{ municipio.poblacion_alfabetismo.hombres or 0 }},
+      "mujeres": {{ municipio.poblacion_alfabetismo.mujeres or 0 }},
+      "asiste": {{ municipio.poblacion_alfabetismo.asiste or 0 }},
+      "noasiste": {{ municipio.poblacion_alfabetismo.noasiste or 0 }},
+      "municipio": {{ municipio.poblacion_alfabetismo.municipio or 0 }},
+      "otromunicipio": {{ municipio.poblacion_alfabetismo.otromunicipio or 0 }},
+      "otropais": {{ municipio.poblacion_alfabetismo.otropais or 0 }},
+      "nodeclarado": {{ municipio.poblacion_alfabetismo.nodeclarado or 0 }},
+	}
+</script>
+
+<script id="poblacion-asistencia" type="application/json">
+	{
+	  "faltadinero": {{ municipio.poblacion_no_asiste.faltadinero or 0 }},
+      "tienetrabajar": {{ municipio.poblacion_no_asiste.tienetrabajar or 0 }},
+      "noescuela": {{ municipio.poblacion_no_asiste.noescuela or 0 }},
+      "padresimpiden": {{ municipio.poblacion_no_asiste.padresimpiden or 0 }},
+      "quehaceres": {{ municipio.poblacion_no_asiste.quehaceres or 0 }},
+      "nogusta": {{ municipio.poblacion_no_asiste.nogusta or 0 }},
+      "termino": {{ municipio.poblacion_no_asiste.termino or 0 }},
+      "otra": {{ municipio.poblacion_no_asiste.otra or 0 }},
+      "nodeclarada": {{ municipio.poblacion_no_asiste.nodeclarada or 0 }}
 	}
 </script>
 

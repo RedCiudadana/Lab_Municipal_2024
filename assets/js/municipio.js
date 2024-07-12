@@ -803,4 +803,60 @@ document.addEventListener("DOMContentLoaded", function() {
 
   }
 
+  // Gráfica de poblacion por pueblo
+  const poblacion_nivel_educativoDataElement = document.getElementById('poblacion-nivel-educativo');
+  
+  if (poblacion_nivel_educativoDataElement) {
+    const poblacion_nivel_educativoData = JSON.parse(poblacion_nivel_educativoDataElement.textContent);
+
+    const ctx = document.getElementById('poblacionNivelEducativoChart').getContext('2d');
+
+    const poblacionNivelEducativoChart = new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: [
+          'Preprimaria', 'Primaria  1 - 3', 'Primaria 4 - 5', 'Primaria 6', 'Basico', 'Diversificado', 'Licenciatura', 'Maestria o Doctorado'
+        ],
+        datasets: [{
+          label: 'Población por Estado Conyugal',
+          data: [
+            poblacion_nivel_educativoData.preprimaria, poblacion_nivel_educativoData.primaria1a3, poblacion_nivel_educativoData.primaria4a5,
+            poblacion_nivel_educativoData.primaria1a6, poblacion_nivel_educativoData.basico, poblacion_nivel_educativoData.diversificado,
+            poblacion_nivel_educativoData.licenciatura, poblacion_nivel_educativoData.maestriaodoctorado 
+          ],
+          borderColor: 'rgba(54, 162, 235, 1)',
+          backgroundColor: 'rgba(54, 162, 235, 0.2)',
+          borderWidth: 1
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: {
+            display: true,
+            position: 'top'
+          },
+          tooltip: {
+            callbacks: {
+              label: function(context) {
+                return `${context.raw.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}`;
+              }
+            }
+          }
+        },
+        scales: {
+          y: {
+            beginAtZero: true,
+            ticks: {
+              callback: function(value) {
+                return value.toLocaleString(); // Añadir comas como separadores de miles
+              }
+            }
+          }
+        }
+      }
+    });
+
+  }
+
 });
