@@ -21,7 +21,7 @@ tags:
 
 {% block content %}
     <!-- ====== Hero Start ====== -->
-    <section class="ud-hero" id="home">
+    <!-- <section class="ud-hero" id="home">
         <div class="container">
           <div class="row">
             <div class="col-lg-12">
@@ -37,14 +37,21 @@ tags:
             </div>
           </div>
         </div>
-    </section>
+    </section> -->
     <!-- ====== Hero End ====== -->
 
     <div class="container">
         <div class="row">
             <div class="col-lg-3">
                 <div class="sidebar">
-                    <ul>
+                    <div style="padding-top: 60px;">
+                        <h5>Municipio: <br><span>{{ municipio.municipio }}</span></h5>
+                        <h5>Departamento: <br><span>{{ municipio.departamento }}</span></h5>
+                    </div>
+                    <div style="padding-top: 20px;">
+                        <h3>Selección de Tema</h3>
+                    </div>
+                    <ul class="semicircle-menu" style="padding: 10px 0 ;">
                         <li><a href="#" class="tab-link active" data-target="#general">General</a></li>
                         <li><a href="#" class="tab-link" data-target="#gestion-municipal">Gestión Municipal</a></li>
                         <li><a href="#" class="tab-link" data-target="#transparencia">Transparencia</a></li>
@@ -57,16 +64,17 @@ tags:
             </div>
           
             <div class="col-lg-9">
+                
                 <div id="tab-content">
 
                     <section id="general" class="ud-section tab-content active">
                         <div class="container">
                             <div class="row align-items-center mb-4">
-                                <div class="col-lg-12">
+                                <!-- <div class="col-lg-12">
                                     <div class="cuadro_titulo">
                                         <h3>General</h3>
                                     </div>
-                                </div>
+                                </div> -->
                                 <div class="col-lg-12">
                                     <div class="row ">
                                         <div class="col-lg-4 my-4">
@@ -128,11 +136,11 @@ tags:
                     <section id="gestion-municipal" class="ud-section tab-content">
                         <div class="container">
                             <div class="row align-items-center mb-4">
-                                <div class="col-lg-12">
+                                <!-- <div class="col-lg-12">
                                     <div class="cuadro_titulo">
                                         <h3>Gestión Municipal</h3>
                                     </div>
-                                </div>
+                                </div> -->
                                 <div class="col-lg-12">
                                     <div class="row ">
                                         <div class="col-lg-4 my-4">
@@ -155,11 +163,11 @@ tags:
                         <div class="container">
 
                             <div class="row align-items-center mb-4">
-                                <div id="transparencia" class="col-lg-12">
+                                <!-- <div id="transparencia" class="col-lg-12">
                                     <div class="cuadro_titulo">
                                         <h3>Transparencia</h3>
                                     </div>
-                                </div>
+                                </div> -->
                                 <div class="col-lg-12">
                                     <div class="row ">
                                         <div class="col-lg-4 my-4">
@@ -182,11 +190,11 @@ tags:
                         <div class="container">
 
                             <div class="row align-items-center mb-4">
-                                <div class="col-lg-12">
+                                <!-- <div class="col-lg-12">
                                     <div class="cuadro_titulo">
                                         <h3>Nutrición / Alimentación</h3>
                                     </div>
-                                </div>
+                                </div> -->
                                 <div class="col-lg-12">
                                     <div class="row ">
                                         <div class="col-lg-4 my-4">
@@ -227,11 +235,11 @@ tags:
                         <div class="container">
 
                             <div class="row align-items-center mb-4">
-                                <div class="col-lg-12">
+                                <!-- <div class="col-lg-12">
                                     <div class="cuadro_titulo">
                                         <h3>Pobreza</h3>
                                     </div>
-                                </div>
+                                </div> -->
                                 <div class="col-lg-12">
                                     <div class="row ">
                                         <div class="col-lg-4 my-4">
@@ -254,11 +262,11 @@ tags:
                         <div class="container">
 
                             <div class="row align-items-center mb-4">
-                                <div class="col-lg-12">
+                                <!-- <div class="col-lg-12">
                                     <div class="cuadro_titulo">
                                         <h3>Población</h3>
                                     </div>
-                                </div>
+                                </div> -->
                                 <div class="col-lg-12">
                                     <div class="row ">
                                         <div class="col-lg-4 my-4">
@@ -328,11 +336,11 @@ tags:
                         <div class="container">
 
                             <div class="row align-items-center mb-4">
-                                <div class="col-lg-12">
+                                <!-- <div class="col-lg-12">
                                     <div class="cuadro_titulo">
                                         <h3>Educación</h3>
                                     </div>
-                                </div>
+                                </div> -->
                                 <div class="col-lg-12">
                                     <div class="row ">
                                         <div class="col-lg-4 my-4">

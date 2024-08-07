@@ -1309,7 +1309,7 @@ p {
 
 /* ===== Contact CSS ===== */
 .ud-section {
-  padding: 120px 0px;
+  padding: 60px 0px;
   position: relative;
 }
 
@@ -2843,11 +2843,9 @@ hr{
 }
 
 .sidebar {
-
   height: 100%;
-  background: #f8f9fa;
   padding: 20px;
-  border-right: 1px solid #dee2e6;
+
 }
 
 .sidebar ul {
@@ -2861,8 +2859,17 @@ hr{
 
 .sidebar ul li a {
   text-decoration: none;
-  color: #007bff;
+  color: #073753;
   font-weight: bold;
+}
+
+.sidebar ul li .active{
+  color: #fff;
+  background-color: #03ac8a;
+  padding: 5px;
+  border-radius: 5px;
+  scale: 1.2;
+  margin-left: 15px;
 }
 
 .tab-content {
