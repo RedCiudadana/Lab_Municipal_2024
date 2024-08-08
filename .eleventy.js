@@ -42,6 +42,7 @@ module.exports = function (eleventyConfig) {
 
 	eleventyConfig.addCollection("municipios_completos", async function(collectionApi) {
 		const municipios = JSON.parse(fs.readFileSync(path.join(__dirname, 'data_files', 'municipios.json'), 'utf-8'));
+		const geojson = JSON.parse(fs.readFileSync(path.join(__dirname, 'data_files', 'municipios.geojson'), 'utf-8'));
 
 		let url = `https://data-dataverso.redciudadana.org/assets/conjuntos/cuadroa1_poblacion_total_por_sexo_grupos_quinquenales_de__edad_y_area.json`;
 		const poblacion_sexo = await fetchDataset(url);
@@ -82,7 +83,7 @@ module.exports = function (eleventyConfig) {
 		url = `https://data-dataverso.redciudadana.org/assets/conjuntos/cuadroa11_poblacion_de_7_anos_o_mas_por_alfabetismo_asistencia_escolar_y_lugar_de_estudio.json`;
 		const poblacion_alfabetismo = await fetchDataset(url);
 
-		return municipios.slice(0,10).map(municipio => {
+		return municipios.map(municipio => {
 			const poblacion_sexoData = poblacion_sexo.find(pob => pob.id_municipal === municipio.id_municipal) || {};
 			const educacionData = educacion.find(edu => (edu.id_municipal === municipio.id_municipal) && (edu.Periodo === 2019)) || {};
 			const gestionData = gestion.find(gestion => gestion.id_municipal === municipio.id_municipal) || {};
@@ -98,6 +99,9 @@ module.exports = function (eleventyConfig) {
 			const poblacion_no_asisteData = poblacion_no_asiste.find(pob => pob.id_municipal === municipio.id_municipal) || {};
 			const poblacion_nivel_educativoData = poblacion_nivel_educativo.find(pob => pob.id_municipal === municipio.id_municipal) || {};
 			const poblacion_alfabetismoData = poblacion_alfabetismo.find(pob => pob.id_municipal === municipio.id_municipal) || {};
+
+			const geojsonData = geojson.features.find(feature => feature.properties.id_municipal === municipio.id_municipal) || {};
+      		const geometry = geojsonData.geometry || {};
 
 			const groupedDesnutricionData = desnutricionData.reduce((acc, desnu) => {
 				if (!acc[desnu.periodo]) {
@@ -260,6 +264,7 @@ module.exports = function (eleventyConfig) {
 
 			return {
 				...municipio,
+				geometry,
 				poblacion_sexo: filteredPoblacionSexoData,
 				educacion: filteredEducacionData,
 				desnutricion: groupedDesnutricionData,

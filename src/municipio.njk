@@ -17,29 +17,20 @@ tags:
     <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
     <link rel="stylesheet" href="/assets/css/ud-styles.css">
 
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
 {% endblock %}
 
 {% block content %}
     <!-- ====== Hero Start ====== -->
     <section class="ud-hero" id="home">
         <div class="container">
-          <div class="row justify-content-between">
-            <div class="col-lg-4">
-                <h5 class="text-white">{{ municipio.departamento }} - {{ municipio.municipio }}</h5>
+          <div class="row">
+            <div class="col-lg-12 text-center">
+                <h3 class="text-white">{{ municipio.departamento }}, {{ municipio.municipio }}</h3>
             </div>
-            <div class="col-lg-4">
-                <div class="row justify-content-end">
-                    <div class="col-lg-4">
-                        <button id="shareButton" class="header-buttons"><i class="fa-solid fa-share-nodes"></i>Compartir</button>
-                    </div>
-                    <div class="col-lg-4">
-                        <button id="expandButton" class="header-buttons"><i id="expandIcon" class="fa-solid fa-maximize"></i>Expandir</button>
-                    </div>
-                    <div class="col-lg-4">
-                        <button id="disclaimerButton" class="header-buttons">Disclaimer</button>
-                    </div>
-                </div>
-            </div>
+            
           </div>
         </div>
     </section>
@@ -54,25 +45,30 @@ tags:
         </div>
     </div>
 
-    <!-- Disclaimer Popup -->
-    <div id="disclaimerPopup" class="popup">
+    <!-- Guia Popup -->
+    <div id="guiaPopup" class="popup">
         <div class="popup-content">
-            <span class="close" id="closeDisclaimerPopup">&times;</span>
-            <p>Este es el texto del disclaimer.</p>
+            <span class="close" id="closeGuiaPopup">&times;</span>
+            <p>Este es el texto de la guia.</p>
         </div>
     </div>
 
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-3">
-                <div class="sidebar">
+    <!-- Metodologia Popup -->
+    <div id="metodologiaPopup" class="popup">
+        <div class="popup-content">
+            <span class="close" id="closeMetodologiaPopup">&times;</span>
+            <p>Este es el texto de la metodologia.</p>
+        </div>
+    </div>
+
+    <div class="mx-5">
+        <div class="row w-100">
+            <div class="col-lg-2">
+                <div class="sidebar box_shadow_section">
                     <!-- <div style="padding-top: 60px;">
                         <h5>Municipio: <br><span>{{ municipio.municipio }}</span></h5>
                         <h5>Departamento: <br><span>{{ municipio.departamento }}</span></h5>
                     </div> -->
-                    <div style="padding-top: 20px;">
-                        <h3>Selección de Tema</h3>
-                    </div>
                     <ul class="semicircle-menu" style="padding: 10px 0 ;">
                         <li><a href="#" class="tab-link active" data-target="#general">General</a></li>
                         <li><a href="#" class="tab-link" data-target="#gestion-municipal">Gestión Municipal</a></li>
@@ -85,11 +81,29 @@ tags:
                 </div>
             </div>
           
-            <div class="col-lg-9">
-                
-                <div id="tab-content">
+            <div class="col-lg-10">
+                <div class="row justify-content-end box_shadow_section_2" >
+                    <div class="col-lg-7">
+                        <div class="row justify-content-end">
+                            <div class="col-lg-3 col-sm-4">
+                                <button id="shareButton" class="header-buttons"><i class="fa-solid fa-share-nodes"></i>Compartir</button>
+                            </div>
+                            <div class="col-lg-3 col-sm-4">
+                                <button id="expandButton" class="header-buttons"><i id="expandIcon" class="fa-solid fa-maximize"></i>Expandir</button>
+                            </div>
+                            <div class="col-lg-3 col-sm-4">
+                                <button id="guiaButton" class="header-buttons">Guía</button>
+                            </div>
+                            <div class="col-lg-3 col-sm-4">
+                                <button id="metodologiaButton" class="header-buttons">Metodología</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-                    <section id="general" class="ud-section tab-content active">
+                <div id="tab-content w-100">
+
+                    <section id="general" class="ud-section tab-content box_shadow_section active">
                         <div class="container">
                             <div class="row align-items-center mb-4">
                                 <!-- <div class="col-lg-12">
@@ -99,6 +113,9 @@ tags:
                                 </div> -->
                                 <div class="col-lg-12">
                                     <div class="row ">
+                                        <div class="col-lg-12">
+                                            <div id="map" style="width: 600px; height: 400px;"></div>
+                                        </div>
                                         <div class="col-lg-4 my-4">
                                             <h3 class="mb-4">Población total</h3>
                                             {% set pobtotal = municipio.poblacion_sexo.Hombres + municipio.poblacion_sexo.Mujeres %}
@@ -155,7 +172,7 @@ tags:
                         </div>
                     </section>
 
-                    <section id="gestion-municipal" class="ud-section tab-content">
+                    <section id="gestion-municipal" class="ud-section tab-content box_shadow_section">
                         <div class="container">
                             <div class="row align-items-center mb-4">
                                 <!-- <div class="col-lg-12">
@@ -181,7 +198,7 @@ tags:
                         </div>
                     </section>
 
-                    <section id="transparencia" class="ud-section tab-content">
+                    <section id="transparencia" class="ud-section tab-content box_shadow_section">
                         <div class="container">
 
                             <div class="row align-items-center mb-4">
@@ -208,7 +225,7 @@ tags:
                         </div>
                     </section>
 
-                    <section id="nutricion" class="ud-section tab-content">
+                    <section id="nutricion" class="ud-section tab-content box_shadow_section">
                         <div class="container">
 
                             <div class="row align-items-center mb-4">
@@ -253,7 +270,7 @@ tags:
                         </div>
                     </section>
 
-                    <section id="pobreza" class="ud-section tab-content">
+                    <section id="pobreza" class="ud-section tab-content box_shadow_section">
                         <div class="container">
 
                             <div class="row align-items-center mb-4">
@@ -280,7 +297,7 @@ tags:
                         </div>
                     </section>
 
-                    <section id="poblacion" class="ud-section tab-content">
+                    <section id="poblacion" class="ud-section tab-content box_shadow_section">
                         <div class="container">
 
                             <div class="row align-items-center mb-4">
@@ -354,7 +371,7 @@ tags:
                         </div>
                     </section>
 
-                    <section id="educacion" class="ud-section tab-content">
+                    <section id="educacion" class="ud-section tab-content box_shadow_section">
                         <div class="container">
 
                             <div class="row align-items-center mb-4">
@@ -461,17 +478,30 @@ tags:
         }
     }
 
-    // Disclaimer Popup
-    var disclaimerButton = document.getElementById('disclaimerButton');
-    var disclaimerPopup = document.getElementById('disclaimerPopup');
-    var closeDisclaimerPopup = document.getElementById('closeDisclaimerPopup');
+    // Guia Popup
+    var guiaButton = document.getElementById('guiaButton');
+    var guiaPopup = document.getElementById('guiaPopup');
+    var closeGuiaPopup = document.getElementById('closeGuiaPopup');
 
-    disclaimerButton.onclick = function() {
-        disclaimerPopup.style.display = "block";
+    guiaButton.onclick = function() {
+        guiaPopup.style.display = "block";
     }
 
-    closeDisclaimerPopup.onclick = function() {
-        disclaimerPopup.style.display = "none";
+    closeGuiaPopup.onclick = function() {
+        guiaPopup.style.display = "none";
+    }
+
+    // Metodologia Popup
+    var metodologiaButton = document.getElementById('metodologiaButton');
+    var metodologiaPopup = document.getElementById('metodologiaPopup');
+    var closeMetodologiaPopup = document.getElementById('closeMetodologiaPopup');
+
+    metodologiaButton.onclick = function() {
+        metodologiaPopup.style.display = "block";
+    }
+
+    closeMetodologiaPopup.onclick = function() {
+        metodologiaPopup.style.display = "none";
     }
 
     // Cerrar popups al hacer clic fuera de ellos
@@ -479,10 +509,47 @@ tags:
         if (event.target == sharePopup) {
             sharePopup.style.display = "none";
         }
-        if (event.target == disclaimerPopup) {
-            disclaimerPopup.style.display = "none";
+        if (event.target == guiaPopup) {
+            guiaPopup.style.display = "none";
+        }
+        if (event.target == metodologiaPopup) {
+            metodologiaPopup.style.display = "none";
         }
     }
+</script>
+
+<!-- Incluir los datos de geometría como JSON -->
+<script id="geometry-data" type="application/json">
+    {{ municipio.geometry | dump | safe }}
+</script>
+
+<script>
+    // Inicializar el mapa
+    var map = L.map('map');
+
+    // Agregar la capa de mosaico de OpenStreetMap con un estilo más oscuro
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '© OpenStreetMap contributors',
+      opacity: 0.3 // Hacer la capa base más oscura
+    }).addTo(map);
+
+    // Obtener los datos de geometría del script JSON
+    var geojsonData = JSON.parse(document.getElementById('geometry-data').textContent);
+
+    var geojsonStyle = {
+      color: 'white',     // Contorno blanco
+      weight: 2,          // Ancho del contorno
+      fillColor: 'blue',  // Relleno azul
+      fillOpacity: 0.5    // Opacidad del relleno
+    };
+
+    // Agregar la geometría al mapa con el estilo definido
+    var geojsonLayer = L.geoJSON(geojsonData, {
+      style: geojsonStyle
+    }).addTo(map);
+
+    // Ajustar la vista del mapa para centrar la geometría del municipio
+    map.fitBounds(geojsonLayer.getBounds());
 </script>
 
 {% if municipio.poblacion_sexo.Rural == "-" %}

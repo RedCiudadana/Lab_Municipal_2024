@@ -1309,7 +1309,7 @@ p {
 
 /* ===== Contact CSS ===== */
 .ud-section {
-  padding: 60px 0px;
+  padding: 10px 0px;
   position: relative;
 }
 
@@ -2917,9 +2917,12 @@ hr{
 }
 
 .header-buttons{
-  background-color: white;
+  background-color: var(--primary-color);
+  color: #fff;
   border-radius: 5px;
   padding: 5px 10px;
+  margin: 0 5px;
+  width: 100%;
   transition: 0.5s all ease;
 }
 
@@ -2929,4 +2932,19 @@ hr{
 
 .header-buttons i{
   margin-right: 5px;
+}
+
+.box_shadow_section{
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  box-shadow: 5px 5px 5px #ccc;
+}
+
+.box_shadow_section_2{
+  background-color: #ddd;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  box-shadow: 5px 5px 5px #ccc;
+  margin: 0px 0px 10px 0px;
+  padding: 10px 0;
 }
