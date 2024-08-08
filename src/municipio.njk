@@ -8,7 +8,7 @@ permalink: "{{ municipio.departamento }}/{{ municipio.municipio }}/index.html"
 tags:
   - municipio
 ---
-{% extends "src/base.njk" %}
+{% extends "src/base2.njk" %}
 
 {% block head %}
 
@@ -23,22 +23,44 @@ tags:
     <!-- ====== Hero Start ====== -->
     <section class="ud-hero" id="home">
         <div class="container">
-          <div class="row">
-            <div class="col-lg-12">
-              <div class="ud-hero-content wow fadeInUp" data-wow-delay=".2s">
-                <h1 class="ud-hero-title">
-                  {{ municipio.municipio }}
-                </h1>
-                <p class="ud-hero-desc">
-                  {{ municipio.departamento }}/{{ municipio.municipio }}
-                </p>
+          <div class="row justify-content-between">
+            <div class="col-lg-4">
+                <h5 class="text-white">{{ municipio.departamento }} - {{ municipio.municipio }}</h5>
+            </div>
+            <div class="col-lg-4">
+                <div class="row justify-content-end">
+                    <div class="col-lg-4">
+                        <button id="shareButton" class="header-buttons"><i class="fa-solid fa-share-nodes"></i>Compartir</button>
+                    </div>
+                    <div class="col-lg-4">
+                        <button id="expandButton" class="header-buttons"><i id="expandIcon" class="fa-solid fa-maximize"></i>Expandir</button>
+                    </div>
+                    <div class="col-lg-4">
+                        <button id="disclaimerButton" class="header-buttons">Disclaimer</button>
+                    </div>
                 </div>
-              </div>
             </div>
           </div>
         </div>
     </section>
     <!-- ====== Hero End ====== -->
+
+    <!-- Compartir Popup -->
+    <div id="sharePopup" class="popup">
+        <div class="popup-content">
+            <span class="close" id="closeSharePopup">&times;</span>
+            <p>Opciones para compartir</p>
+            <!-- Añade tus opciones para compartir aquí -->
+        </div>
+    </div>
+
+    <!-- Disclaimer Popup -->
+    <div id="disclaimerPopup" class="popup">
+        <div class="popup-content">
+            <span class="close" id="closeDisclaimerPopup">&times;</span>
+            <p>Este es el texto del disclaimer.</p>
+        </div>
+    </div>
 
     <div class="container">
         <div class="row">
@@ -406,9 +428,62 @@ tags:
       // Asignar el evento de clic a cada enlace de tab
       tabLinks.forEach(link => link.addEventListener("click", changeTab));
     });
-  </script>
+</script>
   
-  
+<script>
+    // Compartir Popup
+    var shareButton = document.getElementById('shareButton');
+    var sharePopup = document.getElementById('sharePopup');
+    var closeSharePopup = document.getElementById('closeSharePopup');
+
+    shareButton.onclick = function() {
+        sharePopup.style.display = "block";
+    }
+
+    closeSharePopup.onclick = function() {
+        sharePopup.style.display = "none";
+    }
+
+    // Expandir Pantalla
+    var expandButton = document.getElementById('expandButton');
+    var expandIcon = document.getElementById('expandIcon');
+    expandButton.onclick = function() {
+        if (!document.fullscreenElement) {
+            document.documentElement.requestFullscreen();
+            expandIcon.classList.remove('fa-maximize');
+            expandIcon.classList.add('fa-minimize');
+        } else {
+            if (document.exitFullscreen) {
+                document.exitFullscreen();
+                expandIcon.classList.remove('fa-minimize');
+                expandIcon.classList.add('fa-maximize');
+            }
+        }
+    }
+
+    // Disclaimer Popup
+    var disclaimerButton = document.getElementById('disclaimerButton');
+    var disclaimerPopup = document.getElementById('disclaimerPopup');
+    var closeDisclaimerPopup = document.getElementById('closeDisclaimerPopup');
+
+    disclaimerButton.onclick = function() {
+        disclaimerPopup.style.display = "block";
+    }
+
+    closeDisclaimerPopup.onclick = function() {
+        disclaimerPopup.style.display = "none";
+    }
+
+    // Cerrar popups al hacer clic fuera de ellos
+    window.onclick = function(event) {
+        if (event.target == sharePopup) {
+            sharePopup.style.display = "none";
+        }
+        if (event.target == disclaimerPopup) {
+            disclaimerPopup.style.display = "none";
+        }
+    }
+</script>
 
 {% if municipio.poblacion_sexo.Rural == "-" %}
   {% set ruralidad = 0 %}
