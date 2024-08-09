@@ -19881,3 +19881,9 @@ label.checkbox {
   background-color: #00af87;
   margin-left: 170px;
 }
+
+/* Cambiar el color de los signos "+" y "-" */
+.leaflet-control-zoom-in span,
+.leaflet-control-zoom-out span{
+  color: black !important; /* Cambiar el color del signo a negro */
+}

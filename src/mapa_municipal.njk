@@ -66,7 +66,8 @@ permalink: "mapa/index.html"
 
     // Redirigir al hacer clic en el municipio
     layer.on('click', function () {
-      window.location.href = feature.properties.link;
+      var customLink = `/${feature.properties.departamento}/${feature.properties.municipio}/index.html`;
+      window.location.href = customLink;
     });
 
     // Cambiar el estilo al hacer hover
