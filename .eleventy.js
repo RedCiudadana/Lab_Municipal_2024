@@ -40,6 +40,12 @@ module.exports = function (eleventyConfig) {
 	eleventyConfig.addPassthroughCopy('admin');
 	eleventyConfig.addPassthroughCopy('assets');
 
+	eleventyConfig.addGlobalData("geojson", () => {
+		const geojsonPath = path.join(__dirname, 'data_files', 'municipios.geojson');
+		const geojsonData = JSON.parse(fs.readFileSync(geojsonPath, 'utf-8'));
+		return geojsonData;
+	});
+
 	eleventyConfig.addCollection("municipios_completos", async function(collectionApi) {
 		const municipios = JSON.parse(fs.readFileSync(path.join(__dirname, 'data_files', 'municipios.json'), 'utf-8'));
 		const geojson = JSON.parse(fs.readFileSync(path.join(__dirname, 'data_files', 'municipios.geojson'), 'utf-8'));

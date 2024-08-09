@@ -550,6 +550,17 @@ tags:
 
     // Ajustar la vista del mapa para centrar la geometría del municipio
     map.fitBounds(geojsonLayer.getBounds());
+
+    // Crear un botón personalizado para redirigir a la página del mapa general
+    var homeButton = L.control({ position: 'topleft' });
+
+    homeButton.onAdd = function(map) {
+    var div = L.DomUtil.create('div', 'leaflet-bar leaflet-control leaflet-control-custom');
+    div.innerHTML = '<a href="/mapa/index.html" title="Ir al Mapa General" style="display: block; width: 30px; height: 30px; background: url(\'https://cdn-icons-png.flaticon.com/512/25/25694.png\') no-repeat center; background-size: 16px 16px;"></a>';
+    return div;
+    };
+
+    homeButton.addTo(map);
 </script>
 
 {% if municipio.poblacion_sexo.Rural == "-" %}

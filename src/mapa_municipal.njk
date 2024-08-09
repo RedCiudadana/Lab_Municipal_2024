@@ -1,0 +1,92 @@
+---
+permalink: "mapa/index.html"
+---
+
+{% extends "src/base.njk" %}
+
+{% block head %}
+<title>Mapa Municipal | Gobierno Digital</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+{% endblock %}
+
+{% block content %}
+    <section class="px-2" style="background-color: #e9f0f8;">
+        <div class="container clearfix ">
+            <div class="row py-6">
+                <div class="col-lg-12 mb-4">
+                    <h1 style="font-size: 30px;">Mapa Municipal de Guatemala</h1>
+                    <p>Para conocer más sobre el municipio visita el perfil, presionando el municipio del mapa.</p>
+                </div>
+                <div class="col-lg-12 mb-4">
+                    <div id="map" style="width: 100%; height: 600px;"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
+
+{% block body_javascripts %}
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+<!-- Incluir los datos de geometría de todos los municipios como JSON -->
+<script id="all-geojson-data" type="application/json">
+  {{ geojson | dump | safe }}
+</script>
+
+<script>
+  // Inicializar el mapa
+  var map = L.map('map').setView([15.783471, -90.230759], 7);
+
+  // Agregar la capa de mosaico de OpenStreetMap con un estilo más oscuro
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '© OpenStreetMap contributors',
+    opacity: 0.3 // Hacer la capa base más oscura
+  }).addTo(map);
+
+  // Obtener los datos de geometría del script JSON
+  var geojsonData = JSON.parse(document.getElementById('all-geojson-data').textContent);
+
+  // Opciones de estilo para la geometría de los municipios
+  var geojsonStyle = {
+    color: 'white',     // Contorno blanco
+    weight: 1,          // Ancho del contorno
+    fillColor: 'blue',  // Relleno azul
+    fillOpacity: 0.5    // Opacidad del relleno
+  };
+
+  // Opciones de interacción
+  function onEachFeature(feature, layer) {
+    // Mostrar el nombre del municipio y el departamento al hacer hover
+    layer.bindTooltip(`${feature.properties.municipio}, ${feature.properties.departamento}`, {
+      permanent: false,
+      direction: 'auto',
+      className: 'leaflet-tooltip-own'
+    });
+
+    // Redirigir al hacer clic en el municipio
+    layer.on('click', function () {
+      window.location.href = feature.properties.link;
+    });
+
+    // Cambiar el estilo al hacer hover
+    layer.on('mouseover', function () {
+      layer.setStyle({
+        fillColor: 'yellow',
+        fillOpacity: 0.7
+      });
+    });
+
+    // Revertir el estilo al salir del hover
+    layer.on('mouseout', function () {
+      layer.setStyle(geojsonStyle);
+    });
+  }
+
+  // Agregar la geometría al mapa con el estilo y las interacciones definidas
+  L.geoJSON(geojsonData, {
+    style: geojsonStyle,
+    onEachFeature: onEachFeature
+  }).addTo(map);
+</script>
+{% endblock %}
