@@ -1,0 +1,68 @@
+---
+permalink: "municipios/index.html"
+---
+
+{% extends "src/base.njk" %}
+
+{% block head %}
+<title>Lab Municipal | Municipios</title>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+{% endblock %}
+
+{% block content %}
+<!-- Slider
+============================================= -->
+<section id="slider" class="slider-element px-2">
+    <div class="container" style="padding: 0 0;">
+        <div class="row align-items-center">
+            <div class="col-lg-6 my-4">
+                <h1 class="text-titles" style="font-size: 60px!important;line-height: 60px;">Municipios </h1>
+                <div class="my-4">
+                    <input type="text" id="municipioSearch" placeholder="Buscar municipio..." class="form-control">
+                </div>
+            </div>
+            <div class="col-lg-6 my-4">
+                <img style="width: 50%; margin: auto;" src="/assets/img/interoperabilidad/SLIDER 02.png">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Buscador y Lista de Municipios
+============================================= -->
+<section class="px-2" style="background-color: #fff;">
+    <div class="container clearfix">
+
+        <div class="row py-6 align-items-center" id="municipioList">
+            {% for municipio in collections.municipio %}
+            <div class="col-lg-3 my-2 municipio-item">
+                <a href="{{municipio.url}}">
+                    <div class="municipio_box">
+                        <img src="/assets/images/placeholder2.png">
+                        <div class="text">
+                            <h4>{{municipio.data.municipio.departamento}}, {{municipio.data.municipio.municipio}}</h4>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<script>
+    $(document).ready(function() {
+        $('#municipioSearch').on('input', function() {
+            var searchText = $(this).val().toLowerCase();
+            $('#municipioList .municipio-item').each(function() {
+                var municipioText = $(this).text().toLowerCase();
+                if (municipioText.includes(searchText)) {
+                    $(this).show();
+                } else {
+                    $(this).hide();
+                }
+            });
+        });
+    });
+</script>
+{% endblock %}

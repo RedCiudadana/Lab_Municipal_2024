@@ -19887,3 +19887,25 @@ label.checkbox {
 .leaflet-control-zoom-out span{
   color: black !important; /* Cambiar el color del signo a negro */
 }
+
+.municipio_box{
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 3px 3px 3px #ccc;
+  height: 100%;
+  margin: 10px 0;
+  transition: 0.5s all ease;
+}
+
+.municipio_box:hover{
+  transform: translate(-3px, -3px);
+}
+
+.municipio_box .text{
+  padding: 20px 20px 30px 20px;
+}
+
+.municipio_box .text h4{
+  font-size: 20px;
+  height: 40px;
+}
