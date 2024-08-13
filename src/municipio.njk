@@ -116,8 +116,13 @@ tags:
                                 </div> -->
                                 <div class="col-lg-12">
                                     <div class="row ">
-                                        <div class="col-lg-12">
+                                        <div class="col-lg-6">
                                             <div id="map" style="width: 600px; height: 400px;"></div>
+                                        </div>
+                                        <div class="col-lg-6 align-items-center d-flex">
+                                            <p>
+                                                Lorem ipsum odor amet, consectetuer adipiscing elit. Hendrerit metus tortor semper lectus mus dignissim. Eu habitasse per nam senectus nisl libero mauris. Dapibus duis magna tempus tempus morbi; mollis risus quis senectus. Malesuada ligula egestas, potenti posuere nulla commodo. Malesuada feugiat enim vehicula et varius nostra vel fringilla volutpat. Curabitur curae dapibus facilisis ullamcorper et. Rutrum himenaeos ultrices dui aenean taciti nec metus viverra ac. Vitae tellus euismod conubia ullamcorper mi sagittis duis est nisl.
+                                            </p>
                                         </div>
                                         <div class="col-lg-4 my-4">
                                             <h3 class="mb-4">Población total</h3>
@@ -128,18 +133,22 @@ tags:
                                             <p>Fuente: Instituto Nacional de Estadística (INE)</p>
                                         </div>
                                         <div class="col-lg-4 my-4">
-                                            <h5 class="text-center">Población total por sexo</h5>
-                                            <!-- Añadir un canvas para la gráfica -->
-                                            <canvas id="poblacionSexoChart"></canvas>
+                                            <h3 >Desnutrición Crónica Total</h3>
+                                            <h1 class="mb-4">{{municipio.desnutricion['2019']['Crónica']}}</h1>
+
+                                            <p>Fuente: Ministerio de salud pública y asistencia social (MSPAS) 2019</p>
+                                            
                                         </div>
                                         <div class="col-lg-4 my-4">
-                                            <h5 class="text-center">Población total por área</h5>
-                                            <!-- Añadir un canvas para la gráfica -->
-                                            <canvas id="poblacionAreaChart"></canvas>
+                                            <h3 >Desnutrición Aguda Total</h3>
+                                            <h1 class="mb-4">{{municipio.desnutricion['2019']['Aguda']}}</h1>
+
+                                            <p>Fuente: Ministerio de salud pública y asistencia social (MSPAS) 2019</p>
                                         </div>
+                                        
                                     </div>
 
-                                    <div class="row ">
+                                    <!-- <div class="row ">
                                         <div class="col-lg-6 my-4">
                                             <h3 >Desnutrición Crónica Total</h3>
                                             <h1 class="mb-4">{{municipio.desnutricion['2019']['Crónica']}}</h1>
@@ -153,6 +162,7 @@ tags:
 
                                             <p>Fuente: Ministerio de salud pública y asistencia social (MSPAS) 2019</p>
                                         </div>
+
                                     </div>
 
                                     <div class="row ">
@@ -169,7 +179,7 @@ tags:
 
                                             <p>Fuente: Instituto Nacional de Estadística (INE)</p>
                                         </div>
-                                    </div>
+                                    </div> -->
                                 </div>
                             </div>
                         </div>
@@ -185,6 +195,17 @@ tags:
                                 </div> -->
                                 <div class="col-lg-12">
                                     <div class="row ">
+                                        <!-- AQUI NO VA ESTO -->
+                                        <div class="col-lg-4 my-4">
+                                            <h5 class="text-center">Población total por sexo</h5>
+                                            
+                                            <canvas id="poblacionSexoChart"></canvas>
+                                        </div>
+                                        <div class="col-lg-4 my-4">
+                                            <h5 class="text-center">Población total por área</h5>
+                                            
+                                            <canvas id="poblacionAreaChart"></canvas>
+                                        </div>
                                         <div class="col-lg-4 my-4">
                                             <h3 >Índice de Gestión Municipal</h3>
                                             <h1 class="mb-4">{{municipio.gestion.Promediosegeplan | limitNumberLength(4)}}</h1>
