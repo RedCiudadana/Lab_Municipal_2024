@@ -1,0 +1,2722 @@
+[
+    {
+     "id_dep": 1,
+     "departamento": "Guatemala",
+     "id_municipal": 101,
+     "municipio": "Guatemala",
+     "Resumen": "El municipio de Guatemala es el centro neurálgico del país, donde convergen la política, la economía y la cultura. Con una infraestructura avanzada, es sede de los principales organismos gubernamentales y corporaciones. Es un municipio marcado por su rica historia y dinamismo urbano, siendo el motor económico de la nación.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 1,
+     "departamento": "Guatemala",
+     "id_municipal": 102,
+     "municipio": "Santa Catarina Pinula",
+     "Resumen": "Santa Catarina Pinula se distingue por su desarrollo residencial de alto nivel, con un crecimiento sostenido en las últimas décadas. Ubicado en las afueras de la Ciudad de Guatemala, ofrece un ambiente tranquilo y seguro, convirtiéndose en una opción preferida para quienes buscan un equilibrio entre vida urbana y naturaleza.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 1,
+     "departamento": "Guatemala",
+     "id_municipal": 103,
+     "municipio": "San José Pinula",
+     "Resumen": "San José Pinula es conocido por su rápido desarrollo urbano y su proximidad a la capital. Este municipio ha visto un crecimiento en su infraestructura residencial y comercial, atrayendo a familias y empresas que buscan un entorno más tranquilo pero cercano a la ciudad.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 1,
+     "departamento": "Guatemala",
+     "id_municipal": 104,
+     "municipio": "San José del Golfo",
+     "Resumen": "San José del Golfo es un municipio predominantemente rural, donde la agricultura juega un papel central en la economía local. Con paisajes naturales que incluyen montañas y ríos, es un lugar que conserva tradiciones y un estilo de vida más relajado y comunitario.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 1,
+     "departamento": "Guatemala",
+     "id_municipal": 105,
+     "municipio": "Palencia",
+     "Resumen": "Palencia destaca por sus impresionantes paisajes montañosos y sus recursos naturales, siendo un destino ideal para el ecoturismo y actividades al aire libre. Su economía se basa principalmente en la agricultura, con un enfoque en la conservación ambiental y el desarrollo sostenible.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 1,
+     "departamento": "Guatemala",
+     "id_municipal": 106,
+     "municipio": "Chinautla",
+     "Resumen": "Chinautla es un municipio que combina áreas urbanas y rurales, conocido por su producción de ladrillos y su cercanía a la Ciudad de Guatemala. La comunidad local mantiene tradiciones artesanales que han sido preservadas a lo largo de generaciones.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 1,
+     "departamento": "Guatemala",
+     "id_municipal": 107,
+     "municipio": "San Pedro Ayampuc",
+     "Resumen": "San Pedro Ayampuc se caracteriza por su ambiente comunitario y su crecimiento urbano. Con una mezcla de áreas residenciales y zonas agrícolas, el municipio ofrece un entorno diverso donde la agricultura sigue siendo un pilar importante de la economía.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 1,
+     "departamento": "Guatemala",
+     "id_municipal": 108,
+     "municipio": "Mixco",
+     "Resumen": "Mixco es uno de los municipios más grandes y poblados del país, con un desarrollo urbano significativo. Su economía está impulsada por el comercio y los servicios, y su proximidad a la capital lo convierte en un centro de gran actividad empresarial.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 1,
+     "departamento": "Guatemala",
+     "id_municipal": 109,
+     "municipio": "San Pedro Sacatepéquez",
+     "Resumen": "San Pedro Sacatepéquez es reconocido por su rica tradición cultural y su producción de flores, especialmente en la región de las Verapaces. Es un municipio con un fuerte sentido de identidad y una historia que se refleja en sus festividades y artesanías.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 1,
+     "departamento": "Guatemala",
+     "id_municipal": 110,
+     "municipio": "San Juan Sacatepéquez",
+     "Resumen": "San Juan Sacatepéquez es famoso por ser uno de los mayores productores de flores del país, especialmente rosas. Este municipio mantiene vivas sus tradiciones culturales y es conocido por su fuerte sentido de comunidad y resistencia cultural.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 1,
+     "departamento": "Guatemala",
+     "id_municipal": 111,
+     "municipio": "San Raymundo",
+     "Resumen": "El municipio de San Raymundo es conocido por su desarrollo agrícola, con una economía basada en la agricultura. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Guatemala.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 1,
+     "departamento": "Guatemala",
+     "id_municipal": 112,
+     "municipio": "Chuarrancho",
+     "Resumen": "El municipio de Chuarrancho es conocido por su desarrollo agrícola, con una economía basada en el comercio. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Guatemala.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 1,
+     "departamento": "Guatemala",
+     "id_municipal": 113,
+     "municipio": "Fraijanes",
+     "Resumen": "El municipio de Fraijanes es conocido por su riqueza cultural e histórica, con una economía basada en la agricultura. Es un lugar con paisajes naturales impresionantes, lo que lo convierte en un punto de interés en el departamento de Guatemala.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 1,
+     "departamento": "Guatemala",
+     "id_municipal": 114,
+     "municipio": "Amatitlán",
+     "Resumen": "El municipio de Amatitlán es conocido por su desarrollo agrícola, con una economía basada en el comercio. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Guatemala.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 1,
+     "departamento": "Guatemala",
+     "id_municipal": 115,
+     "municipio": "Villa Nueva",
+     "Resumen": "El municipio de Villa Nueva es conocido por su desarrollo agrícola, con una economía basada en la agricultura. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Guatemala.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 1,
+     "departamento": "Guatemala",
+     "id_municipal": 116,
+     "municipio": "Villa Canales",
+     "Resumen": "El municipio de Villa Canales es conocido por su riqueza cultural e histórica, con una economía basada en el comercio. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Guatemala.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 1,
+     "departamento": "Guatemala",
+     "id_municipal": 117,
+     "municipio": "San Miguel Petapa",
+     "Resumen": "El municipio de San Miguel Petapa es conocido por su desarrollo agrícola, con una economía basada en la agricultura. Es un lugar con paisajes naturales impresionantes, lo que lo convierte en un punto de interés en el departamento de Guatemala.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 2,
+     "departamento": "El Progreso",
+     "id_municipal": 201,
+     "municipio": "Guastatoya",
+     "Resumen": "El municipio de Guastatoya es conocido por su desarrollo agrícola, con una economía basada en el comercio. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de El Progreso.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 2,
+     "departamento": "El Progreso",
+     "id_municipal": 202,
+     "municipio": "Morazán",
+     "Resumen": "El municipio de Morazán es conocido por su riqueza cultural e histórica, con una economía basada en la agricultura. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de El Progreso.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 2,
+     "departamento": "El Progreso",
+     "id_municipal": 203,
+     "municipio": "San Agustín Acasaguastlán",
+     "Resumen": "El municipio de San Agustín Acasaguastlán es conocido por su desarrollo agrícola, con una economía basada en el comercio. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de El Progreso.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 2,
+     "departamento": "El Progreso",
+     "id_municipal": 204,
+     "municipio": "San Cristóbal Acasaguastlán",
+     "Resumen": "El municipio de San Cristóbal Acasaguastlán es conocido por su desarrollo agrícola, con una economía basada en la agricultura. Es un lugar con paisajes naturales impresionantes, lo que lo convierte en un punto de interés en el departamento de El Progreso.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 2,
+     "departamento": "El Progreso",
+     "id_municipal": 205,
+     "municipio": "El Jícaro",
+     "Resumen": "El municipio de El Jícaro es conocido por su riqueza cultural e histórica, con una economía basada en el comercio. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de El Progreso.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 2,
+     "departamento": "El Progreso",
+     "id_municipal": 206,
+     "municipio": "Sansare",
+     "Resumen": "El municipio de Sansare es conocido por su desarrollo agrícola, con una economía basada en la agricultura. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de El Progreso.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 2,
+     "departamento": "El Progreso",
+     "id_municipal": 207,
+     "municipio": "Sanarate",
+     "Resumen": "El municipio de Sanarate es conocido por su desarrollo agrícola, con una economía basada en el comercio. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de El Progreso.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 2,
+     "departamento": "El Progreso",
+     "id_municipal": 208,
+     "municipio": "San Antonio La Paz",
+     "Resumen": "El municipio de San Antonio La Paz es conocido por su riqueza cultural e histórica, con una economía basada en la agricultura. Es un lugar con paisajes naturales impresionantes, lo que lo convierte en un punto de interés en el departamento de El Progreso.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 3,
+     "departamento": "Sacatepéquez",
+     "id_municipal": 301,
+     "municipio": "Antigua Guatemala",
+     "Resumen": "El municipio de Antigua Guatemala es conocido por su desarrollo agrícola, con una economía basada en el comercio. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Sacatepéquez.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 3,
+     "departamento": "Sacatepéquez",
+     "id_municipal": 302,
+     "municipio": "Jocotenango",
+     "Resumen": "El municipio de Jocotenango es conocido por su desarrollo agrícola, con una economía basada en la agricultura. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Sacatepéquez.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 3,
+     "departamento": "Sacatepéquez",
+     "id_municipal": 303,
+     "municipio": "Pastores",
+     "Resumen": "El municipio de Pastores es conocido por su riqueza cultural e histórica, con una economía basada en el comercio. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Sacatepéquez.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 3,
+     "departamento": "Sacatepéquez",
+     "id_municipal": 304,
+     "municipio": "Sumpango",
+     "Resumen": "El municipio de Sumpango es conocido por su desarrollo agrícola, con una economía basada en la agricultura. Es un lugar con paisajes naturales impresionantes, lo que lo convierte en un punto de interés en el departamento de Sacatepéquez.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 3,
+     "departamento": "Sacatepéquez",
+     "id_municipal": 305,
+     "municipio": "Santo Domingo Xenacoj",
+     "Resumen": "El municipio de Santo Domingo Xenacoj es conocido por su desarrollo agrícola, con una economía basada en el comercio. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Sacatepéquez.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 3,
+     "departamento": "Sacatepéquez",
+     "id_municipal": 306,
+     "municipio": "Santiago Sacatepéquez",
+     "Resumen": "El municipio de Santiago Sacatepéquez es conocido por su riqueza cultural e histórica, con una economía basada en la agricultura. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Sacatepéquez.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 3,
+     "departamento": "Sacatepéquez",
+     "id_municipal": 307,
+     "municipio": "San Bartolomé Milpas Altas",
+     "Resumen": "El municipio de San Bartolomé Milpas Altas es conocido por su desarrollo agrícola, con una economía basada en el comercio. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Sacatepéquez.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 3,
+     "departamento": "Sacatepéquez",
+     "id_municipal": 308,
+     "municipio": "San Lucas Sacatepéquez",
+     "Resumen": "El municipio de San Lucas Sacatepéquez es conocido por su desarrollo agrícola, con una economía basada en la agricultura. Es un lugar con paisajes naturales impresionantes, lo que lo convierte en un punto de interés en el departamento de Sacatepéquez.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 3,
+     "departamento": "Sacatepéquez",
+     "id_municipal": 309,
+     "municipio": "Santa Lucía Milpas Altas",
+     "Resumen": "El municipio de Santa Lucía Milpas Altas es conocido por su riqueza cultural e histórica, con una economía basada en el comercio. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Sacatepéquez.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 3,
+     "departamento": "Sacatepéquez",
+     "id_municipal": 310,
+     "municipio": "Magdalena Milpas Altas",
+     "Resumen": "El municipio de Magdalena Milpas Altas es conocido por su desarrollo agrícola, con una economía basada en la agricultura. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Sacatepéquez.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 3,
+     "departamento": "Sacatepéquez",
+     "id_municipal": 311,
+     "municipio": "Santa María de Jesús",
+     "Resumen": "El municipio de Santa María de Jesús es conocido por su desarrollo agrícola, con una economía basada en el comercio. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Sacatepéquez.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 3,
+     "departamento": "Sacatepéquez",
+     "id_municipal": 312,
+     "municipio": "Ciudad Vieja",
+     "Resumen": "El municipio de Ciudad Vieja es conocido por su riqueza cultural e histórica, con una economía basada en la agricultura. Es un lugar con paisajes naturales impresionantes, lo que lo convierte en un punto de interés en el departamento de Sacatepéquez.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 3,
+     "departamento": "Sacatepéquez",
+     "id_municipal": 313,
+     "municipio": "San Miguel Dueñas",
+     "Resumen": "El municipio de San Miguel Dueñas es conocido por su desarrollo agrícola, con una economía basada en el comercio. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Sacatepéquez.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 3,
+     "departamento": "Sacatepéquez",
+     "id_municipal": 314,
+     "municipio": "Alotenango",
+     "Resumen": "El municipio de Alotenango es conocido por su desarrollo agrícola, con una economía basada en la agricultura. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Sacatepéquez.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 3,
+     "departamento": "Sacatepéquez",
+     "id_municipal": 315,
+     "municipio": "San Antonio Aguas Calientes",
+     "Resumen": "El municipio de San Antonio Aguas Calientes es conocido por su riqueza cultural e histórica, con una economía basada en el comercio. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Sacatepéquez.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 3,
+     "departamento": "Sacatepéquez",
+     "id_municipal": 316,
+     "municipio": "Santa Catarina Barahona",
+     "Resumen": "El municipio de Santa Catarina Barahona es conocido por su desarrollo agrícola, con una economía basada en la agricultura. Es un lugar con paisajes naturales impresionantes, lo que lo convierte en un punto de interés en el departamento de Sacatepéquez.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 4,
+     "departamento": "Chimaltenango",
+     "id_municipal": 401,
+     "municipio": "Chimaltenango",
+     "Resumen": "El municipio de Chimaltenango es conocido por su desarrollo agrícola, con una economía basada en el comercio. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Chimaltenango.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 4,
+     "departamento": "Chimaltenango",
+     "id_municipal": 402,
+     "municipio": "San José Poaquil",
+     "Resumen": "El municipio de San José Poaquil es conocido por su riqueza cultural e histórica, con una economía basada en la agricultura. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Chimaltenango.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 4,
+     "departamento": "Chimaltenango",
+     "id_municipal": 403,
+     "municipio": "San Martín Jilotepeque",
+     "Resumen": "El municipio de San Martín Jilotepeque es conocido por su desarrollo agrícola, con una economía basada en el comercio. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Chimaltenango.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 4,
+     "departamento": "Chimaltenango",
+     "id_municipal": 404,
+     "municipio": "San Juan Comalapa",
+     "Resumen": "El municipio de San Juan Comalapa es conocido por su desarrollo agrícola, con una economía basada en la agricultura. Es un lugar con paisajes naturales impresionantes, lo que lo convierte en un punto de interés en el departamento de Chimaltenango.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 4,
+     "departamento": "Chimaltenango",
+     "id_municipal": 405,
+     "municipio": "Santa Apolonia",
+     "Resumen": "El municipio de Santa Apolonia es conocido por su riqueza cultural e histórica, con una economía basada en el comercio. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Chimaltenango.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 4,
+     "departamento": "Chimaltenango",
+     "id_municipal": 406,
+     "municipio": "Tecpán Guatemala",
+     "Resumen": "El municipio de Tecpán Guatemala es conocido por su desarrollo agrícola, con una economía basada en la agricultura. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Chimaltenango.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 4,
+     "departamento": "Chimaltenango",
+     "id_municipal": 407,
+     "municipio": "Patzún",
+     "Resumen": "El municipio de Patzún es conocido por su desarrollo agrícola, con una economía basada en el comercio. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Chimaltenango.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 4,
+     "departamento": "Chimaltenango",
+     "id_municipal": 408,
+     "municipio": "San Miguel Pochuta",
+     "Resumen": "El municipio de San Miguel Pochuta es conocido por su riqueza cultural e histórica, con una economía basada en la agricultura. Es un lugar con paisajes naturales impresionantes, lo que lo convierte en un punto de interés en el departamento de Chimaltenango.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 4,
+     "departamento": "Chimaltenango",
+     "id_municipal": 409,
+     "municipio": "Patzicía",
+     "Resumen": "El municipio de Patzicía es conocido por su desarrollo agrícola, con una economía basada en el comercio. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Chimaltenango.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 4,
+     "departamento": "Chimaltenango",
+     "id_municipal": 410,
+     "municipio": "Santa Cruz Balanyá",
+     "Resumen": "El municipio de Santa Cruz Balanyá es conocido por su desarrollo agrícola, con una economía basada en la agricultura. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Chimaltenango.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 4,
+     "departamento": "Chimaltenango",
+     "id_municipal": 411,
+     "municipio": "Acatenango",
+     "Resumen": "El municipio de Acatenango es conocido por su riqueza cultural e histórica, con una economía basada en el comercio. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Chimaltenango.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 4,
+     "departamento": "Chimaltenango",
+     "id_municipal": 412,
+     "municipio": "San Pedro Yepocapa",
+     "Resumen": "El municipio de San Pedro Yepocapa es conocido por su desarrollo agrícola, con una economía basada en la agricultura. Es un lugar con paisajes naturales impresionantes, lo que lo convierte en un punto de interés en el departamento de Chimaltenango.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 4,
+     "departamento": "Chimaltenango",
+     "id_municipal": 413,
+     "municipio": "San Andrés Itzapa",
+     "Resumen": "El municipio de San Andrés Itzapa es conocido por su desarrollo agrícola, con una economía basada en el comercio. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Chimaltenango.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 4,
+     "departamento": "Chimaltenango",
+     "id_municipal": 414,
+     "municipio": "Parramos",
+     "Resumen": "El municipio de Parramos es conocido por su riqueza cultural e histórica, con una economía basada en la agricultura. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Chimaltenango.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 4,
+     "departamento": "Chimaltenango",
+     "id_municipal": 415,
+     "municipio": "Zaragoza",
+     "Resumen": "El municipio de Zaragoza es conocido por su desarrollo agrícola, con una economía basada en el comercio. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Chimaltenango.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 4,
+     "departamento": "Chimaltenango",
+     "id_municipal": 416,
+     "municipio": "El Tejar",
+     "Resumen": "El municipio de El Tejar es conocido por su desarrollo agrícola, con una economía basada en la agricultura. Es un lugar con paisajes naturales impresionantes, lo que lo convierte en un punto de interés en el departamento de Chimaltenango.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 5,
+     "departamento": "Escuintla",
+     "id_municipal": 501,
+     "municipio": "Escuintla",
+     "Resumen": "El municipio de Escuintla es conocido por su riqueza cultural e histórica, con una economía basada en el comercio. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Escuintla.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 5,
+     "departamento": "Escuintla",
+     "id_municipal": 502,
+     "municipio": "Santa Lucía Cotzulmalguapa",
+     "Resumen": "El municipio de Santa Lucía Cotzulmalguapa es conocido por su desarrollo agrícola, con una economía basada en la agricultura. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Escuintla.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 5,
+     "departamento": "Escuintla",
+     "id_municipal": 503,
+     "municipio": "La Democracia",
+     "Resumen": "El municipio de La Democracia es conocido por su desarrollo agrícola, con una economía basada en el comercio. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Escuintla.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 5,
+     "departamento": "Escuintla",
+     "id_municipal": 504,
+     "municipio": "Siquinalá",
+     "Resumen": "El municipio de Siquinalá es conocido por su riqueza cultural e histórica, con una economía basada en la agricultura. Es un lugar con paisajes naturales impresionantes, lo que lo convierte en un punto de interés en el departamento de Escuintla.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 5,
+     "departamento": "Escuintla",
+     "id_municipal": 505,
+     "municipio": "Masagua",
+     "Resumen": "El municipio de Masagua es conocido por su desarrollo agrícola, con una economía basada en el comercio. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Escuintla.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 5,
+     "departamento": "Escuintla",
+     "id_municipal": 506,
+     "municipio": "Tiquisate",
+     "Resumen": "El municipio de Tiquisate es conocido por su desarrollo agrícola, con una economía basada en la agricultura. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Escuintla.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 5,
+     "departamento": "Escuintla",
+     "id_municipal": 507,
+     "municipio": "La Gomera",
+     "Resumen": "El municipio de La Gomera es conocido por su riqueza cultural e histórica, con una economía basada en el comercio. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Escuintla.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 5,
+     "departamento": "Escuintla",
+     "id_municipal": 508,
+     "municipio": "Guanagazapa",
+     "Resumen": "El municipio de Guanagazapa es conocido por su desarrollo agrícola, con una economía basada en la agricultura. Es un lugar con paisajes naturales impresionantes, lo que lo convierte en un punto de interés en el departamento de Escuintla.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 5,
+     "departamento": "Escuintla",
+     "id_municipal": 509,
+     "municipio": "San José",
+     "Resumen": "El municipio de San José es conocido por su desarrollo agrícola, con una economía basada en el comercio. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Escuintla.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 5,
+     "departamento": "Escuintla",
+     "id_municipal": 510,
+     "municipio": "Iztapa",
+     "Resumen": "El municipio de Iztapa es conocido por su riqueza cultural e histórica, con una economía basada en la agricultura. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Escuintla.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 5,
+     "departamento": "Escuintla",
+     "id_municipal": 511,
+     "municipio": "Palín",
+     "Resumen": "El municipio de Palín es conocido por su desarrollo agrícola, con una economía basada en el comercio. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Escuintla.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 5,
+     "departamento": "Escuintla",
+     "id_municipal": 512,
+     "municipio": "San Vicente Pacaya",
+     "Resumen": "El municipio de San Vicente Pacaya es conocido por su desarrollo agrícola, con una economía basada en la agricultura. Es un lugar con paisajes naturales impresionantes, lo que lo convierte en un punto de interés en el departamento de Escuintla.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 5,
+     "departamento": "Escuintla",
+     "id_municipal": 513,
+     "municipio": "Nueva Concepción",
+     "Resumen": "El municipio de Nueva Concepción es conocido por su riqueza cultural e histórica, con una economía basada en el comercio. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Escuintla.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 5,
+     "departamento": "Escuintla",
+     "id_municipal": 514,
+     "municipio": "Sipacate",
+     "Resumen": "El municipio de Sipacate es conocido por su desarrollo agrícola, con una economía basada en la agricultura. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Escuintla.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 6,
+     "departamento": "Santa Rosa",
+     "id_municipal": 601,
+     "municipio": "Cuilapa",
+     "Resumen": "El municipio de Cuilapa es conocido por su desarrollo agrícola, con una economía basada en el comercio. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Santa Rosa.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 6,
+     "departamento": "Santa Rosa",
+     "id_municipal": 602,
+     "municipio": "Barberena",
+     "Resumen": "El municipio de Barberena es conocido por su riqueza cultural e histórica, con una economía basada en la agricultura. Es un lugar con paisajes naturales impresionantes, lo que lo convierte en un punto de interés en el departamento de Santa Rosa.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 6,
+     "departamento": "Santa Rosa",
+     "id_municipal": 603,
+     "municipio": "Santa Rosa de Lima",
+     "Resumen": "El municipio de Santa Rosa de Lima es conocido por su desarrollo agrícola, con una economía basada en el comercio. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Santa Rosa.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 6,
+     "departamento": "Santa Rosa",
+     "id_municipal": 604,
+     "municipio": "Casillas",
+     "Resumen": "El municipio de Casillas es conocido por su desarrollo agrícola, con una economía basada en la agricultura. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Santa Rosa.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 6,
+     "departamento": "Santa Rosa",
+     "id_municipal": 605,
+     "municipio": "San Rafael Las Flores",
+     "Resumen": "El municipio de San Rafael Las Flores es conocido por su riqueza cultural e histórica, con una economía basada en el comercio. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Santa Rosa.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 6,
+     "departamento": "Santa Rosa",
+     "id_municipal": 606,
+     "municipio": "Oratorio",
+     "Resumen": "El municipio de Oratorio es conocido por su desarrollo agrícola, con una economía basada en la agricultura. Es un lugar con paisajes naturales impresionantes, lo que lo convierte en un punto de interés en el departamento de Santa Rosa.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 6,
+     "departamento": "Santa Rosa",
+     "id_municipal": 607,
+     "municipio": "San Juan Tecuaco",
+     "Resumen": "El municipio de San Juan Tecuaco es conocido por su desarrollo agrícola, con una economía basada en el comercio. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Santa Rosa.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 6,
+     "departamento": "Santa Rosa",
+     "id_municipal": 608,
+     "municipio": "Chiquimulilla",
+     "Resumen": "El municipio de Chiquimulilla es conocido por su riqueza cultural e histórica, con una economía basada en la agricultura. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Santa Rosa.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 6,
+     "departamento": "Santa Rosa",
+     "id_municipal": 609,
+     "municipio": "Taxisco",
+     "Resumen": "El municipio de Taxisco es conocido por su desarrollo agrícola, con una economía basada en el comercio. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Santa Rosa.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 6,
+     "departamento": "Santa Rosa",
+     "id_municipal": 610,
+     "municipio": "Santa María Ixhuatán",
+     "Resumen": "El municipio de Santa María Ixhuatán es conocido por su desarrollo agrícola, con una economía basada en la agricultura. Es un lugar con paisajes naturales impresionantes, lo que lo convierte en un punto de interés en el departamento de Santa Rosa.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 6,
+     "departamento": "Santa Rosa",
+     "id_municipal": 611,
+     "municipio": "Guazacapán",
+     "Resumen": "El municipio de Guazacapán es conocido por su riqueza cultural e histórica, con una economía basada en el comercio. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Santa Rosa.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 6,
+     "departamento": "Santa Rosa",
+     "id_municipal": 612,
+     "municipio": "Santa Cruz Naranjo",
+     "Resumen": "El municipio de Santa Cruz Naranjo es conocido por su desarrollo agrícola, con una economía basada en la agricultura. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Santa Rosa.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 6,
+     "departamento": "Santa Rosa",
+     "id_municipal": 613,
+     "municipio": "Pueblo Nuevo Viñas",
+     "Resumen": "El municipio de Pueblo Nuevo Viñas es conocido por su desarrollo agrícola, con una economía basada en el comercio. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Santa Rosa.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 6,
+     "departamento": "Santa Rosa",
+     "id_municipal": 614,
+     "municipio": "Nueva Santa Rosa",
+     "Resumen": "El municipio de Nueva Santa Rosa es conocido por su riqueza cultural e histórica, con una economía basada en la agricultura. Es un lugar con paisajes naturales impresionantes, lo que lo convierte en un punto de interés en el departamento de Santa Rosa.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 7,
+     "departamento": "Sololá",
+     "id_municipal": 701,
+     "municipio": "Sololá",
+     "Resumen": "El municipio de Sololá es conocido por su desarrollo agrícola, con una economía basada en el comercio. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Sololá.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 7,
+     "departamento": "Sololá",
+     "id_municipal": 702,
+     "municipio": "San José Chacayá",
+     "Resumen": "El municipio de San José Chacayá es conocido por su desarrollo agrícola, con una economía basada en la agricultura. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Sololá.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 7,
+     "departamento": "Sololá",
+     "id_municipal": 703,
+     "municipio": "Santa María Visitación",
+     "Resumen": "El municipio de Santa María Visitación es conocido por su riqueza cultural e histórica, con una economía basada en el comercio. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Sololá.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 7,
+     "departamento": "Sololá",
+     "id_municipal": 704,
+     "municipio": "Santa Lucía Utatlán",
+     "Resumen": "El municipio de Santa Lucía Utatlán es conocido por su desarrollo agrícola, con una economía basada en la agricultura. Es un lugar con paisajes naturales impresionantes, lo que lo convierte en un punto de interés en el departamento de Sololá.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 7,
+     "departamento": "Sololá",
+     "id_municipal": 705,
+     "municipio": "Nahualá",
+     "Resumen": "El municipio de Nahualá es conocido por su desarrollo agrícola, con una economía basada en el comercio. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Sololá.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 7,
+     "departamento": "Sololá",
+     "id_municipal": 706,
+     "municipio": "Santa Catarina Ixtahuacán",
+     "Resumen": "El municipio de Santa Catarina Ixtahuacán es conocido por su riqueza cultural e histórica, con una economía basada en la agricultura. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Sololá.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 7,
+     "departamento": "Sololá",
+     "id_municipal": 707,
+     "municipio": "Santa Clara La Laguna",
+     "Resumen": "El municipio de Santa Clara La Laguna es conocido por su desarrollo agrícola, con una economía basada en el comercio. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Sololá.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 7,
+     "departamento": "Sololá",
+     "id_municipal": 708,
+     "municipio": "Concepción",
+     "Resumen": "El municipio de Concepción es conocido por su desarrollo agrícola, con una economía basada en la agricultura. Es un lugar con paisajes naturales impresionantes, lo que lo convierte en un punto de interés en el departamento de Sololá.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 7,
+     "departamento": "Sololá",
+     "id_municipal": 709,
+     "municipio": "San Andrés Semetabaj",
+     "Resumen": "El municipio de San Andrés Semetabaj es conocido por su riqueza cultural e histórica, con una economía basada en el comercio. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Sololá.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 7,
+     "departamento": "Sololá",
+     "id_municipal": 710,
+     "municipio": "Panajachel",
+     "Resumen": "El municipio de Panajachel es conocido por su desarrollo agrícola, con una economía basada en la agricultura. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Sololá.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 7,
+     "departamento": "Sololá",
+     "id_municipal": 711,
+     "municipio": "Santa Catarina Palopó",
+     "Resumen": "El municipio de Santa Catarina Palopó es conocido por su desarrollo agrícola, con una economía basada en el comercio. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Sololá.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 7,
+     "departamento": "Sololá",
+     "id_municipal": 712,
+     "municipio": "San Antonio Palopó",
+     "Resumen": "El municipio de San Antonio Palopó es conocido por su riqueza cultural e histórica, con una economía basada en la agricultura. Es un lugar con paisajes naturales impresionantes, lo que lo convierte en un punto de interés en el departamento de Sololá.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 7,
+     "departamento": "Sololá",
+     "id_municipal": 713,
+     "municipio": "San Lucas Tolimán",
+     "Resumen": "El municipio de San Lucas Tolimán es conocido por su desarrollo agrícola, con una economía basada en el comercio. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Sololá.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 7,
+     "departamento": "Sololá",
+     "id_municipal": 714,
+     "municipio": "Santa Cruz La Laguna",
+     "Resumen": "El municipio de Santa Cruz La Laguna es conocido por su desarrollo agrícola, con una economía basada en la agricultura. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Sololá.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 7,
+     "departamento": "Sololá",
+     "id_municipal": 715,
+     "municipio": "San Pablo La Laguna",
+     "Resumen": "El municipio de San Pablo La Laguna es conocido por su riqueza cultural e histórica, con una economía basada en el comercio. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Sololá.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 7,
+     "departamento": "Sololá",
+     "id_municipal": 716,
+     "municipio": "San Marcos La Laguna",
+     "Resumen": "El municipio de San Marcos La Laguna es conocido por su desarrollo agrícola, con una economía basada en la agricultura. Es un lugar con paisajes naturales impresionantes, lo que lo convierte en un punto de interés en el departamento de Sololá.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 7,
+     "departamento": "Sololá",
+     "id_municipal": 717,
+     "municipio": "San Juan La Laguna",
+     "Resumen": "El municipio de San Juan La Laguna es conocido por su desarrollo agrícola, con una economía basada en el comercio. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Sololá.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 7,
+     "departamento": "Sololá",
+     "id_municipal": 718,
+     "municipio": "San Pedro La Laguna",
+     "Resumen": "El municipio de San Pedro La Laguna es conocido por su riqueza cultural e histórica, con una economía basada en la agricultura. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Sololá.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 7,
+     "departamento": "Sololá",
+     "id_municipal": 719,
+     "municipio": "Santiago Atitlán",
+     "Resumen": "El municipio de Santiago Atitlán es conocido por su desarrollo agrícola, con una economía basada en el comercio. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Sololá.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 8,
+     "departamento": "Totonicapán",
+     "id_municipal": 801,
+     "municipio": "Totonicapán",
+     "Resumen": "El municipio de Totonicapán es conocido por su desarrollo agrícola, con una economía basada en la agricultura. Es un lugar con paisajes naturales impresionantes, lo que lo convierte en un punto de interés en el departamento de Totonicapán.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 8,
+     "departamento": "Totonicapán",
+     "id_municipal": 802,
+     "municipio": "San Cristóbal Totonicapán",
+     "Resumen": "El municipio de San Cristóbal Totonicapán es conocido por su riqueza cultural e histórica, con una economía basada en el comercio. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Totonicapán.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 8,
+     "departamento": "Totonicapán",
+     "id_municipal": 803,
+     "municipio": "San Francisco El Alto",
+     "Resumen": "El municipio de San Francisco El Alto es conocido por su desarrollo agrícola, con una economía basada en la agricultura. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Totonicapán.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 8,
+     "departamento": "Totonicapán",
+     "id_municipal": 804,
+     "municipio": "San Andrés Xecul",
+     "Resumen": "El municipio de San Andrés Xecul es conocido por su desarrollo agrícola, con una economía basada en el comercio. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Totonicapán.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 8,
+     "departamento": "Totonicapán",
+     "id_municipal": 805,
+     "municipio": "Momostenango",
+     "Resumen": "El municipio de Momostenango es conocido por su riqueza cultural e histórica, con una economía basada en la agricultura. Es un lugar con paisajes naturales impresionantes, lo que lo convierte en un punto de interés en el departamento de Totonicapán.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 8,
+     "departamento": "Totonicapán",
+     "id_municipal": 806,
+     "municipio": "Santa María Chiquimula",
+     "Resumen": "El municipio de Santa María Chiquimula es conocido por su desarrollo agrícola, con una economía basada en el comercio. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Totonicapán.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 8,
+     "departamento": "Totonicapán",
+     "id_municipal": 807,
+     "municipio": "Santa Lucía La Reforma",
+     "Resumen": "El municipio de Santa Lucía La Reforma es conocido por su desarrollo agrícola, con una economía basada en la agricultura. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Totonicapán.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 8,
+     "departamento": "Totonicapán",
+     "id_municipal": 808,
+     "municipio": "San Bartolo Aguas Calientes",
+     "Resumen": "El municipio de San Bartolo Aguas Calientes es conocido por su riqueza cultural e histórica, con una economía basada en el comercio. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Totonicapán.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 9,
+     "departamento": "Quetzaltenango",
+     "id_municipal": 901,
+     "municipio": "Quetzaltenango",
+     "Resumen": "El municipio de Quetzaltenango es conocido por su desarrollo agrícola, con una economía basada en la agricultura. Es un lugar con paisajes naturales impresionantes, lo que lo convierte en un punto de interés en el departamento de Quetzaltenango.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 9,
+     "departamento": "Quetzaltenango",
+     "id_municipal": 902,
+     "municipio": "Salcajá",
+     "Resumen": "El municipio de Salcajá es conocido por su desarrollo agrícola, con una economía basada en el comercio. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Quetzaltenango.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 9,
+     "departamento": "Quetzaltenango",
+     "id_municipal": 903,
+     "municipio": "Olintepeque",
+     "Resumen": "El municipio de Olintepeque es conocido por su riqueza cultural e histórica, con una economía basada en la agricultura. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Quetzaltenango.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 9,
+     "departamento": "Quetzaltenango",
+     "id_municipal": 904,
+     "municipio": "San Carlos Sija",
+     "Resumen": "El municipio de San Carlos Sija es conocido por su desarrollo agrícola, con una economía basada en el comercio. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Quetzaltenango.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 9,
+     "departamento": "Quetzaltenango",
+     "id_municipal": 905,
+     "municipio": "Sibilia",
+     "Resumen": "El municipio de Sibilia es conocido por su desarrollo agrícola, con una economía basada en la agricultura. Es un lugar con paisajes naturales impresionantes, lo que lo convierte en un punto de interés en el departamento de Quetzaltenango.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 9,
+     "departamento": "Quetzaltenango",
+     "id_municipal": 906,
+     "municipio": "Cabricán",
+     "Resumen": "El municipio de Cabricán es conocido por su riqueza cultural e histórica, con una economía basada en el comercio. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Quetzaltenango.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 9,
+     "departamento": "Quetzaltenango",
+     "id_municipal": 907,
+     "municipio": "Cajolá",
+     "Resumen": "El municipio de Cajolá es conocido por su desarrollo agrícola, con una economía basada en la agricultura. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Quetzaltenango.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 9,
+     "departamento": "Quetzaltenango",
+     "id_municipal": 908,
+     "municipio": "San Miguel Sigüila",
+     "Resumen": "El municipio de San Miguel Sigüila es conocido por su desarrollo agrícola, con una economía basada en el comercio. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Quetzaltenango.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 9,
+     "departamento": "Quetzaltenango",
+     "id_municipal": 909,
+     "municipio": "San Juan Ostuncalco",
+     "Resumen": "El municipio de San Juan Ostuncalco es conocido por su riqueza cultural e histórica, con una economía basada en la agricultura. Es un lugar con paisajes naturales impresionantes, lo que lo convierte en un punto de interés en el departamento de Quetzaltenango.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 9,
+     "departamento": "Quetzaltenango",
+     "id_municipal": 910,
+     "municipio": "San Mateo",
+     "Resumen": "El municipio de San Mateo es conocido por su desarrollo agrícola, con una economía basada en el comercio. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Quetzaltenango.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 9,
+     "departamento": "Quetzaltenango",
+     "id_municipal": 911,
+     "municipio": "Concepción Chiquirichapa",
+     "Resumen": "El municipio de Concepción Chiquirichapa es conocido por su desarrollo agrícola, con una economía basada en la agricultura. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Quetzaltenango.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 9,
+     "departamento": "Quetzaltenango",
+     "id_municipal": 912,
+     "municipio": "San Martín Sacatepéquez",
+     "Resumen": "El municipio de San Martín Sacatepéquez es conocido por su riqueza cultural e histórica, con una economía basada en el comercio. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Quetzaltenango.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 9,
+     "departamento": "Quetzaltenango",
+     "id_municipal": 913,
+     "municipio": "Almolonga",
+     "Resumen": "El municipio de Almolonga es conocido por su desarrollo agrícola, con una economía basada en la agricultura. Es un lugar con paisajes naturales impresionantes, lo que lo convierte en un punto de interés en el departamento de Quetzaltenango.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 9,
+     "departamento": "Quetzaltenango",
+     "id_municipal": 914,
+     "municipio": "Cantel",
+     "Resumen": "El municipio de Cantel es conocido por su desarrollo agrícola, con una economía basada en el comercio. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Quetzaltenango.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 9,
+     "departamento": "Quetzaltenango",
+     "id_municipal": 915,
+     "municipio": "Huitán",
+     "Resumen": "El municipio de Huitán es conocido por su riqueza cultural e histórica, con una economía basada en la agricultura. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Quetzaltenango.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 9,
+     "departamento": "Quetzaltenango",
+     "id_municipal": 916,
+     "municipio": "Zunil",
+     "Resumen": "El municipio de Zunil es conocido por su desarrollo agrícola, con una economía basada en el comercio. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Quetzaltenango.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 9,
+     "departamento": "Quetzaltenango",
+     "id_municipal": 917,
+     "municipio": "Colomba",
+     "Resumen": "El municipio de Colomba es conocido por su desarrollo agrícola, con una economía basada en la agricultura. Es un lugar con paisajes naturales impresionantes, lo que lo convierte en un punto de interés en el departamento de Quetzaltenango.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 9,
+     "departamento": "Quetzaltenango",
+     "id_municipal": 918,
+     "municipio": "San Francisco La Unión",
+     "Resumen": "El municipio de San Francisco La Unión es conocido por su riqueza cultural e histórica, con una economía basada en el comercio. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Quetzaltenango.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 9,
+     "departamento": "Quetzaltenango",
+     "id_municipal": 919,
+     "municipio": "El Palmar",
+     "Resumen": "El municipio de El Palmar es conocido por su desarrollo agrícola, con una economía basada en la agricultura. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Quetzaltenango.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 9,
+     "departamento": "Quetzaltenango",
+     "id_municipal": 920,
+     "municipio": "Coatepeque",
+     "Resumen": "El municipio de Coatepeque es conocido por su desarrollo agrícola, con una economía basada en el comercio. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Quetzaltenango.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 9,
+     "departamento": "Quetzaltenango",
+     "id_municipal": 921,
+     "municipio": "Génova",
+     "Resumen": "El municipio de Génova es conocido por su riqueza cultural e histórica, con una economía basada en la agricultura. Es un lugar con paisajes naturales impresionantes, lo que lo convierte en un punto de interés en el departamento de Quetzaltenango.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 9,
+     "departamento": "Quetzaltenango",
+     "id_municipal": 922,
+     "municipio": "Flores Costa Cuca",
+     "Resumen": "El municipio de Flores Costa Cuca es conocido por su desarrollo agrícola, con una economía basada en el comercio. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Quetzaltenango.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 9,
+     "departamento": "Quetzaltenango",
+     "id_municipal": 923,
+     "municipio": "La Esperanza",
+     "Resumen": "El municipio de La Esperanza es conocido por su desarrollo agrícola, con una economía basada en la agricultura. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Quetzaltenango.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 9,
+     "departamento": "Quetzaltenango",
+     "id_municipal": 924,
+     "municipio": "Palestina de los Altos",
+     "Resumen": "El municipio de Palestina de los Altos es conocido por su riqueza cultural e histórica, con una economía basada en el comercio. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Quetzaltenango.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 10,
+     "departamento": "Suchitepéquez",
+     "id_municipal": 1001,
+     "municipio": "Mazatenango",
+     "Resumen": "El municipio de Mazatenango es conocido por su desarrollo agrícola, con una economía basada en la agricultura. Es un lugar con paisajes naturales impresionantes, lo que lo convierte en un punto de interés en el departamento de Suchitepéquez.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 10,
+     "departamento": "Suchitepéquez",
+     "id_municipal": 1002,
+     "municipio": "Cuyotenango",
+     "Resumen": "El municipio de Cuyotenango es conocido por su desarrollo agrícola, con una economía basada en el comercio. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Suchitepéquez.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 10,
+     "departamento": "Suchitepéquez",
+     "id_municipal": 1003,
+     "municipio": "San Francisco Zapotitlán",
+     "Resumen": "El municipio de San Francisco Zapotitlán es conocido por su riqueza cultural e histórica, con una economía basada en la agricultura. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Suchitepéquez.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 10,
+     "departamento": "Suchitepéquez",
+     "id_municipal": 1004,
+     "municipio": "San Bernardino",
+     "Resumen": "El municipio de San Bernardino es conocido por su desarrollo agrícola, con una economía basada en el comercio. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Suchitepéquez.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 10,
+     "departamento": "Suchitepéquez",
+     "id_municipal": 1005,
+     "municipio": "San José El Ídolo",
+     "Resumen": "El municipio de San José El Ídolo es conocido por su desarrollo agrícola, con una economía basada en la agricultura. Es un lugar con paisajes naturales impresionantes, lo que lo convierte en un punto de interés en el departamento de Suchitepéquez.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 10,
+     "departamento": "Suchitepéquez",
+     "id_municipal": 1006,
+     "municipio": "Santo Domingo Suchitepéquez",
+     "Resumen": "El municipio de Santo Domingo Suchitepéquez es conocido por su riqueza cultural e histórica, con una economía basada en el comercio. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Suchitepéquez.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 10,
+     "departamento": "Suchitepéquez",
+     "id_municipal": 1007,
+     "municipio": "San Lorenzo",
+     "Resumen": "El municipio de San Lorenzo es conocido por su desarrollo agrícola, con una economía basada en la agricultura. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Suchitepéquez.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 10,
+     "departamento": "Suchitepéquez",
+     "id_municipal": 1008,
+     "municipio": "Samayac",
+     "Resumen": "El municipio de Samayac es conocido por su desarrollo agrícola, con una economía basada en el comercio. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Suchitepéquez.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 10,
+     "departamento": "Suchitepéquez",
+     "id_municipal": 1009,
+     "municipio": "San Pablo Jocopilas",
+     "Resumen": "El municipio de San Pablo Jocopilas es conocido por su riqueza cultural e histórica, con una economía basada en la agricultura. Es un lugar con paisajes naturales impresionantes, lo que lo convierte en un punto de interés en el departamento de Suchitepéquez.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 10,
+     "departamento": "Suchitepéquez",
+     "id_municipal": 1010,
+     "municipio": "San Antonio Suchitepéquez",
+     "Resumen": "El municipio de San Antonio Suchitepéquez es conocido por su desarrollo agrícola, con una economía basada en el comercio. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Suchitepéquez.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 10,
+     "departamento": "Suchitepéquez",
+     "id_municipal": 1011,
+     "municipio": "San Miguel Panán",
+     "Resumen": "El municipio de San Miguel Panán es conocido por su desarrollo agrícola, con una economía basada en la agricultura. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Suchitepéquez.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 10,
+     "departamento": "Suchitepéquez",
+     "id_municipal": 1012,
+     "municipio": "San Gabriel",
+     "Resumen": "El municipio de San Gabriel es conocido por su riqueza cultural e histórica, con una economía basada en el comercio. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Suchitepéquez.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 10,
+     "departamento": "Suchitepéquez",
+     "id_municipal": 1013,
+     "municipio": "Chicacao",
+     "Resumen": "El municipio de Chicacao es conocido por su desarrollo agrícola, con una economía basada en la agricultura. Es un lugar con paisajes naturales impresionantes, lo que lo convierte en un punto de interés en el departamento de Suchitepéquez.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 10,
+     "departamento": "Suchitepéquez",
+     "id_municipal": 1014,
+     "municipio": "Patulul",
+     "Resumen": "El municipio de Patulul es conocido por su desarrollo agrícola, con una economía basada en el comercio. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Suchitepéquez.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 10,
+     "departamento": "Suchitepéquez",
+     "id_municipal": 1015,
+     "municipio": "Santa Bárbara",
+     "Resumen": "El municipio de Santa Bárbara es conocido por su riqueza cultural e histórica, con una economía basada en la agricultura. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Suchitepéquez.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 10,
+     "departamento": "Suchitepéquez",
+     "id_municipal": 1016,
+     "municipio": "San Juan Bautista",
+     "Resumen": "El municipio de San Juan Bautista es conocido por su desarrollo agrícola, con una economía basada en el comercio. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Suchitepéquez.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 10,
+     "departamento": "Suchitepéquez",
+     "id_municipal": 1017,
+     "municipio": "Santo Tomas La Unión",
+     "Resumen": "El municipio de Santo Tomas La Unión es conocido por su desarrollo agrícola, con una economía basada en la agricultura. Es un lugar con paisajes naturales impresionantes, lo que lo convierte en un punto de interés en el departamento de Suchitepéquez.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 10,
+     "departamento": "Suchitepéquez",
+     "id_municipal": 1018,
+     "municipio": "Zunilito",
+     "Resumen": "El municipio de Zunilito es conocido por su riqueza cultural e histórica, con una economía basada en el comercio. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Suchitepéquez.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 10,
+     "departamento": "Suchitepéquez",
+     "id_municipal": 1019,
+     "municipio": "Pueblo Nuevo",
+     "Resumen": "El municipio de Pueblo Nuevo es conocido por su desarrollo agrícola, con una economía basada en la agricultura. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Suchitepéquez.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 10,
+     "departamento": "Suchitepéquez",
+     "id_municipal": 1020,
+     "municipio": "Río Bravo",
+     "Resumen": "El municipio de Río Bravo es conocido por su desarrollo agrícola, con una economía basada en el comercio. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Suchitepéquez.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 10,
+     "departamento": "Suchitepéquez",
+     "id_municipal": 1021,
+     "municipio": "San José La Máquina",
+     "Resumen": "El municipio de San José La Máquina es conocido por su riqueza cultural e histórica, con una economía basada en la agricultura. Es un lugar con paisajes naturales impresionantes, lo que lo convierte en un punto de interés en el departamento de Suchitepéquez.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 11,
+     "departamento": "Retalhuleu",
+     "id_municipal": 1101,
+     "municipio": "Retalhuleu",
+     "Resumen": "El municipio de Retalhuleu es conocido por su desarrollo agrícola, con una economía basada en el comercio. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Retalhuleu.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 11,
+     "departamento": "Retalhuleu",
+     "id_municipal": 1102,
+     "municipio": "San Sebastián",
+     "Resumen": "El municipio de San Sebastián es conocido por su desarrollo agrícola, con una economía basada en la agricultura. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Retalhuleu.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 11,
+     "departamento": "Retalhuleu",
+     "id_municipal": 1103,
+     "municipio": "Santa Cruz Muluá",
+     "Resumen": "El municipio de Santa Cruz Muluá es conocido por su riqueza cultural e histórica, con una economía basada en el comercio. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Retalhuleu.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 11,
+     "departamento": "Retalhuleu",
+     "id_municipal": 1104,
+     "municipio": "San Martín Zapotitlán",
+     "Resumen": "El municipio de San Martín Zapotitlán es conocido por su desarrollo agrícola, con una economía basada en la agricultura. Es un lugar con paisajes naturales impresionantes, lo que lo convierte en un punto de interés en el departamento de Retalhuleu.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 11,
+     "departamento": "Retalhuleu",
+     "id_municipal": 1105,
+     "municipio": "San Felipe Retalhuleu",
+     "Resumen": "El municipio de San Felipe Retalhuleu es conocido por su desarrollo agrícola, con una economía basada en el comercio. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Retalhuleu.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 11,
+     "departamento": "Retalhuleu",
+     "id_municipal": 1106,
+     "municipio": "San Andrés Villa Seca",
+     "Resumen": "El municipio de San Andrés Villa Seca es conocido por su riqueza cultural e histórica, con una economía basada en la agricultura. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Retalhuleu.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 11,
+     "departamento": "Retalhuleu",
+     "id_municipal": 1107,
+     "municipio": "Champerico",
+     "Resumen": "El municipio de Champerico es conocido por su desarrollo agrícola, con una economía basada en el comercio. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Retalhuleu.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 11,
+     "departamento": "Retalhuleu",
+     "id_municipal": 1108,
+     "municipio": "Nuevo San Carlos",
+     "Resumen": "El municipio de Nuevo San Carlos es conocido por su desarrollo agrícola, con una economía basada en la agricultura. Es un lugar con paisajes naturales impresionantes, lo que lo convierte en un punto de interés en el departamento de Retalhuleu.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 11,
+     "departamento": "Retalhuleu",
+     "id_municipal": 1109,
+     "municipio": "El Asintal",
+     "Resumen": "El municipio de El Asintal es conocido por su riqueza cultural e histórica, con una economía basada en el comercio. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Retalhuleu.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 12,
+     "departamento": "San Marcos",
+     "id_municipal": 1201,
+     "municipio": "San Marcos",
+     "Resumen": "El municipio de San Marcos es conocido por su desarrollo agrícola, con una economía basada en la agricultura. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de San Marcos.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 12,
+     "departamento": "San Marcos",
+     "id_municipal": 1202,
+     "municipio": "San Pedro Sacatepéquez",
+     "Resumen": "El municipio de San Pedro Sacatepéquez es conocido por su desarrollo agrícola, con una economía basada en el comercio. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de San Marcos.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 12,
+     "departamento": "San Marcos",
+     "id_municipal": 1203,
+     "municipio": "San Antonio Sacatepéquez",
+     "Resumen": "El municipio de San Antonio Sacatepéquez es conocido por su riqueza cultural e histórica, con una economía basada en la agricultura. Es un lugar con paisajes naturales impresionantes, lo que lo convierte en un punto de interés en el departamento de San Marcos.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 12,
+     "departamento": "San Marcos",
+     "id_municipal": 1204,
+     "municipio": "Comitancillo",
+     "Resumen": "El municipio de Comitancillo es conocido por su desarrollo agrícola, con una economía basada en el comercio. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de San Marcos.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 12,
+     "departamento": "San Marcos",
+     "id_municipal": 1205,
+     "municipio": "San Miguel Ixtahuacán",
+     "Resumen": "El municipio de San Miguel Ixtahuacán es conocido por su desarrollo agrícola, con una economía basada en la agricultura. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de San Marcos.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 12,
+     "departamento": "San Marcos",
+     "id_municipal": 1206,
+     "municipio": "Concepción Tutuapa",
+     "Resumen": "El municipio de Concepción Tutuapa es conocido por su riqueza cultural e histórica, con una economía basada en el comercio. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de San Marcos.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 12,
+     "departamento": "San Marcos",
+     "id_municipal": 1207,
+     "municipio": "Tacaná",
+     "Resumen": "El municipio de Tacaná es conocido por su desarrollo agrícola, con una economía basada en la agricultura. Es un lugar con paisajes naturales impresionantes, lo que lo convierte en un punto de interés en el departamento de San Marcos.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 12,
+     "departamento": "San Marcos",
+     "id_municipal": 1208,
+     "municipio": "Sibinal",
+     "Resumen": "El municipio de Sibinal es conocido por su desarrollo agrícola, con una economía basada en el comercio. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de San Marcos.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 12,
+     "departamento": "San Marcos",
+     "id_municipal": 1209,
+     "municipio": "Tajumulco",
+     "Resumen": "El municipio de Tajumulco es conocido por su riqueza cultural e histórica, con una economía basada en la agricultura. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de San Marcos.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 12,
+     "departamento": "San Marcos",
+     "id_municipal": 1210,
+     "municipio": "Tejutla",
+     "Resumen": "El municipio de Tejutla es conocido por su desarrollo agrícola, con una economía basada en el comercio. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de San Marcos.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 12,
+     "departamento": "San Marcos",
+     "id_municipal": 1211,
+     "municipio": "San Rafael Pie de la Cuesta",
+     "Resumen": "El municipio de San Rafael Pie de la Cuesta es conocido por su desarrollo agrícola, con una economía basada en la agricultura. Es un lugar con paisajes naturales impresionantes, lo que lo convierte en un punto de interés en el departamento de San Marcos.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 12,
+     "departamento": "San Marcos",
+     "id_municipal": 1212,
+     "municipio": "Nuevo Progreso",
+     "Resumen": "El municipio de Nuevo Progreso es conocido por su riqueza cultural e histórica, con una economía basada en el comercio. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de San Marcos.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 12,
+     "departamento": "San Marcos",
+     "id_municipal": 1213,
+     "municipio": "El Tumbador",
+     "Resumen": "El municipio de El Tumbador es conocido por su desarrollo agrícola, con una economía basada en la agricultura. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de San Marcos.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 12,
+     "departamento": "San Marcos",
+     "id_municipal": 1214,
+     "municipio": "El Rodeo",
+     "Resumen": "El municipio de El Rodeo es conocido por su desarrollo agrícola, con una economía basada en el comercio. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de San Marcos.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 12,
+     "departamento": "San Marcos",
+     "id_municipal": 1215,
+     "municipio": "Malacatán",
+     "Resumen": "El municipio de Malacatán es conocido por su riqueza cultural e histórica, con una economía basada en la agricultura. Es un lugar con paisajes naturales impresionantes, lo que lo convierte en un punto de interés en el departamento de San Marcos.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 12,
+     "departamento": "San Marcos",
+     "id_municipal": 1216,
+     "municipio": "Catarina",
+     "Resumen": "El municipio de Catarina es conocido por su desarrollo agrícola, con una economía basada en el comercio. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de San Marcos.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 12,
+     "departamento": "San Marcos",
+     "id_municipal": 1217,
+     "municipio": "Ayutla",
+     "Resumen": "El municipio de Ayutla es conocido por su desarrollo agrícola, con una economía basada en la agricultura. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de San Marcos.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 12,
+     "departamento": "San Marcos",
+     "id_municipal": 1218,
+     "municipio": "Ocós",
+     "Resumen": "El municipio de Ocós es conocido por su riqueza cultural e histórica, con una economía basada en el comercio. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de San Marcos.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 12,
+     "departamento": "San Marcos",
+     "id_municipal": 1219,
+     "municipio": "San Pablo",
+     "Resumen": "El municipio de San Pablo es conocido por su desarrollo agrícola, con una economía basada en la agricultura. Es un lugar con paisajes naturales impresionantes, lo que lo convierte en un punto de interés en el departamento de San Marcos.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 12,
+     "departamento": "San Marcos",
+     "id_municipal": 1220,
+     "municipio": "El Quetzal",
+     "Resumen": "El municipio de El Quetzal es conocido por su desarrollo agrícola, con una economía basada en el comercio. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de San Marcos.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 12,
+     "departamento": "San Marcos",
+     "id_municipal": 1221,
+     "municipio": "La Reforma",
+     "Resumen": "El municipio de La Reforma es conocido por su riqueza cultural e histórica, con una economía basada en la agricultura. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de San Marcos.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 12,
+     "departamento": "San Marcos",
+     "id_municipal": 1222,
+     "municipio": "Pajapita",
+     "Resumen": "El municipio de Pajapita es conocido por su desarrollo agrícola, con una economía basada en el comercio. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de San Marcos.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 12,
+     "departamento": "San Marcos",
+     "id_municipal": 1223,
+     "municipio": "Ixchiguán",
+     "Resumen": "El municipio de Ixchiguán es conocido por su desarrollo agrícola, con una economía basada en la agricultura. Es un lugar con paisajes naturales impresionantes, lo que lo convierte en un punto de interés en el departamento de San Marcos.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 12,
+     "departamento": "San Marcos",
+     "id_municipal": 1224,
+     "municipio": "San José Ojetenam",
+     "Resumen": "El municipio de San José Ojetenam es conocido por su riqueza cultural e histórica, con una economía basada en el comercio. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de San Marcos.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 12,
+     "departamento": "San Marcos",
+     "id_municipal": 1225,
+     "municipio": "San Cristóbal Cucho",
+     "Resumen": "El municipio de San Cristóbal Cucho es conocido por su desarrollo agrícola, con una economía basada en la agricultura. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de San Marcos.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 12,
+     "departamento": "San Marcos",
+     "id_municipal": 1226,
+     "municipio": "Sipacapa",
+     "Resumen": "El municipio de Sipacapa es conocido por su desarrollo agrícola, con una economía basada en el comercio. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de San Marcos.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 12,
+     "departamento": "San Marcos",
+     "id_municipal": 1227,
+     "municipio": "Esquipulas Palo Gordo",
+     "Resumen": "El municipio de Esquipulas Palo Gordo es conocido por su riqueza cultural e histórica, con una economía basada en la agricultura. Es un lugar con paisajes naturales impresionantes, lo que lo convierte en un punto de interés en el departamento de San Marcos.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 12,
+     "departamento": "San Marcos",
+     "id_municipal": 1228,
+     "municipio": "Río Blanco",
+     "Resumen": "El municipio de Río Blanco es conocido por su desarrollo agrícola, con una economía basada en el comercio. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de San Marcos.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 12,
+     "departamento": "San Marcos",
+     "id_municipal": 1229,
+     "municipio": "San Lorenzo",
+     "Resumen": "El municipio de San Lorenzo es conocido por su desarrollo agrícola, con una economía basada en la agricultura. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de San Marcos.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 12,
+     "departamento": "San Marcos",
+     "id_municipal": 1230,
+     "municipio": "La Blanca",
+     "Resumen": "El municipio de La Blanca es conocido por su riqueza cultural e histórica, con una economía basada en el comercio. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de San Marcos.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 13,
+     "departamento": "Huehuetenango",
+     "id_municipal": 1301,
+     "municipio": "Huehuetenango",
+     "Resumen": "El municipio de Huehuetenango es conocido por su desarrollo agrícola, con una economía basada en la agricultura. Es un lugar con paisajes naturales impresionantes, lo que lo convierte en un punto de interés en el departamento de Huehuetenango.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 13,
+     "departamento": "Huehuetenango",
+     "id_municipal": 1302,
+     "municipio": "Chiantla",
+     "Resumen": "El municipio de Chiantla es conocido por su desarrollo agrícola, con una economía basada en el comercio. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Huehuetenango.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 13,
+     "departamento": "Huehuetenango",
+     "id_municipal": 1303,
+     "municipio": "Malacatancito",
+     "Resumen": "El municipio de Malacatancito es conocido por su riqueza cultural e histórica, con una economía basada en la agricultura. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Huehuetenango.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 13,
+     "departamento": "Huehuetenango",
+     "id_municipal": 1304,
+     "municipio": "Cuilco",
+     "Resumen": "El municipio de Cuilco es conocido por su desarrollo agrícola, con una economía basada en el comercio. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Huehuetenango.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 13,
+     "departamento": "Huehuetenango",
+     "id_municipal": 1305,
+     "municipio": "Nentón",
+     "Resumen": "El municipio de Nentón es conocido por su desarrollo agrícola, con una economía basada en la agricultura. Es un lugar con paisajes naturales impresionantes, lo que lo convierte en un punto de interés en el departamento de Huehuetenango.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 13,
+     "departamento": "Huehuetenango",
+     "id_municipal": 1306,
+     "municipio": "San Pedro Necta",
+     "Resumen": "El municipio de San Pedro Necta es conocido por su riqueza cultural e histórica, con una economía basada en el comercio. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Huehuetenango.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 13,
+     "departamento": "Huehuetenango",
+     "id_municipal": 1307,
+     "municipio": "Jacaltenango",
+     "Resumen": "El municipio de Jacaltenango es conocido por su desarrollo agrícola, con una economía basada en la agricultura. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Huehuetenango.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 13,
+     "departamento": "Huehuetenango",
+     "id_municipal": 1308,
+     "municipio": "San Pedro Soloma",
+     "Resumen": "El municipio de San Pedro Soloma es conocido por su desarrollo agrícola, con una economía basada en el comercio. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Huehuetenango.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 13,
+     "departamento": "Huehuetenango",
+     "id_municipal": 1309,
+     "municipio": "San Idelfonso Ixtahuacán",
+     "Resumen": "El municipio de San Idelfonso Ixtahuacán es conocido por su riqueza cultural e histórica, con una economía basada en la agricultura. Es un lugar con paisajes naturales impresionantes, lo que lo convierte en un punto de interés en el departamento de Huehuetenango.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 13,
+     "departamento": "Huehuetenango",
+     "id_municipal": 1310,
+     "municipio": "Santa Bárbara",
+     "Resumen": "El municipio de Santa Bárbara es conocido por su desarrollo agrícola, con una economía basada en el comercio. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Huehuetenango.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 13,
+     "departamento": "Huehuetenango",
+     "id_municipal": 1311,
+     "municipio": "La Libertad",
+     "Resumen": "El municipio de La Libertad es conocido por su desarrollo agrícola, con una economía basada en la agricultura. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Huehuetenango.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 13,
+     "departamento": "Huehuetenango",
+     "id_municipal": 1312,
+     "municipio": "La Democracia",
+     "Resumen": "El municipio de La Democracia es conocido por su riqueza cultural e histórica, con una economía basada en el comercio. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Huehuetenango.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 13,
+     "departamento": "Huehuetenango",
+     "id_municipal": 1313,
+     "municipio": "San Miguel Acatán",
+     "Resumen": "El municipio de San Miguel Acatán es conocido por su desarrollo agrícola, con una economía basada en la agricultura. Es un lugar con paisajes naturales impresionantes, lo que lo convierte en un punto de interés en el departamento de Huehuetenango.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 13,
+     "departamento": "Huehuetenango",
+     "id_municipal": 1314,
+     "municipio": "San Rafael La Independencia",
+     "Resumen": "El municipio de San Rafael La Independencia es conocido por su desarrollo agrícola, con una economía basada en el comercio. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Huehuetenango.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 13,
+     "departamento": "Huehuetenango",
+     "id_municipal": 1315,
+     "municipio": "Todos Santos Cuchumatán",
+     "Resumen": "El municipio de Todos Santos Cuchumatán es conocido por su riqueza cultural e histórica, con una economía basada en la agricultura. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Huehuetenango.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 13,
+     "departamento": "Huehuetenango",
+     "id_municipal": 1316,
+     "municipio": "San Juan Atitán",
+     "Resumen": "El municipio de San Juan Atitán es conocido por su desarrollo agrícola, con una economía basada en el comercio. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Huehuetenango.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 13,
+     "departamento": "Huehuetenango",
+     "id_municipal": 1317,
+     "municipio": "Santa Eulalia",
+     "Resumen": "El municipio de Santa Eulalia es conocido por su desarrollo agrícola, con una economía basada en la agricultura. Es un lugar con paisajes naturales impresionantes, lo que lo convierte en un punto de interés en el departamento de Huehuetenango.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 13,
+     "departamento": "Huehuetenango",
+     "id_municipal": 1318,
+     "municipio": "San Mateo Ixtatán",
+     "Resumen": "El municipio de San Mateo Ixtatán es conocido por su riqueza cultural e histórica, con una economía basada en el comercio. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Huehuetenango.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 13,
+     "departamento": "Huehuetenango",
+     "id_municipal": 1319,
+     "municipio": "Colotenango",
+     "Resumen": "El municipio de Colotenango es conocido por su desarrollo agrícola, con una economía basada en la agricultura. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Huehuetenango.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 13,
+     "departamento": "Huehuetenango",
+     "id_municipal": 1320,
+     "municipio": "San Sebastián Huehuetenango",
+     "Resumen": "El municipio de San Sebastián Huehuetenango es conocido por su desarrollo agrícola, con una economía basada en el comercio. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Huehuetenango.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 13,
+     "departamento": "Huehuetenango",
+     "id_municipal": 1321,
+     "municipio": "Tectitán",
+     "Resumen": "El municipio de Tectitán es conocido por su riqueza cultural e histórica, con una economía basada en la agricultura. Es un lugar con paisajes naturales impresionantes, lo que lo convierte en un punto de interés en el departamento de Huehuetenango.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 13,
+     "departamento": "Huehuetenango",
+     "id_municipal": 1322,
+     "municipio": "Concepción Huista",
+     "Resumen": "El municipio de Concepción Huista es conocido por su desarrollo agrícola, con una economía basada en el comercio. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Huehuetenango.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 13,
+     "departamento": "Huehuetenango",
+     "id_municipal": 1323,
+     "municipio": "San Juan Ixcoy",
+     "Resumen": "El municipio de San Juan Ixcoy es conocido por su desarrollo agrícola, con una economía basada en la agricultura. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Huehuetenango.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 13,
+     "departamento": "Huehuetenango",
+     "id_municipal": 1324,
+     "municipio": "San Antonio Huista",
+     "Resumen": "El municipio de San Antonio Huista es conocido por su riqueza cultural e histórica, con una economía basada en el comercio. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Huehuetenango.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 13,
+     "departamento": "Huehuetenango",
+     "id_municipal": 1325,
+     "municipio": "San Sebastián Coatán",
+     "Resumen": "El municipio de San Sebastián Coatán es conocido por su desarrollo agrícola, con una economía basada en la agricultura. Es un lugar con paisajes naturales impresionantes, lo que lo convierte en un punto de interés en el departamento de Huehuetenango.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 13,
+     "departamento": "Huehuetenango",
+     "id_municipal": 1326,
+     "municipio": "Barillas",
+     "Resumen": "El municipio de Barillas es conocido por su desarrollo agrícola, con una economía basada en el comercio. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Huehuetenango.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 13,
+     "departamento": "Huehuetenango",
+     "id_municipal": 1327,
+     "municipio": "Aguacatán",
+     "Resumen": "El municipio de Aguacatán es conocido por su riqueza cultural e histórica, con una economía basada en la agricultura. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Huehuetenango.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 13,
+     "departamento": "Huehuetenango",
+     "id_municipal": 1328,
+     "municipio": "San Rafael Pétzal",
+     "Resumen": "El municipio de San Rafael Pétzal es conocido por su desarrollo agrícola, con una economía basada en el comercio. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Huehuetenango.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 13,
+     "departamento": "Huehuetenango",
+     "id_municipal": 1329,
+     "municipio": "San Gaspar Ixchil",
+     "Resumen": "El municipio de San Gaspar Ixchil es conocido por su desarrollo agrícola, con una economía basada en la agricultura. Es un lugar con paisajes naturales impresionantes, lo que lo convierte en un punto de interés en el departamento de Huehuetenango.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 13,
+     "departamento": "Huehuetenango",
+     "id_municipal": 1330,
+     "municipio": "Santiago Chimaltenango",
+     "Resumen": "El municipio de Santiago Chimaltenango es conocido por su riqueza cultural e histórica, con una economía basada en el comercio. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Huehuetenango.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 13,
+     "departamento": "Huehuetenango",
+     "id_municipal": 1331,
+     "municipio": "Santa Ana Huista",
+     "Resumen": "El municipio de Santa Ana Huista es conocido por su desarrollo agrícola, con una economía basada en la agricultura. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Huehuetenango.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 13,
+     "departamento": "Huehuetenango",
+     "id_municipal": 1332,
+     "municipio": "Unión Cantinil",
+     "Resumen": "El municipio de Unión Cantinil es conocido por su desarrollo agrícola, con una economía basada en el comercio. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Huehuetenango.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 13,
+     "departamento": "Huehuetenango",
+     "id_municipal": 1333,
+     "municipio": "Petatán",
+     "Resumen": "El municipio de Petatán es conocido por su riqueza cultural e histórica, con una economía basada en la agricultura. Es un lugar con paisajes naturales impresionantes, lo que lo convierte en un punto de interés en el departamento de Huehuetenango.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 14,
+     "departamento": "Quiché",
+     "id_municipal": 1401,
+     "municipio": "Santa Cruz del Quiché",
+     "Resumen": "El municipio de Santa Cruz del Quiché es conocido por su desarrollo agrícola, con una economía basada en el comercio. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Quiché.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 14,
+     "departamento": "Quiché",
+     "id_municipal": 1402,
+     "municipio": "Chiché",
+     "Resumen": "El municipio de Chiché es conocido por su desarrollo agrícola, con una economía basada en la agricultura. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Quiché.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 14,
+     "departamento": "Quiché",
+     "id_municipal": 1403,
+     "municipio": "Chinique",
+     "Resumen": "El municipio de Chinique es conocido por su riqueza cultural e histórica, con una economía basada en el comercio. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Quiché.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 14,
+     "departamento": "Quiché",
+     "id_municipal": 1404,
+     "municipio": "Zacualpa",
+     "Resumen": "El municipio de Zacualpa es conocido por su desarrollo agrícola, con una economía basada en la agricultura. Es un lugar con paisajes naturales impresionantes, lo que lo convierte en un punto de interés en el departamento de Quiché.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 14,
+     "departamento": "Quiché",
+     "id_municipal": 1405,
+     "municipio": "Chajul",
+     "Resumen": "El municipio de Chajul es conocido por su desarrollo agrícola, con una economía basada en el comercio. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Quiché.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 14,
+     "departamento": "Quiché",
+     "id_municipal": 1406,
+     "municipio": "Chichicastenango",
+     "Resumen": "El municipio de Chichicastenango es conocido por su riqueza cultural e histórica, con una economía basada en la agricultura. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Quiché.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 14,
+     "departamento": "Quiché",
+     "id_municipal": 1407,
+     "municipio": "Patzité",
+     "Resumen": "El municipio de Patzité es conocido por su desarrollo agrícola, con una economía basada en el comercio. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Quiché.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 14,
+     "departamento": "Quiché",
+     "id_municipal": 1408,
+     "municipio": "San Antonio Ilotenango",
+     "Resumen": "El municipio de San Antonio Ilotenango es conocido por su desarrollo agrícola, con una economía basada en la agricultura. Es un lugar con paisajes naturales impresionantes, lo que lo convierte en un punto de interés en el departamento de Quiché.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 14,
+     "departamento": "Quiché",
+     "id_municipal": 1409,
+     "municipio": "San Pedro Jocopilas",
+     "Resumen": "El municipio de San Pedro Jocopilas es conocido por su riqueza cultural e histórica, con una economía basada en el comercio. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Quiché.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 14,
+     "departamento": "Quiché",
+     "id_municipal": 1410,
+     "municipio": "Cunén",
+     "Resumen": "El municipio de Cunén es conocido por su desarrollo agrícola, con una economía basada en la agricultura. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Quiché.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 14,
+     "departamento": "Quiché",
+     "id_municipal": 1411,
+     "municipio": "San Juan Cotzal",
+     "Resumen": "El municipio de San Juan Cotzal es conocido por su desarrollo agrícola, con una economía basada en el comercio. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Quiché.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 14,
+     "departamento": "Quiché",
+     "id_municipal": 1412,
+     "municipio": "Joyabaj",
+     "Resumen": "El municipio de Joyabaj es conocido por su riqueza cultural e histórica, con una economía basada en la agricultura. Es un lugar con paisajes naturales impresionantes, lo que lo convierte en un punto de interés en el departamento de Quiché.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 14,
+     "departamento": "Quiché",
+     "id_municipal": 1413,
+     "municipio": "Nebaj",
+     "Resumen": "El municipio de Nebaj es conocido por su desarrollo agrícola, con una economía basada en el comercio. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Quiché.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 14,
+     "departamento": "Quiché",
+     "id_municipal": 1414,
+     "municipio": "San Andrés Sajcabajá",
+     "Resumen": "El municipio de San Andrés Sajcabajá es conocido por su desarrollo agrícola, con una economía basada en la agricultura. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Quiché.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 14,
+     "departamento": "Quiché",
+     "id_municipal": 1415,
+     "municipio": "San Miguel Uspantán",
+     "Resumen": "El municipio de San Miguel Uspantán es conocido por su riqueza cultural e histórica, con una economía basada en el comercio. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Quiché.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 14,
+     "departamento": "Quiché",
+     "id_municipal": 1416,
+     "municipio": "Sacapulas",
+     "Resumen": "El municipio de Sacapulas es conocido por su desarrollo agrícola, con una economía basada en la agricultura. Es un lugar con paisajes naturales impresionantes, lo que lo convierte en un punto de interés en el departamento de Quiché.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 14,
+     "departamento": "Quiché",
+     "id_municipal": 1417,
+     "municipio": "San Bartolomé Jocotenango",
+     "Resumen": "El municipio de San Bartolomé Jocotenango es conocido por su desarrollo agrícola, con una economía basada en el comercio. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Quiché.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 14,
+     "departamento": "Quiché",
+     "id_municipal": 1418,
+     "municipio": "Canillá",
+     "Resumen": "El municipio de Canillá es conocido por su riqueza cultural e histórica, con una economía basada en la agricultura. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Quiché.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 14,
+     "departamento": "Quiché",
+     "id_municipal": 1419,
+     "municipio": "Chicamán",
+     "Resumen": "El municipio de Chicamán es conocido por su desarrollo agrícola, con una economía basada en el comercio. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Quiché.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 14,
+     "departamento": "Quiché",
+     "id_municipal": 1420,
+     "municipio": "Ixcán",
+     "Resumen": "El municipio de Ixcán es conocido por su desarrollo agrícola, con una economía basada en la agricultura. Es un lugar con paisajes naturales impresionantes, lo que lo convierte en un punto de interés en el departamento de Quiché.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 14,
+     "departamento": "Quiché",
+     "id_municipal": 1421,
+     "municipio": "Pachalum",
+     "Resumen": "El municipio de Pachalum es conocido por su riqueza cultural e histórica, con una economía basada en el comercio. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Quiché.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 15,
+     "departamento": "Baja Verapaz",
+     "id_municipal": 1501,
+     "municipio": "Salamá",
+     "Resumen": "El municipio de Salamá es conocido por su desarrollo agrícola, con una economía basada en la agricultura. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Baja Verapaz.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 15,
+     "departamento": "Baja Verapaz",
+     "id_municipal": 1502,
+     "municipio": "San Miguel Chicaj",
+     "Resumen": "El municipio de San Miguel Chicaj es conocido por su desarrollo agrícola, con una economía basada en el comercio. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Baja Verapaz.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 15,
+     "departamento": "Baja Verapaz",
+     "id_municipal": 1503,
+     "municipio": "Rabinal",
+     "Resumen": "El municipio de Rabinal es conocido por su riqueza cultural e histórica, con una economía basada en la agricultura. Es un lugar con paisajes naturales impresionantes, lo que lo convierte en un punto de interés en el departamento de Baja Verapaz.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 15,
+     "departamento": "Baja Verapaz",
+     "id_municipal": 1504,
+     "municipio": "Cubulco",
+     "Resumen": "El municipio de Cubulco es conocido por su desarrollo agrícola, con una economía basada en el comercio. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Baja Verapaz.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 15,
+     "departamento": "Baja Verapaz",
+     "id_municipal": 1505,
+     "municipio": "Granados",
+     "Resumen": "El municipio de Granados es conocido por su desarrollo agrícola, con una economía basada en la agricultura. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Baja Verapaz.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 15,
+     "departamento": "Baja Verapaz",
+     "id_municipal": 1506,
+     "municipio": "Santa Cruz El Chol",
+     "Resumen": "El municipio de Santa Cruz El Chol es conocido por su riqueza cultural e histórica, con una economía basada en el comercio. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Baja Verapaz.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 15,
+     "departamento": "Baja Verapaz",
+     "id_municipal": 1507,
+     "municipio": "San Jerónimo",
+     "Resumen": "El municipio de San Jerónimo es conocido por su desarrollo agrícola, con una economía basada en la agricultura. Es un lugar con paisajes naturales impresionantes, lo que lo convierte en un punto de interés en el departamento de Baja Verapaz.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 15,
+     "departamento": "Baja Verapaz",
+     "id_municipal": 1508,
+     "municipio": "Purulhá",
+     "Resumen": "El municipio de Purulhá es conocido por su desarrollo agrícola, con una economía basada en el comercio. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Baja Verapaz.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 16,
+     "departamento": "Alta Verapaz",
+     "id_municipal": 1601,
+     "municipio": "Cobán",
+     "Resumen": "El municipio de Cobán es conocido por su riqueza cultural e histórica, con una economía basada en la agricultura. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Alta Verapaz.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 16,
+     "departamento": "Alta Verapaz",
+     "id_municipal": 1602,
+     "municipio": "Santa Cruz Verapaz",
+     "Resumen": "El municipio de Santa Cruz Verapaz es conocido por su desarrollo agrícola, con una economía basada en el comercio. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Alta Verapaz.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 16,
+     "departamento": "Alta Verapaz",
+     "id_municipal": 1603,
+     "municipio": "San Cristóbal Verapaz",
+     "Resumen": "El municipio de San Cristóbal Verapaz es conocido por su desarrollo agrícola, con una economía basada en la agricultura. Es un lugar con paisajes naturales impresionantes, lo que lo convierte en un punto de interés en el departamento de Alta Verapaz.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 16,
+     "departamento": "Alta Verapaz",
+     "id_municipal": 1604,
+     "municipio": "Tactic",
+     "Resumen": "El municipio de Tactic es conocido por su riqueza cultural e histórica, con una economía basada en el comercio. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Alta Verapaz.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 16,
+     "departamento": "Alta Verapaz",
+     "id_municipal": 1605,
+     "municipio": "Tamahú",
+     "Resumen": "El municipio de Tamahú es conocido por su desarrollo agrícola, con una economía basada en la agricultura. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Alta Verapaz.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 16,
+     "departamento": "Alta Verapaz",
+     "id_municipal": 1606,
+     "municipio": "San Miguel Tucurú",
+     "Resumen": "El municipio de San Miguel Tucurú es conocido por su desarrollo agrícola, con una economía basada en el comercio. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Alta Verapaz.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 16,
+     "departamento": "Alta Verapaz",
+     "id_municipal": 1607,
+     "municipio": "Panzós",
+     "Resumen": "El municipio de Panzós es conocido por su riqueza cultural e histórica, con una economía basada en la agricultura. Es un lugar con paisajes naturales impresionantes, lo que lo convierte en un punto de interés en el departamento de Alta Verapaz.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 16,
+     "departamento": "Alta Verapaz",
+     "id_municipal": 1608,
+     "municipio": "Senahú",
+     "Resumen": "El municipio de Senahú es conocido por su desarrollo agrícola, con una economía basada en el comercio. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Alta Verapaz.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 16,
+     "departamento": "Alta Verapaz",
+     "id_municipal": 1609,
+     "municipio": "San Pedro Carchá",
+     "Resumen": "El municipio de San Pedro Carchá es conocido por su desarrollo agrícola, con una economía basada en la agricultura. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Alta Verapaz.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 16,
+     "departamento": "Alta Verapaz",
+     "id_municipal": 1610,
+     "municipio": "San Juan Chamelco",
+     "Resumen": "El municipio de San Juan Chamelco es conocido por su riqueza cultural e histórica, con una economía basada en el comercio. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Alta Verapaz.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 16,
+     "departamento": "Alta Verapaz",
+     "id_municipal": 1611,
+     "municipio": "San Agustín Lanquín",
+     "Resumen": "El municipio de San Agustín Lanquín es conocido por su desarrollo agrícola, con una economía basada en la agricultura. Es un lugar con paisajes naturales impresionantes, lo que lo convierte en un punto de interés en el departamento de Alta Verapaz.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 16,
+     "departamento": "Alta Verapaz",
+     "id_municipal": 1612,
+     "municipio": "Santa María Cahabón",
+     "Resumen": "El municipio de Santa María Cahabón es conocido por su desarrollo agrícola, con una economía basada en el comercio. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Alta Verapaz.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 16,
+     "departamento": "Alta Verapaz",
+     "id_municipal": 1613,
+     "municipio": "Chisec",
+     "Resumen": "El municipio de Chisec es conocido por su riqueza cultural e histórica, con una economía basada en la agricultura. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Alta Verapaz.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 16,
+     "departamento": "Alta Verapaz",
+     "id_municipal": 1614,
+     "municipio": "Chahal",
+     "Resumen": "El municipio de Chahal es conocido por su desarrollo agrícola, con una economía basada en el comercio. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Alta Verapaz.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 16,
+     "departamento": "Alta Verapaz",
+     "id_municipal": 1615,
+     "municipio": "Fray Bartolomé de las Casas",
+     "Resumen": "El municipio de Fray Bartolomé de las Casas es conocido por su desarrollo agrícola, con una economía basada en la agricultura. Es un lugar con paisajes naturales impresionantes, lo que lo convierte en un punto de interés en el departamento de Alta Verapaz.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 16,
+     "departamento": "Alta Verapaz",
+     "id_municipal": 1616,
+     "municipio": "Santa Catalina La Tinta",
+     "Resumen": "El municipio de Santa Catalina La Tinta es conocido por su riqueza cultural e histórica, con una economía basada en el comercio. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Alta Verapaz.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 16,
+     "departamento": "Alta Verapaz",
+     "id_municipal": 1617,
+     "municipio": "Raxruhá",
+     "Resumen": "El municipio de Raxruhá es conocido por su desarrollo agrícola, con una economía basada en la agricultura. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Alta Verapaz.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 17,
+     "departamento": "Petén",
+     "id_municipal": 1701,
+     "municipio": "Flores",
+     "Resumen": "El municipio de Flores es conocido por su desarrollo agrícola, con una economía basada en el comercio. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Petén.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 17,
+     "departamento": "Petén",
+     "id_municipal": 1702,
+     "municipio": "San José",
+     "Resumen": "El municipio de San José es conocido por su riqueza cultural e histórica, con una economía basada en la agricultura. Es un lugar con paisajes naturales impresionantes, lo que lo convierte en un punto de interés en el departamento de Petén.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 17,
+     "departamento": "Petén",
+     "id_municipal": 1703,
+     "municipio": "San Benito",
+     "Resumen": "El municipio de San Benito es conocido por su desarrollo agrícola, con una economía basada en el comercio. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Petén.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 17,
+     "departamento": "Petén",
+     "id_municipal": 1704,
+     "municipio": "San Andrés",
+     "Resumen": "El municipio de San Andrés es conocido por su desarrollo agrícola, con una economía basada en la agricultura. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Petén.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 17,
+     "departamento": "Petén",
+     "id_municipal": 1705,
+     "municipio": "La Libertad",
+     "Resumen": "El municipio de La Libertad es conocido por su riqueza cultural e histórica, con una economía basada en el comercio. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Petén.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 17,
+     "departamento": "Petén",
+     "id_municipal": 1706,
+     "municipio": "San Francisco",
+     "Resumen": "El municipio de San Francisco es conocido por su desarrollo agrícola, con una economía basada en la agricultura. Es un lugar con paisajes naturales impresionantes, lo que lo convierte en un punto de interés en el departamento de Petén.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 17,
+     "departamento": "Petén",
+     "id_municipal": 1707,
+     "municipio": "Santa Ana",
+     "Resumen": "El municipio de Santa Ana es conocido por su desarrollo agrícola, con una economía basada en el comercio. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Petén.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 17,
+     "departamento": "Petén",
+     "id_municipal": 1708,
+     "municipio": "Dolores",
+     "Resumen": "El municipio de Dolores es conocido por su riqueza cultural e histórica, con una economía basada en la agricultura. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Petén.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 17,
+     "departamento": "Petén",
+     "id_municipal": 1709,
+     "municipio": "San Luis",
+     "Resumen": "El municipio de San Luis es conocido por su desarrollo agrícola, con una economía basada en el comercio. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Petén.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 17,
+     "departamento": "Petén",
+     "id_municipal": 1710,
+     "municipio": "Sayaxché",
+     "Resumen": "El municipio de Sayaxché es conocido por su desarrollo agrícola, con una economía basada en la agricultura. Es un lugar con paisajes naturales impresionantes, lo que lo convierte en un punto de interés en el departamento de Petén.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 17,
+     "departamento": "Petén",
+     "id_municipal": 1711,
+     "municipio": "Melchor de Mencos",
+     "Resumen": "El municipio de Melchor de Mencos es conocido por su riqueza cultural e histórica, con una economía basada en el comercio. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Petén.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 17,
+     "departamento": "Petén",
+     "id_municipal": 1712,
+     "municipio": "Poptún",
+     "Resumen": "El municipio de Poptún es conocido por su desarrollo agrícola, con una economía basada en la agricultura. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Petén.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 17,
+     "departamento": "Petén",
+     "id_municipal": 1713,
+     "municipio": "Las Cruces",
+     "Resumen": "El municipio de Las Cruces es conocido por su desarrollo agrícola, con una economía basada en el comercio. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Petén.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 17,
+     "departamento": "Petén",
+     "id_municipal": 1714,
+     "municipio": "El Chal",
+     "Resumen": "El municipio de El Chal es conocido por su riqueza cultural e histórica, con una economía basada en la agricultura. Es un lugar con paisajes naturales impresionantes, lo que lo convierte en un punto de interés en el departamento de Petén.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 18,
+     "departamento": "Izabal",
+     "id_municipal": 1801,
+     "municipio": "Puerto Barrios",
+     "Resumen": "El municipio de Puerto Barrios es conocido por su desarrollo agrícola, con una economía basada en el comercio. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Izabal.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 18,
+     "departamento": "Izabal",
+     "id_municipal": 1802,
+     "municipio": "Livingston",
+     "Resumen": "El municipio de Livingston es conocido por su desarrollo agrícola, con una economía basada en la agricultura. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Izabal.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 18,
+     "departamento": "Izabal",
+     "id_municipal": 1803,
+     "municipio": "El Estor",
+     "Resumen": "El municipio de El Estor es conocido por su riqueza cultural e histórica, con una economía basada en el comercio. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Izabal.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 18,
+     "departamento": "Izabal",
+     "id_municipal": 1804,
+     "municipio": "Morales",
+     "Resumen": "El municipio de Morales es conocido por su desarrollo agrícola, con una economía basada en la agricultura. Es un lugar con paisajes naturales impresionantes, lo que lo convierte en un punto de interés en el departamento de Izabal.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 18,
+     "departamento": "Izabal",
+     "id_municipal": 1805,
+     "municipio": "Los Amates",
+     "Resumen": "El municipio de Los Amates es conocido por su desarrollo agrícola, con una economía basada en el comercio. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Izabal.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 19,
+     "departamento": "Zacapa",
+     "id_municipal": 1901,
+     "municipio": "Zacapa",
+     "Resumen": "El municipio de Zacapa es conocido por su riqueza cultural e histórica, con una economía basada en la agricultura. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Zacapa.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 19,
+     "departamento": "Zacapa",
+     "id_municipal": 1902,
+     "municipio": "Estanzuela",
+     "Resumen": "El municipio de Estanzuela es conocido por su desarrollo agrícola, con una economía basada en el comercio. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Zacapa.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 19,
+     "departamento": "Zacapa",
+     "id_municipal": 1903,
+     "municipio": "Río Hondo",
+     "Resumen": "El municipio de Río Hondo es conocido por su desarrollo agrícola, con una economía basada en la agricultura. Es un lugar con paisajes naturales impresionantes, lo que lo convierte en un punto de interés en el departamento de Zacapa.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 19,
+     "departamento": "Zacapa",
+     "id_municipal": 1904,
+     "municipio": "Gualán",
+     "Resumen": "El municipio de Gualán es conocido por su riqueza cultural e histórica, con una economía basada en el comercio. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Zacapa.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 19,
+     "departamento": "Zacapa",
+     "id_municipal": 1905,
+     "municipio": "Teculután",
+     "Resumen": "El municipio de Teculután es conocido por su desarrollo agrícola, con una economía basada en la agricultura. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Zacapa.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 19,
+     "departamento": "Zacapa",
+     "id_municipal": 1906,
+     "municipio": "Usumatlán",
+     "Resumen": "El municipio de Usumatlán es conocido por su desarrollo agrícola, con una economía basada en el comercio. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Zacapa.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 19,
+     "departamento": "Zacapa",
+     "id_municipal": 1907,
+     "municipio": "Cabañas",
+     "Resumen": "El municipio de Cabañas es conocido por su riqueza cultural e histórica, con una economía basada en la agricultura. Es un lugar con paisajes naturales impresionantes, lo que lo convierte en un punto de interés en el departamento de Zacapa.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 19,
+     "departamento": "Zacapa",
+     "id_municipal": 1908,
+     "municipio": "San Diego",
+     "Resumen": "El municipio de San Diego es conocido por su desarrollo agrícola, con una economía basada en el comercio. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Zacapa.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 19,
+     "departamento": "Zacapa",
+     "id_municipal": 1909,
+     "municipio": "La Unión",
+     "Resumen": "El municipio de La Unión es conocido por su desarrollo agrícola, con una economía basada en la agricultura. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Zacapa.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 19,
+     "departamento": "Zacapa",
+     "id_municipal": 1910,
+     "municipio": "Huité",
+     "Resumen": "El municipio de Huité es conocido por su riqueza cultural e histórica, con una economía basada en el comercio. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Zacapa.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 19,
+     "departamento": "Zacapa",
+     "id_municipal": 1911,
+     "municipio": "San Jorge",
+     "Resumen": "El municipio de San Jorge es conocido por su desarrollo agrícola, con una economía basada en la agricultura. Es un lugar con paisajes naturales impresionantes, lo que lo convierte en un punto de interés en el departamento de Zacapa.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 20,
+     "departamento": "Chiquimula",
+     "id_municipal": 2001,
+     "municipio": "Chiquimula",
+     "Resumen": "El municipio de Chiquimula es conocido por su desarrollo agrícola, con una economía basada en el comercio. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Chiquimula.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 20,
+     "departamento": "Chiquimula",
+     "id_municipal": 2002,
+     "municipio": "San José La Arada",
+     "Resumen": "El municipio de San José La Arada es conocido por su riqueza cultural e histórica, con una economía basada en la agricultura. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Chiquimula.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 20,
+     "departamento": "Chiquimula",
+     "id_municipal": 2003,
+     "municipio": "San Juan Ermita",
+     "Resumen": "El municipio de San Juan Ermita es conocido por su desarrollo agrícola, con una economía basada en el comercio. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Chiquimula.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 20,
+     "departamento": "Chiquimula",
+     "id_municipal": 2004,
+     "municipio": "Jocotán",
+     "Resumen": "El municipio de Jocotán es conocido por su desarrollo agrícola, con una economía basada en la agricultura. Es un lugar con paisajes naturales impresionantes, lo que lo convierte en un punto de interés en el departamento de Chiquimula.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 20,
+     "departamento": "Chiquimula",
+     "id_municipal": 2005,
+     "municipio": "Camotán",
+     "Resumen": "El municipio de Camotán es conocido por su riqueza cultural e histórica, con una economía basada en el comercio. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Chiquimula.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 20,
+     "departamento": "Chiquimula",
+     "id_municipal": 2006,
+     "municipio": "Olopa",
+     "Resumen": "El municipio de Olopa es conocido por su desarrollo agrícola, con una economía basada en la agricultura. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Chiquimula.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 20,
+     "departamento": "Chiquimula",
+     "id_municipal": 2007,
+     "municipio": "Esquipulas",
+     "Resumen": "El municipio de Esquipulas es conocido por su desarrollo agrícola, con una economía basada en el comercio. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Chiquimula.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 20,
+     "departamento": "Chiquimula",
+     "id_municipal": 2008,
+     "municipio": "Concepción las Minas",
+     "Resumen": "El municipio de Concepción las Minas es conocido por su riqueza cultural e histórica, con una economía basada en la agricultura. Es un lugar con paisajes naturales impresionantes, lo que lo convierte en un punto de interés en el departamento de Chiquimula.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 20,
+     "departamento": "Chiquimula",
+     "id_municipal": 2009,
+     "municipio": "Quezaltepeque",
+     "Resumen": "El municipio de Quezaltepeque es conocido por su desarrollo agrícola, con una economía basada en el comercio. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Chiquimula.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 20,
+     "departamento": "Chiquimula",
+     "id_municipal": 2010,
+     "municipio": "San Jacinto",
+     "Resumen": "El municipio de San Jacinto es conocido por su desarrollo agrícola, con una economía basada en la agricultura. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Chiquimula.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 20,
+     "departamento": "Chiquimula",
+     "id_municipal": 2011,
+     "municipio": "Ipala",
+     "Resumen": "El municipio de Ipala es conocido por su riqueza cultural e histórica, con una economía basada en el comercio. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Chiquimula.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 21,
+     "departamento": "Jalapa",
+     "id_municipal": 2101,
+     "municipio": "Jalapa",
+     "Resumen": "El municipio de Jalapa es conocido por su desarrollo agrícola, con una economía basada en la agricultura. Es un lugar con paisajes naturales impresionantes, lo que lo convierte en un punto de interés en el departamento de Jalapa.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 21,
+     "departamento": "Jalapa",
+     "id_municipal": 2102,
+     "municipio": "San Pedro Pinula",
+     "Resumen": "El municipio de San Pedro Pinula es conocido por su desarrollo agrícola, con una economía basada en el comercio. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Jalapa.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 21,
+     "departamento": "Jalapa",
+     "id_municipal": 2103,
+     "municipio": "San Luis Jilotepeque",
+     "Resumen": "El municipio de San Luis Jilotepeque es conocido por su riqueza cultural e histórica, con una economía basada en la agricultura. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Jalapa.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 21,
+     "departamento": "Jalapa",
+     "id_municipal": 2104,
+     "municipio": "San Manuel Chaparrón",
+     "Resumen": "El municipio de San Manuel Chaparrón es conocido por su desarrollo agrícola, con una economía basada en el comercio. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Jalapa.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 21,
+     "departamento": "Jalapa",
+     "id_municipal": 2105,
+     "municipio": "San Carlos Alzatate",
+     "Resumen": "El municipio de San Carlos Alzatate es conocido por su desarrollo agrícola, con una economía basada en la agricultura. Es un lugar con paisajes naturales impresionantes, lo que lo convierte en un punto de interés en el departamento de Jalapa.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 21,
+     "departamento": "Jalapa",
+     "id_municipal": 2106,
+     "municipio": "Monjas",
+     "Resumen": "El municipio de Monjas es conocido por su riqueza cultural e histórica, con una economía basada en el comercio. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Jalapa.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 21,
+     "departamento": "Jalapa",
+     "id_municipal": 2107,
+     "municipio": "Mataquescuintla",
+     "Resumen": "El municipio de Mataquescuintla es conocido por su desarrollo agrícola, con una economía basada en la agricultura. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Jalapa.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 22,
+     "departamento": "Jutiapa",
+     "id_municipal": 2201,
+     "municipio": "Jutiapa",
+     "Resumen": "El municipio de Jutiapa es conocido por su desarrollo agrícola, con una economía basada en el comercio. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Jutiapa.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 22,
+     "departamento": "Jutiapa",
+     "id_municipal": 2202,
+     "municipio": "El Progreso",
+     "Resumen": "El municipio de El Progreso es conocido por su riqueza cultural e histórica, con una economía basada en la agricultura. Es un lugar con paisajes naturales impresionantes, lo que lo convierte en un punto de interés en el departamento de Jutiapa.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 22,
+     "departamento": "Jutiapa",
+     "id_municipal": 2203,
+     "municipio": "Santa Catarina Mita",
+     "Resumen": "El municipio de Santa Catarina Mita es conocido por su desarrollo agrícola, con una economía basada en el comercio. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Jutiapa.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 22,
+     "departamento": "Jutiapa",
+     "id_municipal": 2204,
+     "municipio": "Agua Blanca",
+     "Resumen": "El municipio de Agua Blanca es conocido por su desarrollo agrícola, con una economía basada en la agricultura. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Jutiapa.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 22,
+     "departamento": "Jutiapa",
+     "id_municipal": 2205,
+     "municipio": "Asunción Mita",
+     "Resumen": "El municipio de Asunción Mita es conocido por su riqueza cultural e histórica, con una economía basada en el comercio. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Jutiapa.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 22,
+     "departamento": "Jutiapa",
+     "id_municipal": 2206,
+     "municipio": "Yupiltepeque",
+     "Resumen": "El municipio de Yupiltepeque es conocido por su desarrollo agrícola, con una economía basada en la agricultura. Es un lugar con paisajes naturales impresionantes, lo que lo convierte en un punto de interés en el departamento de Jutiapa.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 22,
+     "departamento": "Jutiapa",
+     "id_municipal": 2207,
+     "municipio": "Atescatempa",
+     "Resumen": "El municipio de Atescatempa es conocido por su desarrollo agrícola, con una economía basada en el comercio. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Jutiapa.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 22,
+     "departamento": "Jutiapa",
+     "id_municipal": 2208,
+     "municipio": "Jerez",
+     "Resumen": "El municipio de Jerez es conocido por su riqueza cultural e histórica, con una economía basada en la agricultura. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Jutiapa.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 22,
+     "departamento": "Jutiapa",
+     "id_municipal": 2209,
+     "municipio": "El Adelanto",
+     "Resumen": "El municipio de El Adelanto es conocido por su desarrollo agrícola, con una economía basada en el comercio. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Jutiapa.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 22,
+     "departamento": "Jutiapa",
+     "id_municipal": 2210,
+     "municipio": "Zapotitlán",
+     "Resumen": "El municipio de Zapotitlán es conocido por su desarrollo agrícola, con una economía basada en la agricultura. Es un lugar con paisajes naturales impresionantes, lo que lo convierte en un punto de interés en el departamento de Jutiapa.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 22,
+     "departamento": "Jutiapa",
+     "id_municipal": 2211,
+     "municipio": "Comapa",
+     "Resumen": "El municipio de Comapa es conocido por su riqueza cultural e histórica, con una economía basada en el comercio. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Jutiapa.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 22,
+     "departamento": "Jutiapa",
+     "id_municipal": 2212,
+     "municipio": "Jalpatagua",
+     "Resumen": "El municipio de Jalpatagua es conocido por su desarrollo agrícola, con una economía basada en la agricultura. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Jutiapa.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 22,
+     "departamento": "Jutiapa",
+     "id_municipal": 2213,
+     "municipio": "Conguaco",
+     "Resumen": "El municipio de Conguaco es conocido por su desarrollo agrícola, con una economía basada en el comercio. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Jutiapa.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 22,
+     "departamento": "Jutiapa",
+     "id_municipal": 2214,
+     "municipio": "Moyuta",
+     "Resumen": "El municipio de Moyuta es conocido por su riqueza cultural e histórica, con una economía basada en la agricultura. Es un lugar con paisajes naturales impresionantes, lo que lo convierte en un punto de interés en el departamento de Jutiapa.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 22,
+     "departamento": "Jutiapa",
+     "id_municipal": 2215,
+     "municipio": "Pasaco",
+     "Resumen": "El municipio de Pasaco es conocido por su desarrollo agrícola, con una economía basada en el comercio. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Jutiapa.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 22,
+     "departamento": "Jutiapa",
+     "id_municipal": 2216,
+     "municipio": "San José Acatempa",
+     "Resumen": "El municipio de San José Acatempa es conocido por su desarrollo agrícola, con una economía basada en la agricultura. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Jutiapa.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    },
+    {
+     "id_dep": 22,
+     "departamento": "Jutiapa",
+     "id_municipal": 2217,
+     "municipio": "Quesada",
+     "Resumen": "El municipio de Quesada es conocido por su riqueza cultural e histórica, con una economía basada en el comercio. Es un lugar con una vibrante comunidad local, lo que lo convierte en un punto de interés en el departamento de Jutiapa.",
+     "Fuente\/Referencia": "Datos obtenidos de fuentes oficiales como el Instituto Nacional de Estadística (INE), Ministerios de Gobierno y estudios locales."
+    }
+]

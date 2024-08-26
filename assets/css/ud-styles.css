@@ -2883,7 +2883,7 @@ hr{
 .popup {
   display: none;
   position: fixed;
-  z-index: 1;
+  z-index: 10000;
   left: 0;
   top: 0;
   width: 100%;
@@ -2899,7 +2899,7 @@ hr{
   padding: 20px;
   border: 1px solid #888;
   width: 40%;
-  height: 400px;
+  height: fit-content;
 }
 
 .close {
