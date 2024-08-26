@@ -49,6 +49,7 @@ module.exports = function (eleventyConfig) {
 	eleventyConfig.addCollection("municipios_completos", async function(collectionApi) {
 		const municipios = JSON.parse(fs.readFileSync(path.join(__dirname, 'data_files', 'municipios.json'), 'utf-8'));
 		const geojson = JSON.parse(fs.readFileSync(path.join(__dirname, 'data_files', 'municipios.geojson'), 'utf-8'));
+		const municipios_resumen = JSON.parse(fs.readFileSync(path.join(__dirname, 'data_files', 'municipios_resumen.json'), 'utf-8'));
 
 		let url = `https://data-dataverso.redciudadana.org/assets/conjuntos/cuadroa1_poblacion_total_por_sexo_grupos_quinquenales_de__edad_y_area.json`;
 		const poblacion_sexo = await fetchDataset(url);
@@ -108,6 +109,13 @@ module.exports = function (eleventyConfig) {
 
 			const geojsonData = geojson.features.find(feature => feature.properties.id_municipal === municipio.id_municipal) || {};
       		const geometry = geojsonData.geometry || {};
+
+			const municipios_resumenData = municipios_resumen.find(pob => pob.id_municipal === municipio.id_municipal) || {};
+
+			const filteredMunicipiosResumenData = {
+				Resumen: municipios_resumenData["Resumen"],
+				Fuente: municipios_resumenData["Fuente\/Referencia"]
+			}
 
 			const groupedDesnutricionData = desnutricionData.reduce((acc, desnu) => {
 				if (!acc[desnu.periodo]) {
@@ -271,6 +279,7 @@ module.exports = function (eleventyConfig) {
 			return {
 				...municipio,
 				geometry,
+				resumen: filteredMunicipiosResumenData,
 				poblacion_sexo: filteredPoblacionSexoData,
 				educacion: filteredEducacionData,
 				desnutricion: groupedDesnutricionData,
