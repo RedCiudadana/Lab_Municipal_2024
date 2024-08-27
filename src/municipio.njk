@@ -24,7 +24,7 @@ tags:
 
 {% block content %}
     <!-- ====== Hero Start ====== -->
-    <section class="ud-hero" id="home">
+    <!-- <section class="ud-hero" id="home">
         <div class="container">
           <div class="row">
             <div class="col-lg-12 text-center">
@@ -33,7 +33,7 @@ tags:
             
           </div>
         </div>
-    </section>
+    </section> -->
     <!-- ====== Hero End ====== -->
 
     <!-- Compartir Popup -->
@@ -74,47 +74,54 @@ tags:
 
     <div class="mx-5">
         <div class="row w-100">
-            <div class="col-lg-2">
-                <div class="sidebar box_shadow_section">
-                    <!-- <div style="padding-top: 60px;">
-                        <h5>Municipio: <br><span>{{ municipio.municipio }}</span></h5>
-                        <h5>Departamento: <br><span>{{ municipio.departamento }}</span></h5>
-                    </div> -->
-                    <ul class="semicircle-menu" style="padding: 10px 0 ;">
-                        <li><a href="#" class="tab-link active" data-target="#general">General</a></li>
-                        <li><a href="#" class="tab-link" data-target="#gestion-municipal">Gestión Municipal</a></li>
-                        <li><a href="#" class="tab-link" data-target="#transparencia">Transparencia</a></li>
-                        <li><a href="#" class="tab-link" data-target="#nutricion">Nutrición</a></li>
-                        <li><a href="#" class="tab-link" data-target="#pobreza">Pobreza</a></li>
-                        <li><a href="#" class="tab-link" data-target="#poblacion">Población</a></li>
-                        <li><a href="#" class="tab-link" data-target="#educacion">Educación</a></li>
-                    </ul>
-                </div>
-            </div>
-          
-            <div class="col-lg-10">
+            <div class="col-lg-12">
                 <div class="row align-items-center justify-content-end box_shadow_section_2" >
-                    <div class="col-lg-5">
-                        <a href="/municipios/index.html">Municipios</a> / <a href="#" style="pointer-events: none;">{{municipio.municipio}}</a>
+                    <div class="col-lg-5 e">
+                        <a class="text-white" href="/municipios/index.html">Municipios</a> / <a href="#" class="text-white" style="pointer-events: none;">{{municipio.municipio}}</a>
                     </div>
-                    <div class="col-lg-7">
-                        <div class="row justify-content-end">
-                            <div class="col-lg-3 col-sm-4">
+                    <div class="col-lg-7 responsive-none">
+                        <div class="row justify-content-end ">
+                            <div class="col-lg-3">
                                 <button id="shareButton" class="header-buttons"><i class="fa-solid fa-share-nodes"></i>Compartir</button>
                             </div>
-                            <div class="col-lg-3 col-sm-4">
+                            <div class="col-lg-3">
                                 <button id="expandButton" class="header-buttons"><i id="expandIcon" class="fa-solid fa-maximize"></i>Expandir</button>
                             </div>
-                            <div class="col-lg-3 col-sm-4">
+                            <div class="col-lg-3">
                                 <button id="guiaButton" class="header-buttons">Guía de Datos</button>
                             </div>
-                            <div class="col-lg-3 col-sm-4">
+                            <div class="col-lg-3">
                                 <button id="metodologiaButton" class="header-buttons">Metodología</button>
                             </div>
                         </div>
                     </div>
                 </div>
-
+            </div>
+            <div class="col-lg-2 my-2">
+                <div class="sidebar box_shadow_section">
+                    <select id="responsive-tabs" class="tab-dropdown d-lg-none">
+                      <option value="#general">General</option>
+                      <option value="#gestion-municipal">Gestión Municipal</option>
+                      <option value="#transparencia">Transparencia</option>
+                      <option value="#nutricion">Nutrición</option>
+                      <option value="#pobreza">Pobreza</option>
+                      <option value="#poblacion">Población</option>
+                      <option value="#educacion">Educación</option>
+                    </select>
+                    
+                    <ul class="semicircle-menu d-none d-lg-block" style="padding: 10px 0;">
+                      <li><a href="#" class="tab-link active" data-target="#general">General</a></li>
+                      <li><a href="#" class="tab-link" data-target="#gestion-municipal">Gestión Municipal</a></li>
+                      <li><a href="#" class="tab-link" data-target="#transparencia">Transparencia</a></li>
+                      <li><a href="#" class="tab-link" data-target="#nutricion">Nutrición</a></li>
+                      <li><a href="#" class="tab-link" data-target="#pobreza">Pobreza</a></li>
+                      <li><a href="#" class="tab-link" data-target="#poblacion">Población</a></li>
+                      <li><a href="#" class="tab-link" data-target="#educacion">Educación</a></li>
+                    </ul>
+                  </div>                  
+            </div>
+          
+            <div class="col-lg-10 my-2">
                 <div id="tab-content w-100">
 
                     <section id="general" class="ud-section tab-content box_shadow_section active">
@@ -446,23 +453,36 @@ tags:
 {% block body_javascripts%}
 <script>
     document.addEventListener("DOMContentLoaded", function () {
-      const tabLinks = document.querySelectorAll(".tab-link");
-      const tabContents = document.querySelectorAll(".tab-content");
-  
-      // Función para manejar el cambio de tabs
-      function changeTab(event) {
-        event.preventDefault();
-        tabLinks.forEach(link => link.classList.remove("active"));
-        tabContents.forEach(content => content.classList.remove("active"));
-  
-        this.classList.add("active");
-        const target = document.querySelector(this.getAttribute("data-target"));
-        target.classList.add("active");
-      }
-  
-      // Asignar el evento de clic a cada enlace de tab
-      tabLinks.forEach(link => link.addEventListener("click", changeTab));
+        const tabLinks = document.querySelectorAll(".tab-link");
+        const tabContents = document.querySelectorAll(".tab-content");
+        const dropdown = document.getElementById("responsive-tabs");
+
+        // Función para manejar el cambio de tabs
+        function changeTab(event) {
+            event.preventDefault();
+            tabLinks.forEach(link => link.classList.remove("active"));
+            tabContents.forEach(content => content.classList.remove("active"));
+
+            this.classList.add("active");
+            const target = document.querySelector(this.getAttribute("data-target"));
+            target.classList.add("active");
+        }
+
+        // Función para manejar el cambio en el select dropdown
+        function changeTabFromDropdown() {
+            const target = document.querySelector(this.value);
+            tabLinks.forEach(link => link.classList.remove("active"));
+            tabContents.forEach(content => content.classList.remove("active"));
+            target.classList.add("active");
+        }
+
+        // Asignar el evento de clic a cada enlace de tab
+        tabLinks.forEach(link => link.addEventListener("click", changeTab));
+
+        // Asignar el evento de cambio al dropdown
+        dropdown.addEventListener("change", changeTabFromDropdown);
     });
+
 </script>
   
 <script>

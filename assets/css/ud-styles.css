@@ -136,6 +136,10 @@ p {
   height: 100%;
 }
 
+#header{
+  z-index: 10000;
+}
+
 /*===== All Button Style =====*/
 .ud-main-btn {
   display: inline-block;
@@ -2859,17 +2863,16 @@ hr{
 
 .sidebar ul li a {
   text-decoration: none;
-  color: #073753;
+  color: #1d1d1b;
   font-weight: bold;
+  width: 100%;
 }
 
 .sidebar ul li .active{
   color: #fff;
-  background-color: #03ac8a;
+  background-color: #1d1d1b;
   padding: 5px;
-  border-radius: 5px;
-  scale: 1.2;
-  margin-left: 15px;
+  border-radius: 1px;
 }
 
 .tab-content {
@@ -2917,9 +2920,10 @@ hr{
 }
 
 .header-buttons{
-  background-color: var(--primary-color);
+  background-color: #1d1d1b;
+  border: 1px solid #fff;
   color: #fff;
-  border-radius: 5px;
+  border-radius: 1px;
   padding: 5px 10px;
   margin: 0 5px;
   width: 100%;
@@ -2927,7 +2931,7 @@ hr{
 }
 
 .header-buttons:hover{
-  opacity: 0.5;
+  opacity: 0.8;
 }
 
 .header-buttons i{
@@ -2941,10 +2945,35 @@ hr{
 }
 
 .box_shadow_section_2{
-  background-color: #ddd;
+  background-color: #1d1d1b;
   border-radius: 10px;
-  border: 1px solid #ccc;
   box-shadow: 5px 5px 5px #ccc;
   margin: 0px 0px 10px 0px;
   padding: 10px 0;
+}
+
+
+@media (max-width: 992px) {
+  .tab-dropdown {
+    display: block;
+    width: 100%;
+  }
+
+  .semicircle-menu {
+    display: none;
+  }
+
+  .responsive-none{
+    display: none;
+  }
+}
+
+@media (min-width: 992px) {
+  .tab-dropdown {
+    display: none;
+  }
+
+  .semicircle-menu {
+    display: block;
+  }
 }
