@@ -90,7 +90,7 @@ module.exports = function (eleventyConfig) {
 		url = `https://data-dataverso.redciudadana.org/assets/conjuntos/cuadroa11_poblacion_de_7_anos_o_mas_por_alfabetismo_asistencia_escolar_y_lugar_de_estudio.json`;
 		const poblacion_alfabetismo = await fetchDataset(url);
 
-		return municipios.slice(0,10).map(municipio => {
+		return municipios.map(municipio => {
 			const poblacion_sexoData = poblacion_sexo.find(pob => pob.id_municipal === municipio.id_municipal) || {};
 			const educacionData = educacion.find(edu => (edu.id_municipal === municipio.id_municipal) && (edu.Periodo === 2019)) || {};
 			const gestionData = gestion.find(gestion => gestion.id_municipal === municipio.id_municipal) || {};
