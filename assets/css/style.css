@@ -19534,11 +19534,40 @@ label.checkbox {
 
 }
 
+.redes-responsive{
+  display: none;
+}
+
+.redes-responsive a{
+  color: #02324f;
+  padding: 3px 5px;
+  transition: all ease 0.5s;
+}
+
+.redes-responsive a:hover{
+
+  color: #03ac8a;
+
+}
+
+@media (max-width: 992px) {
+  .redes{
+    display: none;
+  }
+  .redes-responsive{
+    display: flex;
+  }
+  .menu-container{
+    margin: 20px 0;
+  }
+}
+
 
 /* Estilos para el botón de hamburguesa */
 .menu-toggle {
     display: none;
     cursor: pointer;
+    margin: 0 0 5px 0;
 }
 
 .bar {

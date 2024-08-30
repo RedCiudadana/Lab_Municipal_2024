@@ -23,19 +23,6 @@ tags:
 {% endblock %}
 
 {% block content %}
-    <!-- ====== Hero Start ====== -->
-    <!-- <section class="ud-hero" id="home">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-12 text-center">
-                <h3 class="text-white">{{ municipio.departamento }}, {{ municipio.municipio }}</h3>
-            </div>
-            
-          </div>
-        </div>
-    </section> -->
-    <!-- ====== Hero End ====== -->
-
     <!-- Compartir Popup -->
     <div id="sharePopup" class="popup">
         <div class="popup-content">
@@ -65,6 +52,42 @@ tags:
     <div id="metodologiaPopup" class="popup">
         <div class="popup-content">
             <span class="close" id="closeMetodologiaPopup">&times;</span>
+            <br>
+            <h4>Metodologia</h4>
+            <p>En MuniData, la calidad de los datos es nuestra prioridad. Por ello, hemos diseñado una metodología robusta para la recolección y procesamiento de la información. Utilizamos fuentes primarias de instituciones oficiales y complementamos con fuentes secundarias de investigaciones y reportes confiables. Todos los datos son cuidadosamente normalizados y verificados para asegurar su precisión y coherencia, permitiéndote confiar plenamente en la información que utilizas.</p>
+            <a class="btn" href="#">Descarga</a>
+        </div>
+    </div>
+
+    <!-- Compartir Popup 2 -->
+    <div id="sharePopup2" class="popup2">
+        <div class="popup-content">
+            <span class="close" id="closeSharePopup2">&times;</span>
+            <br>
+            <p>Difunde la información relevante con tus colegas, comunidad, o audiencia. Con MuniData, puedes compartir gráficos, mapas y perfiles municipales de manera fácil y rápida a través de redes sociales, enlaces directos, o descargas de datos. </p>
+            <!-- Añade tus opciones para compartir aquí -->
+        </div>
+    </div>
+
+    <!-- Guia Popup  2-->
+    <div id="guiaPopup2" class="popup2">
+        <div class="popup-content">
+            <span class="close" id="closeGuiaPopup2">&times;</span>
+            <br>
+            <h4>Guía de Datos</h4>
+            <p>La Guía de Datos de MuniData está diseñada para ayudarte a interpretar y aprovechar al máximo la información disponible. Aquí encontrarás definiciones claras de cada indicador, explicaciones sobre su origen y metodología, así como consejos prácticos para su aplicación en la toma de decisiones y la formulación de políticas públicas. Navegar por los datos nunca ha sido tan intuitivo y accesible.</p>
+            <p>Debido a la limitada, retrasada o inexacta recolección de información, así como a una muestra limitada y potencialmente sesgada, los datos para este municipio pueden contener inexactitudes. Nuestro método de depuración corrige algunos errores e inconsistencias encontrados en los datos en bruto. Sin embargo, ten en cuenta que los datos mostrados para este municipio reflejan las mejores estimaciones disponibles, basadas en muestras grandes de establecimientos y fuentes oficiales, y requieren una consideración cuidadosa antes de ser utilizados.
+
+                Puedes encontrar más información sobre los datos de MuniData en la página de Preguntas Frecuentes (FAQ).
+                
+                Puedes ayudar a mejorar nuestros datos enviando sugerencias o informando errores <a href="#">aquí</a>.</p>
+        </div>
+    </div>
+
+    <!-- Metodologia Popup 2-->
+    <div id="metodologiaPopup2" class="popup2">
+        <div class="popup-content">
+            <span class="close" id="closeMetodologiaPopup2">&times;</span>
             <br>
             <h4>Metodologia</h4>
             <p>En MuniData, la calidad de los datos es nuestra prioridad. Por ello, hemos diseñado una metodología robusta para la recolección y procesamiento de la información. Utilizamos fuentes primarias de instituciones oficiales y complementamos con fuentes secundarias de investigaciones y reportes confiables. Todos los datos son cuidadosamente normalizados y verificados para asegurar su precisión y coherencia, permitiéndote confiar plenamente en la información que utilizas.</p>
@@ -103,6 +126,15 @@ tags:
                             </div>
                         </div>
                     </div>
+                    <div class="col-lg-7 responsive-flex">
+                        <button id="shareButton2" class="header-buttons"><img src="/assets/images/municipio/01_ELEMENTOS LAB/01_ICONOS/LAB MUNICIPAL_01-49.png"></button>
+
+                        <button id="expandButton2" class="header-buttons"><img src="/assets/images/municipio/01_ELEMENTOS LAB/01_ICONOS/LAB MUNICIPAL_01-50.png"></button>
+
+                        <button id="guiaButton2" class="header-buttons"><img src="/assets/images/municipio/01_ELEMENTOS LAB/01_ICONOS/LAB MUNICIPAL_01-51.png"></button>
+                
+                        <button id="metodologiaButton2" class="header-buttons"><img src="/assets/images/municipio/01_ELEMENTOS LAB/01_ICONOS/LAB MUNICIPAL_01-52.png"></button>
+                    </div>
                 </div>
             </div>
             <div class="col-lg-2 my-2">
@@ -115,6 +147,10 @@ tags:
                       <option value="#pobreza">Pobreza</option>
                       <option value="#poblacion">Población</option>
                       <option value="#educacion">Educación</option>
+                      <option value="#economia">Economía</option>
+                      <option value="#salud">Salud</option>
+                      <option value="#hogar">Hogar</option>
+                      <option value="#vivienda">Vivienda</option>
                     </select>
                     
                     <ul class="semicircle-menu d-none d-lg-block" style="padding: 10px 0;">
@@ -125,6 +161,10 @@ tags:
                       <li><a href="#" class="tab-link" data-target="#pobreza"><img src="/assets/images/municipio/01_ELEMENTOS LAB/01_ICONOS/LAB MUNICIPAL_01-34.png">Pobreza</a></li>
                       <li><a href="#" class="tab-link" data-target="#poblacion"><img src="/assets/images/municipio/01_ELEMENTOS LAB/01_ICONOS/LAB MUNICIPAL_01-46.png">Población</a></li>
                       <li><a href="#" class="tab-link" data-target="#educacion"><img src="/assets/images/municipio/01_ELEMENTOS LAB/01_ICONOS/LAB MUNICIPAL_01-35.png">Educación</a></li>
+                      <li><a href="#" class="tab-link" data-target="#economia"><img src="/assets/images/municipio/01_ELEMENTOS LAB/01_ICONOS/LAB MUNICIPAL_01-33.png">Economía</a></li>
+                      <li><a href="#" class="tab-link" data-target="#salud"><img src="/assets/images/municipio/01_ELEMENTOS LAB/01_ICONOS/LAB MUNICIPAL_01-34.png">Salud</a></li>
+                      <li><a href="#" class="tab-link" data-target="#hogar"><img src="/assets/images/municipio/01_ELEMENTOS LAB/01_ICONOS/LAB MUNICIPAL_01-46.png">Hogar</a></li>
+                      <li><a href="#" class="tab-link" data-target="#vivienda"><img src="/assets/images/municipio/01_ELEMENTOS LAB/01_ICONOS/LAB MUNICIPAL_01-35.png">Vivienda</a></li>
                     </ul>
                   </div>                  
             </div>
@@ -205,80 +245,44 @@ tags:
                                 
                             </div>
                         </div>
-
-                            <!-- <div class="row ">
-                                <div class="col-lg-6 my-4">
-                                    <h3 >Desnutrición Crónica Total</h3>
-                                    <h1 class="mb-4">{{municipio.desnutricion['2019']['Crónica']}}</h1>
-
-                                    <p>Fuente: Ministerio de salud pública y asistencia social (MSPAS) 2019</p>
-                                    
-                                </div>
-                                <div class="col-lg-6 my-4">
-                                    <h3 >Desnutrición Aguda Total</h3>
-                                    <h1 class="mb-4">{{municipio.desnutricion['2019']['Aguda']}}</h1>
-
-                                    <p>Fuente: Ministerio de salud pública y asistencia social (MSPAS) 2019</p>
-                                </div>
-
-                            </div>
-
-                            <div class="row ">
-                                <div class="col-lg-6 my-4">
-                                    <h3 >Desempeño Municipal en Matematica 2018</h3>
-                                    <h1 class="mb-4">{{ municipio.educacion.MatematicaMunicipal}} %</h1>
-
-                                    <p>Fuente: Instituto Nacional de Estadística (INE)</p>
-                                    
-                                </div>
-                                <div class="col-lg-6 my-4">
-                                    <h3 >Desempeño Municipal en Lectura  2018</h3>
-                                    <h1 class="mb-4">{{ municipio.educacion.LecturaMunicipal}} %</h1>
-
-                                    <p>Fuente: Instituto Nacional de Estadística (INE)</p>
-                                </div>
-                            </div> -->
-                        </div>
                     </section>
 
                     <section id="gestion-municipal" class="tab-content">
-                        <div class="">
-                            <div class="row align-items-center mb-4">
-                                <div class="col-lg-12">
-                                    <div class="row ">
+                        <div class="row  mb-4">
+                            <div class="col-lg-12">
+                                <div class="row ">
+                                    
+                                    <div class="col-lg-4 mb-4">
+                                        <div class="section_text_2">
+                                            <div class="text">
+                                                <h3 >Índice de Gestión Municipal</h3>
+                                                <h1 class="mb-4">{{municipio.gestion.Promediosegeplan | limitNumberLength(4)}}</h1>
+
+                                                <p>Fuente: Secretaría de Planificación y Programación de la Presidencia (SEGEPLAN) 2018</p>
                                         
-                                        <div class="col-lg-4 mb-4">
-                                            <div class="section_text_2">
-                                                <div class="text">
-                                                    <h3 >Índice de Gestión Municipal</h3>
-                                                    <h1 style="font-size: 60px;" class="mb-4">{{municipio.gestion.Promediosegeplan | limitNumberLength(4)}}</h1>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-8 mb-4">
+                                        <div class="section_text_2">
+                                            <!-- Añadir un canvas para la gráfica -->
+                                            <canvas id="gestionMunicipalChart"></canvas>
+                                        </div>
+                                        
+                                    </div>
 
-                                                    <p>Fuente: Secretaría de Planificación y Programación de la Presidencia (SEGEPLAN) 2018</p>
+                                    <div class="col-lg-6 mb-4">
+                                        <div class="section_text_2">
+                                            <h5 class="text-center">Población total por sexo</h5>
+                                        
+                                            <canvas id="poblacionSexoChart"></canvas>
+                                        </div>                                        
+                                    </div>
+                                    <div class="col-lg-6 mb-4">
+                                        <div class="section_text_2">
+                                            <h5 class="text-center">Población total por área</h5>
                                             
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-8 mb-4">
-                                            <div class="section_text_2">
-                                                <!-- Añadir un canvas para la gráfica -->
-                                                <canvas id="gestionMunicipalChart"></canvas>
-                                            </div>
-                                            
-                                        </div>
-
-                                        <div class="col-lg-6 mb-4">
-                                            <div class="section_text_2">
-                                                <h5 class="text-center">Población total por sexo</h5>
-                                            
-                                                <canvas id="poblacionSexoChart"></canvas>
-                                            </div>                                        
-                                        </div>
-                                        <div class="col-lg-6 mb-4">
-                                            <div class="section_text_2">
-                                                <h5 class="text-center">Población total por área</h5>
-                                                
-                                                <canvas id="poblacionAreaChart"></canvas>
-                                            </div>
+                                            <canvas id="poblacionAreaChart"></canvas>
                                         </div>
                                     </div>
                                 </div>
@@ -287,25 +291,23 @@ tags:
                     </section>
 
                     <section id="transparencia" class="tab-content">
-                        <div class="">
-
-                            <div class="row align-items-center mb-4">
-                                <div class="col-lg-12">
-                                    <div class="row ">
-                                        <div class="col-lg-4 mb-4">
-                                            <div class="section_text_2">
+                        <div class="row mb-4">
+                            <div class="col-lg-12">
+                                <div class="row ">
+                                    <div class="col-lg-4 mb-4">
+                                        <div class="section_text_2">
+                                            <div class="text">
                                                 <h3 >Acceso a la información pública</h3>
                                                 <h1 class="mb-4">{{municipio.transparencia.aipPromedio | limitNumberLength(5)}} %</h1>
 
                                                 <p>Fuente: Procuraduría de los Derechos Humanos (PDH) 2019</p>
                                             </div>
-                                            
                                         </div>
-                                        <div class="col-lg-8 mb-4">
-                                            <div class="section_text_2">
-                                                <!-- Añadir un canvas para la gráfica -->
-                                                <canvas id="transparenciaChart"></canvas>
-                                            </div>
+                                    </div>
+                                    <div class="col-lg-8 mb-4">
+                                        <div class="section_text_2">
+                                            <!-- Añadir un canvas para la gráfica -->
+                                            <canvas id="transparenciaChart"></canvas>
                                         </div>
                                     </div>
                                 </div>
@@ -314,60 +316,57 @@ tags:
                     </section>
 
                     <section id="nutricion" class="tab-content">
-                        <div class="">
+                        <div class="row mb-4">
 
-                            <div class="row align-items-center mb-4">
+                            <div class="col-lg-12">
+                                <div class="row ">
+                                    <div class="col-lg-4 mb-4">
+                                        <div class="section_text_2_5">
+                                            <img src="/assets/images/municipio/01_ELEMENTOS LAB/01_ICONOS/LAB MUNICIPAL_01-47.png">
+                                            <div class="text">
+                                                <h3 >Desnutrición Crónica Total</h3>
+                                                <h1 >{{municipio.desnutricion['2019']['Crónica']}} </h1>
+                                                <h3 class="mb-4">casos</h3>
 
-                                <div class="col-lg-12">
-                                    <div class="row ">
-                                        <div class="col-lg-4 mb-4">
-                                            <div class="section_text_2_5">
-                                                <img src="/assets/images/municipio/01_ELEMENTOS LAB/01_ICONOS/LAB MUNICIPAL_01-47.png">
-                                                <div class="text">
-                                                    <h3 >Desnutrición Crónica Total</h3>
-                                                    <h1 >{{municipio.desnutricion['2019']['Crónica']}} </h1>
-                                                    <h3 class="mb-4">casos</h3>
-
-                                                    <p>Fuente: Ministerio de salud pública y asistencia social (MSPAS) 2019</p>
-                                                </div>
+                                                <p>Fuente: Ministerio de salud pública y asistencia social (MSPAS) 2019</p>
                                             </div>
-                                            
-                                            <div class="section_text_2_5">
-                                                <img src="/assets/images/municipio/01_ELEMENTOS LAB/01_ICONOS/LAB MUNICIPAL_01-48.png">
-                                                <div class="text">
-                                                    <h3 >Desnutrición Aguda Total</h3>
-                                                    <h1 >{{municipio.desnutricion['2019']['Aguda']}} </h1>
-                                                    <h3 class="mb-4">casos</h3>
-
-                                                    <p>Fuente: Ministerio de salud pública y asistencia social (MSPAS) 2019</p>
-                                                </div>
-                                            </div>
-                                            
                                         </div>
-                                        <div class="col-lg-8 mb-4">
-                                            <div class="section_text_2">
-                                                <!-- Añadir un canvas para la gráfica -->
-                                                <h4>Casos de Desnutrición por Año</h4>
-                                                <canvas id="desnutricionChart"></canvas>
+                                        
+                                        <div class="section_text_2_5">
+                                            <img src="/assets/images/municipio/01_ELEMENTOS LAB/01_ICONOS/LAB MUNICIPAL_01-48.png">
+                                            <div class="text">
+                                                <h3 >Desnutrición Aguda Total</h3>
+                                                <h1 >{{municipio.desnutricion['2019']['Aguda']}} </h1>
+                                                <h3 class="mb-4">casos</h3>
+
+                                                <p>Fuente: Ministerio de salud pública y asistencia social (MSPAS) 2019</p>
                                             </div>
-                                            
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="col-lg-8 mb-4">
+                                        <div class="section_text_2">
+                                            <!-- Añadir un canvas para la gráfica -->
+                                            <h4>Casos de Desnutrición por Año</h4>
+                                            <canvas id="desnutricionChart"></canvas>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-8 mb-2">
+                                        <div class="section_text_2">
+                                            <!-- Añadir un canvas para la gráfica -->
+                                            <h4>Casos de Desnutrición por Edad de 2019</h4>
+                                            <canvas id="desnutricionChartEdadSexo"></canvas>
                                         </div>
                                     </div>
-                                    <div class="row">
-                                        <div class="col-lg-8 mb-2">
-                                            <div class="section_text_2">
-                                                <!-- Añadir un canvas para la gráfica -->
-                                                <h4>Casos de Desnutrición por Edad de 2019</h4>
-                                                <canvas id="desnutricionChartEdadSexo"></canvas>
-                                            </div>
-                                        </div>
 
-                                        <div class="col-lg-4 mb-4">
-                                            <div class="section_text_2">
-                                                <h4>Casos de Desnutrición Crónica por sexo de 2019</h4>
-                                                <canvas id="desnutricionPieChartSexo"></canvas>
-                                            </div> 
-                                        </div>
+                                    <div class="col-lg-4 mb-4">
+                                        <div class="section_text_2">
+                                            <h4>Casos de Desnutrición Crónica por sexo de 2019</h4>
+                                            <canvas id="desnutricionPieChartSexo"></canvas>
+                                        </div> 
                                     </div>
                                 </div>
                             </div>
@@ -375,32 +374,24 @@ tags:
                     </section>
 
                     <section id="pobreza" class="tab-content">
-                        <div class="container">
+                        <div class="row align-items-center mb-4">
+                            <div class="col-lg-12">
+                                <div class="row ">
+                                    <div class="col-lg-4 mb-4">
+                                        <div class="section_text_2">
+                                            <div class="text">
+                                                <h3 >Índice de Pobreza Multidimensional</h3>
+                                                <h1 class="mb-4">{{municipio.pobreza.ipm2014 | limitNumberLength(5)}}</h1>
 
-                            <div class="row align-items-center mb-4">
-                                <!-- <div class="col-lg-12">
-                                    <div class="cuadro_titulo">
-                                        <h3>Pobreza</h3>
-                                    </div>
-                                </div> -->
-                                <div class="col-lg-12">
-                                    <div class="row ">
-                                        <div class="col-lg-4 mb-4">
-                                            <div class="section_text_2">
-                                                <div class="text">
-                                                    <h3 >Índice de Pobreza Multidimensional</h3>
-                                                    <h1 class="mb-4">{{municipio.pobreza.ipm2014 | limitNumberLength(5)}}</h1>
-
-                                                    <p>Fuente: Programa de las Naciones Unidas para el Desarrollo (PNUD) 2014</p>
-                                                </div>
+                                                <p>Fuente: Programa de las Naciones Unidas para el Desarrollo (PNUD) 2014</p>
                                             </div>
                                         </div>
-                                        <div class="col-lg-8 mb-4">
-                                            <div class="section_text_2">
-                                                <!-- Añadir un canvas para la gráfica -->
-                                                <canvas id="pobrezaChart"></canvas>
-                                            </div>                                          
-                                        </div>
+                                    </div>
+                                    <div class="col-lg-8 mb-4">
+                                        <div class="section_text_2">
+                                            <!-- Añadir un canvas para la gráfica -->
+                                            <canvas id="pobrezaChart"></canvas>
+                                        </div>                                          
                                     </div>
                                 </div>
                             </div>
@@ -408,154 +399,167 @@ tags:
                     </section>
 
                     <section id="poblacion" class="tab-content">
-                        <div class="">
+                        <div class="row ">
+                            <div class="col-lg-4 mb-4">
+                                <div class="section_text_2">
+                                    <div class="text">
+                                        <h4>Población total</h4>
+                                        {% set pobtotal = municipio.poblacion_sexo.Hombres + municipio.poblacion_sexo.Mujeres %}
+                                        <h2>{{pobtotal}}</h2>
+                                        <h4 class="mb-4">habitantes</h4>
 
-                            <div class="row ">
-                                <div class="col-lg-4 mb-4">
-                                    <div class="section_text_2">
-                                        <div class="text">
-                                            <h4>Población total</h4>
-                                            {% set pobtotal = municipio.poblacion_sexo.Hombres + municipio.poblacion_sexo.Mujeres %}
-                                            <h2>{{pobtotal}}</h2>
-                                            <h4 class="mb-4">habitantes</h4>
+                                        <p>Fuente: Instituto Nacional de Estadística (INE)</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 mb-4">
+                                <div class="section_text_2">
+                                    <h5 class="text-center">Población total por sexo</h5>
+                                    <!-- Añadir un canvas para la gráfica -->
+                                    <canvas id="poblacionSexoChart2"></canvas>
+                                </div>
+                                
+                            </div>
+                            <div class="col-lg-4 mb-4">
+                                <div class="section_text_2">
+                                    <h5 class="text-center">Población total por sexo</h5>
+                                    <!-- Añadir un canvas para la gráfica -->
+                                    <canvas id="poblacionAreaChart2"></canvas>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 mb-4">
+                                <div class="section_text_2">
+                                    <h5 class="text-center">Población total por grupos quinquenales de edad</h5>
+                                    <!-- Añadir un canvas para la gráfica -->
+                                    <canvas id="poblacionEdadChart"></canvas>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 mb-4">
+                                <div class="section_text_2">
+                                    <h5 class="text-center">Población total por grupos quinquenales de edad</h5>
+                                    <!-- Añadir un canvas para la gráfica -->
+                                    <canvas id="poblacionParentezcoChart"></canvas>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 mb-4">
+                                <div class="section_text_2">
+                                    <div class="text">
+                                        <h4 >Población de 10 años y más</h4>
+                                        <h2>{{municipio.poblacion_estado_conyugal.pob10ymas}}</h2>
+                                        <h4 class="mb-4">habitantes</h4>
 
-                                            <p>Fuente: Instituto Nacional de Estadística (INE)</p>
-                                        </div>
+                                        <p>Fuente: Instituto Nacional de Estadística (INE)</p>
                                     </div>
                                 </div>
-                                <div class="col-lg-4 mb-4">
-                                    <div class="section_text_2">
-                                        <h5 class="text-center">Población total por sexo</h5>
-                                        <!-- Añadir un canvas para la gráfica -->
-                                        <canvas id="poblacionSexoChart2"></canvas>
-                                    </div>
-                                    
+                            </div>
+                            <div class="col-lg-4 mb-4">
+                                <div class="section_text_2">
+                                    <h5 class="text-center">Población de 10 años y más por estado conyugal</h5>
+                                    <!-- Añadir un canvas para la gráfica -->
+                                    <canvas id="poblacionEstadoConyugalChart"></canvas>
                                 </div>
-                                <div class="col-lg-4 mb-4">
-                                    <div class="section_text_2">
-                                        <h5 class="text-center">Población total por sexo</h5>
-                                        <!-- Añadir un canvas para la gráfica -->
-                                        <canvas id="poblacionAreaChart2"></canvas>
-                                    </div>
+                            </div>
+                            <div class="col-lg-4 mb-4">
+                                <div class="section_text_2">
+                                    <h5 class="text-center">Población total por lugar de nacimiento y lugar de residencia en abril del 2013</h5>
+                                    <!-- Añadir un canvas para la gráfica -->
+                                    <canvas id="poblacionResidenciaChart"></canvas>
                                 </div>
-                                <div class="col-lg-6 mb-4">
-                                    <div class="section_text_2">
-                                        <h5 class="text-center">Población total por grupos quinquenales de edad</h5>
-                                        <!-- Añadir un canvas para la gráfica -->
-                                        <canvas id="poblacionEdadChart"></canvas>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 mb-4">
-                                    <div class="section_text_2">
-                                        <h5 class="text-center">Población total por grupos quinquenales de edad</h5>
-                                        <!-- Añadir un canvas para la gráfica -->
-                                        <canvas id="poblacionParentezcoChart"></canvas>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 mb-4">
-                                    <div class="section_text_2">
-                                        <div class="text">
-                                            <h4 >Población de 10 años y más</h4>
-                                            <h2>{{municipio.poblacion_estado_conyugal.pob10ymas}}</h2>
-                                            <h4 class="mb-4">habitantes</h4>
+                            </div>
+                            <div class="col-lg-4 mb-4">
+                                <div class="section_text_2">
+                                    <div class="text">
+                                        <h4 >Total de poblacion pueblo maya</h4>
+                                        <h2>{{municipio.poblacion_pueblo.maya}}</h2>
+                                        <h4 class="mb-4">habitantes</h4>
 
-                                            <p>Fuente: Instituto Nacional de Estadística (INE)</p>
-                                        </div>
+                                        <p>Fuente: Instituto Nacional de Estadística (INE)</p>
                                     </div>
                                 </div>
-                                <div class="col-lg-4 mb-4">
-                                    <div class="section_text_2">
-                                        <h5 class="text-center">Población de 10 años y más por estado conyugal</h5>
-                                        <!-- Añadir un canvas para la gráfica -->
-                                        <canvas id="poblacionEstadoConyugalChart"></canvas>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 mb-4">
-                                    <div class="section_text_2">
-                                        <h5 class="text-center">Población total por lugar de nacimiento y lugar de residencia en abril del 2013</h5>
-                                        <!-- Añadir un canvas para la gráfica -->
-                                        <canvas id="poblacionResidenciaChart"></canvas>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 mb-4">
-                                    <div class="section_text_2">
-                                        <div class="text">
-                                            <h4 >Total de poblacion pueblo maya</h4>
-                                            <h2>{{municipio.poblacion_pueblo.maya}}</h2>
-                                            <h4 class="mb-4">habitantes</h4>
-
-                                            <p>Fuente: Instituto Nacional de Estadística (INE)</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-8 mb-4">
-                                    <div class="section_text_2">
-                                        <h5 class="text-center">Población total por pueblos</h5>
-                                        <!-- Añadir un canvas para la gráfica -->
-                                        <canvas id="poblacionPuebloChart"></canvas>
-                                    </div>
+                            </div>
+                            <div class="col-lg-8 mb-4">
+                                <div class="section_text_2">
+                                    <h5 class="text-center">Población total por pueblos</h5>
+                                    <!-- Añadir un canvas para la gráfica -->
+                                    <canvas id="poblacionPuebloChart"></canvas>
                                 </div>
                             </div>
                         </div>
                     </section>
 
                     <section id="educacion" class="tab-content">
-                        <div class="">
+                        <div class="row">
+                            <div class="col-lg-4 mb-4">
+                                <div class="section_text_2">
+                                    <div class="text">
+                                        <h4>Población de 4 a 29 años que no asiste a un establecimiento educativo</h4>
+                                        <h2>{{municipio.poblacion_no_asiste.total}}</h2>
+                                        <h4 class="mb-4">habitantes</h4>
 
-                            <div class="row ">
-                                <div class="col-lg-4 mb-4">
-                                    <div class="section_text_2">
-                                        <div class="text">
-                                            <h4>Población de 4 a 29 años que no asiste a un establecimiento educativo</h4>
-                                            <h2>{{municipio.poblacion_no_asiste.total}}</h2>
-                                            <h4 class="mb-4">habitantes</h4>
-
-                                            <p>Fuente: Instituto Nacional de Estadística (INE)</p>
-                                        </div>
+                                        <p>Fuente: Instituto Nacional de Estadística (INE)</p>
                                     </div>
                                 </div>
-                                
-                                
-                                <div class="col-lg-4 mb-4">
-                                    <div class="section_text_2">
-                                        <h5 class="text-center">Población de 7 años o más con alfabetismo</h5>
-                                        <!-- Añadir un canvas para la gráfica -->
-                                        <canvas id="poblacionAlfabetismoChart"></canvas>
-                                    </div>
+                            </div>
+                            
+                            
+                            <div class="col-lg-4 mb-4">
+                                <div class="section_text_2">
+                                    <h5 class="text-center">Población de 7 años o más con alfabetismo</h5>
+                                    <!-- Añadir un canvas para la gráfica -->
+                                    <canvas id="poblacionAlfabetismoChart"></canvas>
                                 </div>
-                                <div class="col-lg-4 mb-4">
-                                    <div class="section_text_2">
-                                        <h5 class="text-center">Asistencia escolar</h5>
-                                        <!-- Añadir un canvas para la gráfica -->
-                                        <canvas id="poblacionAsistenciaEscolarChart"></canvas>
-                                    </div>
+                            </div>
+                            <div class="col-lg-4 mb-4">
+                                <div class="section_text_2">
+                                    <h5 class="text-center">Asistencia escolar</h5>
+                                    <!-- Añadir un canvas para la gráfica -->
+                                    <canvas id="poblacionAsistenciaEscolarChart"></canvas>
                                 </div>
-                                
-                                <div class="col-lg-4 mb-4">
-                                    <div class="section_text_2">
-                                        <h5 class="text-center">Población de 4 años y más por nivel educativo</h5>
-                                        <!-- Añadir un canvas para la gráfica -->
-                                        <canvas id="poblacionNivelEducativoChart"></canvas>
-                                    </div>
+                            </div>
+                            
+                            <div class="col-lg-4 mb-4">
+                                <div class="section_text_2">
+                                    <h5 class="text-center">Población de 4 años y más por nivel educativo</h5>
+                                    <!-- Añadir un canvas para la gráfica -->
+                                    <canvas id="poblacionNivelEducativoChart"></canvas>
                                 </div>
-                                <div class="col-lg-4 mb-4">
-                                    <div class="section_text_2">
-                                        <h5 class="text-center">Causa principal de inasistencia</h5>
-                                        <!-- Añadir un canvas para la gráfica -->
-                                        <canvas id="poblacionAsistenciaChart"></canvas>
-                                    </div>
+                            </div>
+                            <div class="col-lg-4 mb-4">
+                                <div class="section_text_2">
+                                    <h5 class="text-center">Causa principal de inasistencia</h5>
+                                    <!-- Añadir un canvas para la gráfica -->
+                                    <canvas id="poblacionAsistenciaChart"></canvas>
                                 </div>
-                                <div class="col-lg-4 mb-4">
-                                    <div class="section_text_2">
-                                        <h5 class="text-center">Lugar de estudio</h5>
-                                        <!-- Añadir un canvas para la gráfica -->
-                                        <canvas id="poblacionLugarEstudioChart"></canvas>
-                                    </div>
+                            </div>
+                            <div class="col-lg-4 mb-4">
+                                <div class="section_text_2">
+                                    <h5 class="text-center">Lugar de estudio</h5>
+                                    <!-- Añadir un canvas para la gráfica -->
+                                    <canvas id="poblacionLugarEstudioChart"></canvas>
                                 </div>
                             </div>
                         </div>
                     </section>
+
+                    <section id="economia" class="tab-content">
+                        <div class="row">
+                        </div>
+                    </section>
+
+                    <section id="salud" class="tab-content">
+                        <div class="row">
+                        </div>
+                    </section>
                     
+                    <section id="hogar" class="tab-content">
+                        <div class="row">
+                        </div>
+                    </section>
+
+                    <section id="vivienda" class="tab-content">
+                        <div class="row">
+                        </div>
+                    </section>
                 </div>
             </div>
         </div>
@@ -573,6 +577,7 @@ tags:
         }
     }
 </script>
+
 <script>
     document.addEventListener("DOMContentLoaded", function () {
         const tabLinks = document.querySelectorAll(".tab-link");
@@ -623,17 +628,12 @@ tags:
 
     // Expandir Pantalla
     var expandButton = document.getElementById('expandButton');
-    var expandIcon = document.getElementById('expandIcon');
     expandButton.onclick = function() {
         if (!document.fullscreenElement) {
             document.documentElement.requestFullscreen();
-            expandIcon.classList.remove('fa-maximize');
-            expandIcon.classList.add('fa-minimize');
         } else {
             if (document.exitFullscreen) {
                 document.exitFullscreen();
-                expandIcon.classList.remove('fa-minimize');
-                expandIcon.classList.add('fa-maximize');
             }
         }
     }
@@ -674,6 +674,72 @@ tags:
         }
         if (event.target == metodologiaPopup) {
             metodologiaPopup.style.display = "none";
+        }
+    }
+</script>
+
+<script>
+    // Compartir Popup
+    var shareButton2 = document.getElementById('shareButton2');
+    var sharePopup2 = document.getElementById('sharePopup2');
+    var closeSharePopup2 = document.getElementById('closeSharePopup2');
+
+    shareButton2.onclick = function() {
+        sharePopup2.style.display = "block";
+    }
+
+    closeSharePopup2.onclick = function() {
+        sharePopup2.style.display = "none";
+    }
+
+    // Expandir Pantalla
+    var expandButton2 = document.getElementById('expandButton2');
+    expandButton2.onclick = function() {
+        if (!document.fullscreenElement) {
+            document.documentElement.requestFullscreen();
+        } else {
+            if (document.exitFullscreen) {
+                document.exitFullscreen();
+            }
+        }
+    }
+
+    // Guia Popup
+    var guiaButton2 = document.getElementById('guiaButton2');
+    var guiaPopup2 = document.getElementById('guiaPopup2');
+    var closeGuiaPopup2 = document.getElementById('closeGuiaPopup2');
+
+    guiaButton2.onclick = function() {
+        guiaPopup2.style.display = "block";
+    }
+
+    closeGuiaPopup2.onclick = function() {
+        guiaPopup2.style.display = "none";
+    }
+
+    // Metodologia Popup
+    var metodologiaButton2 = document.getElementById('metodologiaButton2');
+    var metodologiaPopup2 = document.getElementById('metodologiaPopup2');
+    var closeMetodologiaPopup2 = document.getElementById('closeMetodologiaPopup2');
+
+    metodologiaButton2.onclick = function() {
+        metodologiaPopup2.style.display = "block";
+    }
+
+    closeMetodologiaPopup2.onclick = function() {
+        metodologiaPopup2.style.display = "none";
+    }
+
+    // Cerrar popups al hacer clic fuera de ellos
+    window.onclick = function(event) {
+        if (event.target == sharePopup2) {
+            sharePopup2.style.display = "none";
+        }
+        if (event.target == guiaPopup2) {
+            guiaPopup2.style.display = "none";
+        }
+        if (event.target == metodologiaPopup2) {
+            metodologiaPopup2.style.display = "none";
         }
     }
 </script>

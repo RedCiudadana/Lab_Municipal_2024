@@ -2908,12 +2908,34 @@ hr{
   background-color: rgba(0,0,0,0.4);
 }
 
-.popup-content {
+.popup .popup-content {
   background-color: #fefefe;
   margin: 15% auto;
   padding: 20px;
   border: 1px solid #888;
   width: 40%;
+  height: fit-content;
+}
+
+.popup2 {
+  display: none;
+  position: fixed;
+  z-index: 10000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4);
+}
+
+.popup2 .popup-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 90%;
   height: fit-content;
 }
 
@@ -2969,6 +2991,13 @@ hr{
   padding: 10px 0;
 }
 
+.responsive-flex{
+  display: none;
+}
+
+.responsive-flex button{
+  width: 25%;
+}
 
 @media (max-width: 992px) {
   .tab-dropdown {
@@ -2982,6 +3011,11 @@ hr{
 
   .responsive-none{
     display: none;
+  }
+
+  .responsive-flex{
+    display: flex;
+    margin: 5px 0 ;
   }
 }
 
@@ -3090,8 +3124,18 @@ a, p, span{
   font-size: 15px;
 }
 
+
 .section_text_2 .text h1{
-  font-size: 35px;
+  font-size: 55px;
+}
+@media (max-width: 992px) {
+  .section_text_2 .text h1{
+    font-size: 35px;
+  }
+
+  .section_text_2 .text h3{
+    font-size: 25px;
+  }
 }
 
 .section_text_2 .text p{
@@ -3136,4 +3180,11 @@ a, p, span{
 
 .select-municipios{
   padding: 8px;
+  width: fit-content;
+}
+
+@media (max-width: 992px) {
+  .select-municipios{
+    width: 100%;
+  }
 }
