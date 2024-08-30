@@ -13,8 +13,8 @@ document.addEventListener("DOMContentLoaded", function() {
         labels: ['Hombres', 'Mujeres'],
         datasets: [{
           data: [municipioData.hombres, municipioData.mujeres],
-          backgroundColor: ['#36a2eb', '#ff6384'],
-          hoverBackgroundColor: ['#36a2eb', '#ff6384']
+          backgroundColor: ['#7eb5ea', '#1ec78b'],
+          hoverBackgroundColor: ['#7eb5ea', '#1ec78b']
         }]
       },
       options: {
@@ -50,8 +50,8 @@ document.addEventListener("DOMContentLoaded", function() {
         labels: ['Hombres', 'Mujeres'],
         datasets: [{
           data: [municipioData.hombres, municipioData.mujeres],
-          backgroundColor: ['#36a2eb', '#ff6384'],
-          hoverBackgroundColor: ['#36a2eb', '#ff6384']
+          backgroundColor: ['#7eb5ea', '#1ec78b'],
+          hoverBackgroundColor: ['#7eb5ea', '#1ec78b']
         }]
       },
       options: {
@@ -87,8 +87,8 @@ document.addEventListener("DOMContentLoaded", function() {
         labels: ['Urbana', 'Rural'],
         datasets: [{
           data: [municipioData.urbana, municipioData.rural],
-          backgroundColor: ['#36a2eb', '#ff6384'],
-          hoverBackgroundColor: ['#36a2eb', '#ff6384']
+          backgroundColor: ['#7eb5ea', '#1ec78b'],
+          hoverBackgroundColor: ['#7eb5ea', '#1ec78b']
         }]
       },
       options: {
@@ -124,8 +124,8 @@ document.addEventListener("DOMContentLoaded", function() {
         labels: ['Urbana', 'Rural'],
         datasets: [{
           data: [municipioData.urbana, municipioData.rural],
-          backgroundColor: ['#36a2eb', '#ff6384'],
-          hoverBackgroundColor: ['#36a2eb', '#ff6384']
+          backgroundColor: ['#7eb5ea', '#1ec78b'],
+          hoverBackgroundColor: ['#7eb5ea', '#1ec78b']
         }]
       },
       options: {
@@ -173,8 +173,8 @@ document.addEventListener("DOMContentLoaded", function() {
             municipioData.pob60a64, municipioData.pob65a69, municipioData.pob70a74, municipioData.pob75a79,
             municipioData.pob80a84, municipioData.pob85a89, municipioData.pob90a94, municipioData.pob95a99
           ],
-          borderColor: 'rgba(54, 162, 235, 1)',
-          backgroundColor: 'rgba(54, 162, 235, 0.2)',
+          borderColor: 'rgb(126, 181, 234, 1)',
+          backgroundColor: 'rgb(126, 181, 234, 0.2)',
           borderWidth: 1
         }]
       },
@@ -223,16 +223,16 @@ document.addEventListener("DOMContentLoaded", function() {
           label: 'Datos del Municipio',
           data: [gestionData.segeplan2013, gestionData.segeplan2016, gestionData.segeplan2018],
           fill: true,
-          borderColor: 'rgba(54, 162, 235, 1)',
-          backgroundColor: 'rgba(54, 162, 235, 0.2)',
+          borderColor: 'rgb(126, 181, 234, 1)',
+          backgroundColor: 'rgb(126, 181, 234, 0.2)',
           tension: 0.1
         },
         {
           label: 'Promedio de todos los municipios',
           data: [0.32, 0.29, 0.37], // Aquí coloca tus datos de promedio de todos los municipios
           fill: false,
-          borderColor: 'rgba(255, 99, 132, 1)',
-          backgroundColor: 'rgba(255, 99, 132, 0.2)',
+          borderColor: 'rgb(30, 199, 139, 1)',
+          backgroundColor: 'rgb(30, 199, 139, 0.2)',
           tension: 0.1,
           borderDash: [5, 5]  // Añadir la línea punteada
         }]
@@ -279,16 +279,16 @@ document.addEventListener("DOMContentLoaded", function() {
           label: 'Datos del Municipio',
           data: [transparenciaData.aip2015, transparenciaData.aip2017, transparenciaData.aip2019],
           fill: true,
-          borderColor: 'rgba(54, 162, 235, 1)',
-          backgroundColor: 'rgba(54, 162, 235, 0.2)',
+          borderColor: 'rgb(126, 181, 234, 1)',
+          backgroundColor: 'rgb(126, 181, 234, 0.2)',
           tension: 0.1
         },
         {
           label: 'Promedio de todos los municipios',
           data: [6.92, 18.17, 40.48], // Aquí coloca tus datos de promedio de todos los municipios
           fill: false,
-          borderColor: 'rgba(255, 99, 132, 1)',
-          backgroundColor: 'rgba(255, 99, 132, 0.2)',
+          borderColor: 'rgb(30, 199, 139, 1)',
+          backgroundColor: 'rgb(30, 199, 139, 0.2)',
           tension: 0.1,
           borderDash: [5, 5]  // Añadir la línea punteada
         }]
@@ -344,8 +344,8 @@ document.addEventListener("DOMContentLoaded", function() {
               desnutricionData.cronica2019
             ],
             fill: true,
-            borderColor: 'rgba(54, 162, 235, 1)',
-            backgroundColor: 'rgba(54, 162, 235, 0.2)',
+            borderColor: 'rgb(126, 181, 234, 1)',
+            backgroundColor: 'rgb(126, 181, 234, 0.2)',
             tension: 0.1
           },
           {
@@ -437,7 +437,7 @@ document.addEventListener("DOMContentLoaded", function() {
               desnutricionDataEdadSexo.cronicafem1a4ano
             ],
             backgroundColor: 'rgba(54, 162, 235, 0.6)',
-            borderColor: 'rgba(54, 162, 235, 1)',
+            borderColor: 'rgb(126, 181, 234, 1)',
             borderWidth: 1
           }
         ]
@@ -496,8 +496,8 @@ document.addEventListener("DOMContentLoaded", function() {
         labels: ['Femenino', 'Masculino'],
         datasets: [{
           data: [cronicafem, cronicamasc],
-          backgroundColor: ['#ff6384', '#36a2eb'],
-          hoverBackgroundColor: ['#ff6384', '#36a2eb']
+          backgroundColor: ['#1ec78b', '#7eb5ea'],
+          hoverBackgroundColor: ['#1ec78b', '#7eb5ea']
         }]
       },
       options: {
@@ -542,16 +542,16 @@ document.addEventListener("DOMContentLoaded", function() {
           label: 'Datos del Municipio',
           data: [pobrezaData.ipm2006, pobrezaData.ipm2011, pobrezaData.ipm2014],
           fill: true,
-          borderColor: 'rgba(54, 162, 235, 1)',
-          backgroundColor: 'rgba(54, 162, 235, 0.2)',
+          borderColor: 'rgb(126, 181, 234, 1)',
+          backgroundColor: 'rgb(126, 181, 234, 0.2)',
           tension: 0.1
         },
         {
           label: 'Promedio de todos los municipios',
           data: [0.335, 0.364, 0.368], // Aquí coloca tus datos de promedio de todos los municipios
           fill: false,
-          borderColor: 'rgba(255, 99, 132, 1)',
-          backgroundColor: 'rgba(255, 99, 132, 0.2)',
+          borderColor: 'rgb(30, 199, 139, 1)',
+          backgroundColor: 'rgb(30, 199, 139, 0.2)',
           tension: 0.1,
           borderDash: [5, 5]  // Añadir la línea punteada
         }]
@@ -604,8 +604,8 @@ document.addEventListener("DOMContentLoaded", function() {
             poblacion_parentezoData.nieto, poblacion_parentezoData.hermano, poblacion_parentezoData.padre, poblacion_parentezoData.suegro, 
             poblacion_parentezoData.cunado, poblacion_parentezoData.otro 
           ],
-          borderColor: 'rgba(54, 162, 235, 1)',
-          backgroundColor: 'rgba(54, 162, 235, 0.2)',
+          borderColor: 'rgb(126, 181, 234, 1)',
+          backgroundColor: 'rgb(126, 181, 234, 0.2)',
           borderWidth: 1
         }]
       },
@@ -659,8 +659,8 @@ document.addEventListener("DOMContentLoaded", function() {
             poblacion_estado_conyugalData.soltero, poblacion_estado_conyugalData.unido, poblacion_estado_conyugalData.casado,
             poblacion_estado_conyugalData.separado, poblacion_estado_conyugalData.diverciado, poblacion_estado_conyugalData.viudo,
           ],
-          borderColor: 'rgba(54, 162, 235, 1)',
-          backgroundColor: 'rgba(54, 162, 235, 0.2)',
+          borderColor: 'rgb(126, 181, 234, 1)',
+          backgroundColor: 'rgb(126, 181, 234, 0.2)',
           borderWidth: 1
         }]
       },
@@ -713,8 +713,8 @@ document.addEventListener("DOMContentLoaded", function() {
           data: [
             poblacion_residenciaData.mun, poblacion_residenciaData.otromun, poblacion_residenciaData.otropais, poblacion_residenciaData.nd 
           ],
-          borderColor: 'rgba(54, 162, 235, 1)',
-          backgroundColor: 'rgba(54, 162, 235, 0.2)',
+          borderColor: 'rgb(126, 181, 234, 1)',
+          backgroundColor: 'rgb(126, 181, 234, 0.2)',
           borderWidth: 1
         }]
       },
@@ -768,8 +768,8 @@ document.addEventListener("DOMContentLoaded", function() {
             poblacion_puebloData.maya, poblacion_puebloData.xinca, poblacion_puebloData.garifuna,
             poblacion_puebloData.afro, poblacion_puebloData.ladino, poblacion_puebloData.extranjero 
           ],
-          borderColor: 'rgba(54, 162, 235, 1)',
-          backgroundColor: 'rgba(54, 162, 235, 0.2)',
+          borderColor: 'rgb(126, 181, 234, 1)',
+          backgroundColor: 'rgb(126, 181, 234, 0.2)',
           borderWidth: 1
         }]
       },
@@ -824,8 +824,8 @@ document.addEventListener("DOMContentLoaded", function() {
             poblacion_nivel_educativoData.primaria1a6, poblacion_nivel_educativoData.basico, poblacion_nivel_educativoData.diversificado,
             poblacion_nivel_educativoData.licenciatura, poblacion_nivel_educativoData.maestriaodoctorado 
           ],
-          borderColor: 'rgba(54, 162, 235, 1)',
-          backgroundColor: 'rgba(54, 162, 235, 0.2)',
+          borderColor: 'rgb(126, 181, 234, 1)',
+          backgroundColor: 'rgb(126, 181, 234, 0.2)',
           borderWidth: 1
         }]
       },
@@ -874,8 +874,8 @@ document.addEventListener("DOMContentLoaded", function() {
         labels: ['Hombres', 'Mujeres'],
         datasets: [{
           data: [poblacionAlfabetismoData.hombres, poblacionAlfabetismoData.mujeres],
-          backgroundColor: ['#36a2eb', '#ff6384'],
-          hoverBackgroundColor: ['#36a2eb', '#ff6384']
+          backgroundColor: ['#7eb5ea', '#1ec78b'],
+          hoverBackgroundColor: ['#7eb5ea', '#1ec78b']
         }]
       },
       options: {
@@ -912,8 +912,8 @@ document.addEventListener("DOMContentLoaded", function() {
         labels: ['Asiste', 'No Asiste'],
         datasets: [{
           data: [poblacionAlfabetismoData.asiste, poblacionAlfabetismoData.noasiste],
-          backgroundColor: ['#36a2eb', '#ff6384'],
-          hoverBackgroundColor: ['#36a2eb', '#ff6384']
+          backgroundColor: ['#7eb5ea', '#1ec78b'],
+          hoverBackgroundColor: ['#7eb5ea', '#1ec78b']
         }]
       },
       options: {
@@ -956,8 +956,8 @@ document.addEventListener("DOMContentLoaded", function() {
             poblacionAlfabetismoData.municipio, poblacionAlfabetismoData.otromunicipio, poblacionAlfabetismoData.otropais,
             poblacionAlfabetismoData.nodeclarado
           ],
-          borderColor: 'rgba(54, 162, 235, 1)',
-          backgroundColor: 'rgba(54, 162, 235, 0.2)',
+          borderColor: 'rgb(126, 181, 234, 1)',
+          backgroundColor: 'rgb(126, 181, 234, 0.2)',
           borderWidth: 1
         }]
       },
@@ -1013,8 +1013,8 @@ document.addEventListener("DOMContentLoaded", function() {
             poblacion_asistenciaData.padresimpiden, poblacion_asistenciaData.quehaceres, poblacion_asistenciaData.nogusta,
             poblacion_asistenciaData.termino, poblacion_asistenciaData.otra, poblacion_asistenciaData.nodeclarada 
           ],
-          borderColor: 'rgba(54, 162, 235, 1)',
-          backgroundColor: 'rgba(54, 162, 235, 0.2)',
+          borderColor: 'rgb(126, 181, 234, 1)',
+          backgroundColor: 'rgb(126, 181, 234, 0.2)',
           borderWidth: 1
         }]
       },

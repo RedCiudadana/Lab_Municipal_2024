@@ -72,26 +72,34 @@ tags:
         </div>
     </div>
 
-    <div class="mx-5">
+    <div class="px-5" style="background-color: #edf0f6; height: 100%;">
         <div class="row w-100">
             <div class="col-lg-12">
-                <div class="row align-items-center justify-content-end box_shadow_section_2" >
-                    <div class="col-lg-5 e">
-                        <a class="text-white" href="/municipios/index.html">Municipios</a> / <a href="#" class="text-white" style="pointer-events: none;">{{municipio.municipio}}</a>
+                <div class="row align-items-center justify-content-between box_shadow_section_2" >
+                    <div class="col-lg-5">
+                        <select name="municipio" id="municipios" class="select-municipios" onchange="redirectToMunicipio()">
+                            <option value="actual">{{municipio.departamento}} / {{municipio.municipio}}</option>
+                            {% for municipio_completo in collections.municipio %}
+                            {% if page.url == municipio_completo.url%}
+                            {% else %}
+                            <option value="{{municipio_completo.url}}">{{municipio_completo.data.municipio.departamento}} / {{municipio_completo.data.municipio.municipio}}</option>
+                            {% endif %}
+                            {% endfor %}
+                        </select>                        
                     </div>
                     <div class="col-lg-7 responsive-none">
                         <div class="row justify-content-end ">
                             <div class="col-lg-3">
-                                <button id="shareButton" class="header-buttons"><i class="fa-solid fa-share-nodes"></i>Compartir</button>
+                                <button id="shareButton" class="header-buttons"><img src="/assets/images/municipio/01_ELEMENTOS LAB/01_ICONOS/LAB MUNICIPAL_01-49.png">Compartir</button>
                             </div>
                             <div class="col-lg-3">
-                                <button id="expandButton" class="header-buttons"><i id="expandIcon" class="fa-solid fa-maximize"></i>Expandir</button>
+                                <button id="expandButton" class="header-buttons"><img src="/assets/images/municipio/01_ELEMENTOS LAB/01_ICONOS/LAB MUNICIPAL_01-50.png">Expandir</button>
                             </div>
                             <div class="col-lg-3">
-                                <button id="guiaButton" class="header-buttons">Guía de Datos</button>
+                                <button id="guiaButton" class="header-buttons"><img src="/assets/images/municipio/01_ELEMENTOS LAB/01_ICONOS/LAB MUNICIPAL_01-51.png">Guía de Datos</button>
                             </div>
                             <div class="col-lg-3">
-                                <button id="metodologiaButton" class="header-buttons">Metodología</button>
+                                <button id="metodologiaButton" class="header-buttons"><img src="/assets/images/municipio/01_ELEMENTOS LAB/01_ICONOS/LAB MUNICIPAL_01-52.png">Metodología</button>
                             </div>
                         </div>
                     </div>
@@ -110,13 +118,13 @@ tags:
                     </select>
                     
                     <ul class="semicircle-menu d-none d-lg-block" style="padding: 10px 0;">
-                      <li><a href="#" class="tab-link active" data-target="#general">General</a></li>
-                      <li><a href="#" class="tab-link" data-target="#gestion-municipal">Gestión Municipal</a></li>
-                      <li><a href="#" class="tab-link" data-target="#transparencia">Transparencia</a></li>
-                      <li><a href="#" class="tab-link" data-target="#nutricion">Nutrición</a></li>
-                      <li><a href="#" class="tab-link" data-target="#pobreza">Pobreza</a></li>
-                      <li><a href="#" class="tab-link" data-target="#poblacion">Población</a></li>
-                      <li><a href="#" class="tab-link" data-target="#educacion">Educación</a></li>
+                      <li><a href="#" class="tab-link active" data-target="#general"><img src="/assets/images/municipio/01_ELEMENTOS LAB/01_ICONOS/LAB MUNICIPAL_01-30.png">General</a></li>
+                      <li><a href="#" class="tab-link" data-target="#gestion-municipal"><img src="/assets/images/municipio/01_ELEMENTOS LAB/01_ICONOS/LAB MUNICIPAL_01-31.png">Gestión Municipal</a></li>
+                      <li><a href="#" class="tab-link" data-target="#transparencia"><img src="/assets/images/municipio/01_ELEMENTOS LAB/01_ICONOS/LAB MUNICIPAL_01-32.png">Transparencia</a></li>
+                      <li><a href="#" class="tab-link" data-target="#nutricion"><img src="/assets/images/municipio/01_ELEMENTOS LAB/01_ICONOS/LAB MUNICIPAL_01-33.png">Nutrición</a></li>
+                      <li><a href="#" class="tab-link" data-target="#pobreza"><img src="/assets/images/municipio/01_ELEMENTOS LAB/01_ICONOS/LAB MUNICIPAL_01-34.png">Pobreza</a></li>
+                      <li><a href="#" class="tab-link" data-target="#poblacion"><img src="/assets/images/municipio/01_ELEMENTOS LAB/01_ICONOS/LAB MUNICIPAL_01-46.png">Población</a></li>
+                      <li><a href="#" class="tab-link" data-target="#educacion"><img src="/assets/images/municipio/01_ELEMENTOS LAB/01_ICONOS/LAB MUNICIPAL_01-35.png">Educación</a></li>
                     </ul>
                   </div>                  
             </div>
@@ -124,106 +132,153 @@ tags:
             <div class="col-lg-10 my-2">
                 <div id="tab-content w-100">
 
-                    <section id="general" class="ud-section tab-content box_shadow_section active">
-                        <div class="container">
-                            <div class="row align-items-center mb-4">
+                    <section id="general" class="tab-content active">
+                        <div class="container box_shadow_section ud-section ">
+                            <div class="row align-items-center mb-2 px-2">
 
                                 <div class="col-lg-12">
                                     <div class="row ">
-                                        <div class="col-lg-6">
-                                            <div id="map" style="width: 100%; height: 400px;"></div>
+                                        <div class="col-lg-4">
+                                            <div id="map" style="width: 100%; height: 350px;"></div>
                                         </div>
-                                        <div class="col-lg-6 align-items-center d-flex">
-                                            <p>
-                                                {{municipio.resumen.Resumen}}
-                                            </p>
+                                        <div class="col-lg-8 align-items-center d-flex">
+                                            <div>
+                                                <h3 class="mb-2">
+                                                    {{municipio.departamento}} - {{municipio.municipio}}
+                                                </h3>
+                                                <p>
+                                                    {{municipio.resumen.Resumen}}
+                                                </p>
+                                            </div>
                                         </div>
-                                        <div class="col-lg-4 my-4">
-                                            <h3 class="mb-4">Población total</h3>
-                                            {% set pobtotal = municipio.poblacion_sexo.Hombres + municipio.poblacion_sexo.Mujeres %}
-                                            <h2>{{pobtotal}}</h2>
-                                            <h6 class="mb-4">habitantes</h6>
-
-                                            <p>Fuente: Instituto Nacional de Estadística (INE)</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <div class="container  p-2">
+                            <div class="row align-items-center mb-2">
+                                <div class="col-lg-12">
+                                    <div class="row">
+                                        <div class="col-lg-4 my-2 ud-section">
+                                            <div class="section_text">
+                                                <img src="/assets/images/municipio/01_ELEMENTOS LAB/01_ICONOS/LAB MUNICIPAL_01-46.png">
+                                                <div class="text">
+                                                    <h4>Población total</h4>
+                                                    {% set pobtotal = municipio.poblacion_sexo.Hombres + municipio.poblacion_sexo.Mujeres %}
+                                                    <h1>{{pobtotal}}</h1>
+                                                    <h4 class="mb-2">habitantes</h4>
+                
+                                                    <p>Fuente: Instituto Nacional de Estadística (INE)</p>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div class="col-lg-4 my-4">
-                                            <h3 >Desnutrición Crónica Total</h3>
-                                            <h1 class="mb-4">{{municipio.desnutricion['2019']['Crónica']}}</h1>
-
-                                            <p>Fuente: Ministerio de salud pública y asistencia social (MSPAS) 2019</p>
+        
+        
+                                        <div class="col-lg-4 my-2 ud-section">
+                                            <div class="section_text">
+                                                <img src="/assets/images/municipio/01_ELEMENTOS LAB/01_ICONOS/LAB MUNICIPAL_01-47.png">
+                                                <div class="text">
+                                                    <h4 >Desnutrición Crónica Total</h4>
+                                                    <h1 class="mb-2">{{municipio.desnutricion['2019']['Crónica']}}</h1>
+                
+                                                    <p>Fuente: Ministerio de salud pública y asistencia social (MSPAS) 2019</p>
+                                                </div>
+                                            </div>
                                             
                                         </div>
-                                        <div class="col-lg-4 my-4">
-                                            <h3 >Desnutrición Aguda Total</h3>
-                                            <h1 class="mb-4">{{municipio.desnutricion['2019']['Aguda']}}</h1>
-
-                                            <p>Fuente: Ministerio de salud pública y asistencia social (MSPAS) 2019</p>
+        
+                                        <div class="col-lg-4 my-2 ud-section">
+                                            <div class="section_text">
+                                                <img src="/assets/images/municipio/01_ELEMENTOS LAB/01_ICONOS/LAB MUNICIPAL_01-48.png">
+                                                <div class="text">
+                                                    <h4 >Desnutrición Aguda Total</h4>
+                                                    <h1 class="mb-2">{{municipio.desnutricion['2019']['Aguda']}}</h1>
+                
+                                                    <p>Fuente: Ministerio de salud pública y asistencia social (MSPAS) 2019</p>
+                                                </div>
+                                            </div>
                                         </div>
+                                    </div>
+                                </div>
+                                
+                                
+                            </div>
+                        </div>
+
+                            <!-- <div class="row ">
+                                <div class="col-lg-6 my-4">
+                                    <h3 >Desnutrición Crónica Total</h3>
+                                    <h1 class="mb-4">{{municipio.desnutricion['2019']['Crónica']}}</h1>
+
+                                    <p>Fuente: Ministerio de salud pública y asistencia social (MSPAS) 2019</p>
+                                    
+                                </div>
+                                <div class="col-lg-6 my-4">
+                                    <h3 >Desnutrición Aguda Total</h3>
+                                    <h1 class="mb-4">{{municipio.desnutricion['2019']['Aguda']}}</h1>
+
+                                    <p>Fuente: Ministerio de salud pública y asistencia social (MSPAS) 2019</p>
+                                </div>
+
+                            </div>
+
+                            <div class="row ">
+                                <div class="col-lg-6 my-4">
+                                    <h3 >Desempeño Municipal en Matematica 2018</h3>
+                                    <h1 class="mb-4">{{ municipio.educacion.MatematicaMunicipal}} %</h1>
+
+                                    <p>Fuente: Instituto Nacional de Estadística (INE)</p>
+                                    
+                                </div>
+                                <div class="col-lg-6 my-4">
+                                    <h3 >Desempeño Municipal en Lectura  2018</h3>
+                                    <h1 class="mb-4">{{ municipio.educacion.LecturaMunicipal}} %</h1>
+
+                                    <p>Fuente: Instituto Nacional de Estadística (INE)</p>
+                                </div>
+                            </div> -->
+                        </div>
+                    </section>
+
+                    <section id="gestion-municipal" class="tab-content">
+                        <div class="">
+                            <div class="row align-items-center mb-4">
+                                <div class="col-lg-12">
+                                    <div class="row ">
                                         
-                                    </div>
+                                        <div class="col-lg-4 mb-4">
+                                            <div class="section_text_2">
+                                                <div class="text">
+                                                    <h3 >Índice de Gestión Municipal</h3>
+                                                    <h1 style="font-size: 60px;" class="mb-4">{{municipio.gestion.Promediosegeplan | limitNumberLength(4)}}</h1>
 
-                                    <!-- <div class="row ">
-                                        <div class="col-lg-6 my-4">
-                                            <h3 >Desnutrición Crónica Total</h3>
-                                            <h1 class="mb-4">{{municipio.desnutricion['2019']['Crónica']}}</h1>
-
-                                            <p>Fuente: Ministerio de salud pública y asistencia social (MSPAS) 2019</p>
+                                                    <p>Fuente: Secretaría de Planificación y Programación de la Presidencia (SEGEPLAN) 2018</p>
+                                            
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-8 mb-4">
+                                            <div class="section_text_2">
+                                                <!-- Añadir un canvas para la gráfica -->
+                                                <canvas id="gestionMunicipalChart"></canvas>
+                                            </div>
                                             
                                         </div>
-                                        <div class="col-lg-6 my-4">
-                                            <h3 >Desnutrición Aguda Total</h3>
-                                            <h1 class="mb-4">{{municipio.desnutricion['2019']['Aguda']}}</h1>
 
-                                            <p>Fuente: Ministerio de salud pública y asistencia social (MSPAS) 2019</p>
-                                        </div>
-
-                                    </div>
-
-                                    <div class="row ">
-                                        <div class="col-lg-6 my-4">
-                                            <h3 >Desempeño Municipal en Matematica 2018</h3>
-                                            <h1 class="mb-4">{{ municipio.educacion.MatematicaMunicipal}} %</h1>
-
-                                            <p>Fuente: Instituto Nacional de Estadística (INE)</p>
+                                        <div class="col-lg-6 mb-4">
+                                            <div class="section_text_2">
+                                                <h5 class="text-center">Población total por sexo</h5>
                                             
+                                                <canvas id="poblacionSexoChart"></canvas>
+                                            </div>                                        
                                         </div>
-                                        <div class="col-lg-6 my-4">
-                                            <h3 >Desempeño Municipal en Lectura  2018</h3>
-                                            <h1 class="mb-4">{{ municipio.educacion.LecturaMunicipal}} %</h1>
-
-                                            <p>Fuente: Instituto Nacional de Estadística (INE)</p>
-                                        </div>
-                                    </div> -->
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-
-                    <section id="gestion-municipal" class="ud-section tab-content box_shadow_section">
-                        <div class="container">
-                            <div class="row align-items-center mb-4">
-                                <div class="col-lg-12">
-                                    <div class="row ">
-                                        <!-- AQUI NO VA ESTO -->
-                                        <div class="col-lg-4 my-4">
-                                            <h5 class="text-center">Población total por sexo</h5>
-                                            
-                                            <canvas id="poblacionSexoChart"></canvas>
-                                        </div>
-                                        <div class="col-lg-4 my-4">
-                                            <h5 class="text-center">Población total por área</h5>
-                                            
-                                            <canvas id="poblacionAreaChart"></canvas>
-                                        </div>
-                                        <div class="col-lg-4 my-4">
-                                            <h3 >Índice de Gestión Municipal</h3>
-                                            <h1 class="mb-4">{{municipio.gestion.Promediosegeplan | limitNumberLength(4)}}</h1>
-
-                                            <p>Fuente: Secretaría de Planificación y Programación de la Presidencia (SEGEPLAN) 2018</p>
-                                        </div>
-                                        <div class="col-lg-8 my-4 justify-content-center">
-                                            <!-- Añadir un canvas para la gráfica -->
-                                            <canvas id="gestionMunicipalChart"></canvas>
+                                        <div class="col-lg-6 mb-4">
+                                            <div class="section_text_2">
+                                                <h5 class="text-center">Población total por área</h5>
+                                                
+                                                <canvas id="poblacionAreaChart"></canvas>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -231,21 +286,26 @@ tags:
                         </div>
                     </section>
 
-                    <section id="transparencia" class="ud-section tab-content box_shadow_section">
-                        <div class="container">
+                    <section id="transparencia" class="tab-content">
+                        <div class="">
 
                             <div class="row align-items-center mb-4">
                                 <div class="col-lg-12">
                                     <div class="row ">
-                                        <div class="col-lg-4 my-4">
-                                            <h3 >Acceso a la información pública</h3>
-                                            <h1 class="mb-4">{{municipio.transparencia.aipPromedio | limitNumberLength(5)}} %</h1>
+                                        <div class="col-lg-4 mb-4">
+                                            <div class="section_text_2">
+                                                <h3 >Acceso a la información pública</h3>
+                                                <h1 class="mb-4">{{municipio.transparencia.aipPromedio | limitNumberLength(5)}} %</h1>
 
-                                            <p>Fuente: Procuraduría de los Derechos Humanos (PDH) 2019</p>
+                                                <p>Fuente: Procuraduría de los Derechos Humanos (PDH) 2019</p>
+                                            </div>
+                                            
                                         </div>
-                                        <div class="col-lg-8 my-4 justify-content-center">
-                                            <!-- Añadir un canvas para la gráfica -->
-                                            <canvas id="transparenciaChart"></canvas>
+                                        <div class="col-lg-8 mb-4">
+                                            <div class="section_text_2">
+                                                <!-- Añadir un canvas para la gráfica -->
+                                                <canvas id="transparenciaChart"></canvas>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -253,40 +313,60 @@ tags:
                         </div>
                     </section>
 
-                    <section id="nutricion" class="ud-section tab-content box_shadow_section">
-                        <div class="container">
+                    <section id="nutricion" class="tab-content">
+                        <div class="">
 
                             <div class="row align-items-center mb-4">
 
                                 <div class="col-lg-12">
                                     <div class="row ">
-                                        <div class="col-lg-4 my-4">
-                                            <h3 >Desnutrición Crónica Total</h3>
-                                            <h1 >{{municipio.desnutricion['2019']['Crónica']}} </h1>
-                                            <h6 class="mb-4">casos</h6>
+                                        <div class="col-lg-4 mb-4">
+                                            <div class="section_text_2_5">
+                                                <img src="/assets/images/municipio/01_ELEMENTOS LAB/01_ICONOS/LAB MUNICIPAL_01-47.png">
+                                                <div class="text">
+                                                    <h3 >Desnutrición Crónica Total</h3>
+                                                    <h1 >{{municipio.desnutricion['2019']['Crónica']}} </h1>
+                                                    <h3 class="mb-4">casos</h3>
 
-                                            <h3 >Desnutrición Aguda Total</h3>
-                                            <h1 >{{municipio.desnutricion['2019']['Aguda']}} </h1>
-                                            <h6 class="mb-4">casos</h6>
+                                                    <p>Fuente: Ministerio de salud pública y asistencia social (MSPAS) 2019</p>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="section_text_2_5">
+                                                <img src="/assets/images/municipio/01_ELEMENTOS LAB/01_ICONOS/LAB MUNICIPAL_01-48.png">
+                                                <div class="text">
+                                                    <h3 >Desnutrición Aguda Total</h3>
+                                                    <h1 >{{municipio.desnutricion['2019']['Aguda']}} </h1>
+                                                    <h3 class="mb-4">casos</h3>
 
-                                            <p>Fuente: Ministerio de salud pública y asistencia social (MSPAS) 2019</p>
+                                                    <p>Fuente: Ministerio de salud pública y asistencia social (MSPAS) 2019</p>
+                                                </div>
+                                            </div>
+                                            
                                         </div>
-                                        <div class="col-lg-8 my-4 justify-content-center">
-                                            <!-- Añadir un canvas para la gráfica -->
-                                            <h4>Casos de Desnutrición por Año</h4>
-                                            <canvas id="desnutricionChart"></canvas>
+                                        <div class="col-lg-8 mb-4">
+                                            <div class="section_text_2">
+                                                <!-- Añadir un canvas para la gráfica -->
+                                                <h4>Casos de Desnutrición por Año</h4>
+                                                <canvas id="desnutricionChart"></canvas>
+                                            </div>
+                                            
                                         </div>
                                     </div>
                                     <div class="row">
-                                        <div class="col-lg-8 my-4 justify-content-center">
-                                            <!-- Añadir un canvas para la gráfica -->
-                                            <h4>Casos de Desnutrición por Edad de 2019</h4>
-                                            <canvas id="desnutricionChartEdadSexo"></canvas>
+                                        <div class="col-lg-8 mb-2">
+                                            <div class="section_text_2">
+                                                <!-- Añadir un canvas para la gráfica -->
+                                                <h4>Casos de Desnutrición por Edad de 2019</h4>
+                                                <canvas id="desnutricionChartEdadSexo"></canvas>
+                                            </div>
                                         </div>
 
-                                        <div class="col-lg-4 my-4 justify-content-center">
-                                            <h4>Casos de Desnutrición Crónica por sexo de 2019</h4>
-                                            <canvas id="desnutricionPieChartSexo"></canvas>
+                                        <div class="col-lg-4 mb-4">
+                                            <div class="section_text_2">
+                                                <h4>Casos de Desnutrición Crónica por sexo de 2019</h4>
+                                                <canvas id="desnutricionPieChartSexo"></canvas>
+                                            </div> 
                                         </div>
                                     </div>
                                 </div>
@@ -294,7 +374,7 @@ tags:
                         </div>
                     </section>
 
-                    <section id="pobreza" class="ud-section tab-content box_shadow_section">
+                    <section id="pobreza" class="tab-content">
                         <div class="container">
 
                             <div class="row align-items-center mb-4">
@@ -305,15 +385,21 @@ tags:
                                 </div> -->
                                 <div class="col-lg-12">
                                     <div class="row ">
-                                        <div class="col-lg-4 my-4">
-                                            <h3 >Índice de Pobreza Multidimensional</h3>
-                                            <h1 class="mb-4">{{municipio.pobreza.ipm2014 | limitNumberLength(5)}}</h1>
+                                        <div class="col-lg-4 mb-4">
+                                            <div class="section_text_2">
+                                                <div class="text">
+                                                    <h3 >Índice de Pobreza Multidimensional</h3>
+                                                    <h1 class="mb-4">{{municipio.pobreza.ipm2014 | limitNumberLength(5)}}</h1>
 
-                                            <p>Fuente: Programa de las Naciones Unidas para el Desarrollo (PNUD) 2014</p>
+                                                    <p>Fuente: Programa de las Naciones Unidas para el Desarrollo (PNUD) 2014</p>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div class="col-lg-8 my-4 justify-content-center">
-                                            <!-- Añadir un canvas para la gráfica -->
-                                            <canvas id="pobrezaChart"></canvas>
+                                        <div class="col-lg-8 mb-4">
+                                            <div class="section_text_2">
+                                                <!-- Añadir un canvas para la gráfica -->
+                                                <canvas id="pobrezaChart"></canvas>
+                                            </div>                                          
                                         </div>
                                     </div>
                                 </div>
@@ -452,6 +538,16 @@ tags:
 
 {% block body_javascripts%}
 <script>
+    function redirectToMunicipio() {
+        const select = document.getElementById('municipios');
+        const url = select.value;
+
+        if (url !== "actual") { // Evita redirigir si es la opción actual o algún valor que no sea una URL
+            window.location.href = url;
+        }
+    }
+</script>
+<script>
     document.addEventListener("DOMContentLoaded", function () {
         const tabLinks = document.querySelectorAll(".tab-link");
         const tabContents = document.querySelectorAll(".tab-content");
@@ -577,8 +673,8 @@ tags:
     var geojsonStyle = {
       color: 'white',     // Contorno blanco
       weight: 2,          // Ancho del contorno
-      fillColor: 'blue',  // Relleno azul
-      fillOpacity: 0.5    // Opacidad del relleno
+      fillColor: '#6fd0bb',  // Relleno azul
+      fillOpacity: 0.8    // Opacidad del relleno
     };
 
     // Agregar la geometría al mapa con el estilo definido
