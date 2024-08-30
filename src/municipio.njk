@@ -145,6 +145,7 @@ tags:
                       <option value="#transparencia">Transparencia</option>
                       <option value="#nutricion">Nutrición</option>
                       <option value="#pobreza">Pobreza</option>
+                      <option value="#finanzas">Finanzas</option>
                       <option value="#poblacion">Población</option>
                       <option value="#educacion">Educación</option>
                       <option value="#economia">Economía</option>
@@ -159,6 +160,7 @@ tags:
                       <li><a href="#" class="tab-link" data-target="#transparencia"><img src="/assets/images/municipio/01_ELEMENTOS LAB/01_ICONOS/LAB MUNICIPAL_01-32.png">Transparencia</a></li>
                       <li><a href="#" class="tab-link" data-target="#nutricion"><img src="/assets/images/municipio/01_ELEMENTOS LAB/01_ICONOS/LAB MUNICIPAL_01-33.png">Nutrición</a></li>
                       <li><a href="#" class="tab-link" data-target="#pobreza"><img src="/assets/images/municipio/01_ELEMENTOS LAB/01_ICONOS/LAB MUNICIPAL_01-34.png">Pobreza</a></li>
+                      <li><a href="#" class="tab-link" data-target="#finanzas"><img src="/assets/images/municipio/01_ELEMENTOS LAB/01_ICONOS/LAB MUNICIPAL_01-35.png">Finanzas</a></li>
                       <li><a href="#" class="tab-link" data-target="#poblacion"><img src="/assets/images/municipio/01_ELEMENTOS LAB/01_ICONOS/LAB MUNICIPAL_01-46.png">Población</a></li>
                       <li><a href="#" class="tab-link" data-target="#educacion"><img src="/assets/images/municipio/01_ELEMENTOS LAB/01_ICONOS/LAB MUNICIPAL_01-35.png">Educación</a></li>
                       <li><a href="#" class="tab-link" data-target="#economia"><img src="/assets/images/municipio/01_ELEMENTOS LAB/01_ICONOS/LAB MUNICIPAL_01-33.png">Economía</a></li>
@@ -188,6 +190,12 @@ tags:
                                                 </h3>
                                                 <p class="px-4">
                                                     {{municipio.resumen.Resumen}}
+                                                    <span class="info-icon-container">
+                                                        <i class="fas fa-info-circle info-icon"></i>
+                                                        <span class="popup">
+                                                            {{municipio.resumen.Fuente}}
+                                                        </span>
+                                                    </span>     
                                                 </p>
                                             </div>
                                         </div>
@@ -267,6 +275,9 @@ tags:
                                         <div class="section_text_2">
                                             <!-- Añadir un canvas para la gráfica -->
                                             <canvas id="gestionMunicipalChart"></canvas>
+                                            <div class="text">
+                                                <p class="text-center">Fuente: Secretaría de Planificación y Programación de la Presidencia (SEGEPLAN)</p>
+                                            </div>
                                         </div>
                                         
                                     </div>
@@ -276,6 +287,9 @@ tags:
                                             <h5 class="text-center">Población total por sexo</h5>
                                         
                                             <canvas id="poblacionSexoChart"></canvas>
+                                            <div class="text">
+                                                <p class="text-center">Fuente: Instituto Nacional de Estadística (INE)</p>
+                                            </div>
                                         </div>                                        
                                     </div>
                                     <div class="col-lg-6 mb-4">
@@ -283,6 +297,9 @@ tags:
                                             <h5 class="text-center">Población total por área</h5>
                                             
                                             <canvas id="poblacionAreaChart"></canvas>
+                                            <div class="text">
+                                                <p class="text-center">Fuente: Instituto Nacional de Estadística (INE)</p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -308,6 +325,9 @@ tags:
                                         <div class="section_text_2">
                                             <!-- Añadir un canvas para la gráfica -->
                                             <canvas id="transparenciaChart"></canvas>
+                                            <div class="text">
+                                                <p class="text-center">Fuente: Procuraduría de Derechos Humanos (PDH)</p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -349,6 +369,9 @@ tags:
                                             <!-- Añadir un canvas para la gráfica -->
                                             <h4>Casos de Desnutrición por Año</h4>
                                             <canvas id="desnutricionChart"></canvas>
+                                            <div class="text">
+                                                <p class="text-center">Fuente: Ministerio de salud pública y asistencia social (MSPAS)</p>
+                                            </div>
                                         </div>
                                         
                                     </div>
@@ -359,6 +382,9 @@ tags:
                                             <!-- Añadir un canvas para la gráfica -->
                                             <h4>Casos de Desnutrición por Edad de 2019</h4>
                                             <canvas id="desnutricionChartEdadSexo"></canvas>
+                                            <div class="text">
+                                                <p class="text-center">Fuente: Ministerio de salud pública y asistencia social (MSPAS)</p>
+                                            </div>
                                         </div>
                                     </div>
 
@@ -366,6 +392,9 @@ tags:
                                         <div class="section_text_2">
                                             <h4>Casos de Desnutrición Crónica por sexo de 2019</h4>
                                             <canvas id="desnutricionPieChartSexo"></canvas>
+                                            <div class="text">
+                                                <p class="text-center">Fuente: Ministerio de salud pública y asistencia social (MSPAS)</p>
+                                            </div>
                                         </div> 
                                     </div>
                                 </div>
@@ -391,10 +420,18 @@ tags:
                                         <div class="section_text_2">
                                             <!-- Añadir un canvas para la gráfica -->
                                             <canvas id="pobrezaChart" ></canvas>
+                                            <div class="text">
+                                                <p class="text-center">Fuente: Programa de las Naciones Unidas para el Desarrollo (PNUD)</p>
+                                            </div>
                                         </div>                                          
                                     </div>
                                 </div>
                             </div>
+                        </div>
+                    </section>
+
+                    <section id="finanzas" class="tab-content">
+                        <div class="row">
                         </div>
                     </section>
 
@@ -417,6 +454,9 @@ tags:
                                     <h5 class="text-center">Población total por sexo</h5>
                                     <!-- Añadir un canvas para la gráfica -->
                                     <canvas id="poblacionSexoChart2"></canvas>
+                                    <div class="text">
+                                        <p class="text-center">Fuente: Instituto Nacional de Estadistica (INE)</p>
+                                    </div>
                                 </div>
                                 
                             </div>
@@ -425,6 +465,9 @@ tags:
                                     <h5 class="text-center">Población total por sexo</h5>
                                     <!-- Añadir un canvas para la gráfica -->
                                     <canvas id="poblacionAreaChart2"></canvas>
+                                    <div class="text">
+                                        <p class="text-center">Fuente: Instituto Nacional de Estadistica (INE)</p>
+                                    </div>
                                 </div>
                             </div>
                             <div class="col-lg-6 mb-4">
@@ -432,6 +475,9 @@ tags:
                                     <h5 class="text-center">Población total por grupos quinquenales de edad</h5>
                                     <!-- Añadir un canvas para la gráfica -->
                                     <canvas id="poblacionEdadChart"></canvas>
+                                    <div class="text">
+                                        <p class="text-center">Fuente: Instituto Nacional de Estadistica (INE)</p>
+                                    </div>
                                 </div>
                             </div>
                             <div class="col-lg-6 mb-4">
@@ -439,6 +485,9 @@ tags:
                                     <h5 class="text-center">Población total por grupos quinquenales de edad</h5>
                                     <!-- Añadir un canvas para la gráfica -->
                                     <canvas id="poblacionParentezcoChart"></canvas>
+                                    <div class="text">
+                                        <p class="text-center">Fuente: Instituto Nacional de Estadistica (INE)</p>
+                                    </div>
                                 </div>
                             </div>
                             <div class="col-lg-4 mb-4">
@@ -457,6 +506,9 @@ tags:
                                     <h5 class="text-center">Población de 10 años y más por estado conyugal</h5>
                                     <!-- Añadir un canvas para la gráfica -->
                                     <canvas id="poblacionEstadoConyugalChart"></canvas>
+                                    <div class="text">
+                                        <p class="text-center">Fuente: Instituto Nacional de Estadistica (INE)</p>
+                                    </div>
                                 </div>
                             </div>
                             <div class="col-lg-4 mb-4">
@@ -464,6 +516,9 @@ tags:
                                     <h5 class="text-center">Población total por lugar de nacimiento y lugar de residencia en abril del 2013</h5>
                                     <!-- Añadir un canvas para la gráfica -->
                                     <canvas id="poblacionResidenciaChart"></canvas>
+                                    <div class="text">
+                                        <p class="text-center">Fuente: Instituto Nacional de Estadistica (INE)</p>
+                                    </div>
                                 </div>
                             </div>
                             <div class="col-lg-4 mb-4">
@@ -482,6 +537,9 @@ tags:
                                     <h5 class="text-center">Población total por pueblos</h5>
                                     <!-- Añadir un canvas para la gráfica -->
                                     <canvas id="poblacionPuebloChart"></canvas>
+                                    <div class="text">
+                                        <p class="text-center">Fuente: Instituto Nacional de Estadistica (INE)</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -507,6 +565,9 @@ tags:
                                     <h5 class="text-center">Población de 7 años o más con alfabetismo</h5>
                                     <!-- Añadir un canvas para la gráfica -->
                                     <canvas id="poblacionAlfabetismoChart"></canvas>
+                                    <div class="text">
+                                        <p class="text-center">Fuente: Instituto Nacional de Estadistica (INE)</p>
+                                    </div>
                                 </div>
                             </div>
                             <div class="col-lg-4 mb-4">
@@ -514,6 +575,9 @@ tags:
                                     <h5 class="text-center">Asistencia escolar</h5>
                                     <!-- Añadir un canvas para la gráfica -->
                                     <canvas id="poblacionAsistenciaEscolarChart"></canvas>
+                                    <div class="text">
+                                        <p class="text-center">Fuente: Instituto Nacional de Estadistica (INE)</p>
+                                    </div>
                                 </div>
                             </div>
                             
@@ -522,6 +586,9 @@ tags:
                                     <h5 class="text-center">Población de 4 años y más por nivel educativo</h5>
                                     <!-- Añadir un canvas para la gráfica -->
                                     <canvas id="poblacionNivelEducativoChart"></canvas>
+                                    <div class="text">
+                                        <p class="text-center">Fuente: Instituto Nacional de Estadistica (INE)</p>
+                                    </div>
                                 </div>
                             </div>
                             <div class="col-lg-4 mb-4">
@@ -529,6 +596,9 @@ tags:
                                     <h5 class="text-center">Causa principal de inasistencia</h5>
                                     <!-- Añadir un canvas para la gráfica -->
                                     <canvas id="poblacionAsistenciaChart"></canvas>
+                                    <div class="text">
+                                        <p class="text-center">Fuente: Instituto Nacional de Estadistica (INE)</p>
+                                    </div>
                                 </div>
                             </div>
                             <div class="col-lg-4 mb-4">
@@ -536,6 +606,9 @@ tags:
                                     <h5 class="text-center">Lugar de estudio</h5>
                                     <!-- Añadir un canvas para la gráfica -->
                                     <canvas id="poblacionLugarEstudioChart"></canvas>
+                                    <div class="text">
+                                        <p class="text-center">Fuente: Instituto Nacional de Estadistica (INE)</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -549,6 +622,9 @@ tags:
                                     <h5 class="text-center">Uso de celular</h5>
                                     <!-- Añadir un canvas para la gráfica -->
                                     <canvas id="poblacionUsoCelularChart"></canvas>
+                                    <div class="text">
+                                        <p class="text-center">Fuente: Instituto Nacional de Estadistica (INE)</p>
+                                    </div>
                                 </div>
                             </div>
                             <div class="col-lg-4 mb-4">
@@ -556,6 +632,9 @@ tags:
                                     <h5 class="text-center">Uso de computadora</h5>
                                     <!-- Añadir un canvas para la gráfica -->
                                     <canvas id="poblacionUsoComputadoraChart"></canvas>
+                                    <div class="text">
+                                        <p class="text-center">Fuente: Instituto Nacional de Estadistica (INE)</p>
+                                    </div>
                                 </div>
                             </div>
                             <div class="col-lg-4 mb-4">
@@ -563,6 +642,9 @@ tags:
                                     <h5 class="text-center">Uso de internet</h5>
                                     <!-- Añadir un canvas para la gráfica -->
                                     <canvas id="poblacionUsoInternetChart"></canvas>
+                                    <div class="text">
+                                        <p class="text-center">Fuente: Instituto Nacional de Estadistica (INE)</p>
+                                    </div>
                                 </div>
                             </div>
                             <div class="col-lg-12 mb-4">
@@ -570,6 +652,9 @@ tags:
                                     <h5 class="text-center">Uso de celular, computadora y/o internet</h5>
                                     <!-- Añadir un canvas para la gráfica -->
                                     <canvas id="poblacionUsoTodoChart"></canvas>
+                                    <div class="text">
+                                        <p class="text-center">Fuente: Instituto Nacional de Estadistica (INE)</p>
+                                    </div>
                                 </div>
                             </div>
 

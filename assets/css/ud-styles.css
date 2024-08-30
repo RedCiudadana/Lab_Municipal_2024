@@ -3208,3 +3208,41 @@ a, p, span{
     width: 100%;
   }
 }
+
+.info-icon-container {
+  position: relative;
+  display: inline-block;
+  margin-left: 5px; /* Espacio entre el texto y el icono */
+}
+
+.info-icon {
+  font-size: 18px; /* Ajusta el tamaño según sea necesario */
+  color: #1d1d1b;
+  cursor: pointer;
+}
+
+.popup {
+  display: none;
+  position: absolute;
+  bottom: 120%; /* Posiciona el popup justo encima del icono */
+  left: 50%;
+  transform: translate(-50%, 50%);
+  margin-bottom: 10px;
+  background-color: #fff;
+  color: #333;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc; /* Borde con color #ccc */
+  white-space: normal; /* Permite el salto de línea si es necesario */
+  z-index: 111111;
+  font-size: 14px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+  width: 500px; /* Ancho fijo de 100px */
+  height: fit-content; /* Altura automática */
+  text-align: center;
+}
+
+.info-icon-container:hover .popup {
+  display: block;
+}
+
