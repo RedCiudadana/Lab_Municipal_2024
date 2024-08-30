@@ -2830,7 +2830,7 @@ hr{
 
 #poblacionSexoChart, #poblacionSexoChart2, #poblacionAreaChart, #poblacionAreaChart2, 
 #gestionMunicipalChart, #transparenciaChart, #poblacionPuebloChart, #poblacionAlfabetismoChart,
-#poblacionAsistenciaEscolarChart {
+#poblacionAsistenciaEscolarChart, #poblacionUsoCelularChart, #poblacionUsoComputadoraChart, #poblacionUsoInternetChart {
   width: 70% !important;  /* Ajusta el canvas al 80% del contenedor */
   height: auto !important; /* Mantén la proporción del gráfico */
   margin: auto;
@@ -2839,9 +2839,29 @@ hr{
 @media (max-width: 767px) {
   #poblacionSexoChart, #poblacionSexoChart2, #poblacionAreaChart, #poblacionAreaChart2, 
   #gestionMunicipalChart, #transparenciaChart, #poblacionPuebloChart, #poblacionAlfabetismoChart,
-  #poblacionAsistenciaEscolarChart {
+  #poblacionAsistenciaEscolarChart, #poblacionUsoCelularChart, #poblacionUsoComputadoraChart, #poblacionUsoInternetChart {
     width: 100% !important;  /* Ajusta el canvas al 80% del contenedor */
     height: auto !important; /* Mantén la proporción del gráfico */
+    margin: auto;
+  }
+}
+
+#pobrezaChart{
+  width: 100% !important;  /* Ajusta el canvas al 80% del contenedor */
+  height: auto !important; /* Mantén la proporción del gráfico */
+  margin: auto;
+}
+
+#poblacionUsoTodoChart{
+  width: 100% !important;  /* Ajusta el canvas al 80% del contenedor */
+  height: 200px !important; /* Mantén la proporción del gráfico */
+  margin: auto;
+}
+
+@media (max-width: 767px) {
+  #poblacionUsoTodoChart{
+    width: 100% !important;  /* Ajusta el canvas al 80% del contenedor */
+    height: 400px !important; /* Mantén la proporción del gráfico */
     margin: auto;
   }
 }
@@ -3087,7 +3107,7 @@ a, p, span{
 }
 
 .section_text img{
-  width: 100px;
+  width: 80px;
   margin-right: 15px;
   align-self: flex-start;
 }
@@ -3160,7 +3180,7 @@ a, p, span{
 }
 
 .section_text_2_5 img{
-  width: 100px;
+  width: 80px;
   margin-right: 15px;
   align-self: flex-start;
 }

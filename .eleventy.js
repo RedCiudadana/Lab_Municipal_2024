@@ -90,6 +90,9 @@ module.exports = function (eleventyConfig) {
 		url = `https://data-dataverso.redciudadana.org/assets/conjuntos/cuadroa11_poblacion_de_7_anos_o_mas_por_alfabetismo_asistencia_escolar_y_lugar_de_estudio.json`;
 		const poblacion_alfabetismo = await fetchDataset(url);
 
+		url = `https://data-dataverso.redciudadana.org/assets/conjuntos/cuadroa12_poblacion_de_7_anos_o_mas_por_uso_de_celular_computadora_y_o_internet.json`;
+		const poblacion_electronicos = await fetchDataset(url);
+
 		return municipios.map(municipio => {
 			const poblacion_sexoData = poblacion_sexo.find(pob => pob.id_municipal === municipio.id_municipal) || {};
 			const educacionData = educacion.find(edu => (edu.id_municipal === municipio.id_municipal) && (edu.Periodo === 2019)) || {};
@@ -106,6 +109,7 @@ module.exports = function (eleventyConfig) {
 			const poblacion_no_asisteData = poblacion_no_asiste.find(pob => pob.id_municipal === municipio.id_municipal) || {};
 			const poblacion_nivel_educativoData = poblacion_nivel_educativo.find(pob => pob.id_municipal === municipio.id_municipal) || {};
 			const poblacion_alfabetismoData = poblacion_alfabetismo.find(pob => pob.id_municipal === municipio.id_municipal) || {};
+			const poblacion_electronicosData = poblacion_electronicos.find(pob => pob.id_municipal === municipio.id_municipal) || {};
 
 			const geojsonData = geojson.features.find(feature => feature.properties.id_municipal === municipio.id_municipal) || {};
       		const geometry = geojsonData.geometry || {};
@@ -276,6 +280,23 @@ module.exports = function (eleventyConfig) {
 				nodeclarado: poblacion_alfabetismoData["No declarado"],
 			};
 
+			const filteredPoblacionElectronicosData = {
+				celular: poblacion_electronicosData["Usa celular"],
+				nocelular: poblacion_electronicosData["No usa celular"],
+				nacelular: poblacion_electronicosData["No declarado uso de celular"],
+				computadora: poblacion_electronicosData["Usa computadora "],
+				nocomputadora: poblacion_electronicosData["No usa computadora "],
+				nacomputadora: poblacion_electronicosData["No declarado el uso de computadora "],
+				internet: poblacion_electronicosData["Usa Internet"],
+				nointernet: poblacion_electronicosData["No usa Internet"],
+				nainternet: poblacion_electronicosData["No declarado el uso de Internet"],
+				usatodo: poblacion_electronicosData["Celular, computadora e internet"],
+				usaceyco: poblacion_electronicosData["Celular y computadora"],
+				usaceei: poblacion_electronicosData["Celular e internet"],
+				usacoei: poblacion_electronicosData["Computadora e internet"],
+				
+			};
+
 			return {
 				...municipio,
 				geometry,
@@ -294,7 +315,8 @@ module.exports = function (eleventyConfig) {
 				poblacion_pueblo: filteredPoblacionPuebloData,
 				poblacion_no_asiste: filteredPoblacionNoAsisteData,
 				poblacion_nivel_educativo: filteredPoblacionNivelEducativo,
-				poblacion_alfabetismo: filteredPoblacionAlfabetismoData
+				poblacion_alfabetismo: filteredPoblacionAlfabetismoData,
+				poblacion_electronicos: filteredPoblacionElectronicosData
 			};
         });
     });

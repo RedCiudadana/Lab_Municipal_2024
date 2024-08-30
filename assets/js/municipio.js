@@ -1048,4 +1048,172 @@ document.addEventListener("DOMContentLoaded", function() {
 
   }
 
+
+  // Gráfica de poblacion por electronicos
+  const poblacionElectronicosDataElement = document.getElementById('poblacion-electronicos');
+  
+  if (poblacionElectronicosDataElement) {
+    const poblacionElectronicosData = JSON.parse(poblacionElectronicosDataElement.textContent);
+
+    const ctx = document.getElementById('poblacionUsoCelularChart').getContext('2d');
+
+    const poblacionUsoCelularChart = new Chart(ctx, {
+      type: 'pie',
+      data: {
+        labels: ['Usa Celular', 'No Usa Celular', 'No Declarado'],
+        datasets: [{
+          data: [poblacionElectronicosData.celular, poblacionElectronicosData.nocelular, poblacionElectronicosData.nacelular],
+          backgroundColor: ['#7eb5ea', '#1ec78b', '#ff6f61'],
+          hoverBackgroundColor: ['#7eb5ea', '#1ec78b', '#ff6f61']
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          datalabels: {
+            formatter: (value, ctx) => {
+              let sum = ctx.dataset.data.reduce((a, b) => a + b, 0);
+              let percentage = ((value * 100) / sum).toFixed(2) + "%";
+              return percentage;
+            },
+            color: '#fff',
+          },
+          tooltip: {
+            callbacks: {
+              label: function(tooltipItem) {
+                const dataset = tooltipItem.dataset;
+                const currentValue = dataset.data[tooltipItem.dataIndex];
+                return `${currentValue.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}`;
+              }
+            }
+          }
+        }
+      },
+      plugins: [ChartDataLabels]
+    });
+
+    const ctx2 = document.getElementById('poblacionUsoComputadoraChart').getContext('2d');
+
+    const poblacionUsoComputadoraChart = new Chart(ctx2, {
+      type: 'pie',
+      data: {
+        labels: ['Usa Computadora', 'No Usa Computadora', 'No Declarado'],
+        datasets: [{
+          data: [poblacionElectronicosData.computadora, poblacionElectronicosData.nocomputadora, poblacionElectronicosData.nacomputadora],
+          backgroundColor: ['#7eb5ea', '#1ec78b', '#ff6f61'],
+          hoverBackgroundColor: ['#7eb5ea', '#1ec78b', '#ff6f61']
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          datalabels: {
+            formatter: (value, ctx2) => {
+              let sum = ctx2.dataset.data.reduce((a, b) => a + b, 0);
+              let percentage = ((value * 100) / sum).toFixed(2) + "%";
+              return percentage;
+            },
+            color: '#fff',
+          },
+          tooltip: {
+            callbacks: {
+              label: function(tooltipItem) {
+                const dataset = tooltipItem.dataset;
+                const currentValue = dataset.data[tooltipItem.dataIndex];
+                return `${currentValue.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}`;
+              }
+            }
+          }
+        }
+      },
+      plugins: [ChartDataLabels]
+    });
+
+    const ctx3 = document.getElementById('poblacionUsoInternetChart').getContext('2d');
+
+    const poblacionUsoInternetChart = new Chart(ctx3, {
+      type: 'pie',
+      data: {
+        labels: ['Usa Internet', 'No Usa Internet', 'No Declarado'],
+        datasets: [{
+          data: [poblacionElectronicosData.internet, poblacionElectronicosData.nointernet, poblacionElectronicosData.nainternet],
+          backgroundColor: ['#7eb5ea', '#1ec78b', '#ff6f61'],
+          hoverBackgroundColor: ['#7eb5ea', '#1ec78b', '#ff6f61']
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          datalabels: {
+            formatter: (value, ctx3) => {
+              let sum = ctx3.dataset.data.reduce((a, b) => a + b, 0);
+              let percentage = ((value * 100) / sum).toFixed(2) + "%";
+              return percentage;
+            },
+            color: '#fff',
+          },
+          tooltip: {
+            callbacks: {
+              label: function(tooltipItem) {
+                const dataset = tooltipItem.dataset;
+                const currentValue = dataset.data[tooltipItem.dataIndex];
+                return `${currentValue.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}`;
+              }
+            }
+          }
+        }
+      },
+      plugins: [ChartDataLabels]
+    });
+
+    const ctx4 = document.getElementById('poblacionUsoTodoChart').getContext('2d');
+
+    const poblacionUsoTodoChart = new Chart(ctx4, {
+      type: 'bar',
+      data: {
+        labels: [
+          'Celular, computadora e internet', 'Celular y computadora', 'Celular e internet', 
+          'Computadora e internet'
+        ],
+        datasets: [{
+          label: 'Población por Lugar de Estudio',
+          data: [
+            poblacionElectronicosData.usatodo, poblacionElectronicosData.usaceyco, poblacionElectronicosData.usaceei,
+            poblacionElectronicosData.usacoei
+          ],
+          borderColor: 'rgb(126, 181, 234, 1)',
+          backgroundColor: 'rgb(126, 181, 234, 0.2)',
+          borderWidth: 1
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: {
+            display: true,
+            position: 'top'
+          },
+          tooltip: {
+            callbacks: {
+              label: function(context) {
+                return `${context.raw.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}`;
+              }
+            }
+          }
+        },
+        scales: {
+          y: {
+            beginAtZero: true,
+            ticks: {
+              callback: function(value) {
+                return value.toLocaleString(); // Añadir comas como separadores de miles
+              }
+            }
+          }
+        }
+      }
+    });
+  }
+
 });
