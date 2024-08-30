@@ -407,123 +407,149 @@ tags:
                         </div>
                     </section>
 
-                    <section id="poblacion" class="ud-section tab-content box_shadow_section">
-                        <div class="container">
+                    <section id="poblacion" class="tab-content">
+                        <div class="">
 
-                            <div class="row align-items-center mb-4">
-                                <!-- <div class="col-lg-12">
-                                    <div class="cuadro_titulo">
-                                        <h3>Población</h3>
-                                    </div>
-                                </div> -->
-                                <div class="col-lg-12">
-                                    <div class="row ">
-                                        <div class="col-lg-4 my-4">
-                                            <h3 class="mb-4">Población total</h3>
+                            <div class="row ">
+                                <div class="col-lg-4 mb-4">
+                                    <div class="section_text_2">
+                                        <div class="text">
+                                            <h4>Población total</h4>
                                             {% set pobtotal = municipio.poblacion_sexo.Hombres + municipio.poblacion_sexo.Mujeres %}
                                             <h2>{{pobtotal}}</h2>
-                                            <h6 class="mb-4">habitantes</h6>
+                                            <h4 class="mb-4">habitantes</h4>
 
                                             <p>Fuente: Instituto Nacional de Estadística (INE)</p>
                                         </div>
-                                        <div class="col-lg-4 my-4">
-                                            <h5 class="text-center">Población total por sexo</h5>
-                                            <!-- Añadir un canvas para la gráfica -->
-                                            <canvas id="poblacionSexoChart2"></canvas>
-                                        </div>
-                                        <div class="col-lg-4 my-4">
-                                            <h5 class="text-center">Población total por sexo</h5>
-                                            <!-- Añadir un canvas para la gráfica -->
-                                            <canvas id="poblacionAreaChart2"></canvas>
-                                        </div>
-                                        <div class="col-lg-6 my-4">
-                                            <h5 class="text-center">Población total por grupos quinquenales de edad</h5>
-                                            <!-- Añadir un canvas para la gráfica -->
-                                            <canvas id="poblacionEdadChart"></canvas>
-                                        </div>
-                                        <div class="col-lg-6 my-4">
-                                            <h5 class="text-center">Población total por grupos quinquenales de edad</h5>
-                                            <!-- Añadir un canvas para la gráfica -->
-                                            <canvas id="poblacionParentezcoChart"></canvas>
-                                        </div>
-                                        <div class="col-lg-4 my-4">
-                                            <h5 >Población de 10 años y más</h5>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 mb-4">
+                                    <div class="section_text_2">
+                                        <h5 class="text-center">Población total por sexo</h5>
+                                        <!-- Añadir un canvas para la gráfica -->
+                                        <canvas id="poblacionSexoChart2"></canvas>
+                                    </div>
+                                    
+                                </div>
+                                <div class="col-lg-4 mb-4">
+                                    <div class="section_text_2">
+                                        <h5 class="text-center">Población total por sexo</h5>
+                                        <!-- Añadir un canvas para la gráfica -->
+                                        <canvas id="poblacionAreaChart2"></canvas>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 mb-4">
+                                    <div class="section_text_2">
+                                        <h5 class="text-center">Población total por grupos quinquenales de edad</h5>
+                                        <!-- Añadir un canvas para la gráfica -->
+                                        <canvas id="poblacionEdadChart"></canvas>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 mb-4">
+                                    <div class="section_text_2">
+                                        <h5 class="text-center">Población total por grupos quinquenales de edad</h5>
+                                        <!-- Añadir un canvas para la gráfica -->
+                                        <canvas id="poblacionParentezcoChart"></canvas>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 mb-4">
+                                    <div class="section_text_2">
+                                        <div class="text">
+                                            <h4 >Población de 10 años y más</h4>
                                             <h2>{{municipio.poblacion_estado_conyugal.pob10ymas}}</h2>
-                                            <h6 class="mb-4">habitantes</h6>
+                                            <h4 class="mb-4">habitantes</h4>
 
                                             <p>Fuente: Instituto Nacional de Estadística (INE)</p>
                                         </div>
-                                        <div class="col-lg-4 my-4">
-                                            <h5 class="text-center">Población de 10 años y más por estado conyugal</h5>
-                                            <!-- Añadir un canvas para la gráfica -->
-                                            <canvas id="poblacionEstadoConyugalChart"></canvas>
-                                        </div>
-                                        <div class="col-lg-4 my-4">
-                                            <h5 class="text-center">Población total por lugar de nacimiento y lugar de residencia en abril del 2013</h5>
-                                            <!-- Añadir un canvas para la gráfica -->
-                                            <canvas id="poblacionResidenciaChart"></canvas>
-                                        </div>
-                                        <div class="col-lg-4 my-4">
-                                            <h5 >Total de poblacion pueblo maya</h5>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 mb-4">
+                                    <div class="section_text_2">
+                                        <h5 class="text-center">Población de 10 años y más por estado conyugal</h5>
+                                        <!-- Añadir un canvas para la gráfica -->
+                                        <canvas id="poblacionEstadoConyugalChart"></canvas>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 mb-4">
+                                    <div class="section_text_2">
+                                        <h5 class="text-center">Población total por lugar de nacimiento y lugar de residencia en abril del 2013</h5>
+                                        <!-- Añadir un canvas para la gráfica -->
+                                        <canvas id="poblacionResidenciaChart"></canvas>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 mb-4">
+                                    <div class="section_text_2">
+                                        <div class="text">
+                                            <h4 >Total de poblacion pueblo maya</h4>
                                             <h2>{{municipio.poblacion_pueblo.maya}}</h2>
-                                            <h6 class="mb-4">habitantes</h6>
+                                            <h4 class="mb-4">habitantes</h4>
 
                                             <p>Fuente: Instituto Nacional de Estadística (INE)</p>
                                         </div>
-                                        <div class="col-lg-8 my-4">
-                                            <h5 class="text-center">Población total por pueblos</h5>
-                                            <!-- Añadir un canvas para la gráfica -->
-                                            <canvas id="poblacionPuebloChart"></canvas>
-                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-8 mb-4">
+                                    <div class="section_text_2">
+                                        <h5 class="text-center">Población total por pueblos</h5>
+                                        <!-- Añadir un canvas para la gráfica -->
+                                        <canvas id="poblacionPuebloChart"></canvas>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </section>
 
-                    <section id="educacion" class="ud-section tab-content box_shadow_section">
-                        <div class="container">
+                    <section id="educacion" class="tab-content">
+                        <div class="">
 
-                            <div class="row align-items-center mb-4">
-                                <!-- <div class="col-lg-12">
-                                    <div class="cuadro_titulo">
-                                        <h3>Educación</h3>
-                                    </div>
-                                </div> -->
-                                <div class="col-lg-12">
-                                    <div class="row ">
-                                        <div class="col-lg-4 my-4">
-                                            <h3 class="mb-4">Población de 4 a 29 años que no asiste a un establecimiento educativo</h3>
+                            <div class="row ">
+                                <div class="col-lg-4 mb-4">
+                                    <div class="section_text_2">
+                                        <div class="text">
+                                            <h4>Población de 4 a 29 años que no asiste a un establecimiento educativo</h4>
                                             <h2>{{municipio.poblacion_no_asiste.total}}</h2>
-                                            <h6 class="mb-4">habitantes</h6>
+                                            <h4 class="mb-4">habitantes</h4>
 
                                             <p>Fuente: Instituto Nacional de Estadística (INE)</p>
                                         </div>
-                                        <div class="col-lg-4 my-4">
-                                            <h5 class="text-center">Población de 4 años y más por nivel educativo</h5>
-                                            <!-- Añadir un canvas para la gráfica -->
-                                            <canvas id="poblacionNivelEducativoChart"></canvas>
-                                        </div>
-                                        <div class="col-lg-4 my-4">
-                                            <h5 class="text-center">Población de 7 años o más con alfabetismo</h5>
-                                            <!-- Añadir un canvas para la gráfica -->
-                                            <canvas id="poblacionAlfabetismoChart"></canvas>
-                                        </div>
-                                        <div class="col-lg-4 my-4">
-                                            <h5 class="text-center">Asistencia escolar</h5>
-                                            <!-- Añadir un canvas para la gráfica -->
-                                            <canvas id="poblacionAsistenciaEscolarChart"></canvas>
-                                        </div>
-                                        <div class="col-lg-4 my-4">
-                                            <h5 class="text-center">Causa principal de inasistencia</h5>
-                                            <!-- Añadir un canvas para la gráfica -->
-                                            <canvas id="poblacionAsistenciaChart"></canvas>
-                                        </div>
-                                        <div class="col-lg-4 my-4">
-                                            <h5 class="text-center">Lugar de estudio</h5>
-                                            <!-- Añadir un canvas para la gráfica -->
-                                            <canvas id="poblacionLugarEstudioChart"></canvas>
-                                        </div>
+                                    </div>
+                                </div>
+                                
+                                
+                                <div class="col-lg-4 mb-4">
+                                    <div class="section_text_2">
+                                        <h5 class="text-center">Población de 7 años o más con alfabetismo</h5>
+                                        <!-- Añadir un canvas para la gráfica -->
+                                        <canvas id="poblacionAlfabetismoChart"></canvas>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 mb-4">
+                                    <div class="section_text_2">
+                                        <h5 class="text-center">Asistencia escolar</h5>
+                                        <!-- Añadir un canvas para la gráfica -->
+                                        <canvas id="poblacionAsistenciaEscolarChart"></canvas>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-lg-4 mb-4">
+                                    <div class="section_text_2">
+                                        <h5 class="text-center">Población de 4 años y más por nivel educativo</h5>
+                                        <!-- Añadir un canvas para la gráfica -->
+                                        <canvas id="poblacionNivelEducativoChart"></canvas>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 mb-4">
+                                    <div class="section_text_2">
+                                        <h5 class="text-center">Causa principal de inasistencia</h5>
+                                        <!-- Añadir un canvas para la gráfica -->
+                                        <canvas id="poblacionAsistenciaChart"></canvas>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 mb-4">
+                                    <div class="section_text_2">
+                                        <h5 class="text-center">Lugar de estudio</h5>
+                                        <!-- Añadir un canvas para la gráfica -->
+                                        <canvas id="poblacionLugarEstudioChart"></canvas>
                                     </div>
                                 </div>
                             </div>
