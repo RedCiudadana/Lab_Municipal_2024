@@ -658,6 +658,50 @@ tags:
                                 </div>
                             </div>
 
+                            <div class="col-lg-4 mb-4">
+                                <div class="section_text_2">
+                                    <h5 class="text-center">Población económicamente activa e inactiva</h5>
+                                    <!-- Añadir un canvas para la gráfica -->
+                                    <canvas id="poblacionEconomicamenteChart"></canvas>
+                                    <div class="text">
+                                        <p class="text-center">Fuente: Instituto Nacional de Estadistica (INE)</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-8 mb-4">
+                                <div class="section_text_2">
+                                    <h5 class="text-center">Población económicamente inactiva</h5>
+                                    <!-- Añadir un canvas para la gráfica -->
+                                    <canvas id="poblacionEconomicamenteInactivaChart"></canvas>
+                                    <div class="text">
+                                        <p class="text-center">Fuente: Instituto Nacional de Estadistica (INE)</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 mb-4">
+                                <div class="section_text_2">
+                                    <h5 class="text-center">Condición de actividad</h5>
+                                    <!-- Añadir un canvas para la gráfica -->
+                                    <canvas id="poblacionEconomicamenteActivaChart"></canvas>
+                                    <div class="text">
+                                        <p class="text-center">Fuente: Instituto Nacional de Estadistica (INE)</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-8 mb-4">
+                                <div class="section_text_2">
+                                    <h5 class="text-center">Lugar de trabajo</h5>
+                                    <!-- Añadir un canvas para la gráfica -->
+                                    <canvas id="poblacionEconomicamenteActivaLugarChart"></canvas>
+                                    <div class="text">
+                                        <p class="text-center">Fuente: Instituto Nacional de Estadistica (INE)</p>
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
                     </section>
 
@@ -1112,6 +1156,27 @@ tags:
       "usaceyco": {{ municipio.poblacion_electronicos.usaceyco or 0 }},
       "usaceei": {{ municipio.poblacion_electronicos.usaceei or 0 }},
       "usacoei": {{ municipio.poblacion_electronicos.usacoei or 0 }}
+	}
+</script>
+
+<script id="poblacion-economicamente" type="application/json">
+	{
+	  "totalpea": {{ municipio.poblacion_activaeconomicamente.totalpea or 0 }},
+      "totalpei": {{ municipio.poblacion_activaeconomicamente.totalpei or 0 }},
+      "peiestudio": {{ municipio.poblacion_activaeconomicamente.peiestudio or 0 }},
+      "peijub": {{ municipio.poblacion_activaeconomicamente.peijub or 0 }},
+      "peihogar": {{ municipio.poblacion_activaeconomicamente.peihogar or 0 }},
+      "peicuidado": {{ municipio.poblacion_activaeconomicamente.peicuidado or 0 }},
+      "peicomunitario": {{ municipio.poblacion_activaeconomicamente.peicomunitario or 0 }},
+      "peiotra": {{ municipio.poblacion_activaeconomicamente.peiotra or 0 }},
+      "peina": {{ municipio.poblacion_activaeconomicamente.peina or 0 }},
+      "peaocupada": {{ municipio.poblacion_activaeconomicamente.peaocupada or 0 }},
+      "peacesante": {{ municipio.poblacion_activaeconomicamente.peacesante or 0 }},
+      "peaaspirante": {{ municipio.poblacion_activaeconomicamente.peaaspirante or 0 }},
+      "trabmun": {{ municipio.poblacion_activaeconomicamente.trabmun or 0 }},
+      "trabotromun": {{ municipio.poblacion_activaeconomicamente.trabotromun or 0 }},
+      "trabotropais": {{ municipio.poblacion_activaeconomicamente.trabotropais or 0 }},
+      "trabna": {{ municipio.poblacion_activaeconomicamente.trabna or 0 }}
 	}
 </script>
 

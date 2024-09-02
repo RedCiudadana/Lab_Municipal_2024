@@ -1216,4 +1216,182 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   }
 
+  // Gráfica de poblacion por electronicos
+  const poblacionEconomicamenteDataElement = document.getElementById('poblacion-economicamente');
+  
+  if (poblacionEconomicamenteDataElement) {
+    const poblacionEconomicamenteData = JSON.parse(poblacionEconomicamenteDataElement.textContent);
+
+    const ctx = document.getElementById('poblacionEconomicamenteChart').getContext('2d');
+
+    const poblacionEconomicamenteChart = new Chart(ctx, {
+      type: 'pie',
+      data: {
+        labels: ['Total PEA', 'Total PEI'],
+        datasets: [{
+          data: [poblacionEconomicamenteData.totalpea, poblacionEconomicamenteData.totalpei],
+          backgroundColor: ['#7eb5ea', '#1ec78b', '#ff6f61'],
+          hoverBackgroundColor: ['#7eb5ea', '#1ec78b', '#ff6f61']
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          datalabels: {
+            formatter: (value, ctx) => {
+              let sum = ctx.dataset.data.reduce((a, b) => a + b, 0);
+              let percentage = ((value * 100) / sum).toFixed(2) + "%";
+              return percentage;
+            },
+            color: '#fff',
+          },
+          tooltip: {
+            callbacks: {
+              label: function(tooltipItem) {
+                const dataset = tooltipItem.dataset;
+                const currentValue = dataset.data[tooltipItem.dataIndex];
+                return `${currentValue.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}`;
+              }
+            }
+          }
+        }
+      },
+      plugins: [ChartDataLabels]
+    });
+
+    const ctx2 = document.getElementById('poblacionEconomicamenteInactivaChart').getContext('2d');
+
+    const poblacionEconomicamenteInactivaChart = new Chart(ctx2, {
+      type: 'bar',
+      data: {
+        labels: [
+          'PEI Unicamente estudio', 'PEI  Rentista o jubilado', 'PEI  Que haceres del hogar', 
+          'PEI  Cuidado de personas', 'PEI  Cargo comunitario', 'PEI  Otra', 'PEI  No declarado'
+        ],
+        datasets: [{
+          label: 'Población por Lugar de Estudio',
+          data: [
+            poblacionEconomicamenteData.peiestudio, poblacionEconomicamenteData.peijub, poblacionEconomicamenteData.peihogar,
+            poblacionEconomicamenteData.peicuidado, poblacionEconomicamenteData.peicomunitario, poblacionEconomicamenteData.peiotra,
+            poblacionEconomicamenteData.peina
+          ],
+          borderColor: 'rgb(126, 181, 234, 1)',
+          backgroundColor: 'rgb(126, 181, 234, 0.2)',
+          borderWidth: 1
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: {
+            display: true,
+            position: 'top'
+          },
+          tooltip: {
+            callbacks: {
+              label: function(context) {
+                return `${context.raw.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}`;
+              }
+            }
+          }
+        },
+        scales: {
+          y: {
+            beginAtZero: true,
+            ticks: {
+              callback: function(value) {
+                return value.toLocaleString(); // Añadir comas como separadores de miles
+              }
+            }
+          }
+        }
+      }
+    });
+
+    const ctx3 = document.getElementById('poblacionEconomicamenteActivaChart').getContext('2d');
+
+    const poblacionEconomicamenteActivaChart = new Chart(ctx3, {
+      type: 'pie',
+      data: {
+        labels: ['PEA Ocupada', 'PEA Cesante', 'PEA Aspirante'],
+        datasets: [{
+          data: [poblacionEconomicamenteData.peaocupada, poblacionEconomicamenteData.peacesante, poblacionEconomicamenteData.peaaspirante],
+          backgroundColor: ['#7eb5ea', '#1ec78b', '#ff6f61'],
+          hoverBackgroundColor: ['#7eb5ea', '#1ec78b', '#ff6f61']
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          datalabels: {
+            formatter: (value, ctx) => {
+              let sum = ctx.dataset.data.reduce((a, b) => a + b, 0);
+              let percentage = ((value * 100) / sum).toFixed(2) + "%";
+              return percentage;
+            },
+            color: '#fff',
+          },
+          tooltip: {
+            callbacks: {
+              label: function(tooltipItem) {
+                const dataset = tooltipItem.dataset;
+                const currentValue = dataset.data[tooltipItem.dataIndex];
+                return `${currentValue.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}`;
+              }
+            }
+          }
+        }
+      },
+      plugins: [ChartDataLabels]
+    });
+
+    const ctx4 = document.getElementById('poblacionEconomicamenteActivaLugarChart').getContext('2d');
+
+    const poblacionEconomicamenteActivaLugarChart = new Chart(ctx4, {
+      type: 'bar',
+      data: {
+        labels: [
+          'Lugar de trabajo en el mismo municipio', 'Lugar de trabajo en otro municipio', 'Lugar de trabajo en otro pais', 
+          'Lugar de trabajo no declarado'
+        ],
+        datasets: [{
+          label: 'Población por Lugar de Estudio',
+          data: [
+            poblacionEconomicamenteData.trabmun, poblacionEconomicamenteData.trabotromun, poblacionEconomicamenteData.trabotropais,
+            poblacionEconomicamenteData.trabna
+          ],
+          borderColor: 'rgb(126, 181, 234, 1)',
+          backgroundColor: 'rgb(126, 181, 234, 0.2)',
+          borderWidth: 1
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: {
+            display: true,
+            position: 'top'
+          },
+          tooltip: {
+            callbacks: {
+              label: function(context) {
+                return `${context.raw.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}`;
+              }
+            }
+          }
+        },
+        scales: {
+          y: {
+            beginAtZero: true,
+            ticks: {
+              callback: function(value) {
+                return value.toLocaleString(); // Añadir comas como separadores de miles
+              }
+            }
+          }
+        }
+      }
+    });
+  }
+
 });

@@ -93,7 +93,10 @@ module.exports = function (eleventyConfig) {
 		url = `https://data-dataverso.redciudadana.org/assets/conjuntos/cuadroa12_poblacion_de_7_anos_o_mas_por_uso_de_celular_computadora_y_o_internet.json`;
 		const poblacion_electronicos = await fetchDataset(url);
 
-		return municipios.map(municipio => {
+		url = `https://data-dataverso.redciudadana.org/assets/conjuntos/cuadroa13_poblacion_de_15_anos_y_mas_economicamente_activa_e_inactiva_condicion_de_inactividad_y_lugar_de_trabajo.json`;
+		const poblacion_activaeconomicamente = await fetchDataset(url);
+
+		return municipios.slice(0,10).map(municipio => {
 			const poblacion_sexoData = poblacion_sexo.find(pob => pob.id_municipal === municipio.id_municipal) || {};
 			const educacionData = educacion.find(edu => (edu.id_municipal === municipio.id_municipal) && (edu.Periodo === 2019)) || {};
 			const gestionData = gestion.find(gestion => gestion.id_municipal === municipio.id_municipal) || {};
@@ -110,6 +113,7 @@ module.exports = function (eleventyConfig) {
 			const poblacion_nivel_educativoData = poblacion_nivel_educativo.find(pob => pob.id_municipal === municipio.id_municipal) || {};
 			const poblacion_alfabetismoData = poblacion_alfabetismo.find(pob => pob.id_municipal === municipio.id_municipal) || {};
 			const poblacion_electronicosData = poblacion_electronicos.find(pob => pob.id_municipal === municipio.id_municipal) || {};
+			const poblacion_activaeconomicamenteData = poblacion_activaeconomicamente.find(pob => pob.id_municipal === municipio.id_municipal) || {};
 
 			const geojsonData = geojson.features.find(feature => feature.properties.id_municipal === municipio.id_municipal) || {};
       		const geometry = geojsonData.geometry || {};
@@ -293,8 +297,26 @@ module.exports = function (eleventyConfig) {
 				usatodo: poblacion_electronicosData["Celular, computadora e internet"],
 				usaceyco: poblacion_electronicosData["Celular y computadora"],
 				usaceei: poblacion_electronicosData["Celular e internet"],
-				usacoei: poblacion_electronicosData["Computadora e internet"],
-				
+				usacoei: poblacion_electronicosData["Computadora e internet"],	
+			};
+
+			const filteredPoblacionActivaEconomicamenteData = {
+				totalpea: poblacion_activaeconomicamenteData["Total PEA"],
+				totalpei: poblacion_activaeconomicamenteData["Total PEI "],
+				peiestudio: poblacion_activaeconomicamenteData["PEI Unicamente estudio"],
+				peijub: poblacion_activaeconomicamenteData["PEI  Rentista o jubilado"],
+				peihogar: poblacion_activaeconomicamenteData["PEI  Que haceres del hogar"],
+				peicuidado: poblacion_activaeconomicamenteData["PEI  Cuidado de personas"],
+				peicomunitario: poblacion_activaeconomicamenteData["PEI  Cargo comunitario"],
+				peiotra: poblacion_activaeconomicamenteData["PEI  Otra"],
+				peina: poblacion_activaeconomicamenteData["PEI  No declarado"],
+				peaocupada: poblacion_activaeconomicamenteData["PEA Ocupada"],
+				peacesante: poblacion_activaeconomicamenteData["PEA Cesante"],
+				peaaspirante: poblacion_activaeconomicamenteData["PEA Aspirante"],
+				trabmun: poblacion_activaeconomicamenteData["Lugar de trabajo en el mismo municipio"],
+				trabotromun: poblacion_activaeconomicamenteData["Lugar de trabajo en otro municipio "],
+				trabotropais: poblacion_activaeconomicamenteData["Lugar de trabajo en otro pais"],
+				trabna: poblacion_activaeconomicamenteData["Lugar de trabajo no declarado"],
 			};
 
 			return {
@@ -316,7 +338,8 @@ module.exports = function (eleventyConfig) {
 				poblacion_no_asiste: filteredPoblacionNoAsisteData,
 				poblacion_nivel_educativo: filteredPoblacionNivelEducativo,
 				poblacion_alfabetismo: filteredPoblacionAlfabetismoData,
-				poblacion_electronicos: filteredPoblacionElectronicosData
+				poblacion_electronicos: filteredPoblacionElectronicosData,
+				poblacion_activaeconomicamente: filteredPoblacionActivaEconomicamenteData
 			};
         });
     });
