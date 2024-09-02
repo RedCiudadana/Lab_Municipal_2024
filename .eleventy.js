@@ -96,6 +96,9 @@ module.exports = function (eleventyConfig) {
 		url = `https://data-dataverso.redciudadana.org/assets/conjuntos/cuadroa13_poblacion_de_15_anos_y_mas_economicamente_activa_e_inactiva_condicion_de_inactividad_y_lugar_de_trabajo.json`;
 		const poblacion_activaeconomicamente = await fetchDataset(url);
 
+		url = `https://data-dataverso.redciudadana.org/assets/conjuntos/cuadroa14_mujeres_de_15_anos_y_mas_numero_de_hijos_nacidos_vivos_numero_de_hijos_vivos_y_edad_de_la_mujer_al_nacimiento_de_su_primer_hijo.json`;
+		const poblacion_salud = await fetchDataset(url);
+
 		return municipios.map(municipio => {
 			const poblacion_sexoData = poblacion_sexo.find(pob => pob.id_municipal === municipio.id_municipal) || {};
 			const educacionData = educacion.find(edu => (edu.id_municipal === municipio.id_municipal) && (edu.Periodo === 2019)) || {};
@@ -114,6 +117,7 @@ module.exports = function (eleventyConfig) {
 			const poblacion_alfabetismoData = poblacion_alfabetismo.find(pob => pob.id_municipal === municipio.id_municipal) || {};
 			const poblacion_electronicosData = poblacion_electronicos.find(pob => pob.id_municipal === municipio.id_municipal) || {};
 			const poblacion_activaeconomicamenteData = poblacion_activaeconomicamente.find(pob => pob.id_municipal === municipio.id_municipal) || {};
+			const poblacion_saludData = poblacion_salud.find(pob => pob.id_municipal === municipio.id_municipal) || {};
 
 			const geojsonData = geojson.features.find(feature => feature.properties.id_municipal === municipio.id_municipal) || {};
       		const geometry = geojsonData.geometry || {};
@@ -319,6 +323,24 @@ module.exports = function (eleventyConfig) {
 				trabna: poblacion_activaeconomicamenteData["Lugar de trabajo no declarado"],
 			};
 
+			const filteredPoblacionSaludData = {
+				totalmujeres: poblacion_saludData["Total de mujeres de 15 años y mas"],
+				nacidos0: poblacion_saludData["nacidos vivos 0"],
+				nacidos1: poblacion_saludData["nacidos vivos 1"],
+				nacidos2: poblacion_saludData["nacidos vivos 2"],
+				nacidos3: poblacion_saludData["nacidos vivos 3"],
+				nacidos4: poblacion_saludData["nacidos vivos 4"],
+				nacidos5: poblacion_saludData[" nacidos vivos 5 o mas"],
+				nacidosna: poblacion_saludData["nacidos vivos No declarado"],
+				partoa15: poblacion_saludData["Edad mujer al momento de parto  antes de 15"],
+				partoa17: poblacion_saludData["Edad mujer al momento de parto 15 - 17 años"],
+				partoa19: poblacion_saludData["Edad mujer al momento de parto 18 - 19 años"],
+				partoa24: poblacion_saludData["Edad mujer al momento de parto 20 - 24 años"],
+				partoa29: poblacion_saludData["Edad mujer al momento de parto 25 - 29 años"],
+				partoa30: poblacion_saludData["Edad mujer al momento de parto 30 años o mas"],
+				partoana: poblacion_saludData["Edad mujer al momento de parto no declarado"],
+			};
+
 			return {
 				...municipio,
 				geometry,
@@ -339,7 +361,8 @@ module.exports = function (eleventyConfig) {
 				poblacion_nivel_educativo: filteredPoblacionNivelEducativo,
 				poblacion_alfabetismo: filteredPoblacionAlfabetismoData,
 				poblacion_electronicos: filteredPoblacionElectronicosData,
-				poblacion_activaeconomicamente: filteredPoblacionActivaEconomicamenteData
+				poblacion_activaeconomicamente: filteredPoblacionActivaEconomicamenteData,
+				poblacion_salud: filteredPoblacionSaludData
 			};
         });
     });

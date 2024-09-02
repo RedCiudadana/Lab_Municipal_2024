@@ -707,6 +707,36 @@ tags:
 
                     <section id="salud" class="tab-content">
                         <div class="row">
+                            <div class="col-lg-4 mb-4">
+                                <div class="section_text_2">
+                                    <div class="text">
+                                        <h3 >Total de mujeres de 15 años y mas</h3>
+                                        <h1 class="mb-4">{{municipio.poblacion_salud.totalmujeres}}</h1>
+
+                                        <p>Fuente: Instituto Nacional de Estadistica (INE)</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-8 mb-4">
+                                <div class="section_text_2">
+                                    <h5 class="text-center">Número de hijos nacidos vivos</h5>
+                                    <!-- Añadir un canvas para la gráfica -->
+                                    <canvas id="numerohijosChart" ></canvas>
+                                    <div class="text">
+                                        <p class="text-center">Fuente: Programa de las Naciones Unidas para el Desarrollo (PNUD)</p>
+                                    </div>
+                                </div>                                          
+                            </div>
+                            <div class="col-lg-12 mb-4">
+                                <div class="section_text_2">
+                                    <h5 class="text-center">Edad de la mujer al nacimiento de su primer hijo</h5>
+                                    <!-- Añadir un canvas para la gráfica -->
+                                    <canvas id="edadmujerChart" ></canvas>
+                                    <div class="text">
+                                        <p class="text-center">Fuente: Programa de las Naciones Unidas para el Desarrollo (PNUD)</p>
+                                    </div>
+                                </div>                                          
+                            </div>
                         </div>
                     </section>
                     
@@ -1177,6 +1207,25 @@ tags:
       "trabotromun": {{ municipio.poblacion_activaeconomicamente.trabotromun or 0 }},
       "trabotropais": {{ municipio.poblacion_activaeconomicamente.trabotropais or 0 }},
       "trabna": {{ municipio.poblacion_activaeconomicamente.trabna or 0 }}
+	}
+</script>
+
+<script id="poblacion-salud" type="application/json">
+	{
+	  "nacidos0": {{ municipio.poblacion_salud.nacidos0 or 0 }},
+      "nacidos1": {{ municipio.poblacion_salud.nacidos1 or 0 }},
+      "nacidos2": {{ municipio.poblacion_salud.nacidos2 or 0 }},
+      "nacidos3": {{ municipio.poblacion_salud.nacidos3 or 0 }},
+      "nacidos4": {{ municipio.poblacion_salud.nacidos4 or 0 }},
+      "nacidos5": {{ municipio.poblacion_salud.nacidos5 or 0 }},
+      "nacidosna": {{ municipio.poblacion_salud.nacidosna or 0 }},
+      "partoa15": {{ municipio.poblacion_salud.partoa15 or 0 }},
+      "partoa17": {{ municipio.poblacion_salud.partoa17 or 0 }},
+      "partoa19": {{ municipio.poblacion_salud.partoa19 or 0 }},
+      "partoa24": {{ municipio.poblacion_salud.partoa24 or 0 }},
+      "partoa29": {{ municipio.poblacion_salud.partoa29 or 0 }},
+      "partoa30": {{ municipio.poblacion_salud.partoa30 or 0 }},
+      "partoana": {{ municipio.poblacion_salud.partoana or 0 }}
 	}
 </script>
 

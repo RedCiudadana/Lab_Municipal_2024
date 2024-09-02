@@ -1394,4 +1394,112 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   }
 
+  // Gráfica de poblacion por electronicos
+  const poblacionSaludDataElement = document.getElementById('poblacion-salud');
+  
+  if (poblacionSaludDataElement) {
+    const poblacionSaludData = JSON.parse(poblacionSaludDataElement.textContent);
+    
+    const ctx = document.getElementById('numerohijosChart').getContext('2d');
+
+    const numerohijosChart = new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: [
+          'nacidos vivos 0', 'nacidos vivos 1', 'nacidos vivos 2', 
+          'nacidos vivos 3', 'nacidos vivos 4', 'nacidos vivos 5 o más',
+          'nacidos vivos no declarado'
+        ],
+        datasets: [{
+          label: 'Población por Lugar de Estudio',
+          data: [
+            poblacionSaludData.nacidos0, poblacionSaludData.nacidos1, poblacionSaludData.nacidos2,
+            poblacionSaludData.nacidos3, poblacionSaludData.nacidos4, poblacionSaludData.nacidos5,
+            poblacionSaludData.nacidosna
+          ],
+          borderColor: 'rgb(126, 181, 234, 1)',
+          backgroundColor: 'rgb(126, 181, 234, 0.2)',
+          borderWidth: 1
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: {
+            display: true,
+            position: 'top'
+          },
+          tooltip: {
+            callbacks: {
+              label: function(context) {
+                return `${context.raw.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}`;
+              }
+            }
+          }
+        },
+        scales: {
+          y: {
+            beginAtZero: true,
+            ticks: {
+              callback: function(value) {
+                return value.toLocaleString(); // Añadir comas como separadores de miles
+              }
+            }
+          }
+        }
+      }
+    });
+
+    const ctx2 = document.getElementById('edadmujerChart').getContext('2d');
+
+    const edadmujerChart = new Chart(ctx2, {
+      type: 'bar',
+      data: {
+        labels: [
+          'Edad mujer al momento de parto  antes de 15', 'Edad mujer al momento de parto 15 - 17 años', 'Edad mujer al momento de parto 18 - 19 años', 
+          'Edad mujer al momento de parto 20 - 24 años', 'nacidos vivos Edad mujer al momento de parto 25 - 29 años', 'Edad mujer al momento de parto 30 o más años',
+          'Edad mujer al momento no delcarada'
+        ],
+        datasets: [{
+          label: 'Población por Lugar de Estudio',
+          data: [
+            poblacionSaludData.partoa15, poblacionSaludData.partoa17, poblacionSaludData.partoa19,
+            poblacionSaludData.partoa24, poblacionSaludData.partoa29, poblacionSaludData.partoa30,
+            poblacionSaludData.partoana
+          ],
+          borderColor: 'rgb(126, 181, 234, 1)',
+          backgroundColor: 'rgb(126, 181, 234, 0.2)',
+          borderWidth: 1
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: {
+            display: true,
+            position: 'top'
+          },
+          tooltip: {
+            callbacks: {
+              label: function(context) {
+                return `${context.raw.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}`;
+              }
+            }
+          }
+        },
+        scales: {
+          y: {
+            beginAtZero: true,
+            ticks: {
+              callback: function(value) {
+                return value.toLocaleString(); // Añadir comas como separadores de miles
+              }
+            }
+          }
+        }
+      }
+    });
+  }
+
 });

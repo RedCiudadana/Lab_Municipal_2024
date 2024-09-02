@@ -2852,14 +2852,14 @@ hr{
   margin: auto;
 }
 
-#poblacionUsoTodoChart{
+#poblacionUsoTodoChart, #edadmujerChart{
   width: 100% !important;  /* Ajusta el canvas al 80% del contenedor */
   height: 200px !important; /* Mantén la proporción del gráfico */
   margin: auto;
 }
 
 @media (max-width: 767px) {
-  #poblacionUsoTodoChart{
+  #poblacionUsoTodoChart, #edadmujerChart{
     width: 100% !important;  /* Ajusta el canvas al 80% del contenedor */
     height: 400px !important; /* Mantén la proporción del gráfico */
     margin: auto;
