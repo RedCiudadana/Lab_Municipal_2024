@@ -96,7 +96,7 @@ module.exports = function (eleventyConfig) {
 		url = `https://data-dataverso.redciudadana.org/assets/conjuntos/cuadroa13_poblacion_de_15_anos_y_mas_economicamente_activa_e_inactiva_condicion_de_inactividad_y_lugar_de_trabajo.json`;
 		const poblacion_activaeconomicamente = await fetchDataset(url);
 
-		return municipios.slice(0,10).map(municipio => {
+		return municipios.map(municipio => {
 			const poblacion_sexoData = poblacion_sexo.find(pob => pob.id_municipal === municipio.id_municipal) || {};
 			const educacionData = educacion.find(edu => (edu.id_municipal === municipio.id_municipal) && (edu.Periodo === 2019)) || {};
 			const gestionData = gestion.find(gestion => gestion.id_municipal === municipio.id_municipal) || {};
