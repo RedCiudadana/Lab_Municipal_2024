@@ -15,6 +15,7 @@ tags:
     <title>Lab Municipal | {{ municipio.municipio }}</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-chart-treemap"></script>
     <link rel="stylesheet" href="/assets/css/ud-styles.css">
 
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
@@ -741,6 +742,57 @@ tags:
                     
                     <section id="hogar" class="tab-content">
                         <div class="row">
+                            <div class="col-lg-4 mb-4">
+                                <div class="section_text_2">
+                                    <div class="text">
+                                        <h3 >Total de hogares</h3>
+                                        <h1 >{{municipio.hogares.totalhogares  | formatNumberWithCommas}}</h1>
+                                        <h3 class="mb-4">hogares</h3>
+
+                                        <p>Fuente: Instituto Nacional de Estadistica (INE)</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-8 mb-4">
+                                <div class="section_text_2">
+                                    <h5 class="text-center">Hogares por tipo de tenencia de la vivienda</h5>
+                                    <!-- Añadir un canvas para la gráfica -->
+                                    <canvas id="hogarestipoChart" ></canvas>
+                                    <div class="text">
+                                        <p class="text-center">Fuente: Programa de las Naciones Unidas para el Desarrollo (PNUD)</p>
+                                    </div>
+                                </div>                                          
+                            </div>
+                            <div class="col-lg-6 mb-4">
+                                <div class="section_text_2">
+                                    <h5 class="text-center">Hogares por sexo del propietario de la vivienda</h5>
+                                    <!-- Añadir un canvas para la gráfica -->
+                                    <canvas id="hogarespropetarioChart" ></canvas>
+                                    <div class="text">
+                                        <p class="text-center">Fuente: Programa de las Naciones Unidas para el Desarrollo (PNUD)</p>
+                                    </div>
+                                </div>                                          
+                            </div>
+                            <div class="col-lg-6 mb-4">
+                                <div class="section_text_2">
+                                    <h5 class="text-center">Sexo de la persona que toma las principales decisiones en el hogar</h5>
+                                    <!-- Añadir un canvas para la gráfica -->
+                                    <canvas id="hogaressexoChart" ></canvas>
+                                    <div class="text">
+                                        <p class="text-center">Fuente: Programa de las Naciones Unidas para el Desarrollo (PNUD)</p>
+                                    </div>
+                                </div>                                          
+                            </div>
+                            <div class="col-lg-12 mb-4">
+                                <div class="section_text_2">
+                                    <h5 class="text-center">Hogares por fuente principal de agua para consumo</h5>
+                                    <!-- Añadir un canvas para la gráfica -->
+                                    <canvas id="hogaresfuenteaguaChart" ></canvas>
+                                    <div class="text">
+                                        <p class="text-center">Fuente: Programa de las Naciones Unidas para el Desarrollo (PNUD)</p>
+                                    </div>
+                                </div>                                          
+                            </div>
                         </div>
                     </section>
 
@@ -1225,6 +1277,38 @@ tags:
       "partoa29": {{ municipio.poblacion_salud.partoa29 or 0 }},
       "partoa30": {{ municipio.poblacion_salud.partoa30 or 0 }},
       "partoana": {{ municipio.poblacion_salud.partoana or 0 }}
+	}
+</script>
+
+<script id="hogares" type="application/json">
+	{
+	  "propia": {{ municipio.hogares.propia or 0 }},
+      "alquilada": {{ municipio.hogares.alquilada or 0 }},
+      "cedida": {{ municipio.hogares.cedida or 0 }},
+      "comunal": {{ municipio.hogares.comunal or 0 }},
+      "otra": {{ municipio.hogares.otra or 0 }},
+      "prohom": {{ municipio.hogares.prohom or 0 }},
+      "promuj": {{ municipio.hogares.promuj or 0 }},
+      "proamb": {{ municipio.hogares.proamb or 0 }},
+      "prona": {{ municipio.hogares.prona or 0 }},
+      "deshom": {{ municipio.hogares.deshom or 0 }},
+      "desmuj": {{ municipio.hogares.desmuj or 0 }},
+      "desamb": {{ municipio.hogares.desamb or 0 }},
+      "desna": {{ municipio.hogares.desna or 0 }}
+	}
+</script>
+
+<script id="fuente-agua" type="application/json">
+	{
+	  "tubviv": {{ municipio.fuenteagua.tubviv or 0 }},
+      "tubvivafu": {{ municipio.fuenteagua.tubvivafu or 0 }},
+      "chorro": {{ municipio.fuenteagua.chorro or 0 }},
+      "pozo": {{ municipio.fuenteagua.pozo or 0 }},
+      "lluvia": {{ municipio.fuenteagua.lluvia or 0 }},
+      "rio": {{ municipio.fuenteagua.rio or 0 }},
+      "manantial": {{ municipio.fuenteagua.manantial or 0 }},
+      "camion": {{ municipio.fuenteagua.camion or 0 }},
+      "otro": {{ municipio.fuenteagua.otro or 0 }}
 	}
 </script>
 

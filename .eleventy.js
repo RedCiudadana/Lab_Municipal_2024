@@ -99,6 +99,12 @@ module.exports = function (eleventyConfig) {
 		url = `https://data-dataverso.redciudadana.org/assets/conjuntos/cuadroa14_mujeres_de_15_anos_y_mas_numero_de_hijos_nacidos_vivos_numero_de_hijos_vivos_y_edad_de_la_mujer_al_nacimiento_de_su_primer_hijo.json`;
 		const poblacion_salud = await fetchDataset(url);
 
+		url = `https://data-dataverso.redciudadana.org/assets/conjuntos/cuadrob1_hogares_por_tipo_de_tenencia_de_la_vivienda_sexo_del_propietario_de_la_vivienda_y_sexo_de_la_persona_que_toma_las_principales_decisiones_en_el_hogar.json`;
+		const hogares = await fetchDataset(url);
+
+		url = `https://data-dataverso.redciudadana.org/assets/conjuntos/cuadrob2_hogares_por_fuente-principal_de_agua_para_consumo.json`;
+		const fuenteagua = await fetchDataset(url);
+
 		return municipios.map(municipio => {
 			const poblacion_sexoData = poblacion_sexo.find(pob => pob.id_municipal === municipio.id_municipal) || {};
 			const educacionData = educacion.find(edu => (edu.id_municipal === municipio.id_municipal) && (edu.Periodo === 2019)) || {};
@@ -118,6 +124,8 @@ module.exports = function (eleventyConfig) {
 			const poblacion_electronicosData = poblacion_electronicos.find(pob => pob.id_municipal === municipio.id_municipal) || {};
 			const poblacion_activaeconomicamenteData = poblacion_activaeconomicamente.find(pob => pob.id_municipal === municipio.id_municipal) || {};
 			const poblacion_saludData = poblacion_salud.find(pob => pob.id_municipal === municipio.id_municipal) || {};
+			const hogaresData = hogares.find(pob => pob.id_municipal === municipio.id_municipal) || {};
+			const fuenteaguaData = fuenteagua.find(pob => pob.id_municipal === municipio.id_municipal) || {};
 
 			const geojsonData = geojson.features.find(feature => feature.properties.id_municipal === municipio.id_municipal) || {};
       		const geometry = geojsonData.geometry || {};
@@ -341,6 +349,35 @@ module.exports = function (eleventyConfig) {
 				partoana: poblacion_saludData["Edad mujer al momento de parto no declarado"],
 			};
 
+			const filteredHogaresData = {
+				totalhogares: hogaresData["Total de hogares"],
+				propia: hogaresData["Propia"],
+				alquilada: hogaresData["Alquilada"],
+				cedida: hogaresData["Cedida o prestada"],
+				comunal: hogaresData["Propiedad comunal"],
+				otra: hogaresData["Otra"],
+				prohom: hogaresData["Propoetario Hombre"],
+				promuj: hogaresData["Propoetario Mujer"],
+				proamb: hogaresData["Propoetario Ambos"],
+				prona: hogaresData["Propoetario no declarado"],
+				deshom: hogaresData["Decisiones hogar Hombre"],
+				desmuj: hogaresData["Decisiones hogar Mujer"],
+				desamb: hogaresData["Decisiones hogar ambos"],
+				desna: hogaresData["Decisiones hogar no declarado"],
+			};
+
+			const filteredFuenteAguaData = {
+				tubviv :fuenteaguaData["Tuberia en la vivienda"],
+				tubvivafu :fuenteaguaData["Tuberia fuera de la vivienda"],
+				chorro :fuenteaguaData["Chorro publico"],
+				pozo :fuenteaguaData["Pozo perforado"],
+				lluvia :fuenteaguaData["Agua de lluvia"],
+				rio :fuenteaguaData["Rio o lago"],
+				manantial :fuenteaguaData["Manantial o nacimiento"],
+				camion :fuenteaguaData["Camion o tonel"],
+				otro :fuenteaguaData["Otro"],
+			};
+
 			return {
 				...municipio,
 				geometry,
@@ -362,7 +399,9 @@ module.exports = function (eleventyConfig) {
 				poblacion_alfabetismo: filteredPoblacionAlfabetismoData,
 				poblacion_electronicos: filteredPoblacionElectronicosData,
 				poblacion_activaeconomicamente: filteredPoblacionActivaEconomicamenteData,
-				poblacion_salud: filteredPoblacionSaludData
+				poblacion_salud: filteredPoblacionSaludData,
+				hogares: filteredHogaresData,
+				fuenteagua: filteredFuenteAguaData
 			};
         });
     });

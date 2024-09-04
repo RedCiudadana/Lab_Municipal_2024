@@ -1176,7 +1176,7 @@ document.addEventListener("DOMContentLoaded", function() {
           'Computadora e internet'
         ],
         datasets: [{
-          label: 'Población por Lugar de Estudio',
+          label: 'Población por uso de electrónicos',
           data: [
             poblacionElectronicosData.usatodo, poblacionElectronicosData.usaceyco, poblacionElectronicosData.usaceei,
             poblacionElectronicosData.usacoei
@@ -1269,7 +1269,7 @@ document.addEventListener("DOMContentLoaded", function() {
           'PEI  Cuidado de personas', 'PEI  Cargo comunitario', 'PEI  Otra', 'PEI  No declarado'
         ],
         datasets: [{
-          label: 'Población por Lugar de Estudio',
+          label: 'Población por inactividad económica',
           data: [
             poblacionEconomicamenteData.peiestudio, poblacionEconomicamenteData.peijub, poblacionEconomicamenteData.peihogar,
             poblacionEconomicamenteData.peicuidado, poblacionEconomicamenteData.peicomunitario, poblacionEconomicamenteData.peiotra,
@@ -1355,7 +1355,7 @@ document.addEventListener("DOMContentLoaded", function() {
           'Lugar de trabajo no declarado'
         ],
         datasets: [{
-          label: 'Población por Lugar de Estudio',
+          label: 'Población por lugar de trabajo',
           data: [
             poblacionEconomicamenteData.trabmun, poblacionEconomicamenteData.trabotromun, poblacionEconomicamenteData.trabotropais,
             poblacionEconomicamenteData.trabna
@@ -1394,7 +1394,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   }
 
-  // Gráfica de poblacion por electronicos
+  // Gráfica de poblacion por salud
   const poblacionSaludDataElement = document.getElementById('poblacion-salud');
   
   if (poblacionSaludDataElement) {
@@ -1411,7 +1411,7 @@ document.addEventListener("DOMContentLoaded", function() {
           'nacidos vivos no declarado'
         ],
         datasets: [{
-          label: 'Población por Lugar de Estudio',
+          label: 'Población por número de hijos nacidos',
           data: [
             poblacionSaludData.nacidos0, poblacionSaludData.nacidos1, poblacionSaludData.nacidos2,
             poblacionSaludData.nacidos3, poblacionSaludData.nacidos4, poblacionSaludData.nacidos5,
@@ -1461,7 +1461,7 @@ document.addEventListener("DOMContentLoaded", function() {
           'Edad mujer al momento no delcarada'
         ],
         datasets: [{
-          label: 'Población por Lugar de Estudio',
+          label: 'Población por edad de la mujer al parto',
           data: [
             poblacionSaludData.partoa15, poblacionSaludData.partoa17, poblacionSaludData.partoa19,
             poblacionSaludData.partoa24, poblacionSaludData.partoa29, poblacionSaludData.partoa30,
@@ -1501,5 +1501,211 @@ document.addEventListener("DOMContentLoaded", function() {
       }
     });
   }
+
+  // Gráfica de poblacion por hogares
+  const hogaresDataElement = document.getElementById('hogares');
+  
+  if (hogaresDataElement) {
+    const hogaresData = JSON.parse(hogaresDataElement.textContent);
+    
+    const ctx = document.getElementById('hogarestipoChart').getContext('2d');
+
+    const hogarestipoChart = new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: [
+          'Propia', 'Alquilada', 'Cedida o Prestada',
+          'Propiedad Comunal', 'Otra'
+        ],
+        datasets: [{
+          label: 'Hogares por tipo de tenencia',
+          data: [
+            hogaresData.propia, hogaresData.alquilada, hogaresData.cedida,
+            hogaresData.comunal, hogaresData.otra 
+          ],
+          borderColor: 'rgb(126, 181, 234, 1)',
+          backgroundColor: 'rgb(126, 181, 234, 0.2)',
+          borderWidth: 1
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: {
+            display: true,
+            position: 'top'
+          },
+          tooltip: {
+            callbacks: {
+              label: function(context) {
+                return `${context.raw.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}`;
+              }
+            }
+          }
+        },
+        scales: {
+          y: {
+            beginAtZero: true,
+            ticks: {
+              callback: function(value) {
+                return value.toLocaleString(); // Añadir comas como separadores de miles
+              }
+            }
+          }
+        }
+      }
+    });
+
+    const ctx2 = document.getElementById('hogarespropetarioChart').getContext('2d');
+
+    const hogarespropetarioChart = new Chart(ctx2, {
+      type: 'bar',
+      data: {
+        labels: [
+          'Propoetario Hombre', 'Propoetario Mujer', 'Propoetario Ambos',
+          'Propoetario no declarado'
+        ],
+        datasets: [{
+          label: 'Hogares por sexo del propetario',
+          data: [
+            hogaresData.prohom, hogaresData.promuj, hogaresData.proamb,
+            hogaresData.prona
+          ],
+          borderColor: 'rgb(126, 181, 234, 1)',
+          backgroundColor: 'rgb(126, 181, 234, 0.2)',
+          borderWidth: 1
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: {
+            display: true,
+            position: 'top'
+          },
+          tooltip: {
+            callbacks: {
+              label: function(context) {
+                return `${context.raw.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}`;
+              }
+            }
+          }
+        },
+        scales: {
+          y: {
+            beginAtZero: true,
+            ticks: {
+              callback: function(value) {
+                return value.toLocaleString(); // Añadir comas como separadores de miles
+              }
+            }
+          }
+        }
+      }
+    });
+
+    const ctx3 = document.getElementById('hogaressexoChart').getContext('2d');
+
+    const hogaressexoChart = new Chart(ctx3, {
+      type: 'bar',
+      data: {
+        labels: [
+          'Decisiones hogar Hombre', 'Decisiones hogar Mujer', 'Decisiones hogar Ambos',
+          'Decisiones hogar no declarado'
+        ],
+        datasets: [{
+          label: 'Sexo que toma desiciones del hogar',
+          data: [
+            hogaresData.deshom, hogaresData.desmuj, hogaresData.desamb,
+            hogaresData.desna
+          ],
+          borderColor: 'rgb(126, 181, 234, 1)',
+          backgroundColor: 'rgb(126, 181, 234, 0.2)',
+          borderWidth: 1
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: {
+            display: true,
+            position: 'top'
+          },
+          tooltip: {
+            callbacks: {
+              label: function(context) {
+                return `${context.raw.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}`;
+              }
+            }
+          }
+        },
+        scales: {
+          y: {
+            beginAtZero: true,
+            ticks: {
+              callback: function(value) {
+                return value.toLocaleString(); // Añadir comas como separadores de miles
+              }
+            }
+          }
+        }
+      }
+    });
+  }
+
+  const fuenteaguaDataElement = document.getElementById('fuente-agua');
+  if (fuenteaguaDataElement) {
+    const fuenteaguaData = JSON.parse(fuenteaguaDataElement.textContent);
+    const ctx = document.getElementById('hogaresfuenteaguaChart').getContext('2d');
+    
+    const hogaresfuenteaguaChart = new Chart(ctx, {
+      type: 'treemap',
+      data: {
+        datasets: [{
+          tree: [
+            { label: 'Agua por tubería dentro de la vivienda', value: fuenteaguaData.tubviv },
+            { label: 'Agua por tubería fuera de la vivienda', value: fuenteaguaData.tubvivafu },
+            { label: 'Chorro público', value: fuenteaguaData.chorro },
+            { label: 'Pozo', value: fuenteaguaData.pozo },
+            { label: 'Agua de lluvia', value: fuenteaguaData.lluvia },
+            { label: 'Río', value: fuenteaguaData.rio },
+            { label: 'Manantial', value: fuenteaguaData.manantial },
+            { label: 'Camión cisterna', value: fuenteaguaData.camion },
+            { label: 'Otro', value: fuenteaguaData.otro }
+          ],
+          backgroundColor: [
+              '#ff6384', '#36a2eb', '#cc65fe', '#ffce56', '#4bc0c0',
+              '#9966ff', '#ff9f40', '#ffcd56', '#c9cbcf'
+          ],
+          borderWidth: 1,
+          borderColor: '#fff',
+          spacing: 1,
+          labels: {
+            display: true,
+            align: 'center',
+            font: {
+                size: 11
+            }
+          }
+        }]
+      },
+      options: {
+        plugins: {
+          title: {
+            display: true,
+            text: 'Hogares por Fuente de Agua'
+          },
+          tooltip: {
+            callbacks: {
+              label: function(context) {
+                return `${context.raw.label}: ${context.raw.value}`;
+              }
+            }
+          }
+        }
+      }
+    });
+  }
+
 
 });
