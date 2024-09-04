@@ -214,7 +214,7 @@ tags:
                                                 <div class="text">
                                                     <h4>Población total</h4>
                                                     {% set pobtotal = municipio.poblacion_sexo.Hombres + municipio.poblacion_sexo.Mujeres %}
-                                                    <h1>{{pobtotal}}</h1>
+                                                    <h1>{{pobtotal | formatNumberWithCommas}}</h1>
                                                     <h4 class="mb-2">habitantes</h4>
                 
                                                     <p>Fuente: Instituto Nacional de Estadística (INE)</p>
@@ -228,7 +228,7 @@ tags:
                                                 <img src="/assets/images/municipio/01_ELEMENTOS LAB/01_ICONOS/LAB MUNICIPAL_01-47.png">
                                                 <div class="text">
                                                     <h4 >Desnutrición Crónica Total</h4>
-                                                    <h1 class="mb-2">{{municipio.desnutricion['2019']['Crónica']}}</h1>
+                                                    <h1 class="mb-2">{{municipio.desnutricion['2019']['Crónica'] | formatNumberWithCommas}}</h1>
                 
                                                     <p>Fuente: Ministerio de salud pública y asistencia social (MSPAS) 2019</p>
                                                 </div>
@@ -241,7 +241,7 @@ tags:
                                                 <img src="/assets/images/municipio/01_ELEMENTOS LAB/01_ICONOS/LAB MUNICIPAL_01-48.png">
                                                 <div class="text">
                                                     <h4 >Desnutrición Aguda Total</h4>
-                                                    <h1 class="mb-2">{{municipio.desnutricion['2019']['Aguda']}}</h1>
+                                                    <h1 class="mb-2">{{municipio.desnutricion['2019']['Aguda'] | formatNumberWithCommas}}</h1>
                 
                                                     <p>Fuente: Ministerio de salud pública y asistencia social (MSPAS) 2019</p>
                                                 </div>
@@ -345,7 +345,7 @@ tags:
                                             <img src="/assets/images/municipio/01_ELEMENTOS LAB/01_ICONOS/LAB MUNICIPAL_01-47.png">
                                             <div class="text">
                                                 <h3 >Desnutrición Crónica Total</h3>
-                                                <h1 >{{municipio.desnutricion['2019']['Crónica']}} </h1>
+                                                <h1 >{{municipio.desnutricion['2019']['Crónica'] | formatNumberWithCommas}} </h1>
                                                 <h3 class="mb-4">casos</h3>
 
                                                 <p>Fuente: Ministerio de salud pública y asistencia social (MSPAS) 2019</p>
@@ -356,7 +356,7 @@ tags:
                                             <img src="/assets/images/municipio/01_ELEMENTOS LAB/01_ICONOS/LAB MUNICIPAL_01-48.png">
                                             <div class="text">
                                                 <h3 >Desnutrición Aguda Total</h3>
-                                                <h1 >{{municipio.desnutricion['2019']['Aguda']}} </h1>
+                                                <h1 >{{municipio.desnutricion['2019']['Aguda'] | formatNumberWithCommas}} </h1>
                                                 <h3 class="mb-4">casos</h3>
 
                                                 <p>Fuente: Ministerio de salud pública y asistencia social (MSPAS) 2019</p>
@@ -441,8 +441,7 @@ tags:
                                 <div class="section_text_2">
                                     <div class="text">
                                         <h4>Población total</h4>
-                                        {% set pobtotal = municipio.poblacion_sexo.Hombres + municipio.poblacion_sexo.Mujeres %}
-                                        <h2>{{pobtotal}}</h2>
+                                        <h2>{{pobtotal  | formatNumberWithCommas}}</h2>
                                         <h4 class="mb-4">habitantes</h4>
 
                                         <p>Fuente: Instituto Nacional de Estadística (INE)</p>
@@ -551,7 +550,7 @@ tags:
                                 <div class="section_text_2">
                                     <div class="text">
                                         <h4>Población de 4 a 29 años que no asiste a un establecimiento educativo</h4>
-                                        <h2>{{municipio.poblacion_no_asiste.total}}</h2>
+                                        <h2>{{municipio.poblacion_no_asiste.total  | formatNumberWithCommas}}</h2>
                                         <h4 class="mb-4">habitantes</h4>
 
                                         <p>Fuente: Instituto Nacional de Estadística (INE)</p>
@@ -711,7 +710,7 @@ tags:
                                 <div class="section_text_2">
                                     <div class="text">
                                         <h3 >Total de mujeres de 15 años y mas</h3>
-                                        <h1 class="mb-4">{{municipio.poblacion_salud.totalmujeres}}</h1>
+                                        <h1 class="mb-4">{{municipio.poblacion_salud.totalmujeres  | formatNumberWithCommas}}</h1>
 
                                         <p>Fuente: Instituto Nacional de Estadistica (INE)</p>
                                     </div>

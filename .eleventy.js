@@ -388,4 +388,13 @@ module.exports = function (eleventyConfig) {
       return value;
     });
 
+	eleventyConfig.addNunjucksFilter("formatNumberWithCommas", function(value) {
+		if (!isNaN(value)) {
+			// Asegurarse de que sea un número o cadena numérica
+			return Number(value).toLocaleString('en');
+		}
+		return value;
+	});
+	
+
 }
