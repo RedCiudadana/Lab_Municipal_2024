@@ -105,7 +105,7 @@ module.exports = function (eleventyConfig) {
 		url = `https://data-dataverso.redciudadana.org/assets/conjuntos/cuadrob2_hogares_por_fuente-principal_de_agua_para_consumo.json`;
 		const fuenteagua = await fetchDataset(url);
 
-		return municipios.map(municipio => {
+		return municipios.slice(0,10).map(municipio => {
 			const poblacion_sexoData = poblacion_sexo.find(pob => pob.id_municipal === municipio.id_municipal) || {};
 			const educacionData = educacion.find(edu => (edu.id_municipal === municipio.id_municipal) && (edu.Periodo === 2019)) || {};
 			const gestionData = gestion.find(gestion => gestion.id_municipal === municipio.id_municipal) || {};

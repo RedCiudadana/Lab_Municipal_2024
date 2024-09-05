@@ -186,14 +186,17 @@ tags:
                                         </div>
                                         <div class="col-lg-8 align-items-center d-flex">
                                             <div>
-                                                <h3 class="mb-2 px-4">
-                                                    {{municipio.departamento}} - {{municipio.municipio}}
-                                                </h3>
-                                                <p class="px-4">
+                                                <div class="d-flex align-items-center px-4 mb-2">
+                                                    <img style="width: 35px; height: 35px;" src="/assets/images/municipio/01_ELEMENTOS LAB/01_ICONOS/LAB MUNICIPAL_01-30.png">
+                                                    <h3 class="ml-2">
+                                                        {{municipio.departamento}} - {{municipio.municipio}}
+                                                    </h3>
+                                                </div>
+                                                <p class="px-4" style="line-height: 20px;">
                                                     {{municipio.resumen.Resumen}}
                                                     <span class="info-icon-container">
                                                         <i class="fas fa-info-circle info-icon"></i>
-                                                        <span class="popup">
+                                                        <span class="popup_inf">
                                                             {{municipio.resumen.Fuente}}
                                                         </span>
                                                     </span>     
@@ -263,7 +266,9 @@ tags:
                                     
                                     <div class="col-lg-4 mb-4">
                                         <div class="section_text_2">
+                                            <img src="/assets/images/municipio/01_ELEMENTOS LAB/01_ICONOS/Gestion municipal.png">
                                             <div class="text">
+                                                
                                                 <h3 >Índice de Gestión Municipal</h3>
                                                 <h1 class="mb-4">{{municipio.gestion.Promediosegeplan | limitNumberLength(4)}}</h1>
 
@@ -314,6 +319,7 @@ tags:
                                 <div class="row ">
                                     <div class="col-lg-4 mb-4">
                                         <div class="section_text_2">
+                                            <img src="/assets/images/municipio/01_ELEMENTOS LAB/01_ICONOS/LAB MUNICIPAL_01-32.png">
                                             <div class="text">
                                                 <h3 >Acceso a la información pública</h3>
                                                 <h1 class="mb-4">{{municipio.transparencia.aipPromedio | limitNumberLength(5)}} %</h1>
@@ -409,6 +415,7 @@ tags:
                                 <div class="row ">
                                     <div class="col-lg-4 mb-4">
                                         <div class="section_text_2">
+                                            <img src="/assets/images/municipio/01_ELEMENTOS LAB/01_ICONOS/LAB MUNICIPAL_01-34.png">
                                             <div class="text">
                                                 <h3 >Índice de Pobreza Multidimensional</h3>
                                                 <h1 class="mb-4">{{municipio.pobreza.ipm2014 | limitNumberLength(5)}}</h1>
@@ -440,6 +447,7 @@ tags:
                         <div class="row ">
                             <div class="col-lg-4 mb-4">
                                 <div class="section_text_2">
+                                    <img src="/assets/images/municipio/01_ELEMENTOS LAB/01_ICONOS/LAB MUNICIPAL_01-46.png">
                                     <div class="text">
                                         <h4>Población total</h4>
                                         <h2>{{pobtotal  | formatNumberWithCommas}}</h2>
@@ -549,6 +557,7 @@ tags:
                         <div class="row">
                             <div class="col-lg-4 mb-4">
                                 <div class="section_text_2">
+                                    <img src="/assets/images/municipio/01_ELEMENTOS LAB/01_ICONOS/LAB MUNICIPAL_01-35.png">
                                     <div class="text">
                                         <h4>Población de 4 a 29 años que no asiste a un establecimiento educativo</h4>
                                         <h2>{{municipio.poblacion_no_asiste.total  | formatNumberWithCommas}}</h2>
@@ -709,6 +718,7 @@ tags:
                         <div class="row">
                             <div class="col-lg-4 mb-4">
                                 <div class="section_text_2">
+                                    <img src="/assets/images/municipio/01_ELEMENTOS LAB/01_ICONOS/Salud.png">
                                     <div class="text">
                                         <h3 >Total de mujeres de 15 años y mas</h3>
                                         <h1 class="mb-4">{{municipio.poblacion_salud.totalmujeres  | formatNumberWithCommas}}</h1>
@@ -744,6 +754,7 @@ tags:
                         <div class="row">
                             <div class="col-lg-4 mb-4">
                                 <div class="section_text_2">
+                                    <img src="/assets/images/municipio/01_ELEMENTOS LAB/01_ICONOS/Hogar.png">
                                     <div class="text">
                                         <h3 >Total de hogares</h3>
                                         <h1 >{{municipio.hogares.totalhogares  | formatNumberWithCommas}}</h1>

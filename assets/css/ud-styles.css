@@ -2867,7 +2867,7 @@ hr{
 }
 
 .sidebar {
-  height: 100%;
+  height: fit-content;
   padding: 20px;
 
 }
@@ -3085,12 +3085,18 @@ hr{
   src: url("/assets/fonts/tipografia/texto/EuclidCircularA-SemiBold.ttf");
 }
 
+@font-face {
+  font-family: "Euclid-Regular";
+
+  src: url("/assets/fonts/tipografia/texto/EuclidCircularA-Regular.ttf");
+}
+
 h1, h2, h3, h4, h5, h6{
   font-family: 'Sora-Bold', sans-serif!important;
 }
 
 a, p, span{
-  font-family: 'Euclid-Medium', sans-serif!important;
+  font-family: 'Euclid-Regular', sans-serif!important;
 }
 
 .section_text{
@@ -3107,7 +3113,7 @@ a, p, span{
 }
 
 .section_text img{
-  width: 80px;
+  width: 60px;
   margin-right: 15px;
   align-self: flex-start;
 }
@@ -3115,14 +3121,17 @@ a, p, span{
 .section_text .text h4{
   font-family: 'Sora-Light', sans-serif!important;
   font-size: 15px;
+  line-height: 17px;
 }
 
 .section_text .text h1{
   font-size: 35px;
+  line-height: 37px;
 }
 
 .section_text .text p{
   font-size: 13px;
+  line-height: 15px;
 }
 
 
@@ -3139,32 +3148,49 @@ a, p, span{
   height: 100%;
 }
 
+.section_text_2 img{
+  width: 65px;
+}
+
+.section_text_2 .text{
+  margin-top: 15px;
+}
+
 .section_text_2 .text h4{
   font-family: 'Sora-Light', sans-serif!important;
   font-size: 15px;
+  line-height: 17px;
+}
+
+.section_text_2 .text h3{
+  font-size: 27px;
+  line-height: 29px;
 }
 
 
 .section_text_2 .text h1{
-  font-size: 55px;
+  font-size: 52px;
+  line-height: 54px;
 }
 @media (max-width: 992px) {
   .section_text_2 .text h1{
     font-size: 35px;
+    line-height: 37px;
   }
 
   .section_text_2 .text h3{
     font-size: 25px;
+    line-height: 27px;
   }
 }
 
 .section_text_2 .text p{
   font-size: 13px;
+  line-height: 15px;
 }
 
 .section_text_2_5{
   display: flex;
-  align-items: center;
   justify-content: center;
   padding: 5%;
   margin: 0px 6px 0 0;
@@ -3180,22 +3206,25 @@ a, p, span{
 }
 
 .section_text_2_5 img{
-  width: 80px;
+  width: 60px;
   margin-right: 15px;
   align-self: flex-start;
 }
 
 .section_text_2_5 .text h3{
-  font-family: 'Sora-Light', sans-serif!important;
+  font-family: 'Sora-Bold', sans-serif!important;
   font-size: 15px;
+  line-height: 17px;
 }
 
 .section_text_2_5 .text h1{
   font-size: 35px;
+  line-height: 37px;
 }
 
 .section_text_2_5 .text p{
   font-size: 13px;
+  line-height: 15px;
 }
 
 .select-municipios{
@@ -3221,12 +3250,12 @@ a, p, span{
   cursor: pointer;
 }
 
-.popup {
+.popup_inf {
   display: none;
   position: absolute;
-  bottom: 120%; /* Posiciona el popup justo encima del icono */
+  bottom: -50%; /* Posiciona el popup justo encima del icono */
   left: 50%;
-  transform: translate(-50%, 50%);
+  transform: translate(-50%, 100%);
   margin-bottom: 10px;
   background-color: #fff;
   color: #333;
@@ -3242,7 +3271,7 @@ a, p, span{
   text-align: center;
 }
 
-.info-icon-container:hover .popup {
+.info-icon-container:hover .popup_inf {
   display: block;
 }
 
