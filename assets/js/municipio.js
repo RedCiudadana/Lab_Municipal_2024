@@ -1654,58 +1654,92 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 
   const fuenteaguaDataElement = document.getElementById('fuente-agua');
+  function colorFromValue(value, border) {
+    // Vamos a limitar el rango de value para asegurarnos de que esté dentro de un rango significativo
+    var scaledValue = Math.max(value, 1); // Asegura que value nunca sea menor que 1
+    var alpha = (Math.log(scaledValue) / Math.log(10)) / 2; // Ajustamos el rango de alpha
+  
+    if (alpha > 1) alpha = 1; // Limitar a un máximo de 1
+    if (alpha < 0.1) alpha = 0.1; // Limitar a un mínimo de 0.1
+  
+    var color = "#7EB5EA"; // Color base
+    if (border) {
+      alpha += 0.1; // Aumentamos un poco el alpha para el borde
+      if (alpha > 1) alpha = 1; // Limitar el alpha a 1
+    }
+  
+    // Retornamos el color en formato RGBA
+    return `rgba(126, 181, 234, ${alpha})`;
+  }  
+  
   if (fuenteaguaDataElement) {
     const fuenteaguaData = JSON.parse(fuenteaguaDataElement.textContent);
-    const ctx = document.getElementById('hogaresfuenteaguaChart').getContext('2d');
-    
-    const hogaresfuenteaguaChart = new Chart(ctx, {
-      type: 'treemap',
+    var ctx = document.getElementById("hogaresfuenteaguaChart").getContext("2d");
+    window.chart1b = new Chart(ctx, {
+      type: "treemap",
       data: {
-        datasets: [{
-          tree: [
-            { label: 'Agua por tubería dentro de la vivienda', value: fuenteaguaData.tubviv },
-            { label: 'Agua por tubería fuera de la vivienda', value: fuenteaguaData.tubvivafu },
-            { label: 'Chorro público', value: fuenteaguaData.chorro },
-            { label: 'Pozo', value: fuenteaguaData.pozo },
-            { label: 'Agua de lluvia', value: fuenteaguaData.lluvia },
-            { label: 'Río', value: fuenteaguaData.rio },
-            { label: 'Manantial', value: fuenteaguaData.manantial },
-            { label: 'Camión cisterna', value: fuenteaguaData.camion },
-            { label: 'Otro', value: fuenteaguaData.otro }
-          ],
-          backgroundColor: [
-              '#ff6384', '#36a2eb', '#cc65fe', '#ffce56', '#4bc0c0',
-              '#9966ff', '#ff9f40', '#ffcd56', '#c9cbcf'
-          ],
-          borderWidth: 1,
-          borderColor: '#fff',
-          spacing: 1,
-          labels: {
-            display: true,
-            align: 'center',
-            font: {
-                size: 11
-            }
+        datasets: [
+          { 
+            label: "Hogares por fuente principal de agua para consumo",
+            tree: [
+              {value: fuenteaguaData.tubviv, title: 'Tuberia en la vivienda'},
+              {value: fuenteaguaData.tubvivafu, title: 'Tuberia fuera de la vivienda'},
+              {value: fuenteaguaData.chorro, title: 'Chorro publico'},
+              {value: fuenteaguaData.pozo, title: 'Pozo perforado'},
+              {value: fuenteaguaData.lluvia, title: 'Agua de lluvia'},
+              {value: fuenteaguaData.rio, title: 'Rio o lago'},
+              {value: fuenteaguaData.manantial, title: 'Manantial o nacimiento'},
+              {value: fuenteaguaData.camion, title: 'Camion o tonel'},
+              {value: fuenteaguaData.otro, title: 'Otro'}
+            ],
+            key: 'value',
+            groups: ['title'],
+            fontColor: 'black',
+            fontFamily: 'Optima',
+            fontSize: 20,
+            backgroundColor: function(ctx) {
+              var treeItem = ctx.dataset.tree[ctx.dataIndex];
+              if (treeItem && treeItem.value !== undefined) {
+                return colorFromValue(treeItem.value);
+              }
+              return 'rgba(0,0,0,0)'; // Valor por defecto en caso de que no haya un valor válido
+            },
+            borderColor: function(ctx) {
+              var treeItem = ctx.dataset.tree[ctx.dataIndex];
+              if (treeItem && treeItem.value !== undefined) {
+                return colorFromValue(treeItem.value, true);
+              }
+              return 'rgba(0,0,0,0)'; // Valor por defecto en caso de que no haya un valor válido
+            },
+            spacing: 0.1,
+            borderWidth: 2,
+            borderColor: "rgb(126, 181, 234, 1)"
           }
-        }]
+        ]
       },
       options: {
-        plugins: {
-          title: {
-            display: true,
-            text: 'Hogares por Fuente de Agua'
-          },
-          tooltip: {
-            callbacks: {
-              label: function(context) {
-                return `${context.raw.label}: ${context.raw.value}`;
-              }
+        maintainAspectRatio: false,
+        title: {
+          display: true,
+          text: "Hogares por fuente principal de agua para consumo"
+        },
+        legend: {
+          display: false
+        },
+        tooltips: {
+          callbacks: {
+            title: function(item, data) {
+              return data.datasets[item[0].datasetIndex].key;
+            },
+            label: function(item, data) {
+              var dataset = data.datasets[item.datasetIndex];
+              var dataItem = dataset.data[item.index];
+              return dataItem.v;
             }
           }
-        }
+        }    
       }
     });
   }
-
 
 });
