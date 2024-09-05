@@ -1654,26 +1654,39 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 
   const fuenteaguaDataElement = document.getElementById('fuente-agua');
-  function colorFromValue(value, border) {
-    // Vamos a limitar el rango de value para asegurarnos de que esté dentro de un rango significativo
-    var scaledValue = Math.max(value, 1); // Asegura que value nunca sea menor que 1
-    var alpha = (Math.log(scaledValue) / Math.log(10)) / 2; // Ajustamos el rango de alpha
   
-    if (alpha > 1) alpha = 1; // Limitar a un máximo de 1
-    if (alpha < 0.1) alpha = 0.1; // Limitar a un mínimo de 0.1
+  function colorFromIndex(index, totalItems) {
+    // Definir los colores inicial y final (ambos verdes)
+    var colorStart = { r: 126, g: 181, b: 234 };   // Verde más claro
+    var colorEnd = { r: 127, g: 217, b: 235 };        // Verde más oscuro
   
-    var color = "#7EB5EA"; // Color base
-    if (border) {
-      alpha += 0.1; // Aumentamos un poco el alpha para el borde
-      if (alpha > 1) alpha = 1; // Limitar el alpha a 1
-    }
+    // Calcular la proporción del índice respecto al total de elementos
+    var percentage = index / (totalItems - 1);
   
-    // Retornamos el color en formato RGBA
-    return `rgba(126, 181, 234, ${alpha})`;
-  }  
+    // Interpolación lineal entre los colores inicial y final
+    var r = Math.round(colorStart.r + percentage * (colorEnd.r - colorStart.r));
+    var g = Math.round(colorStart.g + percentage * (colorEnd.g - colorStart.g));
+    var b = Math.round(colorStart.b + percentage * (colorEnd.b - colorStart.b));
+  
+    // Devolver el color en formato RGB
+    return `rgb(${r}, ${g}, ${b})`;
+  }
   
   if (fuenteaguaDataElement) {
     const fuenteaguaData = JSON.parse(fuenteaguaDataElement.textContent);
+  
+    var treeData = [
+      {value: fuenteaguaData.tubviv, title: 'Tuberia en la vivienda'},
+      {value: fuenteaguaData.tubvivafu, title: 'Tuberia fuera de la vivienda'},
+      {value: fuenteaguaData.chorro, title: 'Chorro publico'},
+      {value: fuenteaguaData.pozo, title: 'Pozo perforado'},
+      {value: fuenteaguaData.lluvia, title: 'Agua de lluvia'},
+      {value: fuenteaguaData.rio, title: 'Rio o lago'},
+      {value: fuenteaguaData.manantial, title: 'Manantial o nacimiento'},
+      {value: fuenteaguaData.camion, title: 'Camion o tonel'},
+      {value: fuenteaguaData.otro, title: 'Otro'}
+    ];
+  
     var ctx = document.getElementById("hogaresfuenteaguaChart").getContext("2d");
     window.chart1b = new Chart(ctx, {
       type: "treemap",
@@ -1681,39 +1694,24 @@ document.addEventListener("DOMContentLoaded", function() {
         datasets: [
           { 
             label: "Hogares por fuente principal de agua para consumo",
-            tree: [
-              {value: fuenteaguaData.tubviv, title: 'Tuberia en la vivienda'},
-              {value: fuenteaguaData.tubvivafu, title: 'Tuberia fuera de la vivienda'},
-              {value: fuenteaguaData.chorro, title: 'Chorro publico'},
-              {value: fuenteaguaData.pozo, title: 'Pozo perforado'},
-              {value: fuenteaguaData.lluvia, title: 'Agua de lluvia'},
-              {value: fuenteaguaData.rio, title: 'Rio o lago'},
-              {value: fuenteaguaData.manantial, title: 'Manantial o nacimiento'},
-              {value: fuenteaguaData.camion, title: 'Camion o tonel'},
-              {value: fuenteaguaData.otro, title: 'Otro'}
-            ],
+            tree: treeData,
             key: 'value',
             groups: ['title'],
             fontColor: 'black',
             fontFamily: 'Optima',
             fontSize: 20,
+            // Color de fondo basado en el índice
             backgroundColor: function(ctx) {
-              var treeItem = ctx.dataset.tree[ctx.dataIndex];
-              if (treeItem && treeItem.value !== undefined) {
-                return colorFromValue(treeItem.value);
-              }
-              return 'rgba(0,0,0,0)'; // Valor por defecto en caso de que no haya un valor válido
+              var index = ctx.dataIndex; // Obtener el índice del elemento
+              return colorFromIndex(index, treeData.length); // Pasar el índice y el total de elementos
             },
+            // Color de borde basado en el índice
             borderColor: function(ctx) {
-              var treeItem = ctx.dataset.tree[ctx.dataIndex];
-              if (treeItem && treeItem.value !== undefined) {
-                return colorFromValue(treeItem.value, true);
-              }
-              return 'rgba(0,0,0,0)'; // Valor por defecto en caso de que no haya un valor válido
+              var index = ctx.dataIndex; // Obtener el índice del elemento
+              return colorFromIndex(index, treeData.length); // Pasar el índice y el total de elementos
             },
             spacing: 0.1,
             borderWidth: 2,
-            borderColor: "rgb(126, 181, 234, 1)"
           }
         ]
       },
@@ -1733,13 +1731,12 @@ document.addEventListener("DOMContentLoaded", function() {
             },
             label: function(item, data) {
               var dataset = data.datasets[item.datasetIndex];
-              var dataItem = dataset.data[item.index];
-              return dataItem.v;
+              var dataItem = dataset.tree[item.index];
+              return dataItem.title + ': ' + dataItem.value;
             }
           }
         }    
       }
     });
   }
-
 });
