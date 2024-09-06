@@ -831,6 +831,46 @@ tags:
                                     </div>
                                 </div>                                          
                             </div>
+                            <div class="col-lg-6 mb-4">
+                                <div class="section_text_2">
+                                    <h5 class="text-center">Distribución de ocupación de viviendas</h5>
+                                    <!-- Añadir un canvas para la gráfica -->
+                                    <canvas id="viviendasocupacionChart" ></canvas>
+                                    <div class="text">
+                                        <p class="text-center">Fuente: Instituto Nacional de Estadistica (INE) - 2018</p>
+                                    </div>
+                                </div>                                          
+                            </div>
+                            <div class="col-lg-6 mb-4">
+                                <div class="section_text_2">
+                                    <h5 class="text-center">Distribución de viviendas por tipo de pared</h5>
+                                    <!-- Añadir un canvas para la gráfica -->
+                                    <canvas id="viviendaparedChart" style="max-height: 400px; width: 100%;"></canvas>
+                                    <div class="text">
+                                        <p class="text-center">Fuente: Instituto Nacional de Estadistica (INE) - 2018</p>
+                                    </div>
+                                </div>                                          
+                            </div>
+                            <div class="col-lg-6 mb-4">
+                                <div class="section_text_2">
+                                    <h5 class="text-center">Tipo de vivienda particular</h5>
+                                    <!-- Añadir un canvas para la gráfica -->
+                                    <canvas id="tipoviviendaChart" ></canvas>
+                                    <div class="text">
+                                        <p class="text-center">Fuente: Instituto Nacional de Estadistica (INE) - 2018</p>
+                                    </div>
+                                </div>                                          
+                            </div>
+                            <div class="col-lg-6 mb-4">
+                                <div class="section_text_2">
+                                    <h5 class="text-center">Distribución de viviendas por tipo de techo</h5>
+                                    <!-- Añadir un canvas para la gráfica -->
+                                    <canvas id="viviendastechoChart" style="max-height: 400px; width: 100%;"></canvas>
+                                    <div class="text">
+                                        <p class="text-center">Fuente: Instituto Nacional de Estadistica (INE) - 2018</p>
+                                    </div>
+                                </div>                                          
+                            </div>
                         </div>
                     </section>
                 </div>
@@ -1355,6 +1395,45 @@ tags:
       "madera": {{ municipio.casas_piso.madera or 0 }},
       "tierra": {{ municipio.casas_piso.tierra or 0 }},
       "otro": {{ municipio.casas_piso.otro or 0 }}
+	}
+</script>
+
+<script id="viviendas-pared_techo" type="application/json">
+	{
+	  "p_ladr": {{ municipio.casas_pared_techo.p_ladr or 0 }},
+      "p_bloc": {{ municipio.casas_pared_techo.p_bloc or 0 }},
+      "p_conc": {{ municipio.casas_pared_techo.p_conc or 0 }},
+      "p_adob": {{ municipio.casas_pared_techo.p_adob or 0 }},
+      "p_made": {{ municipio.casas_pared_techo.p_made or 0 }},
+      "p_lami": {{ municipio.casas_pared_techo.p_lami or 0 }},
+      "p_baja": {{ municipio.casas_pared_techo.p_baja or 0 }},
+      "p_lepa": {{ municipio.casas_pared_techo.p_lepa or 0 }},
+      "p_dese": {{ municipio.casas_pared_techo.p_dese or 0 }},
+      "p_otro": {{ municipio.casas_pared_techo.p_otro or 0 }},
+      "p_igno": {{ municipio.casas_pared_techo.p_igno or 0 }},
+      "t_conc": {{ municipio.casas_pared_techo.t_conc or 0 }},
+      "t_lami": {{ municipio.casas_pared_techo.t_lami or 0 }},
+      "t_asbe": {{ municipio.casas_pared_techo.t_asbe or 0 }},
+      "t_teja": {{ municipio.casas_pared_techo.t_teja or 0 }},
+      "t_paja": {{ municipio.casas_pared_techo.t_paja or 0 }},
+      "t_otro": {{ municipio.casas_pared_techo.t_otro or 0 }},
+      "t_igno": {{ municipio.casas_pared_techo.t_igno or 0 }}
+	}
+</script>
+
+<script id="tipo-vivienda" type="application/json">
+	{
+	  "casa": {{ municipio.tipo_vivienda.casa or 0 }},
+      "apartamento": {{ municipio.tipo_vivienda.apartamento or 0 }},
+      "vecindad": {{ municipio.tipo_vivienda.vecindad or 0 }},
+      "rancho": {{ municipio.tipo_vivienda.rancho or 0 }},
+      "improvisada": {{ municipio.tipo_vivienda.improvisada or 0 }},
+      "otro": {{ municipio.tipo_vivienda.otro or 0 }},
+      "ignorado": {{ municipio.tipo_vivienda.ignorado or 0 }},
+      "c_cole": {{ municipio.tipo_vivienda.c_cole or 0 }},
+      "c_ocup": {{ municipio.tipo_vivienda.c_ocup or 0 }},
+      "c_temp": {{ municipio.tipo_vivienda.c_temp or 0 }},
+      "c_deso": {{ municipio.tipo_vivienda.c_deso or 0 }}
 	}
 </script>
 

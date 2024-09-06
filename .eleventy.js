@@ -108,7 +108,13 @@ module.exports = function (eleventyConfig) {
 		url = `https://data-dataverso.redciudadana.org/assets/conjuntos/cuadroc3_viviendas_particulares_por_material_predominante_en_el_piso.json`;
 		const casas_piso = await fetchDataset(url);
 
-		return municipios.slice(0,10).map(municipio => {
+		url = `https://data-dataverso.redciudadana.org/assets/conjuntos/cuadroc1_tipo_de_vivienda_y_condicion_de_ocupacion.json`;
+		const tipo_vivienda = await fetchDataset(url);
+
+		url = `https://data-dataverso.redciudadana.org/assets/conjuntos/cuadroc2_viviendas_particulares_por_material_predominante_en_las_paredes_exteriores_y_en_el_techo.json`;
+		const casas_pared_techo = await fetchDataset(url);
+
+		return municipios.map(municipio => {
 			const poblacion_sexoData = poblacion_sexo.find(pob => pob.id_municipal === municipio.id_municipal) || {};
 			const educacionData = educacion.find(edu => (edu.id_municipal === municipio.id_municipal) && (edu.Periodo === 2019)) || {};
 			const gestionData = gestion.find(gestion => gestion.id_municipal === municipio.id_municipal) || {};
@@ -130,6 +136,8 @@ module.exports = function (eleventyConfig) {
 			const hogaresData = hogares.find(pob => pob.id_municipal === municipio.id_municipal) || {};
 			const fuenteaguaData = fuenteagua.find(pob => pob.id_municipal === municipio.id_municipal) || {};
 			const casas_pisoData = casas_piso.find(pob => pob.id_municipal === municipio.id_municipal) || {};
+			const tipo_viviendaData = tipo_vivienda.find(pob => pob.id_municipal === municipio.id_municipal) || {};
+			const casas_pared_techoData = casas_pared_techo.find(pob => pob.id_municipal === municipio.id_municipal) || {};
 
 			const geojsonData = geojson.features.find(feature => feature.properties.id_municipal === municipio.id_municipal) || {};
       		const geometry = geojsonData.geometry || {};
@@ -393,6 +401,43 @@ module.exports = function (eleventyConfig) {
 				otro: casas_pisoData["Otro"],
 			}
 
+			const filteredTipoViviendaData = {
+				total: tipo_viviendaData["Vivienda particular total"],
+				casa: tipo_viviendaData["Vivienda particular  Casa formal"],
+				apartamento: tipo_viviendaData["Vivienda particular  Apartamento"],
+				vecindad: tipo_viviendaData["Vivienda particular Cuarto en casa de vecindad"],
+				rancho: tipo_viviendaData["Vivienda particular  Rancho"],
+				improvisada: tipo_viviendaData["Vivienda particular  Improvisada"],
+				otro: tipo_viviendaData["Vivienda particular  Otro"],
+				ignorado: tipo_viviendaData["Vivienda particular  Ignorado"],
+				c_cole: tipo_viviendaData["Condicion de ocupacion Viviendas colectivas"],
+				c_ocup: tipo_viviendaData["Condicion de ocupacion Ocupada"],
+				c_temp: tipo_viviendaData["Condicion de ocupacion De uso temporal"],
+				c_deso: tipo_viviendaData["Condicion de ocupacion Desocupada"],
+			}
+
+			const filteredCasasParedTechoData = {
+				p_ladr: casas_pared_techoData["Pared Ladrillo"],
+				p_bloc: casas_pared_techoData["Pared Block"],
+				p_conc: casas_pared_techoData["Pared Concreto"],
+				p_adob: casas_pared_techoData["Pared Adobe"],
+				p_made: casas_pared_techoData["Pared Madera"],
+				p_lami: casas_pared_techoData["Pared Lamina metalica"],
+				p_baja: casas_pared_techoData["Pared Bajareque"],
+				p_lepa: casas_pared_techoData["Pared Lepa, palo o caña"],
+				p_dese: casas_pared_techoData["Pared Material de desecho"],
+				p_otro: casas_pared_techoData["Pared Otro"],
+				p_igno: casas_pared_techoData["Pared Ignorado"],
+				t_conc: casas_pared_techoData["Techo Concreto"],
+				t_lami: casas_pared_techoData["Techo Lamina metalica"],
+				t_asbe: casas_pared_techoData["Techo Asbesto o cemento"],
+				t_teja: casas_pared_techoData["Techo Teja"],
+				t_paja: casas_pared_techoData["Techo Paja, palma o similar"],
+				t_dese: casas_pared_techoData["Techo Material de desecho"],
+				t_otro: casas_pared_techoData["Techo Otro"],
+				t_igno: casas_pared_techoData["Techo Ignorado"],
+			}
+
 			return {
 				...municipio,
 				geometry,
@@ -417,7 +462,9 @@ module.exports = function (eleventyConfig) {
 				poblacion_salud: filteredPoblacionSaludData,
 				hogares: filteredHogaresData,
 				fuenteagua: filteredFuenteAguaData,
-				casas_piso: filteredCasasPisoData
+				casas_piso: filteredCasasPisoData,
+				tipo_vivienda: filteredTipoViviendaData,
+				casas_pared_techo: filteredCasasParedTechoData
 			};
         });
     });

@@ -1795,5 +1795,244 @@ document.addEventListener("DOMContentLoaded", function() {
       }
     });
   }
+
+  // Gráfica de viviendas por piso
+  const tipoviviendaDataElement = document.getElementById('tipo-vivienda');
+  
+  if (tipoviviendaDataElement) {
+    const tipoviviendaData = JSON.parse(tipoviviendaDataElement.textContent);
+    
+    const ctx = document.getElementById('viviendasocupacionChart').getContext('2d');
+
+    const viviendasocupacionChart = new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: [
+          'Condicion de ocupacion Viviendas colectivas', 'Condicion de ocupacion Ocupada',
+          'Condicion de ocupacion De uso temporal', 'Condicion de ocupacion Desocupada'
+        ],
+        datasets: [{
+          label: 'Distribución de ocupación de viviendas',
+          data: [
+            tipoviviendaData.c_cole, tipoviviendaData.c_ocup, tipoviviendaData.c_temp,
+            tipoviviendaData.c_deso
+          ],
+          borderColor: 'rgb(126, 181, 234, 1)',
+          backgroundColor: 'rgb(126, 181, 234, 0.2)',
+          borderWidth: 1
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: {
+            display: true,
+            position: 'top'
+          },
+          tooltip: {
+            callbacks: {
+              label: function(context) {
+                return `${context.raw.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}`;
+              }
+            }
+          }
+        },
+        scales: {
+          y: {
+            beginAtZero: true,
+            ticks: {
+              callback: function(value) {
+                return value.toLocaleString(); // Añadir comas como separadores de miles
+              }
+            }
+          }
+        }
+      }
+    });
+
+    const ctx2 = document.getElementById('tipoviviendaChart').getContext('2d');
+
+    const tipoviviendaChart = new Chart(ctx2, {
+      type: 'bar',
+      data: {
+        labels: [
+          'Vivienda particular total', 'Vivienda particular Casa forma',
+          'Vivienda particular Apartamento', 'Vivienda particular Cuarto en casa de vecindad',
+          'Vivienda particular Rancho', 'Vivienda particular Improvisada', 'Vivienda particular Otro',
+          'Vivienda particular Ignorado'
+        ],
+        datasets: [{
+          label: 'Tipo de vivienda particular',
+          data: [
+            tipoviviendaData.c_cole, tipoviviendaData.c_ocup, tipoviviendaData.c_temp,
+            tipoviviendaData.c_deso
+          ],
+          borderColor: 'rgb(126, 181, 234, 1)',
+          backgroundColor: 'rgb(126, 181, 234, 0.2)',
+          borderWidth: 1
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: {
+            display: true,
+            position: 'top'
+          },
+          tooltip: {
+            callbacks: {
+              label: function(context) {
+                return `${context.raw.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}`;
+              }
+            }
+          }
+        },
+        scales: {
+          y: {
+            beginAtZero: true,
+            ticks: {
+              callback: function(value) {
+                return value.toLocaleString(); // Añadir comas como separadores de miles
+              }
+            }
+          }
+        }
+      }
+    });
+  }
+
+  const viviendasparedtechoDataElement = document.getElementById('viviendas-pared_techo');
+  
+  if (viviendasparedtechoDataElement) {
+    const viviendasparedtechoData = JSON.parse(viviendasparedtechoDataElement.textContent);
+  
+    var treeData1 = [
+      {value: viviendasparedtechoData.p_ladr, title: 'Pared Ladrillo'},
+      {value: viviendasparedtechoData.p_bloc, title: 'Pared Block'},
+      {value: viviendasparedtechoData.p_conc, title: 'Pared Concreto'},
+      {value: viviendasparedtechoData.p_adob, title: 'Pared Adobe'},
+      {value: viviendasparedtechoData.p_made, title: 'Pared Madera'},
+      {value: viviendasparedtechoData.p_lami, title: 'Pared Lamina metalica'},
+      {value: viviendasparedtechoData.p_baja, title: 'Pared Bajareque'},
+      {value: viviendasparedtechoData.p_lepa, title: 'Pared Lepa, palo o caña'},
+      {value: viviendasparedtechoData.p_dese, title: 'Pared Material de desecho'},
+      {value: viviendasparedtechoData.p_otro, title: 'Pared Otro'},
+      {value: viviendasparedtechoData.p_igno, title: 'Pared Ignorado'}
+    ];
+
+    var treeData2 = [
+      {value: viviendasparedtechoData.t_conc, title: 'Techo Concreto'},
+      {value: viviendasparedtechoData.t_lami, title: 'Techo Lamina metalica'},
+      {value: viviendasparedtechoData.t_asbe, title: 'Techo Asbesto o cemento'},
+      {value: viviendasparedtechoData.t_teja, title: 'Techo Paja, palma o similar'},
+      {value: viviendasparedtechoData.t_paja, title: 'Techo Material de desecho'},
+      {value: viviendasparedtechoData.t_otro, title: 'Techo Otro'},
+      {value: viviendasparedtechoData.t_igno, title: 'Techo Ignorado'}
+    ];
+  
+    var ctx1 = document.getElementById("viviendaparedChart").getContext("2d");
+    window.chart1b = new Chart(ctx1, {
+      type: "treemap",
+      data: {
+        datasets: [
+          { 
+            label: "Distribución de viviendas por tipo de pared",
+            tree: treeData1,
+            key: 'value',
+            groups: ['title'],
+            fontColor: 'black',
+            fontFamily: 'Optima',
+            fontSize: 20,
+            // Color de fondo basado en el índice
+            backgroundColor: function(ctx1) {
+              var index = ctx1.dataIndex; // Obtener el índice del elemento
+              return colorFromIndex(index, treeData.length); // Pasar el índice y el total de elementos
+            },
+            // Color de borde basado en el índice
+            borderColor: function(ctx1) {
+              var index = ctx1.dataIndex; // Obtener el índice del elemento
+              return colorFromIndex(index, treeData.length); // Pasar el índice y el total de elementos
+            },
+            spacing: 0.1,
+            borderWidth: 2,
+          }
+        ]
+      },
+      options: {
+        maintainAspectRatio: false,
+        title: {
+          display: true,
+          text: "Distribución de viviendas por tipo de pared"
+        },
+        legend: {
+          display: false
+        },
+        tooltips: {
+          callbacks: {
+            title: function(item, data) {
+              return data.datasets[item[0].datasetIndex].key;
+            },
+            label: function(item, data) {
+              var dataset = data.datasets[item.datasetIndex];
+              var dataItem = dataset.tree[item.index];
+              return dataItem.title + ': ' + dataItem.value;
+            }
+          }
+        }    
+      }
+    });
+
+    var ctx2 = document.getElementById("viviendastechoChart").getContext("2d");
+    window.chart1b = new Chart(ctx2, {
+      type: "treemap",
+      data: {
+        datasets: [
+          { 
+            label: "Distribución de viviendas por tipo de techo",
+            tree: treeData2,
+            key: 'value',
+            groups: ['title'],
+            fontColor: 'black',
+            fontFamily: 'Optima',
+            fontSize: 20,
+            // Color de fondo basado en el índice
+            backgroundColor: function(ctx) {
+              var index = ctx2.dataIndex; // Obtener el índice del elemento
+              return colorFromIndex(index, treeData.length); // Pasar el índice y el total de elementos
+            },
+            // Color de borde basado en el índice
+            borderColor: function(ctx2) {
+              var index = ctx2.dataIndex; // Obtener el índice del elemento
+              return colorFromIndex(index, treeData.length); // Pasar el índice y el total de elementos
+            },
+            spacing: 0.1,
+            borderWidth: 2,
+          }
+        ]
+      },
+      options: {
+        maintainAspectRatio: false,
+        title: {
+          display: true,
+          text: "Distribución de viviendas por tipo de techo"
+        },
+        legend: {
+          display: false
+        },
+        tooltips: {
+          callbacks: {
+            title: function(item, data) {
+              return data.datasets[item[0].datasetIndex].key;
+            },
+            label: function(item, data) {
+              var dataset = data.datasets[item.datasetIndex];
+              var dataItem = dataset.tree[item.index];
+              return dataItem.title + ': ' + dataItem.value;
+            }
+          }
+        }    
+      }
+    });
+  }
   
 });
