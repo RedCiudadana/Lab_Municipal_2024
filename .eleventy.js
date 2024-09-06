@@ -105,7 +105,10 @@ module.exports = function (eleventyConfig) {
 		url = `https://data-dataverso.redciudadana.org/assets/conjuntos/cuadrob2_hogares_por_fuente-principal_de_agua_para_consumo.json`;
 		const fuenteagua = await fetchDataset(url);
 
-		return municipios.map(municipio => {
+		url = `https://data-dataverso.redciudadana.org/assets/conjuntos/cuadroc3_viviendas_particulares_por_material_predominante_en_el_piso.json`;
+		const casas_piso = await fetchDataset(url);
+
+		return municipios.slice(0,10).map(municipio => {
 			const poblacion_sexoData = poblacion_sexo.find(pob => pob.id_municipal === municipio.id_municipal) || {};
 			const educacionData = educacion.find(edu => (edu.id_municipal === municipio.id_municipal) && (edu.Periodo === 2019)) || {};
 			const gestionData = gestion.find(gestion => gestion.id_municipal === municipio.id_municipal) || {};
@@ -126,6 +129,7 @@ module.exports = function (eleventyConfig) {
 			const poblacion_saludData = poblacion_salud.find(pob => pob.id_municipal === municipio.id_municipal) || {};
 			const hogaresData = hogares.find(pob => pob.id_municipal === municipio.id_municipal) || {};
 			const fuenteaguaData = fuenteagua.find(pob => pob.id_municipal === municipio.id_municipal) || {};
+			const casas_pisoData = casas_piso.find(pob => pob.id_municipal === municipio.id_municipal) || {};
 
 			const geojsonData = geojson.features.find(feature => feature.properties.id_municipal === municipio.id_municipal) || {};
       		const geometry = geojsonData.geometry || {};
@@ -378,6 +382,17 @@ module.exports = function (eleventyConfig) {
 				otro :fuenteaguaData["Otro"],
 			};
 
+			const filteredCasasPisoData = {
+				lad_cer: casas_pisoData["Ladrillo ceramico"],
+				lad_cem: casas_pisoData["Ladrillo de cemento"],
+				lad_bar: casas_pisoData["Ladrillo de barro"],
+				cemento: casas_pisoData["Torta de cemento"],
+				parque: casas_pisoData["Parque o vinil"],
+				madera: casas_pisoData["Madera"],
+				tierra: casas_pisoData["Tierra"],
+				otro: casas_pisoData["Otro"],
+			}
+
 			return {
 				...municipio,
 				geometry,
@@ -401,7 +416,8 @@ module.exports = function (eleventyConfig) {
 				poblacion_activaeconomicamente: filteredPoblacionActivaEconomicamenteData,
 				poblacion_salud: filteredPoblacionSaludData,
 				hogares: filteredHogaresData,
-				fuenteagua: filteredFuenteAguaData
+				fuenteagua: filteredFuenteAguaData,
+				casas_piso: filteredCasasPisoData
 			};
         });
     });

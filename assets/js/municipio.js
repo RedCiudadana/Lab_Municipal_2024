@@ -1739,4 +1739,61 @@ document.addEventListener("DOMContentLoaded", function() {
       }
     });
   }
+
+  // Gráfica de viviendas por piso
+  const viviendaspisoDataElement = document.getElementById('viviendas-piso');
+  
+  if (viviendaspisoDataElement) {
+    const viviendaspisoData = JSON.parse(viviendaspisoDataElement.textContent);
+    
+    const ctx = document.getElementById('viviendaspisosChart').getContext('2d');
+
+    const viviendaspisosChart = new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: [
+          'Ladrillo ceramico', 'Ladrillo de cemento', 'Ladrillo de barro',
+          'Torta de cemento', 'Parque o vinil', 'Madera', 'Tierra', 'Otra'
+        ],
+        datasets: [{
+          label: 'Distribución de viviendas por tipos de pisos',
+          data: [
+            viviendaspisoData.lad_cer, viviendaspisoData.lad_cem, viviendaspisoData.lad_bar,
+            viviendaspisoData.cemento, viviendaspisoData.parque, viviendaspisoData.madera,
+            viviendaspisoData.tierra, viviendaspisoData.otra 
+          ],
+          borderColor: 'rgb(126, 181, 234, 1)',
+          backgroundColor: 'rgb(126, 181, 234, 0.2)',
+          borderWidth: 1
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: {
+            display: true,
+            position: 'top'
+          },
+          tooltip: {
+            callbacks: {
+              label: function(context) {
+                return `${context.raw.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}`;
+              }
+            }
+          }
+        },
+        scales: {
+          y: {
+            beginAtZero: true,
+            ticks: {
+              callback: function(value) {
+                return value.toLocaleString(); // Añadir comas como separadores de miles
+              }
+            }
+          }
+        }
+      }
+    });
+  }
+  
 });

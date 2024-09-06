@@ -809,6 +809,28 @@ tags:
 
                     <section id="vivienda" class="tab-content">
                         <div class="row">
+                            <div class="col-lg-4 mb-4">
+                                <div class="section_text_2">
+                                    <img src="/assets/images/municipio/01_ELEMENTOS LAB/01_ICONOS/Vivienda.png">
+                                    <div class="text">
+                                        <h3 >Total de viviendas con piso de tierra</h3>
+                                        <h1 >{{municipio.casas_piso.tierra  | formatNumberWithCommas}}</h1>
+                                        <h3 class="mb-4">viviendas</h3>
+
+                                        <p>Fuente: Instituto Nacional de Estadistica (INE) - 2018</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-8 mb-4">
+                                <div class="section_text_2">
+                                    <h5 class="text-center">Distribución de viviendas por tipos de pisos</h5>
+                                    <!-- Añadir un canvas para la gráfica -->
+                                    <canvas id="viviendaspisosChart" ></canvas>
+                                    <div class="text">
+                                        <p class="text-center">Fuente: Instituto Nacional de Estadistica (INE) - 2018</p>
+                                    </div>
+                                </div>                                          
+                            </div>
                         </div>
                     </section>
                 </div>
@@ -1320,6 +1342,19 @@ tags:
       "manantial": {{ municipio.fuenteagua.manantial or 0 }},
       "camion": {{ municipio.fuenteagua.camion or 0 }},
       "otro": {{ municipio.fuenteagua.otro or 0 }}
+	}
+</script>
+
+<script id="viviendas-piso" type="application/json">
+	{
+	  "lad_cer": {{ municipio.casas_piso.lad_cer or 0 }},
+      "lad_cem": {{ municipio.casas_piso.lad_cem or 0 }},
+      "lad_bar": {{ municipio.casas_piso.lad_bar or 0 }},
+      "cemento": {{ municipio.casas_piso.cemento or 0 }},
+      "parque": {{ municipio.casas_piso.parque or 0 }},
+      "madera": {{ municipio.casas_piso.madera or 0 }},
+      "tierra": {{ municipio.casas_piso.tierra or 0 }},
+      "otro": {{ municipio.casas_piso.otro or 0 }}
 	}
 </script>
 
