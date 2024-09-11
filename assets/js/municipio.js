@@ -1657,8 +1657,8 @@ document.addEventListener("DOMContentLoaded", function() {
   
   function colorFromIndex(index, totalItems) {
     // Definir los colores inicial y final (ambos verdes)
-    var colorStart = { r: 126, g: 181, b: 234 };   // Verde más claro
-    var colorEnd = { r: 127, g: 217, b: 235 };        // Verde más oscuro
+    var colorStart = { r: 53, g: 113, b: 158 };   // Verde más claro
+    var colorEnd = { r: 127, g: 180, b: 234 };        // Verde más oscuro
   
     // Calcular la proporción del índice respecto al total de elementos
     var percentage = index / (totalItems - 1);
@@ -1718,7 +1718,7 @@ document.addEventListener("DOMContentLoaded", function() {
       options: {
         maintainAspectRatio: false,
         title: {
-          display: true,
+          display: false,
           text: "Hogares por fuente principal de agua para consumo"
         },
         legend: {
@@ -1726,8 +1726,8 @@ document.addEventListener("DOMContentLoaded", function() {
         },
         tooltips: {
           callbacks: {
-            title: function(item, data) {
-              return data.datasets[item[0].datasetIndex].key;
+            title: function() {
+              return ''; // No mostrar ningún título en el tooltip
             },
             label: function(item, data) {
               var dataset = data.datasets[item.datasetIndex];
