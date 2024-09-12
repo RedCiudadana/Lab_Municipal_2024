@@ -1656,18 +1656,33 @@ document.addEventListener("DOMContentLoaded", function() {
   const fuenteaguaDataElement = document.getElementById('fuente-agua');
   
   function colorFromIndex(index, totalItems) {
-    // Definir los colores inicial y final (ambos verdes)
-    var colorStart = { r: 53, g: 113, b: 158 };   // Verde más claro
-    var colorEnd = { r: 127, g: 180, b: 234 };        // Verde más oscuro
-  
-    // Calcular la proporción del índice respecto al total de elementos
-    var percentage = index / (totalItems - 1);
-  
-    // Interpolación lineal entre los colores inicial y final
-    var r = Math.round(colorStart.r + percentage * (colorEnd.r - colorStart.r));
-    var g = Math.round(colorStart.g + percentage * (colorEnd.g - colorStart.g));
-    var b = Math.round(colorStart.b + percentage * (colorEnd.b - colorStart.b));
-  
+    // Colores proporcionados en formato RGB
+    const colors = [
+        'rgb(127, 180, 234)',  // #7fb4ea
+        'rgb(53, 113, 158)',   // #35719e
+        'rgb(146, 206, 255)',  // #92ceff
+        'rgb(103, 188, 169)',  // #67bca9
+        'rgb(214, 228, 237)',  // #d6e4ed
+        'rgb(221, 221, 221)'   // #dddddd
+    ];
+
+    // Si el índice es menor que la cantidad de colores, se usa el color del array
+    if (index < colors.length) {
+        return colors[index];
+    }
+
+    // Si hay más elementos que colores, se generan colores más claros interpolando hacia blanco
+    var colorBase = { r: 127, g: 180, b: 234 };  // Último color en la lista en RGB
+    var white = { r: 255, g: 255, b: 255 };      // Color blanco
+    
+    // Calcular la proporción del índice respecto al total de elementos que exceden los colores definidos
+    var percentage = (index - colors.length) / (totalItems - colors.length);
+
+    // Interpolación lineal hacia el blanco
+    var r = Math.round(colorBase.r + percentage * (white.r - colorBase.r));
+    var g = Math.round(colorBase.g + percentage * (white.g - colorBase.g));
+    var b = Math.round(colorBase.b + percentage * (white.b - colorBase.b));
+
     // Devolver el color en formato RGB
     return `rgb(${r}, ${g}, ${b})`;
   }
@@ -1699,7 +1714,7 @@ document.addEventListener("DOMContentLoaded", function() {
             groups: ['title'],
             fontColor: 'black',
             fontFamily: 'Optima',
-            fontSize: 20,
+            fontSize: 50,
             // Color de fondo basado en el índice
             backgroundColor: function(ctx) {
               var index = ctx.dataIndex; // Obtener el índice del elemento
@@ -1716,26 +1731,21 @@ document.addEventListener("DOMContentLoaded", function() {
         ]
       },
       options: {
-        maintainAspectRatio: false,
-        title: {
-          display: false,
-          text: "Hogares por fuente principal de agua para consumo"
-        },
-        legend: {
-          display: false
-        },
-        tooltips: {
-          callbacks: {
-            title: function() {
-              return ''; // No mostrar ningún título en el tooltip
-            },
-            label: function(item, data) {
-              var dataset = data.datasets[item.datasetIndex];
-              var dataItem = dataset.tree[item.index];
-              return dataItem.title + ': ' + dataItem.value;
+        plugins: {
+          tooltip: {
+            callbacks: {
+              title: function() {
+                // No mostrar título en el tooltip
+                return '';
+              },
+              label: function(context) {
+                // Obtener el elemento correcto en el dataset
+                var dataItem = context.dataset.tree[context.dataIndex]; 
+                return dataItem.title + ': ' + dataItem.value; // Mostrar solo el título y el valor
+              }
             }
           }
-        }    
+        }
       }
     });
   }
@@ -1959,26 +1969,21 @@ document.addEventListener("DOMContentLoaded", function() {
         ]
       },
       options: {
-        maintainAspectRatio: false,
-        title: {
-          display: true,
-          text: "Distribución de viviendas por tipo de pared"
-        },
-        legend: {
-          display: false
-        },
-        tooltips: {
-          callbacks: {
-            title: function(item, data) {
-              return data.datasets[item[0].datasetIndex].key;
-            },
-            label: function(item, data) {
-              var dataset = data.datasets[item.datasetIndex];
-              var dataItem = dataset.tree[item.index];
-              return dataItem.title + ': ' + dataItem.value;
+        plugins: {
+          tooltip: {
+            callbacks: {
+              title: function() {
+                // No mostrar título en el tooltip
+                return '';
+              },
+              label: function(context) {
+                // Obtener el elemento correcto en el dataset
+                var dataItem = context.dataset.tree[context.dataIndex]; 
+                return dataItem.title + ': ' + dataItem.value; // Mostrar solo el título y el valor
+              }
             }
           }
-        }    
+        }
       }
     });
 
@@ -1996,7 +2001,7 @@ document.addEventListener("DOMContentLoaded", function() {
             fontFamily: 'Optima',
             fontSize: 20,
             // Color de fondo basado en el índice
-            backgroundColor: function(ctx) {
+            backgroundColor: function(ctx2) {
               var index = ctx2.dataIndex; // Obtener el índice del elemento
               return colorFromIndex(index, treeData.length); // Pasar el índice y el total de elementos
             },
@@ -2011,26 +2016,21 @@ document.addEventListener("DOMContentLoaded", function() {
         ]
       },
       options: {
-        maintainAspectRatio: false,
-        title: {
-          display: true,
-          text: "Distribución de viviendas por tipo de techo"
-        },
-        legend: {
-          display: false
-        },
-        tooltips: {
-          callbacks: {
-            title: function(item, data) {
-              return data.datasets[item[0].datasetIndex].key;
-            },
-            label: function(item, data) {
-              var dataset = data.datasets[item.datasetIndex];
-              var dataItem = dataset.tree[item.index];
-              return dataItem.title + ': ' + dataItem.value;
+        plugins: {
+          tooltip: {
+            callbacks: {
+              title: function() {
+                // No mostrar título en el tooltip
+                return '';
+              },
+              label: function(context) {
+                // Obtener el elemento correcto en el dataset
+                var dataItem = context.dataset.tree[context.dataIndex]; 
+                return dataItem.title + ': ' + dataItem.value; // Mostrar solo el título y el valor
+              }
             }
           }
-        }    
+        }
       }
     });
   }
