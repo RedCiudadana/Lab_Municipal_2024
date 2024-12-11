@@ -64,7 +64,21 @@ module.exports = function (eleventyConfig) {
 		const gestion = await fetchDataset(url);
 
 		url = `https://data-dataverso.redciudadana.org/assets/conjuntos/acceso_a_la_informacion_publica.json`;
-		const transparencia = await fetchDataset(url);
+		let transparencia = await fetchDataset(url);
+
+		transparencia = transparencia.map(trans => ({
+			...trans,
+			aip2022: typeof trans.aip2022 === 'number' ? trans.aip2022 : 0,
+			aip2023: typeof trans.aip2023 === 'number' ? trans.aip2023 : 0,
+		}));
+		
+		transparencia.forEach(trans => {
+			if (typeof trans.aip2022 !== 'number' || typeof trans.aip2023 !== 'number') {
+				console.error(`Invalid data at ${trans.id_municipal}`, trans);
+			}
+		});
+		
+		
 
 		url = `https://data-dataverso.redciudadana.org/assets/conjuntos/indice_de_pobreza_multidimensional.json`;
 		const pobreza = await fetchDataset(url);
@@ -204,6 +218,8 @@ module.exports = function (eleventyConfig) {
 				aip2015: transparenciaData.aip2015,
 				aip2017: transparenciaData.aip2017,
 				aip2019: transparenciaData.aip2019,
+				aip2022: transparenciaData.aip2022,
+				aip2023: transparenciaData.aip2023,
 				aipPromedio: transparenciaData.aipPromedio,
 			};
 

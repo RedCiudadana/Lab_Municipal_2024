@@ -274,10 +274,10 @@ document.addEventListener("DOMContentLoaded", function() {
     const transparenciaChart = new Chart(ctx3, {
       type: 'line',
       data: {
-        labels: ['2015', '2017', '2019'],
+        labels: ['2015', '2017', '2019', '2022', '2023'],
         datasets: [{
           label: 'Datos del Municipio',
-          data: [transparenciaData.aip2015, transparenciaData.aip2017, transparenciaData.aip2019],
+          data: [transparenciaData.aip2015, transparenciaData.aip2017, transparenciaData.aip2019, transparenciaData.aip2022, transparenciaData.aip2023],
           fill: true,
           borderColor: 'rgb(126, 181, 234, 1)',
           backgroundColor: 'rgb(126, 181, 234, 0.2)',
@@ -285,7 +285,7 @@ document.addEventListener("DOMContentLoaded", function() {
         },
         {
           label: 'Promedio de todos los municipios',
-          data: [6.92, 18.17, 40.48], // Aquí coloca tus datos de promedio de todos los municipios
+          data: [6.92, 18.17, 40.48, 56.43, 54.70], // Aquí coloca tus datos de promedio de todos los municipios
           fill: false,
           borderColor: 'rgb(30, 199, 139, 1)',
           backgroundColor: 'rgb(30, 199, 139, 0.2)',

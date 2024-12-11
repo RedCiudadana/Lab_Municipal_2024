@@ -323,8 +323,7 @@ tags:
                                             <div class="text">
                                                 <h3 >Acceso a la información pública</h3>
                                                 <h1 class="mb-4">{{municipio.transparencia.aipPromedio | limitNumberLength(5)}} %</h1>
-
-                                                <p>Fuente: Procuraduría de los Derechos Humanos (PDH) 2019</p>
+                                                <p>Fuente: Procuraduría de los Derechos Humanos (PDH) 2023</p>
                                             </div>
                                         </div>
                                     </div>
@@ -1155,7 +1154,9 @@ tags:
 	{
 	  "aip2015": {{ municipio.transparencia.aip2015 | safe }},
 	  "aip2017": {{ municipio.transparencia.aip2017 | safe }},
-	  "aip2019": {{ municipio.transparencia.aip2019 | safe }}
+	  "aip2019": {{ municipio.transparencia.aip2019 | safe }},
+      "aip2022": {{ municipio.transparencia.aip2022 | safe }},
+      "aip2023": {{ municipio.transparencia.aip2023 | safe }}
 	}
 </script>
 
