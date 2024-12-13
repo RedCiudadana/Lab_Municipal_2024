@@ -288,6 +288,17 @@ tags:
                                         
                                     </div>
 
+                                    <div class="col-lg-12 mb-4">
+                                        <div class="section_text_2">
+                                            <!-- Añadir un canvas para la gráfica -->
+                                            <canvas id="gestionMunicipalChart2021"></canvas>
+                                            <div class="text">
+                                                <p class="text-center">Fuente: Secretaría de Planificación y Programación de la Presidencia (SEGEPLAN)</p>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+
                                     <div class="col-lg-6 mb-4">
                                         <div class="section_text_2">
                                             <h5 class="text-center">Población total por sexo</h5>
@@ -1144,19 +1155,25 @@ tags:
 
 <script id="gestion-data" type="application/json">
 	{
-	  "segeplan2013": {{ municipio.gestion.segeplan2013 | safe }},
-	  "segeplan2016": {{ municipio.gestion.segeplan2016 | safe }},
-	  "segeplan2018": {{ municipio.gestion.segeplan2018 | safe }}
+	  "segeplan2013": {{ municipio.gestion.segeplan2013 or 0 | safe }},
+	  "segeplan2016": {{ municipio.gestion.segeplan2016 or 0 | safe }},
+	  "segeplan2018": {{ municipio.gestion.segeplan2018 or 0 | safe }},
+      "indice_participacion_ciudadana": {{municipio.gestion.indice_participacion_ciudadana or 0 | safe }},
+      "indice_informacion_a_ciudadania": {{municipio.gestion.indice_informacion_a_ciudadania or 0 | safe }},
+      "indice_servicios_publicos": {{municipio.gestion.indice_servicios_publicos or 0 | safe }},
+      "indice_gestion_administrativa": {{municipio.gestion.indice_gestion_administrativa or 0 | safe }},
+      "indice_gestion_financiera": {{municipio.gestion.indice_gestion_financiera or 0 | safe }},
+      "indice_gestion_estrategica": {{municipio.gestion.indice_gestion_estrategica or 0 | safe }}
 	}
 </script>
 
 <script id="transparencia-data" type="application/json">
 	{
-	  "aip2015": {{ municipio.transparencia.aip2015 | safe }},
-	  "aip2017": {{ municipio.transparencia.aip2017 | safe }},
-	  "aip2019": {{ municipio.transparencia.aip2019 | safe }},
-      "aip2022": {{ municipio.transparencia.aip2022 | safe }},
-      "aip2023": {{ municipio.transparencia.aip2023 | safe }}
+	  "aip2015": {{ municipio.transparencia.aip2015 or 0 | safe }},
+	  "aip2017": {{ municipio.transparencia.aip2017 or 0 | safe }},
+	  "aip2019": {{ municipio.transparencia.aip2019 or 0 | safe }},
+      "aip2022": {{ municipio.transparencia.aip2022 or 0 | safe }},
+      "aip2023": {{ municipio.transparencia.aip2023 or 0 | safe }}
 	}
 </script>
 

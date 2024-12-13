@@ -213,6 +213,54 @@ document.addEventListener("DOMContentLoaded", function() {
   if (gestionDataElement) {
     const gestionData = JSON.parse(gestionDataElement.textContent);
 
+    const ctx = document.getElementById('gestionMunicipalChart2021').getContext('2d');
+
+    const gestionMunicipalChart2021 = new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: [
+          'Índice de Participación Ciudadana', 'Índice de Información a la Ciudadanía', 'Índice de Servicios Públicos', 
+          'Índice de Gestión Administrativa', 'Índice de Gestión Financiera', 'Indice de Gestión Estratégica'
+        ],
+        datasets: [{
+          label: 'Índices de Gestiones Municipales (2020-2021)',
+          data: [
+            gestionData.indice_participacion_ciudadana, gestionData.indice_informacion_a_ciudadania, gestionData.indice_servicios_publicos,
+            gestionData.indice_gestion_administrativa, gestionData.indice_gestion_financiera, gestionData.indice_gestion_estrategica 
+          ],
+          borderColor: 'rgb(126, 181, 234, 1)',
+          backgroundColor: 'rgb(126, 181, 234, 0.2)',
+          borderWidth: 1
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: {
+            display: true,
+            position: 'top'
+          },
+          tooltip: {
+            callbacks: {
+              label: function(context) {
+                return `${context.raw}`;
+              }
+            }
+          }
+        },
+        scales: {
+          y: {
+            beginAtZero: true,
+            ticks: {
+              callback: function(value) {
+                return value.toLocaleString(); // Añadir comas como separadores de miles
+              }
+            }
+          }
+        }
+      }
+    });
+
     const ctx2 = document.getElementById('gestionMunicipalChart').getContext('2d');
 
     const gestionMunicipalChart = new Chart(ctx2, {

@@ -66,20 +66,6 @@ module.exports = function (eleventyConfig) {
 		url = `https://data-dataverso.redciudadana.org/assets/conjuntos/acceso_a_la_informacion_publica.json`;
 		let transparencia = await fetchDataset(url);
 
-		transparencia = transparencia.map(trans => ({
-			...trans,
-			aip2022: typeof trans.aip2022 === 'number' ? trans.aip2022 : 0,
-			aip2023: typeof trans.aip2023 === 'number' ? trans.aip2023 : 0,
-		}));
-		
-		transparencia.forEach(trans => {
-			if (typeof trans.aip2022 !== 'number' || typeof trans.aip2023 !== 'number') {
-				console.error(`Invalid data at ${trans.id_municipal}`, trans);
-			}
-		});
-		
-		
-
 		url = `https://data-dataverso.redciudadana.org/assets/conjuntos/indice_de_pobreza_multidimensional.json`;
 		const pobreza = await fetchDataset(url);
 
@@ -212,6 +198,12 @@ module.exports = function (eleventyConfig) {
 				segeplan2016: gestionData.segeplan2016,
 				segeplan2018: gestionData.segeplan2018,
 				Promediosegeplan: gestionData.Promediosegeplan,
+				indice_participacion_ciudadana: gestionData.indice_participacion_ciudadana,
+				indice_informacion_a_ciudadania: gestionData.indice_informacion_a_ciudadania,
+				indice_servicios_publicos: gestionData.indice_servicios_publicos,
+				indice_gestion_administrativa: gestionData.indice_gestion_administrativa,
+				indice_gestion_financiera: gestionData.indice_gestion_financiera,
+				indice_gestion_estrategica: gestionData.indice_gestion_estrategica
 			};
 
 			const filteredtransparenciaData = {
