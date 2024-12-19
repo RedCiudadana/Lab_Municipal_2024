@@ -19924,6 +19924,7 @@ label.checkbox {
   height: 100%;
   margin: 10px 0;
   transition: 0.5s all ease;
+  background-color: #fff;
 }
 
 .municipio_box:hover{
@@ -19932,9 +19933,52 @@ label.checkbox {
 
 .municipio_box .text{
   padding: 20px 20px 30px 20px;
+  color: #02324f;
 }
 
-.municipio_box .text h4{
+.municipio_box .text h2{
   font-size: 20px;
-  height: 40px;
+  display: flex;
+  align-items: center;
+}
+
+.municipio_box .text i{
+  font-size: 10px;
+  margin-right: 5px;
+}
+
+.municipio_box .text p{
+  height: 35px;
+}
+
+/* Estilos opcionales para la paginación */
+.pagination-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0 50px 0;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+.pagination-button {
+  background: #03ac8a;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  margin: 0 2px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: 0.5s all ease;
+}
+.pagination-button.active {
+  background: #03324e;
+  color: #fff;
+}
+.pagination-button:hover {
+  background: #03324e;
+  color: #fff;
+}
+.pagination-button[disabled] {
+  opacity: 0.5;
+  cursor: default;
 }

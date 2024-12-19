@@ -6,7 +6,6 @@ permalink: "municipios/index.html"
 
 {% block head %}
 <title>Lab Municipal | Municipios</title>
-
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 {% endblock %}
 
@@ -18,6 +17,7 @@ permalink: "municipios/index.html"
         <div class="row align-items-center">
             <div class="col-lg-6 my-4">
                 <h1 class="text-titles" style="font-size: 60px!important;line-height: 60px;">Municipios </h1>
+                <h3>Explora, Visualiza y Analiza datos municipales de Guatemala</h3>
                 <div class="my-4">
                     <input type="text" id="municipioSearch" placeholder="Buscar municipio..." class="form-control">
                 </div>
@@ -33,37 +33,158 @@ permalink: "municipios/index.html"
 ============================================= -->
 <section class="px-2" style="background-color: #fff;">
     <div class="container clearfix">
-
-        <div class="row py-6 align-items-center" id="municipioList">
+        <div class="row py-4 align-items-center" id="municipioList">
             {% for municipio in collections.municipio %}
             <div class="col-lg-3 my-2 municipio-item">
-                <a href="{{municipio.url}}">
+                <a href="{{ municipio.url }}">
                     <div class="municipio_box">
-                        <img src="/assets/images/placeholder2.png">
                         <div class="text">
-                            <h4>{{municipio.data.municipio.departamento}}, {{municipio.data.municipio.municipio}}</h4>
+                            <h2><i class="fa-solid fa-circle-dot"></i> Departamento: </h2>
+                            <p>{{ municipio.data.municipio.departamento }}</p>
+                            <h2><i class="fa-solid fa-circle-dot"></i> Municipio: </h2>
+                            <p>{{ municipio.data.municipio.municipio }}</p>
+                            <h2><i class="fa-solid fa-circle-dot"></i> Partido: </h2>
+                            <p>{{ municipio.data.municipio.partido }}</p>
+                            <h2><i class="fa-solid fa-circle-dot"></i> Alcalde: </h2>
+                            <p>{{ municipio.data.municipio.alcalde }}</p>
                         </div>
                     </div>
                 </a>
             </div>
             {% endfor %}
         </div>
+
+        <!-- Contenedor para la paginación -->
+        <div class="pagination-container" id="paginationControls">
+            <!-- Los botones se generarán dinámicamente -->
+        </div>
     </div>
 </section>
 
 <script>
     $(document).ready(function() {
-        $('#municipioSearch').on('input', function() {
-            var searchText = $(this).val().toLowerCase();
-            $('#municipioList .municipio-item').each(function() {
-                var municipioText = $(this).text().toLowerCase();
-                if (municipioText.includes(searchText)) {
-                    $(this).show();
-                } else {
-                    $(this).hide();
+        var itemsPerPage = 12;
+        var currentPage = 1;
+        var $items = $('#municipioList .municipio-item');
+
+        // Función para normalizar texto removiendo tildes/acentos
+        function normalizeText(str) {
+            return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+        }
+
+        // Genera los botones de paginación dinámicamente
+        function renderPagination(totalPages) {
+            var $pagination = $('#paginationControls');
+            $pagination.empty();
+
+            // Botón Anterior
+            var $prevBtn = $('<button class="pagination-button" id="prevPage">Anterior</button>');
+            $prevBtn.prop('disabled', currentPage === 1);
+            $pagination.append($prevBtn);
+
+            // Primera página (siempre)
+            if (totalPages > 0) {
+                var $firstPageBtn = $('<button class="pagination-button page-btn">1</button>');
+                $firstPageBtn.addClass(currentPage === 1 ? 'active' : '');
+                $pagination.append($firstPageBtn);
+            }
+
+            // Página anterior a la actual (si corresponde)
+            if (currentPage - 1 > 1 && currentPage - 1 < totalPages) {
+                var $prevPageBtn = $('<button class="pagination-button page-btn">' + (currentPage - 1) + '</button>');
+                $prevPageBtn.addClass('page-btn');
+                $pagination.append($prevPageBtn);
+            }
+
+            // Página actual (si no es ni la primera ni la última ya mostrada)
+            if (currentPage > 1 && currentPage < totalPages) {
+                var $currentPageBtn = $('<button class="pagination-button page-btn active">' + currentPage + '</button>');
+                $pagination.append($currentPageBtn);
+            }
+
+            // Página siguiente a la actual (si corresponde)
+            if (currentPage + 1 > 1 && currentPage + 1 < totalPages) {
+                var $nextPageBtn = $('<button class="pagination-button page-btn">' + (currentPage + 1) + '</button>');
+                $pagination.append($nextPageBtn);
+            }
+
+            // Última página (siempre que no coincida con la primera y si totalPages > 1)
+            if (totalPages > 1) {
+                var $lastPageBtn = $('<button class="pagination-button page-btn">' + totalPages + '</button>');
+                $lastPageBtn.addClass(currentPage === totalPages ? 'active' : '');
+                $pagination.append($lastPageBtn);
+            }
+
+            // Botón Siguiente
+            var $nextBtn = $('<button class="pagination-button" id="nextPage">Siguiente</button>');
+            $nextBtn.prop('disabled', currentPage === totalPages || totalPages === 0);
+            $pagination.append($nextBtn);
+
+            // Evento para botones de página
+            $('.page-btn').not('.active').on('click', function() {
+                var pageNum = parseInt($(this).text());
+                if (!isNaN(pageNum)) {
+                    currentPage = pageNum;
+                    updateList();
                 }
             });
+
+            // Eventos botones anterior y siguiente
+            $('#prevPage').on('click', function() {
+                if (currentPage > 1) {
+                    currentPage--;
+                    updateList();
+                }
+            });
+
+            $('#nextPage').on('click', function() {
+                if (currentPage < totalPages) {
+                    currentPage++;
+                    updateList();
+                }
+            });
+        }
+
+        // Función para actualizar la lista mostrada en base a búsqueda y paginación
+        function updateList() {
+            var searchText = normalizeText($('#municipioSearch').val() || '');
+            var filteredItems = $items.filter(function() {
+                var municipioText = normalizeText($(this).text());
+                return municipioText.includes(searchText);
+            });
+
+            // Ocultamos todos los items
+            $items.hide();
+
+            // Calculamos el total de páginas en base a los items filtrados
+            var totalItems = filteredItems.length;
+            var totalPages = Math.ceil(totalItems / itemsPerPage);
+
+            // Ajustamos currentPage si excede el total de páginas
+            if (currentPage > totalPages && totalPages > 0) {
+                currentPage = totalPages;
+            } else if (totalPages === 0) {
+                currentPage = 1;
+            }
+
+            var startIndex = (currentPage - 1) * itemsPerPage;
+            var endIndex = startIndex + itemsPerPage;
+
+            // Mostramos sólo los items de la página actual
+            filteredItems.slice(startIndex, endIndex).show();
+
+            // Renderizamos la paginación
+            renderPagination(totalPages);
+        }
+
+        // Evento al escribir en el buscador
+        $('#municipioSearch').on('input', function() {
+            currentPage = 1;
+            updateList();
         });
+
+        // Inicializamos la vista
+        updateList();
     });
 </script>
 {% endblock %}

@@ -115,9 +115,16 @@ permalink: "index.html"
                             <div class="col-lg-3 my-2 municipio-item">
                                 <a href="{{municipio.url}}">
                                     <div class="municipio_box">
-                                        <img src="/assets/images/placeholder2.png">
+                                        <!-- <img src="/assets/images/placeholder2.png"> -->
                                         <div class="text">
-                                            <h4>{{municipio.data.municipio.departamento}}, {{municipio.data.municipio.municipio}}</h4>
+                                            <h2><i class="fa-solid fa-circle-dot"></i> Departamento: </h2>
+                                            <p>{{municipio.data.municipio.departamento}}</p>
+                                            <h2><i class="fa-solid fa-circle-dot"></i> Municipio: </h2>
+                                            <p>{{municipio.data.municipio.municipio}}</p>
+                                            <h2><i class="fa-solid fa-circle-dot"></i> Partido: </h2>
+                                            <p>{{municipio.data.municipio.partido}}</p>
+                                            <h2><i class="fa-solid fa-circle-dot"></i> Alcalde: </h2>
+                                            <p>{{municipio.data.municipio.alcalde}}</p>
                                         </div>
                                     </div>
                                 </a>
