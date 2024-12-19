@@ -29,13 +29,49 @@ permalink: "municipios/index.html"
     </div>
 </section>
 
-<!-- Buscador y Lista de Municipios
+<!-- Filtros por Departamento y Municipio -->
+<section class="px-2" style="background-color: #fff;">
+    <div class="container my-4">
+        <div class="row">
+            <div class="col-lg-4">
+                <label for="departamentoFilter">Departamento:</label>
+                <select id="departamentoFilter" class="form-control">
+                    <option value="">Todos los Departamentos</option>
+                    {% set departamentos = [] %}
+                    {% for m in collections.municipio %}
+                        {% if m.data.municipio.departamento not in departamentos %}
+                            {% set departamentos = departamentos.concat([m.data.municipio.departamento]) %}
+                        {% endif %}
+                    {% endfor %}
+                    {% for d in departamentos %}
+                        <option value="{{ d }}">{{ d }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="col-lg-4">
+                <label for="municipioFilter">Municipio:</label>
+                <select id="municipioFilter" class="form-control" disabled>
+                    <option value="">Todos los Municipios</option>
+                </select>
+            </div>
+            <div class="col-lg-4 d-flex ">
+                <button id="buscarBtn" class="btn  mr-2">Buscar</button>
+                <button id="limpiarBtn" class="btn">Limpiar</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Lista de Municipios
 ============================================= -->
 <section class="px-2" style="background-color: #fff;">
     <div class="container clearfix">
         <div class="row py-4 align-items-center" id="municipioList">
             {% for municipio in collections.municipio %}
-            <div class="col-lg-3 my-2 municipio-item">
+            <div class="col-lg-3 my-2 municipio-item"
+                 data-departamento="{{ municipio.data.municipio.departamento | lower }}"
+                 data-municipio="{{ municipio.data.municipio.municipio | lower }}">
                 <a href="{{ municipio.url }}">
                     <div class="municipio_box">
                         <div class="text">
@@ -66,6 +102,19 @@ permalink: "municipios/index.html"
         var itemsPerPage = 12;
         var currentPage = 1;
         var $items = $('#municipioList .municipio-item');
+
+        // Obtenemos lista de municipios por departamento para cargar dinámicamente
+        var municipiosPorDepartamento = {};
+        $items.each(function() {
+            var dep = $(this).data('departamento');
+            var mun = $(this).data('municipio');
+            if (!municipiosPorDepartamento[dep]) {
+                municipiosPorDepartamento[dep] = [];
+            }
+            if (!municipiosPorDepartamento[dep].includes(mun)) {
+                municipiosPorDepartamento[dep].push(mun);
+            }
+        });
 
         // Función para normalizar texto removiendo tildes/acentos
         function normalizeText(str) {
@@ -145,13 +194,30 @@ permalink: "municipios/index.html"
             });
         }
 
-        // Función para actualizar la lista mostrada en base a búsqueda y paginación
-        function updateList() {
+        // Función para filtrar en base a la búsqueda, departamento y municipio seleccionados
+        function filterItems() {
             var searchText = normalizeText($('#municipioSearch').val() || '');
-            var filteredItems = $items.filter(function() {
-                var municipioText = normalizeText($(this).text());
-                return municipioText.includes(searchText);
+            var selectedDep = normalizeText($('#departamentoFilter').val());
+            var selectedMun = normalizeText($('#municipioFilter').val());
+
+            var filtered = $items.filter(function() {
+                var itemText = normalizeText($(this).text());
+                var itemDep = $(this).data('departamento');
+                var itemMun = $(this).data('municipio');
+
+                var matchesSearch = itemText.includes(searchText);
+                var matchesDep = (selectedDep === '' || itemDep === selectedDep);
+                var matchesMun = (selectedMun === '' || itemMun === selectedMun);
+
+                return matchesSearch && matchesDep && matchesMun;
             });
+
+            return filtered;
+        }
+
+        // Función para actualizar la lista mostrada en base a filtros y paginación
+        function updateList() {
+            var filteredItems = filterItems();
 
             // Ocultamos todos los items
             $items.hide();
@@ -182,6 +248,46 @@ permalink: "municipios/index.html"
             currentPage = 1;
             updateList();
         });
+
+        // Evento al cambiar departamento
+        $('#departamentoFilter').on('change', function() {
+            var dep = normalizeText($(this).val());
+            var $municipioFilter = $('#municipioFilter');
+            $municipioFilter.empty().append('<option value="">Todos los Municipios</option>');
+
+            if (dep !== '' && municipiosPorDepartamento[dep]) {
+                // Habilita y carga municipios del departamento seleccionado
+                $municipioFilter.prop('disabled', false);
+                municipiosPorDepartamento[dep].sort().forEach(function(m) {
+                    // Convertir m a su forma original (si fuera necesario)
+                    // Aquí se asume que ya está normalizado.
+                    $municipioFilter.append('<option value="'+ m +'">'+ capitalize(m) +'</option>');
+                });
+            } else {
+                // Si no hay departamento seleccionado o no hay municipios
+                $municipioFilter.prop('disabled', true);
+            }
+        });
+
+        // Botón buscar
+        $('#buscarBtn').on('click', function() {
+            currentPage = 1;
+            updateList();
+        });
+
+        // Botón limpiar
+        $('#limpiarBtn').on('click', function() {
+            $('#municipioSearch').val('');
+            $('#departamentoFilter').val('');
+            $('#municipioFilter').val('').prop('disabled', true);
+            currentPage = 1;
+            updateList();
+        });
+
+        // Función auxiliar para capitalizar texto
+        function capitalize(str) {
+            return str.charAt(0).toUpperCase() + str.slice(1);
+        }
 
         // Inicializamos la vista
         updateList();
