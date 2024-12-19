@@ -39,6 +39,9 @@ module.exports = function (eleventyConfig) {
 	eleventyConfig.addPassthroughCopy('src');
 	eleventyConfig.addPassthroughCopy('admin');
 	eleventyConfig.addPassthroughCopy('assets');
+	eleventyConfig.addPassthroughCopy('./src');
+	eleventyConfig.addPassthroughCopy('./admin');
+	eleventyConfig.addPassthroughCopy('./assets');
 
 	eleventyConfig.addGlobalData("geojson", () => {
 		const geojsonPath = path.join(__dirname, 'data_files', 'municipios.geojson');
