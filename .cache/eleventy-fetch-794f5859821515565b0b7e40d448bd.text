@@ -1,3 +1,4 @@
+
 [
  {
   "id_municipal": 101,
@@ -4225,7 +4226,7 @@
   "id_dep": 16,
   "departamento": "Alta Verapaz",
   "segeplan2013": 0.4957,
-  "segeplan2016": 0.4454,
+  "segeplan2016": 0.445,
   "segeplan2018": 0.4851,
   "Promediosegeplan": 0.4754,
   "indice_participacion_ciudadana": 0.5529,

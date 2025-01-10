@@ -1373,19 +1373,19 @@ tags:
 
 <script id="hogares" type="application/json">
 	{
-	  "propia": {{ municipio.hogares.propia or 0 }},
-      "alquilada": {{ municipio.hogares.alquilada or 0 }},
-      "cedida": {{ municipio.hogares.cedida or 0 }},
-      "comunal": {{ municipio.hogares.comunal or 0 }},
-      "otra": {{ municipio.hogares.otra or 0 }},
-      "prohom": {{ municipio.hogares.prohom or 0 }},
-      "promuj": {{ municipio.hogares.promuj or 0 }},
-      "proamb": {{ municipio.hogares.proamb or 0 }},
-      "prona": {{ municipio.hogares.prona or 0 }},
-      "deshom": {{ municipio.hogares.deshom or 0 }},
-      "desmuj": {{ municipio.hogares.desmuj or 0 }},
-      "desamb": {{ municipio.hogares.desamb or 0 }},
-      "desna": {{ municipio.hogares.desna or 0 }}
+	  "propia": {{ municipio.hogares.propia if municipio.hogares.propia != "-" else 0 }},
+      "alquilada": {{ municipio.hogares.alquilada if municipio.hogares.alquilada != "-" else 0 }},
+      "cedida": {{ municipio.hogares.cedida if municipio.hogares.cedida != "-" else 0 }},
+      "comunal": {{ municipio.hogares.comunal if municipio.hogares.comunal != "-" else 0 }},
+      "otra": {{ municipio.hogares.otra if municipio.hogares.otra != "-" else 0 }},
+      "prohom": {{ municipio.hogares.prohom if municipio.hogares.prohom != "-" else 0 }},
+      "promuj": {{ municipio.hogares.promuj if municipio.hogares.promuj != "-" else 0 }},
+      "proamb": {{ municipio.hogares.proamb if municipio.hogares.proamb != "-" else 0 }},
+      "prona": {{ municipio.hogares.prona if municipio.hogares.prona != "-" else 0 }},
+      "deshom": {{ municipio.hogares.deshom if municipio.hogares.deshom != "-" else 0 }},
+      "desmuj": {{ municipio.hogares.desmuj if municipio.hogares.desmuj != "-" else 0 }},
+      "desamb": {{ municipio.hogares.desamb if municipio.hogares.desamb != "-" else 0 }},
+      "desna": {{ municipio.hogares.desna if municipio.hogares.desna != "-" else 0 }}
 	}
 </script>
 
@@ -1418,24 +1418,24 @@ tags:
 
 <script id="viviendas-pared_techo" type="application/json">
 	{
-	  "p_ladr": {{ municipio.casas_pared_techo.p_ladr or 0 }},
-      "p_bloc": {{ municipio.casas_pared_techo.p_bloc or 0 }},
-      "p_conc": {{ municipio.casas_pared_techo.p_conc or 0 }},
-      "p_adob": {{ municipio.casas_pared_techo.p_adob or 0 }},
-      "p_made": {{ municipio.casas_pared_techo.p_made or 0 }},
-      "p_lami": {{ municipio.casas_pared_techo.p_lami or 0 }},
-      "p_baja": {{ municipio.casas_pared_techo.p_baja or 0 }},
-      "p_lepa": {{ municipio.casas_pared_techo.p_lepa or 0 }},
-      "p_dese": {{ municipio.casas_pared_techo.p_dese or 0 }},
-      "p_otro": {{ municipio.casas_pared_techo.p_otro or 0 }},
-      "p_igno": {{ municipio.casas_pared_techo.p_igno or 0 }},
-      "t_conc": {{ municipio.casas_pared_techo.t_conc or 0 }},
-      "t_lami": {{ municipio.casas_pared_techo.t_lami or 0 }},
-      "t_asbe": {{ municipio.casas_pared_techo.t_asbe or 0 }},
-      "t_teja": {{ municipio.casas_pared_techo.t_teja or 0 }},
-      "t_paja": {{ municipio.casas_pared_techo.t_paja or 0 }},
-      "t_otro": {{ municipio.casas_pared_techo.t_otro or 0 }},
-      "t_igno": {{ municipio.casas_pared_techo.t_igno or 0 }}
+	  "p_ladr": {{ municipio.casas_pared_techo.p_ladr if municipio.casas_pared_techo.p_ladr != "-" else 0 }},
+      "p_bloc": {{ municipio.casas_pared_techo.p_bloc if municipio.casas_pared_techo.p_bloc != "-" else 0 }},
+      "p_conc": {{ municipio.casas_pared_techo.p_conc if municipio.casas_pared_techo.p_conc != "-" else 0 }},
+      "p_adob": {{ municipio.casas_pared_techo.p_adob if municipio.casas_pared_techo.p_adob != "-" else 0 }},
+      "p_made": {{ municipio.casas_pared_techo.p_made if municipio.casas_pared_techo.p_made != "-" else 0 }},
+      "p_lami": {{ municipio.casas_pared_techo.p_lami if municipio.casas_pared_techo.p_lami != "-" else 0 }},
+      "p_baja": {{ municipio.casas_pared_techo.p_baja if municipio.casas_pared_techo.p_baja != "-" else 0 }},
+      "p_lepa": {{ municipio.casas_pared_techo.p_lepa if municipio.casas_pared_techo.p_lepa != "-" else 0 }},
+      "p_dese": {{ municipio.casas_pared_techo.p_dese if municipio.casas_pared_techo.p_dese != "-" else 0 }},
+      "p_otro": {{ municipio.casas_pared_techo.p_otro if municipio.casas_pared_techo.p_otro != "-" else 0 }},
+      "p_igno": {{ municipio.casas_pared_techo.p_igno if municipio.casas_pared_techo.p_igno != "-" else 0 }},
+      "t_conc": {{ municipio.casas_pared_techo.t_conc if municipio.casas_pared_techo.t_conc != "-" else 0 }},
+      "t_lami": {{ municipio.casas_pared_techo.t_lami if municipio.casas_pared_techo.t_lami != "-" else 0 }},
+      "t_asbe": {{ municipio.casas_pared_techo.t_asbe if municipio.casas_pared_techo.t_asbe != "-" else 0 }},
+      "t_teja": {{ municipio.casas_pared_techo.t_teja if municipio.casas_pared_techo.t_teja != "-" else 0 }},
+      "t_paja": {{ municipio.casas_pared_techo.t_paja if municipio.casas_pared_techo.t_paja != "-" else 0 }},
+      "t_otro": {{ municipio.casas_pared_techo.t_otro if municipio.casas_pared_techo.t_otro != "-" else 0 }},
+      "t_igno": {{ municipio.casas_pared_techo.t_igno if municipio.casas_pared_techo.t_igno != "-" else 0 }}
 	}
 </script>
 
