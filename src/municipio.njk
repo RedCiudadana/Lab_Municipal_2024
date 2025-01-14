@@ -283,7 +283,7 @@ tags:
                                             <tbody>
                                                 {% for adjudicacion in municipio.adjudicaciones.adjudicaciones %}
                                                 <tr>
-                                                    <td>{{ adjudicacion.siglas | capitalize }}</td>
+                                                    <td>{{ adjudicacion.siglas }}</td>
                                                     <td>{{ adjudicacion.corporacion_municipal | capitalize }}</td>
                                                     <td>{{ adjudicacion.nombre | capitalize }}</td>
                                                     {% if adjudicacion.puesto == "ALCALDE MUNICIPAL" %}

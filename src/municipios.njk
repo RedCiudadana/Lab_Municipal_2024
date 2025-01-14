@@ -80,9 +80,9 @@ permalink: "municipios/index.html"
                             <h2><i class="fa-solid fa-circle-dot"></i> Municipio: </h2>
                             <p>{{ municipio.data.municipio.municipio }}</p>
                             <h2><i class="fa-solid fa-circle-dot"></i> Partido: </h2>
-                            <p>{{ municipio.data.municipio.partido }}</p>
+                            <p>{{ municipio.data.municipio.adjudicaciones.adjudicaciones[0].corporacion_municipal | capitalize}}</p>
                             <h2><i class="fa-solid fa-circle-dot"></i> Alcalde: </h2>
-                            <p>{{ municipio.data.municipio.alcalde }}</p>
+                            <p>{{ municipio.data.municipio.adjudicaciones.adjudicaciones[0].nombre | capitalize}}</p>
                         </div>
                     </div>
                 </a>
