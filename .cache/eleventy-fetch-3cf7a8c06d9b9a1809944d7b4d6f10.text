@@ -3055,7 +3055,7 @@
     "id_dep": 12,
     "departamento": "San Marcos",
     "id_municipal": 1228,
-    "Municipalidad": "Río Blanco",
+    "unicipalidad": "Río Blanco",
     "aip2019": 0,
     "aip2017": 20,
     "aip2015": 0,
@@ -4115,4 +4115,4 @@
     "aip2022": 0,
     "aip2023": 0
   }
-]
+]]

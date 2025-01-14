@@ -54,7 +54,10 @@ module.exports = function (eleventyConfig) {
 		const geojson = JSON.parse(fs.readFileSync(path.join(__dirname, 'data_files', 'municipios.geojson'), 'utf-8'));
 		const municipios_resumen = JSON.parse(fs.readFileSync(path.join(__dirname, 'data_files', 'municipios_resumen.json'), 'utf-8'));
 
-		let url = `https://data-dataverso.redciudadana.org/assets/conjuntos/cuadroa1_poblacion_total_por_sexo_grupos_quinquenales_de__edad_y_area.json`;
+		let url = `https://data-dataverso.redciudadana.org/assets/conjuntos/corporaciones_municipales.json`;
+		const corporaciones_municipales = await fetchDataset(url);
+
+		url = `https://data-dataverso.redciudadana.org/assets/conjuntos/cuadroa1_poblacion_total_por_sexo_grupos_quinquenales_de__edad_y_area.json`;
 		const poblacion_sexo = await fetchDataset(url);
 
 		url = `https://data-dataverso.redciudadana.org/assets/conjuntos/desempeno_de_escuelas_consolidado_2015_2019.json`;
@@ -118,6 +121,7 @@ module.exports = function (eleventyConfig) {
 		const casas_pared_techo = await fetchDataset(url);
 
 		return municipios.map(municipio => {
+			const corporaciones_municipalesData = corporaciones_municipales.find(pob => pob.id_municipal === municipio.id_municipal) || {};
 			const poblacion_sexoData = poblacion_sexo.find(pob => pob.id_municipal === municipio.id_municipal) || {};
 			const educacionData = educacion.find(edu => (edu.id_municipal === municipio.id_municipal) && (edu.Periodo === 2019)) || {};
 			const gestionData = gestion.find(gestion => gestion.id_municipal === municipio.id_municipal) || {};
@@ -162,6 +166,10 @@ module.exports = function (eleventyConfig) {
 				acc[desnu.periodo][desnu.Tipo].push(desnu.Cantidad);
 				return acc;
 			}, {});
+
+			const filteredCorporacionesMunicipalesData = {
+				adjudicaciones: corporaciones_municipalesData.adjudicaciones
+			};
 
 			// Filtrar solo las columnas necesarias
 			const filteredPoblacionSexoData = {
@@ -452,6 +460,7 @@ module.exports = function (eleventyConfig) {
 			return {
 				...municipio,
 				geometry,
+				adjudicaciones: filteredCorporacionesMunicipalesData,
 				resumen: filteredMunicipiosResumenData,
 				poblacion_sexo: filteredPoblacionSexoData,
 				educacion: filteredEducacionData,
@@ -509,5 +518,26 @@ module.exports = function (eleventyConfig) {
 		return value;
 	});
 	
+	eleventyConfig.addFilter("capitalize", function(value) {
+		if (!value) return "";
+		return value
+		  .toLowerCase()
+		  .split(" ")
+		  .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+		  .join(" ");
+	});
 
+	eleventyConfig.addFilter("capitalizeExceptLast", function(value) {
+		if (!value) return "";
+
+		let words = value.toLowerCase().split(" ");
+
+		for (let i = 0; i < words.length - 1; i++) {
+		  words[i] = words[i].charAt(0).toUpperCase() + words[i].slice(1);
+		}
+
+		words[words.length - 1] = words[words.length - 1].toUpperCase();
+
+		return words.join(" ");
+	});
 }
