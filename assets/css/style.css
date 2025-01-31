@@ -6113,6 +6113,27 @@ body:not(.top-search-open)
   letter-spacing: 0.2px;
 }
 
+.text-titles2-5{
+  color: #fff!important;
+  font-family: 'Metropolis-Bold', sans-serif!important;
+  font-size: 30px!important;
+  line-height: 35px;
+  font-weight: 600!important;
+  letter-spacing: 0.2px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.text-titles3-5{
+  color: #02324f!important;
+  font-family: 'Metropolis-Bold', sans-serif!important;
+  font-size: 30px!important;
+  line-height: 35px;
+  font-weight: 600!important;
+  letter-spacing: 0.2px;
+  text-align: center;
+  margin-bottom: 10px;
+}
 
 .slider-element {
   position: relative;
