@@ -19907,6 +19907,7 @@ label.checkbox {
 .bg-white-green{
   background-color: #fff;
   transition: 0.5s all ease;
+  min-height: 100%;
 }
 
 .bg-white-green:hover{
@@ -19952,8 +19953,19 @@ label.checkbox {
   transform: translate(-3px, -3px);
 }
 
+.municipio_box .header-box{
+  background-color: #02324f;
+  padding: 20px 20px;
+  display: flex;
+}
+
+.municipio_box .header-box h2{
+  font-size: 20px;
+  color: #fff!important;
+}
+
 .municipio_box .text{
-  padding: 20px 20px 30px 20px;
+  padding: 20px 40px 0px 40px;
   color: #02324f;
 }
 
@@ -19969,7 +19981,7 @@ label.checkbox {
 }
 
 .municipio_box .text p{
-  height: 35px;
+  height: 45px;
 }
 
 /* Estilos opcionales para la paginación */

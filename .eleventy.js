@@ -120,7 +120,7 @@ module.exports = function (eleventyConfig) {
 		url = `https://data-dataverso.redciudadana.org/assets/conjuntos/cuadroc2_viviendas_particulares_por_material_predominante_en_las_paredes_exteriores_y_en_el_techo.json`;
 		const casas_pared_techo = await fetchDataset(url);
 
-		return municipios.map(municipio => {
+		return municipios.slice(0,10).map(municipio => {
 			const corporaciones_municipalesData = corporaciones_municipales.find(pob => pob.id_municipal === municipio.id_municipal) || {};
 			const poblacion_sexoData = poblacion_sexo.find(pob => pob.id_municipal === municipio.id_municipal) || {};
 			const educacionData = educacion.find(edu => (edu.id_municipal === municipio.id_municipal) && (edu.Periodo === 2019)) || {};

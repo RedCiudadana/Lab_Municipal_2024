@@ -72,20 +72,23 @@ permalink: "municipios/index.html"
             <div class="col-lg-3 my-2 municipio-item"
                  data-departamento="{{ municipio.data.municipio.departamento | lower }}"
                  data-municipio="{{ municipio.data.municipio.municipio | lower }}">
-                <a href="{{ municipio.url }}">
-                    <div class="municipio_box">
-                        <div class="text">
-                            <h2><i class="fa-solid fa-circle-dot"></i> Departamento: </h2>
-                            <p>{{ municipio.data.municipio.departamento }}</p>
-                            <h2><i class="fa-solid fa-circle-dot"></i> Municipio: </h2>
-                            <p>{{ municipio.data.municipio.municipio }}</p>
-                            <h2><i class="fa-solid fa-circle-dot"></i> Partido: </h2>
-                            <p>{{ municipio.data.municipio.adjudicaciones.adjudicaciones[0].corporacion_municipal | capitalize}}</p>
-                            <h2><i class="fa-solid fa-circle-dot"></i> Alcalde: </h2>
-                            <p>{{ municipio.data.municipio.adjudicaciones.adjudicaciones[0].nombre | capitalize}}</p>
-                        </div>
+                <div class="municipio_box">
+                    <div class="header-box">
+                        <img src=""><h2>{{municipio.data.municipio.municipio}}</h2>
                     </div>
-                </a>
+                    <!-- <img src="/assets/images/placeholder2.png"> -->
+                    <div class="text">
+                        <h2> Departamento</h2>
+                        <p>{{municipio.data.municipio.departamento}}</p>
+                        <hr>
+                        <h2>Partido</h2>
+                        <p>{{ municipio.data.municipio.adjudicaciones.adjudicaciones[0].corporacion_municipal | capitalize}}</p>
+                        <hr>
+                        <h2>Alcalde</h2>
+                        <p>{{ municipio.data.municipio.adjudicaciones.adjudicaciones[0].nombre | capitalize}}</p>
+                        <a href="{{municipio.url}}" class="btn">Ver más</a>
+                    </div>
+                </div>
             </div>
             {% endfor %}
         </div>
@@ -99,7 +102,7 @@ permalink: "municipios/index.html"
 
 <script>
     $(document).ready(function() {
-        var itemsPerPage = 12;
+        var itemsPerPage = 8;
         var currentPage = 1;
         var $items = $('#municipioList .municipio-item');
 
