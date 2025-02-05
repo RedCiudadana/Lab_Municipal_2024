@@ -19955,13 +19955,20 @@ label.checkbox {
 
 .municipio_box .header-box{
   background-color: #02324f;
-  padding: 20px 20px;
+  padding: 15px 20px;
   display: flex;
+  align-items: center;
 }
 
 .municipio_box .header-box h2{
   font-size: 20px;
   color: #fff!important;
+}
+
+.municipio_box .header-box img{
+  width: 35px;
+  height: auto;
+  margin-right: 10px;
 }
 
 .municipio_box .text{
