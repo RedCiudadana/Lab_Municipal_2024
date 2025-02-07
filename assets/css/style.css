@@ -19914,6 +19914,16 @@ label.checkbox {
   background-color: #00af87;
 }
 
+.bg-white-green2{
+  background-color: #e9f0f8;
+  transition: 0.5s all ease;
+  min-height: 100%;
+}
+
+.bg-white-green2:hover{
+  background-color: #00af87;
+}
+
 
 .bg-white-green:hover .text-titles{
   color: #fff!important;
