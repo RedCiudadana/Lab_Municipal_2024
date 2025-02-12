@@ -21,16 +21,45 @@ permalink: "municipios/index.html"
                 <div class="my-4">
                     <input type="text" id="municipioSearch" placeholder="Buscar municipio..." class="form-control">
                 </div>
+
+                <div class="row">
+                    <div class="col-lg-6 mb-4">
+                        <label for="departamentoFilter">Departamento:</label>
+                        <select id="departamentoFilter" class="form-control">
+                            <option value="">Todos los Departamentos</option>
+                            {% set departamentos = [] %}
+                            {% for m in collections.municipio %}
+                                {% if m.data.municipio.departamento not in departamentos %}
+                                    {% set departamentos = departamentos.concat([m.data.municipio.departamento]) %}
+                                {% endif %}
+                            {% endfor %}
+                            {% for d in departamentos %}
+                                <option value="{{ d }}">{{ d }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <div class="col-lg-6 mb-4">
+                        <label for="municipioFilter">Municipio:</label>
+                        <select id="municipioFilter" class="form-control" disabled>
+                            <option value="">Todos los Municipios</option>
+                        </select>
+                    </div>
+                    <div class="col-lg-12 mb-4 d-flex ">
+                        <button id="buscarBtn" class="btn  mr-2">Buscar</button>
+                        <button id="limpiarBtn" class="btn">Limpiar</button>
+                    </div>
+                </div>
             </div>
             <div class="col-lg-6 my-4">
                 <img style="width: 50%; margin: auto;" src="/assets/images/new_images/17.png">
             </div>
         </div>
+        
     </div>
 </section>
 
 <!-- Filtros por Departamento y Municipio -->
-<section class="px-2" style="background-color: #fff;">
+<!-- <section class="px-2" style="background-color: #fff;">
     <div class="container my-4">
         <div class="row">
             <div class="col-lg-4">
@@ -60,7 +89,7 @@ permalink: "municipios/index.html"
             </div>
         </div>
     </div>
-</section>
+</section> -->
 
 
 <!-- Lista de Municipios
